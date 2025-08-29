@@ -1,0 +1,17 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+class especialidad{
+private:
+	string nombre;
+public:
+	especialidad(string);
+	especialidad();
+	~especialidad();
+	string getNombre();
+	string toString();
+};
+
