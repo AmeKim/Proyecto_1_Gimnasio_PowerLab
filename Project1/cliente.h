@@ -14,7 +14,8 @@ private:
 	char sexo;
 	fecha* fechaInscrip;
 	instructor* inst;
-	//rutina* r;
+	rutina* r;
+	//Medicion* medicion;
 public:
 	
 	string toString();

@@ -128,6 +128,7 @@
     <ClInclude Include="especialidad.h" />
     <ClInclude Include="fecha.h" />
     <ClInclude Include="instructor.h" />
+    <ClInclude Include="medicion.h" />
     <ClInclude Include="persona.h" />
     <ClInclude Include="rutina.h" />
     <ClInclude Include="utiles.h" />
@@ -141,6 +142,7 @@
     <ClCompile Include="fecha.cpp" />
     <ClCompile Include="instructor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="medicion.cpp" />
     <ClCompile Include="persona.cpp" />
     <ClCompile Include="rutina.cpp" />
     <ClCompile Include="utiles.cpp" />
