@@ -36,6 +36,9 @@
     <ClInclude Include="vecClientes.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Persona.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cliente.cpp">
@@ -57,6 +60,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="vecClientes.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Downloads\Persona.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

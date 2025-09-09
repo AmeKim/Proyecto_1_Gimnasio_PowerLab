@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Downloads\Persona.h" />
     <ClInclude Include="claseGrupal.h" />
     <ClInclude Include="cliente.h" />
     <ClInclude Include="especialidad.h" />
@@ -132,6 +133,7 @@
     <ClInclude Include="vecEspecialidades.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\Persona.cpp" />
     <ClCompile Include="claseGrupal.cpp" />
     <ClCompile Include="cliente.cpp" />
     <ClCompile Include="especialidad.cpp" />
