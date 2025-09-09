@@ -123,21 +123,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\Persona.h" />
     <ClInclude Include="claseGrupal.h" />
     <ClInclude Include="cliente.h" />
     <ClInclude Include="especialidad.h" />
     <ClInclude Include="instructor.h" />
+    <ClInclude Include="Persona.h" />
     <ClInclude Include="utiles.h" />
     <ClInclude Include="vecClientes.h" />
     <ClInclude Include="vecEspecialidades.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\Persona.cpp" />
     <ClCompile Include="claseGrupal.cpp" />
     <ClCompile Include="cliente.cpp" />
     <ClCompile Include="especialidad.cpp" />
     <ClCompile Include="instructor.cpp" />
+    <ClCompile Include="Persona.cpp" />
     <ClCompile Include="utiles.cpp" />
     <ClCompile Include="vecClientes.cpp" />
     <ClCompile Include="vecEspecialidades.cpp" />
