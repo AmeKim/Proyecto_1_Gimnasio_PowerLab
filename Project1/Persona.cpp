@@ -1,90 +1,66 @@
-#include "Persona.h"
+#include "persona.h"
 
-Persona::Persona(string nom, string ced, int numT, string cor, int dia, int mes, int annio)
-{
+persona::persona(string nom, string ced, int numT, string cor, fecha* fechaNacimiento){
     this->nombre = nom;
     this->cedula = ced;
-    this->numeroT = numT;
+    this->numeroTelefono = numT;
     this->correo = cor;
-    this->fechaN[0] = dia; // day
-    this->fechaN[1] = mes; // month
-    this->fechaN[2] = annio; // year|
-}
+	this->fechaNacimiento = fechaNacimiento;
 
-void Persona::setNombre(string nom)
+}
+persona::~persona(){}
+
+void persona::setNombre(string nom)
 {
 	this->nombre = nom;
 }
 
-string Persona::getNombre()
+string persona::getNombre()
 {
     return nombre;
 }
 
-void Persona::setCedula(string ced)
+void persona::setCedula(string ced)
 {
 	this->cedula = ced;
 }
 
-string Persona::getCedula()
+string persona::getCedula()
 {
     return cedula;
 }
 
-void Persona::setNumeroT(int numT)
+void persona::setNumeroTelefono(int numT)
 {
-	this->numeroT = numT;
+	this->numeroTelefono = numT;
 }
 
-int Persona::getNumeroT()
+int persona::getNumeroTelefono()
 {
-    return numeroT
+	return numeroTelefono;
 }
 
-void Persona::setCorreo(string cor)
+void persona::setCorreo(string cor)
 {
 	this->correo = cor;
 }
 
-string Persona::getCorreo()
+string persona::getCorreo()
 {
     return correo;
 }
 
-void Persona::setFechaN(int dia, int mes, int annio)
-{
-	fechaN[0] = dia; 
-	fechaN[1] = mes;
-	fechaN[2] = annio;
+fecha* persona::getFechaNacimiento(){
+	return fechaNacimiento;
+}
+string persona::toString(){
+	stringstream s;
+	s << "Nombre: " << nombre << endl;
+	s << "Cedula: " << cedula << endl;
+	s << "Numero de Telefono : " << numeroTelefono << endl;
+	s << "Correo : " << correo << endl;
+	s<< "Fecha de Nacimiento : " << fechaNacimiento->toString() << endl;
+	return s.str();	
 }
 
-int Persona::getDia()
-{
-    return fechaN[0];
-}
 
-int Persona::getMes()
-{
-    return fechaN[1];
-}
-
-int Persona::getAnnio()
-{
-    return fechaN[2];
-}
-
-void Persona::mostrarDatos()
-{
-	cout << "Nombre: " << nombre << endl;
-	cout << "Cedula: " << cedula << endl;
-	cout << "Numero de Telefono: " << numeroT << endl;
-	cout << "Correo Electronico: " << correo << endl;
-	cout << "Fecha de Nacimiento: "
-		<< fechaN[0] << "/"
-		<< fechaN[1] << "/"
-		<< fechaN[2] << endl;
-}
-
-Persona::~Persona()
-{
-}

@@ -1,42 +1,29 @@
 #pragma once
 #include <iostream>
 #include <string>
-
-
-/*cédula de identidad, nombre completo,  
-teléfono de contacto, correo electrónico,
-fecha de nacimiento, 
-
-sexo, fecha de inscripción, entre otros más.*/
-
-/*número de cédula, nombre completo,
-teléfono, correo, fecha de nacimiento,
-y una o varias de las siguientes especialidades:
-CrossFit, HIIT, TRX, Pesas, spinning, Cardio, Yoga,
-Zumba (un instructor puede tener más de una especialidad). */
+#include <sstream>
+#include "fecha.h"
 using namespace std;
 
-class Persona {
+class persona {
 private:
 	string nombre;
 	string cedula;
-	int numeroT;
+	int numeroTelefono;
 	string correo;
-	int fechaN[3];// dia, mes, año
+	fecha* fechaNacimiento; 
 public:
-	Persona(string ="", string ="", int =0, string ="", int =0, int =0, int =0);
-	void setNombre(string nom);
+	persona(string = "", string = "", int = 0, string = "", fecha* = nullptr);
+	~persona();
+	void setNombre(string);
 	string getNombre();
-	void setCedula(string ced);
+	void setCedula(string);
 	string getCedula();
-	void setNumeroT(int numT);
-	int getNumeroT();
-	void setCorreo(string cor);
+	void setNumeroTelefono(int);
+	int getNumeroTelefono();
+	void setCorreo(string);
 	string getCorreo();
-	void setFechaN(int dia, int mes, int annio);
-	int getDia();
-	int getMes();
-	int getAnnio();
-	void mostrarDatos();
-	~Persona();
+	fecha* getFechaNacimiento();
+	string toString();
+	
 };
