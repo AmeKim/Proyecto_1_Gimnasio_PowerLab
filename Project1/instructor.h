@@ -4,6 +4,7 @@
 #include <sstream>
 #include "vecEspecialidades.h"
 #include "utiles.h"
+//#include "rutina.h"
 #include "Persona.h"
 using namespace std;
 

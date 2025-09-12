@@ -4,7 +4,7 @@
 #include <sstream>
 #include "utiles.h"
 #include "instructor.h"
-#include "rutina.h"
+//#include "rutina.h"
 #include "Persona.h"
 using namespace std;
 
@@ -13,7 +13,7 @@ private:
     char sexo;
     string fecha_Inscripcion;
     instructor* inst;
-    rutina* r;
+    //rutina* r;
 public:
     cliente(string nombre, string cedula, int telefono, string correo, int dia, int mes, int anio,
             char sexo, string fecha_Inscripcion, instructor* inst, rutina* r);
@@ -22,12 +22,12 @@ public:
     char getSexo();
     string getFechaInscripcion();
     instructor* getInstructor();
-    rutina* getRutina();
+    //rutina* getRutina();
 
     void setSexo(char);
     void setFechaInscripcion(string);
     void setInstructor(instructor*);
-    void setRutina(rutina*);
+    //void setRutina(rutina*);
 
     string toString();
 };
