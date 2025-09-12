@@ -11,7 +11,7 @@ cliente::cliente(string nombre, string cedula, int telefono, string correo, int 
 
 cliente::~cliente() {
     delete inst;
-    delete r; // Libera la memoria de rutina si fue asignada dinámicamente
+    delete r;
 }
 
 char cliente::getSexo() {
@@ -26,9 +26,9 @@ instructor* cliente::getInstructor() {
     return inst;
 }
 
-//rutina* cliente::getRutina() {
-//    return r;
-//}
+rutina* cliente::getRutina() {
+return r;
+}
 
 void cliente::setSexo(char sexo) {
     this->sexo = sexo;
@@ -42,9 +42,9 @@ void cliente::setInstructor(instructor* inst) {
     this->inst = inst;
 }
 
-//void cliente::setRutina(rutina* r) {
-//    this->r = r;
-//}
+void cliente::setRutina(rutina* r) {
+this->r = r;
+}
 
 string cliente::toString() {
     stringstream s;
@@ -57,7 +57,7 @@ string cliente::toString() {
     s << "Fecha de Inscripcion: " << fecha_Inscripcion << endl;
     if (inst)
         s << "Instructor: " << inst->getNombre() << endl;
-    //if (r)
-    //    s << "Rutina: " << r->toString() << endl;
+    if (r)
+    s << "Rutina: " << r->toString() << endl;
     return s.str();
 }
