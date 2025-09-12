@@ -4,30 +4,17 @@
 #include <sstream>
 #include "vecEspecialidades.h"
 #include "utiles.h"
+#include "Persona.h"
 using namespace std;
 
-class instructor{
+class instructor : public Persona {
 private:
-	int cedula;
-	string nombre;
-	string correo;
-	int telefono;
-	string fecha_Nacimiento;
-	vecEspecialidades* v;
+    vecEspecialidades* v;
 public:
-	instructor(int, string, string, int, string, vecEspecialidades*);
-	~instructor();
-	int getCedula();
-	string getNombre();
-	int getTelefono();
-	string getCorreo();
-	string getFechaNacimiento();
-	vecEspecialidades* getEspecialidades();
-	void setCedula(int);
-	void setNombre(string);
-	void setTelefono(int);
-	void setCorreo(string);
-	void setFechaNacimiento(string);
-	string toString();
+    instructor(string nombre, string cedula, int telefono, string correo,
+               int dia, int mes, int anio, vecEspecialidades* vec);
+    ~instructor();
+    vecEspecialidades* getEspecialidades();
+    string toString();
 };
 

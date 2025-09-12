@@ -4,42 +4,31 @@
 #include <sstream>
 #include "utiles.h"
 #include "instructor.h"
-//#include "rutina.h"
+#include "rutina.h"
+#include "Persona.h"
 using namespace std;
 
-class cliente{
+class cliente : public Persona {
 private:
-	int cedula;
-	int telefono;
-	string nombre;
-	string correo;
-	char sexo;
-	string fecha_Nacimiento;
-	string fecha_Inscripcion;
-	instructor* inst;
-	//rutina* r;
+    char sexo;
+    string fecha_Inscripcion;
+    instructor* inst;
+    rutina* r;
 public:
-	cliente(int, int, string, string, char, string, string, instructor*);//, rutina*);
-	~cliente();
-	int getCedula();
-	int getTelefono();
-	string getNombre();
-	string getCorreo();
-	char getSexo();
-	string getFechaNacimiento();
-	string getFechaInscripcion();
-	instructor* getInstructor();
-	//rutina* getRutina();
-	void setCedula(int);
-	void setTelefono(int);
-	void setNombre(string);
-	void setCorreo(string);
-	void setSexo(char);
-	void setFechaNacimiento(string);
-	void setFechaInscripcion(string);
-	void setInstructor(instructor*);
-	//void setRutina(rutina*);
-	string toString();
-	
+    cliente(string nombre, string cedula, int telefono, string correo, int dia, int mes, int anio,
+            char sexo, string fecha_Inscripcion, instructor* inst, rutina* r);
+    ~cliente();
+
+    char getSexo();
+    string getFechaInscripcion();
+    instructor* getInstructor();
+    rutina* getRutina();
+
+    void setSexo(char);
+    void setFechaInscripcion(string);
+    void setInstructor(instructor*);
+    void setRutina(rutina*);
+
+    string toString();
 };
 
