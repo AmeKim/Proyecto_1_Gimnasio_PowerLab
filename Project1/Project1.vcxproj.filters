@@ -75,6 +75,12 @@
     <ClInclude Include="submenuClaseGrup.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="vecSucursales.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="reporteM.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cliente.cpp">
@@ -138,6 +144,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="submenuClaseGrup.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="vecSucursales.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="reporteM.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
