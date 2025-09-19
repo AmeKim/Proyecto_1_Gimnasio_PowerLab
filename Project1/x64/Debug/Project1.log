@@ -1,6 +1,18 @@
-﻿  Sucursal.cpp
+﻿  claseGrupal.cpp
+  cliente.cpp
+  Ejercicio.cpp
+  especialidad.cpp
+  fecha.cpp
+  instructor.cpp
+  Medición.cpp
+  Persona.cpp
+  Rutina.cpp
+  Sucursal.cpp
+  utiles.cpp
+  vecClasesGrupales.cpp
   vecClientes.cpp
   vecEspecialidades.cpp
+  vecInstructores.cpp
   Generando código...
 MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo main sin resolver al que se hace referencia en la función "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe : fatal error LNK1120: 1 externos sin resolver
+C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe : fatal error LNK1120: 1 externos sin resolver
