@@ -5,13 +5,11 @@
 #include "vecClientes.h"
 #include "vecInstructores.h"
 #include "vecClasesGrupales.h"
-#include "utiles.h"
-
 using namespace std;
 
 class Sucursal {
 private:
-    string codigo;
+    int codigo;
     string provincia;
     string canton;
     string correo;
@@ -21,13 +19,13 @@ private:
     vecClasesGrupales* clasesGrupales;
 
 public:
-    // Constructores
-    Sucursal(string codigo, string provincia, string canton, string correo, string telefono);
+    // Constructores y destructor
     Sucursal();
+    Sucursal(int codigo, string provincia, string canton, string correo, string telefono);
     ~Sucursal();
 
     // Getters
-    string getCodigo() const;
+    int getCodigo() const;
     string getProvincia() const;
     string getCanton() const;
     string getCorreo() const;
@@ -37,28 +35,30 @@ public:
     vecClasesGrupales* getClasesGrupales() const;
 
     // Setters
-    void setCodigo(string codigo);
-    void setProvincia(string provincia);
-    void setCanton(string canton);
-    void setCorreo(string correo);
-    void setTelefono(string telefono);
+    void setCodigo(int codigo);
+    void setProvincia(const string& provincia);
+    void setCanton(const string& canton);
+    void setCorreo(const string& correo);
+    void setTelefono(const string& telefono);
 
-    // Métodos de gestión
+    // Métodos para gestionar clientes
     bool agregarCliente(cliente* cli);
+    cliente* buscarCliente(const string& cedula);
+    void mostrarClientes() const;
+    void reporteIMC() const;
+    cliente* getClientePorIndice(int indice) const;
+
+    // Métodos para gestionar instructores
     bool agregarInstructor(instructor* inst);
+    instructor* buscarInstructor(const string& cedula);
+    void mostrarInstructores() const;
+    instructor* getInstructorPorIndice(int indice) const;
+
+    // Métodos para gestionar clases grupales
     bool agregarClaseGrupal(claseGrupal* clase);
-    cliente* buscarCliente(string cedula);
-    instructor* buscarInstructor(string cedula);
-    claseGrupal* buscarClaseGrupal(int codigoClase) const;
     void mostrarClasesGrupales() const;
-    bool matricularClienteEnClase(int codigoClase, cliente* cli);
-    void mostrarClientesDeClase(int codigoClase) const;
 
-    // Reportes
-    string reporteIMC();
-    string listaClientesPorInstructor(string cedulaInstructor);
-
-    // Utilidades
-    string toString();
-    string toStringSimple(); // Solo código y ubicación
+    // Métodos de utilidad
+    string toString() const;
+    void mostrarDetalle() const;
 };
