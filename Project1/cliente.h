@@ -4,31 +4,38 @@
 #include <sstream>
 #include "utiles.h"
 #include "instructor.h"
-//#include "rutina.h"
+#include "Fecha.h"
 #include "Persona.h"
 using namespace std;
 
 class cliente : public Persona {
 private:
     char sexo;
-    string fecha_Inscripcion;
+    Fecha fechaInscripcion;
     instructor* inst;
-    //rutina* r;
+
 public:
+    // Constructores
     cliente(string nombre, string cedula, int telefono, string correo, int dia, int mes, int anio,
-            char sexo, string fecha_Inscripcion, instructor* inst, rutina* r);
+        char sexo, const Fecha& fechaIns, instructor* inst);
+    cliente(string nombre, string cedula, int telefono, string correo, const Fecha& fechaNac,
+        char sexo, const Fecha& fechaIns, instructor* inst);
+    cliente(string nombre, string cedula, int telefono, string correo, const string& fechaNacStr,
+        char sexo, const string& fechaInsStr, instructor* inst);
     ~cliente();
 
-    char getSexo();
-    string getFechaInscripcion();
-    instructor* getInstructor();
+    // Getters
+    char getSexo() const;
+    Fecha getFechaInscripcion() const;
+    instructor* getInstructor() const;
     //rutina* getRutina();
 
+    // Setters
     void setSexo(char);
-    void setFechaInscripcion(string);
+    void setFechaInscripcion(const Fecha& fecha);
+    void setFechaInscripcion(const string& fechaStr);
     void setInstructor(instructor*);
-    //void setRutina(rutina*);
 
-    string toString();
+    string toString() override;
+    int getAntiguedad() const; // Calcula antiguedad en el gimnasio
 };
-

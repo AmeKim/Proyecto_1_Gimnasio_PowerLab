@@ -4,18 +4,32 @@
 #include <sstream>
 #include "vecEspecialidades.h"
 #include "utiles.h"
-//#include "rutina.h"
+#include "Fecha.h"
 #include "Persona.h"
 using namespace std;
 
 class instructor : public Persona {
 private:
-    vecEspecialidades* v;
-public:
-    instructor(string nombre, string cedula, int telefono, string correo,
-               int dia, int mes, int anio, vecEspecialidades* vec);
-    ~instructor();
-    vecEspecialidades* getEspecialidades();
-    string toString();
-};
+    vecEspecialidades* especialidades;
 
+public:
+    // Constructores
+    instructor(string nombre, string cedula, int telefono, string correo,
+        int dia, int mes, int anio, vecEspecialidades* esp);
+    instructor(string nombre, string cedula, int telefono, string correo,
+        const Fecha& fechaNac, vecEspecialidades* esp);
+    instructor(string nombre, string cedula, int telefono, string correo,
+        const string& fechaNacStr, vecEspecialidades* esp);
+    ~instructor();
+
+    // Getters
+    vecEspecialidades* getEspecialidades() const;
+
+    // Setters
+    void setEspecialidades(vecEspecialidades* esp);
+
+    // Utility methods
+    string toString() override;
+    bool tieneEspecialidad(const string& nombreEsp) const;
+    int getCantidadEspecialidades() const;
+};

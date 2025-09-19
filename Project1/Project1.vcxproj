@@ -126,8 +126,11 @@
     <ClInclude Include="claseGrupal.h" />
     <ClInclude Include="cliente.h" />
     <ClInclude Include="especialidad.h" />
+    <ClInclude Include="fecha.h" />
     <ClInclude Include="instructor.h" />
+    <ClInclude Include="Medición.h" />
     <ClInclude Include="Persona.h" />
+    <ClInclude Include="Sucursal.h" />
     <ClInclude Include="utiles.h" />
     <ClInclude Include="vecClientes.h" />
     <ClInclude Include="vecEspecialidades.h" />
@@ -136,8 +139,11 @@
     <ClCompile Include="claseGrupal.cpp" />
     <ClCompile Include="cliente.cpp" />
     <ClCompile Include="especialidad.cpp" />
+    <ClCompile Include="fecha.cpp" />
     <ClCompile Include="instructor.cpp" />
+    <ClCompile Include="Medición.cpp" />
     <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Sucursal.cpp" />
     <ClCompile Include="utiles.cpp" />
     <ClCompile Include="vecClientes.cpp" />
     <ClCompile Include="vecEspecialidades.cpp" />
