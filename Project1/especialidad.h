@@ -4,14 +4,25 @@
 #include <sstream>
 using namespace std;
 
-class especialidad{
+class especialidad {
 private:
-	string nombre;
+    int id;
+    string nombre;
+    string descripcion;
 public:
-	especialidad(string);
-	especialidad();
-	~especialidad();
-	string getNombre();
-	string toString();
+    especialidad();
+    especialidad(int id, string nombre, string descripcion = "");
+    ~especialidad();
+    // Getters
+    int getId() const;
+    string getNombre() const;
+    string getDescripcion() const;
+    // Setters
+    void setId(int id);
+    void setNombre(const string& nombre);
+    void setDescripcion(const string& descripcion);
+    // Mostrar
+    void mostrar() const;
+    string toString() const;
 };
 

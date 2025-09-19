@@ -1,4 +1,4 @@
-#include "Medicion.h"
+#include "Medición.h"
 
 Medicion::Medicion(const Fecha& fecha, double peso, double estatura,
     double porcGrasa, double porcMusculo) {

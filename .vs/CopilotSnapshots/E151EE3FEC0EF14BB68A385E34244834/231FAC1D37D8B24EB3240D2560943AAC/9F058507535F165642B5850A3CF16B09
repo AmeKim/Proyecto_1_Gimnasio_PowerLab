@@ -1,0 +1,5 @@
+﻿#pragma once
+#include "instructor.h"
+class vecInstructores {
+    // Stub para compilar
+};

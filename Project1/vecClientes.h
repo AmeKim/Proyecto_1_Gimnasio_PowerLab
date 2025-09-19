@@ -15,10 +15,11 @@ public:
 	vecClientes();
 	~vecClientes();
 	void agregarCliente(cliente*);
-	void eliminarCliente(int);
-	cliente* getCliente(int);
+	void eliminarCliente(string);
+	cliente* getCliente(string);
 	int getCan();
 	string toString();
-	string toStringEspecifico(int);
+	string toStringEspecifico(string);
+	cliente* getClientePorIndice(int idx) { return (idx >= 0 && idx < can) ? vClientes[idx] : nullptr; }
 };
 

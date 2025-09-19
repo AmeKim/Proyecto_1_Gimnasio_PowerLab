@@ -1,0 +1,7 @@
+﻿#pragma once
+#include "claseGrupal.h"
+class vecClasesGrupales {
+public:
+    void agregarClase(claseGrupal*) {}
+    int getCan() const { return 0; }
+};

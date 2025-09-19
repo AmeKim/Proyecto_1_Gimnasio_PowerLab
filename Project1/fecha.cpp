@@ -32,10 +32,11 @@ Fecha::Fecha(const Fecha& otra) {
 Fecha::Fecha() {
     // Obtener fecha actual
     time_t t = time(0);
-    tm* now = localtime(&t);
-    dia = now->tm_mday;
-    mes = now->tm_mon + 1;
-    anio = now->tm_year + 1900;
+    tm now_tm;
+    localtime_s(&now_tm, &t);
+    dia = now_tm.tm_mday;
+    mes = now_tm.tm_mon + 1;
+    anio = now_tm.tm_year + 1900;
 }
 
 // Getters

@@ -1,0 +1,31 @@
+﻿#pragma once
+#include "Ejercicio.h"
+
+// Forward declaration
+class cliente;
+
+class Rutina {
+private:
+    Ejercicio** listaEjercicios;  // Array of pointers to Ejercicio
+    int* series;
+    int* repeticiones;
+    int cantidad;
+    cliente* clientePtr;
+
+public:
+    // Constructor y destructor
+    Rutina();
+    ~Rutina();
+
+    // Métodos principales
+    void agregarEjercicio(Ejercicio* ejercicio, int numSeries, int numRepeticiones);
+    void mostrarRutina() const;
+    void eliminarRutina();
+    
+    // Getters
+    int getCantidad() const;
+    cliente* getCliente() const;
+    
+    // Setter
+    void setCliente(cliente* nuevoCliente);
+};

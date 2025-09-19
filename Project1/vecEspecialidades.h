@@ -3,22 +3,21 @@
 #include <string>
 #include <sstream>
 #include "especialidad.h"
-#include "utiles.h"
 using namespace std;
 
-class vecEspecialidades{
-	private:
-	especialidad** vEspecialidades;
-	int can;
-	int tam = 8;
+class vecEspecialidades {
+private:
+    especialidad** vEspecialidades;
+    int can;
+    int tam = 20;
 public:
-	vecEspecialidades();
-	~vecEspecialidades();
-	void agregarEspecialidad(especialidad*);
-	void eliminarEspecialidad(string);
-	especialidad* getEspecialidad(string);
-	int getCan();
-	string toString();
-	string toStringEspecifico(string);
+    vecEspecialidades();
+    ~vecEspecialidades();
+    void agregarEspecialidad(especialidad* esp);
+    especialidad* buscarPorId(int id);
+    especialidad* buscarPorNombre(const string& nombre);
+    int getCan() const;
+    string toString() const;
+    void mostrarTodas() const;
 };
 

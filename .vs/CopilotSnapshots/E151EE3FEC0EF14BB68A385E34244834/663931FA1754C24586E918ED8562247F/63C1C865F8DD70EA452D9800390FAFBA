@@ -1,0 +1,73 @@
+﻿#include "claseGrupal.h"
+#include <iostream>
+
+claseGrupal::claseGrupal(int codigo, string tipo, int capacidadMax, string salon, string horario)
+    : codigo(codigo), tipo(tipo), capacidadMax(capacidadMax > 0 ? capacidadMax : 1), cantidadActual(0), salon(salon), horario(horario), instructorPtr(nullptr) {
+    clientes = new cliente*[this->capacidadMax];
+    for (int i = 0; i < this->capacidadMax; ++i) {
+        clientes[i] = nullptr;
+    }
+}
+
+claseGrupal::~claseGrupal() {
+    // No liberar los clientes, solo el arreglo
+    delete[] clientes;
+}
+
+bool claseGrupal::setInstructor(instructor* inst) {
+    if (!inst) return false;
+    // Verificar que el instructor tenga la especialidad correspondiente
+    if (inst->tieneEspecialidad(tipo)) {
+        instructorPtr = inst;
+        return true;
+    }
+    return false;
+}
+
+bool claseGrupal::matricularCliente(cliente* cli) {
+    if (!cli) return false;
+    if (cantidadActual >= capacidadMax) return false;
+    // Verificar que el cliente no esté repetido
+    for (int i = 0; i < cantidadActual; ++i) {
+        if (clientes[i] == cli) return false;
+    }
+    clientes[cantidadActual++] = cli;
+    return true;
+}
+
+void claseGrupal::mostrarDetalle() const {
+    std::cout << "\n=== DETALLE DE CLASE GRUPAL ===" << std::endl;
+    std::cout << "Código: " << codigo << std::endl;
+    std::cout << "Tipo: " << tipo << std::endl;
+    std::cout << "Salón: " << salon << std::endl;
+    std::cout << "Horario: " << horario << std::endl;
+    std::cout << "Capacidad máxima: " << capacidadMax << std::endl;
+    std::cout << "Cantidad actual: " << cantidadActual << std::endl;
+    if (instructorPtr) {
+        std::cout << "Instructor: " << instructorPtr->getNombre() << std::endl;
+    } else {
+        std::cout << "Instructor: No asignado" << std::endl;
+    }
+    mostrarClientes();
+}
+
+void claseGrupal::mostrarClientes() const {
+    std::cout << "\n--- CLIENTES MATRICULADOS ---" << std::endl;
+    if (cantidadActual == 0) {
+        std::cout << "No hay clientes inscritos." << std::endl;
+        return;
+    }
+    for (int i = 0; i < cantidadActual; ++i) {
+        if (clientes[i]) {
+            std::cout << clientes[i]->getNombre() << " (" << clientes[i]->getCedula() << ")" << std::endl;
+        }
+    }
+}
+
+int claseGrupal::getCodigo() const { return codigo; }
+string claseGrupal::getTipo() const { return tipo; }
+int claseGrupal::getCapacidadMax() const { return capacidadMax; }
+int claseGrupal::getCantidadActual() const { return cantidadActual; }
+string claseGrupal::getSalon() const { return salon; }
+string claseGrupal::getHorario() const { return horario; }
+instructor* claseGrupal::getInstructor() const { return instructorPtr; }

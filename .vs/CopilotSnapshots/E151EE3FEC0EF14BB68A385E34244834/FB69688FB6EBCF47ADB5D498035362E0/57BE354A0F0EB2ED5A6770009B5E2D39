@@ -1,0 +1,81 @@
+﻿#include "Rutina.h"
+#include <iostream>
+
+Rutina::Rutina() : listaEjercicios(nullptr), series(nullptr), repeticiones(nullptr), cantidad(0), cliente(nullptr) {}
+
+Rutina::~Rutina() {
+    eliminarRutina();
+}
+
+void Rutina::agregarEjercicio(Ejercicio* ejercicio, int numSeries, int numRepeticiones) {
+    // Crear nuevos arreglos temporales con un tamaño mayor
+    Ejercicio** tempEjercicios = new Ejercicio*[cantidad + 1];
+    int* tempSeries = new int[cantidad + 1];
+    int* tempRepeticiones = new int[cantidad + 1];
+
+    // Copiar los elementos existentes
+    for (int i = 0; i < cantidad; i++) {
+        tempEjercicios[i] = listaEjercicios[i];
+        tempSeries[i] = series[i];
+        tempRepeticiones[i] = repeticiones[i];
+    }
+
+    // Agregar el nuevo ejercicio
+    tempEjercicios[cantidad] = ejercicio;
+    tempSeries[cantidad] = numSeries;
+    tempRepeticiones[cantidad] = numRepeticiones;
+
+    // Liberar la memoria antigua
+    delete[] listaEjercicios;
+    delete[] series;
+    delete[] repeticiones;
+
+    // Actualizar los punteros
+    listaEjercicios = tempEjercicios;
+    series = tempSeries;
+    repeticiones = tempRepeticiones;
+    cantidad++;
+}
+
+void Rutina::mostrarRutina() const {
+    if (cantidad == 0) {
+        std::cout << "La rutina está vacía." << std::endl;
+        return;
+    }
+
+    std::cout << "\n=== RUTINA DE EJERCICIOS ===" << std::endl;
+    if (cliente) {
+        std::cout << "Cliente: " << cliente->getNombre() << std::endl;
+    }
+    std::cout << "Cantidad de ejercicios: " << cantidad << std::endl;
+
+    for (int i = 0; i < cantidad; i++) {
+        std::cout << "\nEjercicio " << (i + 1) << ":" << std::endl;
+        listaEjercicios[i]->mostrarEjercicio();
+        std::cout << "Series: " << series[i] << std::endl;
+        std::cout << "Repeticiones: " << repeticiones[i] << std::endl;
+    }
+}
+
+void Rutina::eliminarRutina() {
+    delete[] listaEjercicios;
+    delete[] series;
+    delete[] repeticiones;
+    listaEjercicios = nullptr;
+    series = nullptr;
+    repeticiones = nullptr;
+    cantidad = 0;
+    cliente = nullptr;
+}
+
+int Rutina::getCantidad() const {
+    return cantidad;
+}
+
+Cliente* Rutina::getCliente() const {
+    return cliente;
+}
+
+void Rutina::setCliente(Cliente* nuevoCliente) {
+    cliente = nuevoCliente;
+}

@@ -2,24 +2,24 @@
 
 // Constructores
 cliente::cliente(string nombre, string cedula, int telefono, string correo, int dia, int mes, int anio,
-    char sexo, const Fecha& fechaIns, instructor* inst)
-    : Persona(nombre, cedula, telefono, correo, dia, mes, anio), sexo(sexo), fechaInscripcion(fechaIns), inst(inst) {
-}
+    char sexo, const Fecha& fechaIns, instructor* inst, Rutina* r)
+    : Persona(nombre, cedula, to_string(telefono), correo, dia, mes, anio), sexo(sexo), fechaInscripcion(fechaIns), inst(inst), r(r) {}
 
 cliente::cliente(string nombre, string cedula, int telefono, string correo, const Fecha& fechaNac,
-    char sexo, const Fecha& fechaIns, instructor* inst)
-    : Persona(nombre, cedula, telefono, correo, fechaNac), sexo(sexo), fechaInscripcion(fechaIns), inst(inst) {
-}
+    char sexo, const Fecha& fechaIns, instructor* inst, Rutina* r)
+    : Persona(nombre, cedula, to_string(telefono), correo, fechaNac), sexo(sexo), fechaInscripcion(fechaIns), inst(inst), r(r) {}
 
 cliente::cliente(string nombre, string cedula, int telefono, string correo, const string& fechaNacStr,
-    char sexo, const string& fechaInsStr, instructor* inst)
-    : Persona(nombre, cedula, telefono, correo, fechaNacStr), sexo(sexo), fechaInscripcion(fechaInsStr), inst(inst) {
-}
+    char sexo, const string& fechaInsStr, instructor* inst, Rutina* r)
+    : Persona(nombre, cedula, to_string(telefono), correo, fechaNacStr), sexo(sexo), fechaInscripcion(fechaInsStr), inst(inst), r(r) {}
 
 cliente::~cliente() {
-    // Note: Don't delete inst here as it's managed elsewhere
-    // delete inst; // Commented out to avoid double deletion
-    // delete r; // Commented out until rutina class is implemented
+    // No eliminar inst ya que es manejado externamente
+    delete r;
+    for(Medicion* medicion : historialMediciones) {
+        delete medicion;
+    }
+    historialMediciones.clear();
 }
 
 // Getters
@@ -35,9 +35,20 @@ instructor* cliente::getInstructor() const {
     return inst;
 }
 
-//rutina* cliente::getRutina() {
-//    return r;
-//}
+Rutina* cliente::getRutina() const {
+    return r;
+}
+
+const vector<Medicion*>& cliente::getHistorialMediciones() const {
+    return historialMediciones;
+}
+
+Medicion* cliente::getUltimaMedicion() const {
+    if (historialMediciones.empty()) {
+        return nullptr;
+    }
+    return historialMediciones.back();
+}
 
 // Setters
 void cliente::setSexo(char sexo) {
@@ -49,36 +60,81 @@ void cliente::setFechaInscripcion(const Fecha& fecha) {
 }
 
 void cliente::setFechaInscripcion(const string& fechaStr) {
-    fechaInscripcion.parsearFecha(fechaStr);
+    fechaInscripcion.setFecha(fechaStr);
 }
 
 void cliente::setInstructor(instructor* inst) {
     this->inst = inst;
 }
 
-//void cliente::setRutina(rutina* r) {
-//    this->r = r;
-//}
+void cliente::setRutina(Rutina* nuevaRutina) {
+    if (r != nuevaRutina) {
+        delete r;
+        r = nuevaRutina;
+    }
+}
 
 // Utility methods
+void cliente::agregarMedicion(Medicion* nuevaMedicion) {
+    if (nuevaMedicion != nullptr) {
+        historialMediciones.push_back(nuevaMedicion);
+    }
+}
+
+void cliente::eliminarMedicion(const Fecha& fecha) {
+    for (auto it = historialMediciones.begin(); it != historialMediciones.end(); ++it) {
+        if ((*it)->getFecha()->esIgual(fecha)) {
+            delete *it;
+            historialMediciones.erase(it);
+            break;
+        }
+    }
+}
+
+Medicion* cliente::buscarMedicion(const Fecha& fecha) const {
+    for (Medicion* medicion : historialMediciones) {
+        if (medicion->getFecha()->esIgual(fecha)) {
+            return medicion;
+        }
+    }
+    return nullptr;
+}
+
+string cliente::obtenerHistorialMedicionesStr() const {
+    stringstream s;
+    s << "=== HISTORIAL DE MEDICIONES ===" << endl;
+    if (historialMediciones.empty()) {
+        s << "No hay mediciones registradas." << endl;
+    } else {
+        for (const Medicion* medicion : historialMediciones) {
+            s << medicion->toString() << endl;
+            s << "----------------------------" << endl;
+        }
+    }
+    return s.str();
+}
+
 string cliente::toString() {
     stringstream s;
     s << "=== INFORMACIÓN DEL CLIENTE ===" << endl;
     s << "Nombre: " << getNombre() << endl;
     s << "Cedula: " << getCedula() << endl;
-    s << "Telefono: " << getNumeroT() << endl;
+    s << "Telefono: " << getTelefono() << endl;
     s << "Correo: " << getCorreo() << endl;
-    s << "Fecha de Nacimiento: " << getFechaNacimiento().toString() << endl;
+    s << "Fecha de Nacimiento: " << getFechaNacimiento()->toString() << endl;
 
-    if (getFechaNacimiento().esFechaInicializada() && getFechaNacimiento().esFechaValida()) {
-        s << "Edad: " << getEdad() << " años" << endl;
+    // Edad
+    if (getFechaNacimiento() && getFechaNacimiento()->esValida()) {
+        Fecha actual = Fecha::fechaActual();
+        s << "Edad: " << getFechaNacimiento()->calcularEdad(actual) << " años" << endl;
     }
 
     s << "Sexo: " << sexo << endl;
     s << "Fecha de Inscripcion: " << fechaInscripcion.toString() << endl;
 
-    if (fechaInscripcion.esFechaInicializada() && fechaInscripcion.esFechaValida()) {
-        s << "Antiguedad: " << getAntiguedad() << " años" << endl;
+    if (fechaInscripcion.esValida()) {
+        Fecha actual = Fecha::fechaActual();
+        s << "Antiguedad: " << fechaInscripcion.calcularEdad(actual) << " años" << endl;
     }
 
     if (inst) {
@@ -88,15 +144,29 @@ string cliente::toString() {
         s << "Instructor: No asignado" << endl;
     }
 
-    //if (r)
-    //    s << "Rutina: " << r->toString() << endl;
+    if (r) {
+        s << "Rutina actual: " << endl;
+        r->mostrarRutina();
+    } else {
+        s << "Rutina: No asignada" << endl;
+    }
+
+    Medicion* ultimaMedicion = getUltimaMedicion();
+    if (ultimaMedicion) {
+        s << "Última medición: " << endl;
+        s << ultimaMedicion->toStringResumen() << endl;
+    } else {
+        s << "No hay mediciones registradas" << endl;
+    }
+
     s << "===============================" << endl;
     return s.str();
 }
 
 int cliente::getAntiguedad() const {
-    if (!fechaInscripcion.esFechaInicializada() || !fechaInscripcion.esFechaValida()) {
+    if (!fechaInscripcion.esValida()) {
         return -1; // Indica error
     }
-    return fechaInscripcion.calcularEdad(Fecha::fechaActual());
+    Fecha actual = Fecha::fechaActual();
+    return fechaInscripcion.calcularEdad(actual);
 }

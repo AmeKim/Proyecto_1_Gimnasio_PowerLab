@@ -49,6 +49,10 @@ public:
     bool agregarClaseGrupal(claseGrupal* clase);
     cliente* buscarCliente(string cedula);
     instructor* buscarInstructor(string cedula);
+    claseGrupal* buscarClaseGrupal(int codigoClase) const;
+    void mostrarClasesGrupales() const;
+    bool matricularClienteEnClase(int codigoClase, cliente* cli);
+    void mostrarClientesDeClase(int codigoClase) const;
 
     // Reportes
     string reporteIMC();

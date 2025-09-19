@@ -3,17 +3,17 @@
 // Constructores
 instructor::instructor(string nombre, string cedula, int telefono, string correo,
     int dia, int mes, int anio, vecEspecialidades* esp)
-    : Persona(nombre, cedula, telefono, correo, dia, mes, anio), especialidades(esp) {
+    : Persona(nombre, cedula, to_string(telefono), correo, dia, mes, anio), especialidades(esp) {
 }
 
 instructor::instructor(string nombre, string cedula, int telefono, string correo,
     const Fecha& fechaNac, vecEspecialidades* esp)
-    : Persona(nombre, cedula, telefono, correo, fechaNac), especialidades(esp) {
+    : Persona(nombre, cedula, to_string(telefono), correo, fechaNac), especialidades(esp) {
 }
 
 instructor::instructor(string nombre, string cedula, int telefono, string correo,
     const string& fechaNacStr, vecEspecialidades* esp)
-    : Persona(nombre, cedula, telefono, correo, fechaNacStr), especialidades(esp) {
+    : Persona(nombre, cedula, to_string(telefono), correo, fechaNacStr), especialidades(esp) {
 }
 
 instructor::~instructor() {
@@ -40,11 +40,12 @@ string instructor::toString() {
     s << "Cedula: " << getCedula() << endl;
     s << "Nombre: " << getNombre() << endl;
     s << "Correo: " << getCorreo() << endl;
-    s << "Telefono: " << getNumeroT() << endl;
-    s << "Fecha de Nacimiento: " << getFechaNacimiento().toString() << endl;
+    s << "Telefono: " << getTelefono() << endl;
+    s << "Fecha de Nacimiento: " << getFechaNacimiento()->toString() << endl;
 
-    if (getFechaNacimiento().esFechaInicializada() && getFechaNacimiento().esFechaValida()) {
-        s << "Edad: " << getEdad() << " años" << endl;
+    if (getFechaNacimiento() && getFechaNacimiento()->esValida()) {
+        Fecha actual = Fecha::fechaActual();
+        s << "Edad: " << getFechaNacimiento()->calcularEdad(actual) << " años" << endl;
     }
 
     s << "Especialidades (" << getCantidadEspecialidades() << "):" << endl;
@@ -63,15 +64,7 @@ bool instructor::tieneEspecialidad(const string& nombreEsp) const {
         return false;
     }
 
-    for (int i = 0; i < especialidades->getCan(); i++) {
-        // Este método necesitaría ser implementado en vecEspecialidades
-        // para acceder a especialidades por índice
-        // Por ahora, usamos el método existente
-        if (especialidades->getEspecialidad(nombreEsp) != nullptr) {
-            return true;
-        }
-    }
-    return false;
+    return especialidades->buscarPorNombre(nombreEsp) != nullptr;
 }
 
 int instructor::getCantidadEspecialidades() const {

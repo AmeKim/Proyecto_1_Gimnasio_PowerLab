@@ -1,0 +1,29 @@
+﻿#pragma once
+#include "Ejercicio.h"
+#include "cliente.h"
+
+class Rutina {
+private:
+    Ejercicio** listaEjercicios;  // Changed to double pointer for array of pointers
+    int* series;
+    int* repeticiones;
+    int cantidad;
+    Cliente* cliente;
+
+public:
+    // Constructor y destructor
+    Rutina();
+    ~Rutina();
+
+    // Métodos principales
+    void agregarEjercicio(Ejercicio* ejercicio, int numSeries, int numRepeticiones);
+    void mostrarRutina() const;
+    void eliminarRutina();
+    
+    // Getters
+    int getCantidad() const;
+    Cliente* getCliente() const;
+    
+    // Setter
+    void setCliente(Cliente* nuevoCliente);
+};

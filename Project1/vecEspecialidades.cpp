@@ -1,65 +1,64 @@
 #include "vecEspecialidades.h"
-vecEspecialidades::vecEspecialidades(){
-	this->can = 0;
-	this->vEspecialidades = new especialidad*[tam];
-	for (int i = 0; i < tam; i++) {
-		vEspecialidades[i] = nullptr;
-	}
+#include <iostream>
+
+vecEspecialidades::vecEspecialidades() {
+    can = 0;
+    vEspecialidades = new especialidad*[tam];
+    for (int i = 0; i < tam; i++) {
+        vEspecialidades[i] = nullptr;
+    }
 }
-vecEspecialidades::~vecEspecialidades(){
-	for(int i = 0; i < can; i++){
-		delete vEspecialidades[i];
-	}
-	delete[] vEspecialidades;
+
+vecEspecialidades::~vecEspecialidades() {
+    for (int i = 0; i < can; i++) {
+        delete vEspecialidades[i];
+    }
+    delete[] vEspecialidades;
 }
-void vecEspecialidades::agregarEspecialidad(especialidad* esp){
-	if(can < tam){
-		vEspecialidades[can] = esp;
-		can++;
-	}
-	else{
-		print("No se pueden agregar mas especialidades\n");
-	}
+
+void vecEspecialidades::agregarEspecialidad(especialidad* esp) {
+    if (can < tam && esp) {
+        vEspecialidades[can++] = esp;
+    }
 }
-void vecEspecialidades::eliminarEspecialidad(string nom){
-	for(int i = 0; i < can; i++){
-		if(vEspecialidades[i]->getNombre() == nom){
-			delete vEspecialidades[i];
-			for(int j = i; j < can - 1; j++){
-				vEspecialidades[j] = vEspecialidades[j + 1];
-			}
-			vEspecialidades[can - 1] = nullptr;
-			can--;
-			print("Especialidad eliminada\n");
-			return;
-		}
-	}
-	print("No se encontro la especialidad\n");
+
+especialidad* vecEspecialidades::buscarPorId(int id) {
+    for (int i = 0; i < can; i++) {
+        if (vEspecialidades[i] && vEspecialidades[i]->getId() == id) {
+            return vEspecialidades[i];
+        }
+    }
+    return nullptr;
 }
-especialidad* vecEspecialidades::getEspecialidad(string nom){
-	for(int i = 0; i < can; i++){
-		if(vEspecialidades[i]->getNombre() == nom){
-			return vEspecialidades[i];
-		}
-	}
-	return nullptr;
+
+especialidad* vecEspecialidades::buscarPorNombre(const string& nombre) {
+    for (int i = 0; i < can; i++) {
+        if (vEspecialidades[i] && vEspecialidades[i]->getNombre() == nombre) {
+            return vEspecialidades[i];
+        }
+    }
+    return nullptr;
 }
-int vecEspecialidades::getCan(){
-	return can;
+
+int vecEspecialidades::getCan() const {
+    return can;
 }
-string vecEspecialidades::toString(){
-	stringstream s;
-	for(int i = 0; i < can; i++){
-		s << vEspecialidades[i]->toString() << endl;
-	}
-	return s.str();
+
+string vecEspecialidades::toString() const {
+    stringstream s;
+    for (int i = 0; i < can; i++) {
+        if (vEspecialidades[i]) {
+            s << vEspecialidades[i]->toString() << endl;
+        }
+    }
+    return s.str();
 }
-string vecEspecialidades::toStringEspecifico(string nom){
-	stringstream s;
-	for(int i = 0; i < can; i++){
-		if(vEspecialidades[i]->getNombre() == nom){
-			s << vEspecialidades[i]->toString() << endl;
-		}
-	}
-	return s.str();
+
+void vecEspecialidades::mostrarTodas() const {
+    for (int i = 0; i < can; i++) {
+        if (vEspecialidades[i]) {
+            vEspecialidades[i]->mostrar();
+            cout << "-------------------" << endl;
+        }
+    }
 }

@@ -1,0 +1,8 @@
+#pragma once
+#include "instructor.h"
+class vecInstructores {
+public:
+    void agregarInstructor(instructor*) {}
+    instructor* getInstructor(const std::string&) { return nullptr; }
+    int getCan() const { return 0; }
+};

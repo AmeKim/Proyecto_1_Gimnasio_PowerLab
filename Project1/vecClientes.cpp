@@ -21,7 +21,7 @@ void vecClientes::agregarCliente(cliente* cli){
 		print("No se pueden agregar mas clientes\n");
 	}
 }
-void vecClientes::eliminarCliente(int ced){
+void vecClientes::eliminarCliente(string ced){
 	for(int i = 0; i < can; i++){
 		if(vClientes[i]->getCedula() == ced){
 			delete vClientes[i];
@@ -36,7 +36,7 @@ void vecClientes::eliminarCliente(int ced){
 	}
 	print("No se encontro el cliente\n");
 }
-cliente* vecClientes::getCliente(int ced){
+cliente* vecClientes::getCliente(string ced){
 	for(int i = 0; i < can; i++){
 		if(vClientes[i]->getCedula() == ced){
 			return vClientes[i];
@@ -54,7 +54,7 @@ string vecClientes::toString(){
 	}
 	return s.str();
 }
-string vecClientes::toStringEspecifico(int ced){
+string vecClientes::toStringEspecifico(string ced){
 	stringstream s;
 	for(int i = 0; i < can; i++){
 		if(vClientes[i]->getCedula() == ced){

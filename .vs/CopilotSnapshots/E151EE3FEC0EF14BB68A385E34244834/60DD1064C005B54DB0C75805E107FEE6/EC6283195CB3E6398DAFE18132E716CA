@@ -1,0 +1,38 @@
+﻿#pragma once
+#include <iostream>
+#include <string>
+#include <sstream>
+#include "utiles.h"
+#include "especialidad.h"
+#include "instructor.h"
+#include "cliente.h"
+
+using namespace std;
+
+class claseGrupal {
+private:
+    int codigo;
+    string tipo;
+    int capacidadMax;
+    int cantidadActual;
+    string salon;
+    string horario;
+    instructor* instructorPtr;
+    cliente** clientes;
+public:
+    claseGrupal(int codigo, string tipo, int capacidadMax, string salon, string horario);
+    ~claseGrupal();
+    bool setInstructor(instructor* inst);
+    bool matricularCliente(cliente* cli);
+    void mostrarDetalle() const;
+    void mostrarClientes() const;
+    // Getters
+    int getCodigo() const;
+    string getTipo() const;
+    int getCapacidadMax() const;
+    int getCantidadActual() const;
+    string getSalon() const;
+    string getHorario() const;
+    instructor* getInstructor() const;
+};
+

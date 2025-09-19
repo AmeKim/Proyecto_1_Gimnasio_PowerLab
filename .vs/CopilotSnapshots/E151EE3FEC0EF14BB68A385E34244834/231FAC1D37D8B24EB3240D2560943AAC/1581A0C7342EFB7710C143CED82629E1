@@ -1,0 +1,5 @@
+﻿#pragma once
+#include "claseGrupal.h"
+class vecClasesGrupales {
+    // Stub para compilar
+};
