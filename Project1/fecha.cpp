@@ -1,254 +1,135 @@
 #include "Fecha.h"
 
-// Métodos privados
-bool Fecha::esAnioBisiesto(int anio) const {
-    return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
+Fecha::Fecha(int dia, int mes, int anio) {
+    this->dia = dia;
+    this->mes = mes;
+    this->anio = anio;
 }
 
-int Fecha::diasEnMes(int mes, int anio) const {
-    int diasMes[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    if (mes == 2 && esAnioBisiesto(anio)) {
-        return 29;
+Fecha::Fecha(const string& fechaStr) {
+    // Parsear fecha del formato "dd/mm/aaaa"
+    size_t pos1 = fechaStr.find('/');
+    size_t pos2 = fechaStr.find('/', pos1 + 1);
+
+    if (pos1 != string::npos && pos2 != string::npos) {
+        dia = stoi(fechaStr.substr(0, pos1));
+        mes = stoi(fechaStr.substr(pos1 + 1, pos2 - pos1 - 1));
+        anio = stoi(fechaStr.substr(pos2 + 1));
     }
-    if (mes < 1 || mes > 12) {
-        return 31; // Valor por defecto para evitar errores
-    }
-    return diasMes[mes - 1];
-}
-
-// Constructores
-Fecha::Fecha() : dia(0), mes(0), anio(0) {
-    // Constructor por defecto sin inicialización específica
-    // Los valores deben ser asignados posteriormente
-}
-
-Fecha::Fecha(int d, int m, int a) : dia(d), mes(m), anio(a) {
-    validarFecha();
-}
-
-Fecha::Fecha(const string& fechaStr) : dia(0), mes(0), anio(0) {
-    if (!parsearFecha(fechaStr)) {
-        // Si falla el parseo, dejar valores en 0 para indicar fecha inválida
-        dia = 0;
-        mes = 0;
-        anio = 0;
+    else {
+        dia = 1;
+        mes = 1;
+        anio = 2000;
     }
 }
 
-// Destructor
-Fecha::~Fecha() {
+Fecha::Fecha(const Fecha& otra) {
+    this->dia = otra.dia;
+    this->mes = otra.mes;
+    this->anio = otra.anio;
+}
+
+Fecha::Fecha() {
+    // Obtener fecha actual
+    time_t t = time(0);
+    tm* now = localtime(&t);
+    dia = now->tm_mday;
+    mes = now->tm_mon + 1;
+    anio = now->tm_year + 1900;
 }
 
 // Getters
-int Fecha::getDia() const {
-    return dia;
+int Fecha::getDia() const { return dia; }
+int Fecha::getMes() const { return mes; }
+int Fecha::getAnio() const { return anio; }
+
+// Setters
+void Fecha::setDia(int dia) {
+    if (dia >= 1 && dia <= 31) this->dia = dia;
 }
 
-int Fecha::getMes() const {
-    return mes;
+void Fecha::setMes(int mes) {
+    if (mes >= 1 && mes <= 12) this->mes = mes;
 }
 
-int Fecha::getAnio() const {
-    return anio;
+void Fecha::setAnio(int anio) {
+    if (anio >= 1900 && anio <= 2100) this->anio = anio;
 }
 
-// Setters con validación
-void Fecha::setDia(int d) {
-    dia = d;
-    validarFecha();
+void Fecha::setFecha(int dia, int mes, int anio) {
+    setDia(dia);
+    setMes(mes);
+    setAnio(anio);
 }
 
-void Fecha::setMes(int m) {
-    mes = m;
-    validarFecha();
-}
+void Fecha::setFecha(const string& fechaStr) {
+    size_t pos1 = fechaStr.find('/');
+    size_t pos2 = fechaStr.find('/', pos1 + 1);
 
-void Fecha::setAnio(int a) {
-    anio = a;
-    validarFecha();
-}
-
-void Fecha::setFecha(int d, int m, int a) {
-    dia = d;
-    mes = m;
-    anio = a;
-    validarFecha();
-}
-
-// Validación de fecha
-bool Fecha::validarFecha() {
-    bool esValida = true;
-
-    if (mes < 1 || mes > 12) {
-        esValida = false;
+    if (pos1 != string::npos && pos2 != string::npos) {
+        setDia(stoi(fechaStr.substr(0, pos1)));
+        setMes(stoi(fechaStr.substr(pos1 + 1, pos2 - pos1 - 1)));
+        setAnio(stoi(fechaStr.substr(pos2 + 1)));
     }
-
-    if (dia < 1 || dia > diasEnMes(mes, anio)) {
-        esValida = false;
-    }
-
-    if (anio < 1900 || anio > 2100) {
-        esValida = false;
-    }
-
-    return esValida;
 }
 
-// Verifica si la fecha actual es válida sin modificarla
-bool Fecha::esFechaValida() const {
+string Fecha::toString() const {
+    stringstream s;
+    s << (dia < 10 ? "0" : "") << dia << "/";
+    s << (mes < 10 ? "0" : "") << mes << "/";
+    s << anio;
+    return s.str();
+}
+
+bool Fecha::esValida() const {
     if (mes < 1 || mes > 12) return false;
     if (dia < 1 || dia > diasEnMes(mes, anio)) return false;
     if (anio < 1900 || anio > 2100) return false;
     return true;
 }
 
-// Verifica si la fecha ha sido inicializada
-bool Fecha::esFechaInicializada() const {
-    return !(dia == 0 && mes == 0 && anio == 0);
-}
-
-// Parsear fecha desde string (formato: dd/mm/aaaa o dd-mm-aaaa)
-bool Fecha::parsearFecha(const string& fechaStr) {
-    size_t pos1 = fechaStr.find_first_of("/-");
-    size_t pos2 = fechaStr.find_last_of("/-");
-
-    if (pos1 == string::npos || pos2 == string::npos || pos1 == pos2) {
-        return false;
-    }
-
-    try {
-        string diaStr = fechaStr.substr(0, pos1);
-        string mesStr = fechaStr.substr(pos1 + 1, pos2 - pos1 - 1);
-        string anioStr = fechaStr.substr(pos2 + 1);
-
-        // Conversión manual para evitar stoi (más compatible)
-        dia = 0;
-        for (char c : diaStr) {
-            if (c < '0' || c > '9') return false;
-            dia = dia * 10 + (c - '0');
-        }
-
-        mes = 0;
-        for (char c : mesStr) {
-            if (c < '0' || c > '9') return false;
-            mes = mes * 10 + (c - '0');
-        }
-
-        anio = 0;
-        for (char c : anioStr) {
-            if (c < '0' || c > '9') return false;
-            anio = anio * 10 + (c - '0');
-        }
-
-        return validarFecha();
-    }
-    catch (...) {
-        return false;
-    }
-}
-
-// Convertir a string
-string Fecha::toString() const {
-    if (!esFechaInicializada()) {
-        return "No asignada";
-    }
-    if (!esFechaValida()) {
-        return "Fecha inválida";
-    }
-
-    stringstream ss;
-    ss << setfill('0') << setw(2) << dia << "/"
-        << setfill('0') << setw(2) << mes << "/"
-        << anio;
-    return ss.str();
-}
-
-string Fecha::toStringLargo() const {
-    if (!esFechaInicializada()) {
-        return "Fecha no asignada";
-    }
-    if (!esFechaValida()) {
-        return "Fecha inválida";
-    }
-
-    string meses[] = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-                     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
-    stringstream ss;
-    if (mes >= 1 && mes <= 12) {
-        ss << dia << " de " << meses[mes - 1] << " de " << anio;
-    }
-    else {
-        ss << toString(); // Fallback al formato corto si hay error
-    }
-    return ss.str();
-}
-
-// Calcular edad (útil para clientes e instructores)
 int Fecha::calcularEdad(const Fecha& fechaActual) const {
-    if (!esFechaInicializada() || !esFechaValida() ||
-        !fechaActual.esFechaInicializada() || !fechaActual.esFechaValida()) {
-        return -1; // Indica error en el cálculo
-    }
-
     int edad = fechaActual.anio - anio;
     if (fechaActual.mes < mes || (fechaActual.mes == mes && fechaActual.dia < dia)) {
         edad--;
     }
-    return edad < 0 ? -1 : edad; // -1 indica fecha futura o error
+    return edad;
 }
 
-// Comparar fechas
-bool Fecha::esAnterior(const Fecha& otra) const {
-    if (!esFechaInicializada() || !esFechaValida() ||
-        !otra.esFechaInicializada() || !otra.esFechaValida()) {
-        return false; // No se pueden comparar fechas inválidas
-    }
-
-    if (anio < otra.anio) return true;
-    if (anio > otra.anio) return false;
-    if (mes < otra.mes) return true;
-    if (mes > otra.mes) return false;
-    return dia < otra.dia;
+int Fecha::diasTranscurridos(const Fecha& otraFecha) const {
+    // Implementación simplificada
+    int dias = (otraFecha.anio - anio) * 365;
+    dias += (otraFecha.mes - mes) * 30;
+    dias += (otraFecha.dia - dia);
+    return abs(dias);
 }
 
-bool Fecha::esPosterior(const Fecha& otra) const {
-    return !esAnterior(otra) && !esIgual(otra);
+bool Fecha::esMayor(const Fecha& otraFecha) const {
+    if (anio > otraFecha.anio) return true;
+    if (anio < otraFecha.anio) return false;
+    if (mes > otraFecha.mes) return true;
+    if (mes < otraFecha.mes) return false;
+    return dia > otraFecha.dia;
 }
 
-bool Fecha::esIgual(const Fecha& otra) const {
-    if (!esFechaInicializada() || !esFechaValida() ||
-        !otra.esFechaInicializada() || !otra.esFechaValida()) {
-        return false; // Fechas inválidas no son iguales a nada
-    }
-
-    return dia == otra.dia && mes == otra.mes && anio == otra.anio;
+bool Fecha::esMenor(const Fecha& otraFecha) const {
+    return !esMayor(otraFecha) && !esIgual(otraFecha);
 }
 
-// Operadores
-bool Fecha::operator<(const Fecha& otra) const {
-    return esAnterior(otra);
+bool Fecha::esIgual(const Fecha& otraFecha) const {
+    return dia == otraFecha.dia && mes == otraFecha.mes && anio == otraFecha.anio;
 }
 
-bool Fecha::operator>(const Fecha& otra) const {
-    return esPosterior(otra);
-}
-
-bool Fecha::operator==(const Fecha& otra) const {
-    return esIgual(otra);
-}
-
-bool Fecha::operator!=(const Fecha& otra) const {
-    return !esIgual(otra);
-}
-
-// Métodos estáticos
 Fecha Fecha::fechaActual() {
-    // En un proyecto real, usarías <chrono> o <ctime>
-    // Por simplicidad, retorna una fecha fija basada en el contexto del proyecto
-    return Fecha(18, 9, 2025); // Fecha actual según el contexto
+    return Fecha();
 }
 
-bool Fecha::esFechaValida(int d, int m, int a) {
-    Fecha temp(d, m, a);
-    return (temp.dia == d && temp.mes == m && temp.anio == a);
+bool Fecha::esBisiesto(int anio) {
+    return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
+}
+
+int Fecha::diasEnMes(int mes, int anio) {
+    int dias[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+    if (mes == 2 && esBisiesto(anio)) return 29;
+    return dias[mes - 1];
 }

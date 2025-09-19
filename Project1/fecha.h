@@ -2,7 +2,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <iomanip>
+#include <ctime>
+
 using namespace std;
 
 class Fecha {
@@ -11,56 +12,36 @@ private:
     int mes;
     int anio;
 
-    bool esAnioBisiesto(int anio) const;
-    int diasEnMes(int mes, int anio) const;
-
 public:
     // Constructores
-    Fecha(); // Constructor por defecto sin inicialización
-    Fecha(int d, int m, int a);
-    Fecha(const string& fechaStr);
-
-    // Destructor
-    ~Fecha();
+    Fecha(int dia, int mes, int anio);
+    Fecha(const string& fechaStr); // formato: "dd/mm/aaaa"
+    Fecha(const Fecha& otra);
+    Fecha(); // Fecha actual
 
     // Getters
     int getDia() const;
     int getMes() const;
     int getAnio() const;
 
-    // Setters con validación
-    void setDia(int d);
-    void setMes(int m);
-    void setAnio(int a);
-    void setFecha(int d, int m, int a);
+    // Setters
+    void setDia(int dia);
+    void setMes(int mes);
+    void setAnio(int anio);
+    void setFecha(int dia, int mes, int anio);
+    void setFecha(const string& fechaStr);
 
-    // Validación de fecha
-    bool validarFecha();
-    bool esFechaValida() const; // Verifica si la fecha actual es válida
-    bool esFechaInicializada() const; // Verifica si la fecha ha sido inicializada
-
-    // Parsear fecha desde string (formato: dd/mm/aaaa o dd-mm-aaaa)
-    bool parsearFecha(const string& fechaStr);
-
-    // Convertir a string
+    // Utilidades
     string toString() const;
-    string toStringLargo() const;
-
-    // Calcular edad (útil para clientes e instructores)
+    bool esValida() const;
     int calcularEdad(const Fecha& fechaActual) const;
-
-    // Comparar fechas
-    bool esAnterior(const Fecha& otra) const;
-    bool esPosterior(const Fecha& otra) const;
-    bool esIgual(const Fecha& otra) const;
-
-    // Operadores
-    bool operator<(const Fecha& otra) const;
-    bool operator>(const Fecha& otra) const;
-    bool operator==(const Fecha& otra) const;
-    bool operator!=(const Fecha& otra) const;
+    int diasTranscurridos(const Fecha& otraFecha) const;
+    bool esMayor(const Fecha& otraFecha) const;
+    bool esMenor(const Fecha& otraFecha) const;
+    bool esIgual(const Fecha& otraFecha) const;
 
     // Métodos estáticos
     static Fecha fechaActual();
-    static bool esFechaValida(int d, int m, int a);
+    static bool esBisiesto(int anio);
+    static int diasEnMes(int mes, int anio);
 };

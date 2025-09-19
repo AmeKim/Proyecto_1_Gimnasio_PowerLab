@@ -1,0 +1,46 @@
+﻿#include "Medicion.h"
+
+Medicion::Medicion(const Fecha& fecha, double peso, double estatura,
+    double porcGrasa, double porcMusculo) {
+    this->fecha = new Fecha(fecha);
+    this->peso = peso;
+    this->estatura = estatura;
+    this->porcentajeGrasa = porcGrasa;
+    this->porcentajeMusculo = porcMusculo;
+    this->cintura = 0;
+    this->cadera = 0;
+    this->pecho = 0;
+    this->muslo = 0;
+
+    calcularIMC();
+    calcularClasificacion();
+}
+
+Medicion::Medicion() {
+    this->fecha = new Fecha();
+    this->peso = 0;
+    this->estatura = 0;
+    this->porcentajeGrasa = 0;
+    this->porcentajeMusculo = 0;
+    this->imc = 0;
+    this->clasificacion = "";
+    this->altoRiesgo = false;
+    this->vasosAgua = 0;
+    this->proteinaRecomendada = 0;
+    this->cintura = 0;
+    this->cadera = 0;
+    this->pecho = 0;
+    this->muslo = 0;
+}
+
+Medicion::~Medicion() {
+    delete fecha;
+}
+
+// Getters
+Fecha* Medicion::getFecha() const { return fecha; }
+double Medicion::getPeso() const { return peso; }
+double Medicion::getEstatura() const { return estatura; }
+double Medicion::getPorcentajeGrasa() const { return porcentajeGrasa; }
+double Medicion::getPorcentajeMusculo() const {
+    return porcentaje

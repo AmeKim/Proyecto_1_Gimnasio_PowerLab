@@ -22,41 +22,35 @@ class Persona {
 protected:
     string nombre;
     string cedula;
-    int numeroT;
+    string telefono;
     string correo;
-    Fecha fechaNacimiento; // Ahora usa la clase Fecha
+    Fecha* fechaNacimiento;
 
 public:
     // Constructores
-    Persona(string nom, string ced, int numT, string cor, int dia, int mes, int anio);
-    Persona(string nom, string ced, int numT, string cor, const Fecha& fecha);
-    Persona(string nom, string ced, int numT, string cor, const string& fechaStr);
-
-    // Destructor virtual para herencia
+    Persona(string nombre, string cedula, string telefono, string correo, int dia, int mes, int anio);
+    Persona(string nombre, string cedula, string telefono, string correo, const Fecha& fecha);
+    Persona(string nombre, string cedula, string telefono, string correo, const string& fechaStr);
+    Persona();
     virtual ~Persona();
-
-    // Setters
-    void setNombre(string nom);
-    void setCedula(string ced);
-    void setNumeroT(int numT);
-    void setCorreo(string cor);
-    void setFechaNacimiento(int dia, int mes, int anio);
-    void setFechaNacimiento(const Fecha& fecha);
-    void setFechaNacimiento(const string& fechaStr);
 
     // Getters
     string getNombre() const;
     string getCedula() const;
-    int getNumeroT() const;
+    string getTelefono() const;
     string getCorreo() const;
-    Fecha getFechaNacimiento() const;
-    int getEdad() const; // Calcula edad automáticamente
+    Fecha* getFechaNacimiento() const;
+    int getEdad() const;
 
-    // Getters específicos de fecha
-    int getDia() const;
-    int getMes() const;
-    int getAnio() const;
+    // Setters
+    void setNombre(string nombre);
+    void setCedula(string cedula);
+    void setTelefono(string telefono);
+    void setCorreo(string correo);
+    void setFechaNacimiento(const Fecha& fecha);
+    void setFechaNacimiento(int dia, int mes, int anio);
+    void setFechaNacimiento(const string& fechaStr);
 
-    virtual void mostrarDatos();
+    // Métodos virtuales
     virtual string toString();
 };

@@ -1,108 +1,86 @@
 #include "Persona.h"
 
-// Constructores
-Persona::Persona(string nom, string ced, int numT, string cor, int dia, int mes, int anio)
-    : nombre(nom), cedula(ced), numeroT(numT), correo(cor), fechaNacimiento(dia, mes, anio) {
+Persona::Persona(string nombre, string cedula, string telefono, string correo, int dia, int mes, int anio) {
+    this->nombre = nombre;
+    this->cedula = cedula;
+    this->telefono = telefono;
+    this->correo = correo;
+    this->fechaNacimiento = new Fecha(dia, mes, anio);
 }
 
-Persona::Persona(string nom, string ced, int numT, string cor, const Fecha& fecha)
-    : nombre(nom), cedula(ced), numeroT(numT), correo(cor), fechaNacimiento(fecha) {
+Persona::Persona(string nombre, string cedula, string telefono, string correo, const Fecha& fecha) {
+    this->nombre = nombre;
+    this->cedula = cedula;
+    this->telefono = telefono;
+    this->correo = correo;
+    this->fechaNacimiento = new Fecha(fecha);
 }
 
-Persona::Persona(string nom, string ced, int numT, string cor, const string& fechaStr)
-    : nombre(nom), cedula(ced), numeroT(numT), correo(cor), fechaNacimiento(fechaStr) {
+Persona::Persona(string nombre, string cedula, string telefono, string correo, const string& fechaStr) {
+    this->nombre = nombre;
+    this->cedula = cedula;
+    this->telefono = telefono;
+    this->correo = correo;
+    this->fechaNacimiento = new Fecha(fechaStr);
 }
 
-// Setters
-void Persona::setNombre(string nom) {
-    this->nombre = nom;
+Persona::Persona() {
+    this->nombre = "";
+    this->cedula = "";
+    this->telefono = "";
+    this->correo = "";
+    this->fechaNacimiento = new Fecha();
 }
 
-void Persona::setCedula(string ced) {
-    this->cedula = ced;
-}
-
-void Persona::setNumeroT(int numT) {
-    this->numeroT = numT;
-}
-
-void Persona::setCorreo(string cor) {
-    this->correo = cor;
-}
-
-void Persona::setFechaNacimiento(int dia, int mes, int anio) {
-    fechaNacimiento.setFecha(dia, mes, anio);
-}
-
-void Persona::setFechaNacimiento(const Fecha& fecha) {
-    this->fechaNacimiento = fecha;
-}
-
-void Persona::setFechaNacimiento(const string& fechaStr) {
-    fechaNacimiento.parsearFecha(fechaStr);
+Persona::~Persona() {
+    delete fechaNacimiento;
 }
 
 // Getters
-string Persona::getNombre() const {
-    return nombre;
-}
-
-string Persona::getCedula() const {
-    return cedula;
-}
-
-int Persona::getNumeroT() const {
-    return numeroT;
-}
-
-string Persona::getCorreo() const {
-    return correo;
-}
-
-Fecha Persona::getFechaNacimiento() const {
-    return fechaNacimiento;
-}
+string Persona::getNombre() const { return nombre; }
+string Persona::getCedula() const { return cedula; }
+string Persona::getTelefono() const { return telefono; }
+string Persona::getCorreo() const { return correo; }
+Fecha* Persona::getFechaNacimiento() const { return fechaNacimiento; }
 
 int Persona::getEdad() const {
-    return fechaNacimiento.calcularEdad(Fecha::fechaActual());
-}
-
-// Getters específicos de fecha
-int Persona::getDia() const {
-    return fechaNacimiento.getDia();
-}
-
-int Persona::getMes() const {
-    return fechaNacimiento.getMes();
-}
-
-int Persona::getAnio() const {
-    return fechaNacimiento.getAnio();
-}
-
-void Persona::mostrarDatos() {
-    cout << "Nombre: " << nombre << endl;
-    cout << "Cedula: " << cedula << endl;
-    cout << "Numero de Telefono: " << numeroT << endl;
-    cout << "Correo Electronico: " << correo << endl;
-    cout << "Fecha de Nacimiento: " << fechaNacimiento.toString() << endl;
-    if (fechaNacimiento.esFechaInicializada() && fechaNacimiento.esFechaValida()) {
-        cout << "Edad: " << getEdad() << " años" << endl;
+    if (fechaNacimiento) {
+        Fecha hoy; // Asumir que el constructor por defecto crea fecha actual
+        return fechaNacimiento->calcularEdad(hoy);
     }
+    return 0;
+}
+
+// Setters
+void Persona::setNombre(string nombre) { this->nombre = nombre; }
+void Persona::setCedula(string cedula) { this->cedula = cedula; }
+void Persona::setTelefono(string telefono) { this->telefono = telefono; }
+void Persona::setCorreo(string correo) { this->correo = correo; }
+
+void Persona::setFechaNacimiento(const Fecha& fecha) {
+    if (fechaNacimiento) delete fechaNacimiento;
+    fechaNacimiento = new Fecha(fecha);
+}
+
+void Persona::setFechaNacimiento(int dia, int mes, int anio) {
+    if (fechaNacimiento) delete fechaNacimiento;
+    fechaNacimiento = new Fecha(dia, mes, anio);
+}
+
+void Persona::setFechaNacimiento(const string& fechaStr) {
+    if (fechaNacimiento) delete fechaNacimiento;
+    fechaNacimiento = new Fecha(fechaStr);
 }
 
 string Persona::toString() {
     stringstream s;
-    s << "Nombre: " << nombre << endl;
-    s << "Cedula: " << cedula << endl;
-    s << "Telefono: " << numeroT << endl;
-    s << "Correo: " << correo << endl;
-    s << "Fecha de Nacimiento: " << fechaNacimiento.toString() << endl;
-    if (fechaNacimiento.esFechaInicializada() && fechaNacimiento.esFechaValida()) {
-        s << "Edad: " << getEdad() << " años" << endl;
+    s << "Nombre: " << nombre << "\n";
+    s << "Cedula: " << cedula << "\n";
+    s << "Telefono: " << telefono << "\n";
+    s << "Correo: " << correo << "\n";
+    if (fechaNacimiento) {
+        s << "Fecha de nacimiento: " << fechaNacimiento->toString() << "\n";
+        s << "Edad: " << getEdad() << " años\n";
     }
     return s.str();
-}
-
-Persona::~Persona() {
 }

@@ -4,63 +4,61 @@
 #include <sstream>
 #include <iomanip>
 #include "Fecha.h"
+
 using namespace std;
 
 class Medicion {
 private:
-    Fecha fechaMedicion;
-    string cedulaCliente;
-    string cedulaInstructor;
-    double peso;           // en kg
-    double estatura;       // en metros
+    Fecha* fecha;
+    double peso;          // en kg
+    double estatura;      // en metros
     double porcentajeGrasa;
     double porcentajeMusculo;
-    double imc;            // calculado automáticamente
-    string clasificacionIMC; // calculado automáticamente
-    bool altoRiesgo;       // calculado automáticamente
-    int vasosAgua;         // calculado automáticamente
-    double proteinaRecomendada; // calculado automáticamente
-    char sexoCliente;      // necesario para cálculo de proteína
+    double imc;
+    string clasificacion;
+    bool altoRiesgo;
+    int vasosAgua;        // cantidad recomendada
+    double proteinaRecomendada; // en gramos
 
-    void calcularIMC();
-    void determinarClasificacionIMC();
-    void calcularVasosAgua();
-    void calcularProteinaRecomendada();
-    void calcularTodosLosValores(); // Método helper
+    // Medidas corporales opcionales
+    double cintura;
+    double cadera;
+    double pecho;
+    double muslo;
 
 public:
     // Constructores
-    Medicion(const Fecha& fecha, string cedCliente, string cedInstructor,
-        double p, double est, double pGrasa, double pMusculo, char sexo);
-    Medicion(const string& fechaStr, string cedCliente, string cedInstructor,
-        double p, double est, double pGrasa, double pMusculo, char sexo);
+    Medicion(const Fecha& fecha, double peso, double estatura,
+        double porcGrasa, double porcMusculo);
+    Medicion();
     ~Medicion();
 
     // Getters
-    Fecha getFecha() const;
-    string getCedulaCliente() const;
-    string getCedulaInstructor() const;
+    Fecha* getFecha() const;
     double getPeso() const;
     double getEstatura() const;
     double getPorcentajeGrasa() const;
     double getPorcentajeMusculo() const;
     double getIMC() const;
-    string getClasificacionIMC() const;
-    bool esAltoRiesgo() const;
+    string getClasificacion() const;
+    bool getAltoRiesgo() const;
     int getVasosAgua() const;
     double getProteinaRecomendada() const;
-    char getSexoCliente() const;
 
-    // Setters que recalculan automáticamente
-    void setPeso(double p);
-    void setEstatura(double est);
-    void setPorcentajeGrasa(double pGrasa);
-    void setPorcentajeMusculo(double pMusculo);
-    void setFecha(const Fecha& fecha);
-    void setFecha(const string& fechaStr);
+    // Setters
+    void setPeso(double peso);
+    void setEstatura(double estatura);
+    void setPorcentajeGrasa(double porc);
+    void setPorcentajeMusculo(double porc);
+    void setMedidasCorporales(double cintura, double cadera, double pecho, double muslo);
 
-    // Métodos de presentación
-    string toStringCompleto() const;
+    // Cálculos
+    void calcularIMC();
+    void calcularClasificacion();
+    void calcularRecomendaciones(char sexo, bool haceEjercicio);
+
+    // Utilidades
+    string toString() const;
+    string toStringDetallado() const;
     string toStringResumen() const;
-    string toStringParaHistorial() const;
 };

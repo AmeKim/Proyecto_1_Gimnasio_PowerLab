@@ -1,5 +1,60 @@
 #pragma once
-class Sucursal
-{
-};
+#include <iostream>
+#include <string>
+#include <sstream>
+#include "vecClientes.h"
+#include "vecInstructores.h"
+#include "vecClasesGrupales.h"
+#include "utiles.h"
 
+using namespace std;
+
+class Sucursal {
+private:
+    string codigo;
+    string provincia;
+    string canton;
+    string correo;
+    string telefono;
+    vecClientes* clientes;
+    vecInstructores* instructores;
+    vecClasesGrupales* clasesGrupales;
+
+public:
+    // Constructores
+    Sucursal(string codigo, string provincia, string canton, string correo, string telefono);
+    Sucursal();
+    ~Sucursal();
+
+    // Getters
+    string getCodigo() const;
+    string getProvincia() const;
+    string getCanton() const;
+    string getCorreo() const;
+    string getTelefono() const;
+    vecClientes* getClientes() const;
+    vecInstructores* getInstructores() const;
+    vecClasesGrupales* getClasesGrupales() const;
+
+    // Setters
+    void setCodigo(string codigo);
+    void setProvincia(string provincia);
+    void setCanton(string canton);
+    void setCorreo(string correo);
+    void setTelefono(string telefono);
+
+    // Métodos de gestión
+    bool agregarCliente(cliente* cli);
+    bool agregarInstructor(instructor* inst);
+    bool agregarClaseGrupal(claseGrupal* clase);
+    cliente* buscarCliente(string cedula);
+    instructor* buscarInstructor(string cedula);
+
+    // Reportes
+    string reporteIMC();
+    string listaClientesPorInstructor(string cedulaInstructor);
+
+    // Utilidades
+    string toString();
+    string toStringSimple(); // Solo código y ubicación
+};
