@@ -1,31 +1,34 @@
 #pragma once
+#include <iostream>
+#include <string>
+#include <sstream>
 #include "Ejercicio.h"
-
-// Forward declaration
-class cliente;
+using namespace std;
 
 class Rutina {
 private:
-    Ejercicio** listaEjercicios;  // Array of pointers to Ejercicio
-    int* series;
-    int* repeticiones;
-    int cantidad;
-    cliente* clientePtr;
+    Ejercicio** ejercicios;
+    int can;
+    int tam;
+    string cedulaCliente;
 
 public:
-    // Constructor y destructor
-    Rutina();
+    Rutina(string cedulaCliente, int capacidad = 50);
     ~Rutina();
 
     // Métodos principales
-    void agregarEjercicio(Ejercicio* ejercicio, int numSeries, int numRepeticiones);
-    void mostrarRutina() const;
-    void eliminarRutina();
-    
+    bool agregarEjercicio(Ejercicio* ejercicio);
+    void limpiarRutina();
+
     // Getters
-    int getCantidad() const;
-    cliente* getCliente() const;
-    
-    // Setter
-    void setCliente(cliente* nuevoCliente);
+    string getCedulaCliente() const;
+    int getCan() const;
+
+    // Métodos de visualización
+    string toString() const;
+    void mostrarRutina() const;
+    void mostrarPorZona(int zona) const;
+
+    // Método para obtener ejercicios por zona
+    int contarEjerciciosPorZona(int zona) const;
 };

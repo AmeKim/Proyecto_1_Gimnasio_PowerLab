@@ -1,36 +1,39 @@
 #pragma once
+#include <iostream>
 #include <string>
 #include <sstream>
 using namespace std;
 
-enum ZonaMuscular {
-    PECHO = 1,
-    TRICEPS = 2,
-    BICEPS = 3,
-    PIERNAS = 4,
-    ESPALDA = 5
-};
-
 class Ejercicio {
 private:
+    int zonaMuscular; // 1-Pecho, 2-Tríceps, 3-Bíceps, 4-Piernas, 5-Espalda
     string nombre;
     string descripcion;
-    int zonaMuscular; // Usa el enum ZonaMuscular
+    int series;
+    int repeticiones;
+
 public:
-    Ejercicio(string nombre, string descripcion, int zonaMuscular);
     Ejercicio();
+    Ejercicio(int zona, string nombre, string descripcion);
+    Ejercicio(int zona, string nombre, string descripcion, int series, int repeticiones);
     ~Ejercicio();
 
     // Getters
+    int getZonaMuscular() const;
     string getNombre() const;
     string getDescripcion() const;
-    int getZonaMuscular() const;
+    int getSeries() const;
+    int getRepeticiones() const;
 
     // Setters
+    void setZonaMuscular(int zona);
     void setNombre(const string& nombre);
     void setDescripcion(const string& descripcion);
-    void setZonaMuscular(int zonaMuscular);
+    void setSeries(int series);
+    void setRepeticiones(int repeticiones);
 
-    // Mostrar información
-    string mostrarEjercicio() const;
+    // Métodos adicionales
+    string getNombreZona() const;
+    string toString() const;
+    void mostrar() const;
 };

@@ -1,8 +1,8 @@
 #include "vecInstructores.h"
 
 vecInstructores::vecInstructores() {
-    this->can = 0;
-    this->vInstructores = new instructor * [tam];
+    can = 0;
+    vInstructores = new instructor * [tam];
     for (int i = 0; i < tam; i++) {
         vInstructores[i] = nullptr;
     }
@@ -10,9 +10,7 @@ vecInstructores::vecInstructores() {
 
 vecInstructores::~vecInstructores() {
     for (int i = 0; i < can; i++) {
-        if (vInstructores[i]) {
-            delete vInstructores[i];
-        }
+        delete vInstructores[i];
     }
     delete[] vInstructores;
 }
@@ -29,7 +27,7 @@ void vecInstructores::agregarInstructor(instructor* inst) {
 
 void vecInstructores::eliminarInstructor(string cedula) {
     for (int i = 0; i < can; i++) {
-        if (vInstructores[i] && vInstructores[i]->getCedula() == cedula) {
+        if (vInstructores[i]->getCedula() == cedula) {
             delete vInstructores[i];
             for (int j = i; j < can - 1; j++) {
                 vInstructores[j] = vInstructores[j + 1];
@@ -43,7 +41,7 @@ void vecInstructores::eliminarInstructor(string cedula) {
     print("No se encontró el instructor\n");
 }
 
-instructor* vecInstructores::getInstructor(const string& cedula) {
+instructor* vecInstructores::getInstructor(string cedula) {
     for (int i = 0; i < can; i++) {
         if (vInstructores[i] && vInstructores[i]->getCedula() == cedula) {
             return vInstructores[i];
@@ -59,11 +57,11 @@ instructor* vecInstructores::getInstructorPorIndice(int idx) {
     return nullptr;
 }
 
-int vecInstructores::getCan() const {
+int vecInstructores::getCan() {
     return can;
 }
 
-string vecInstructores::toString() const {
+string vecInstructores::toString() {
     stringstream s;
     for (int i = 0; i < can; i++) {
         if (vInstructores[i]) {
@@ -73,21 +71,33 @@ string vecInstructores::toString() const {
     return s.str();
 }
 
-string vecInstructores::toStringEspecifico(string cedula) const {
-    for (int i = 0; i < can; i++) {
-        if (vInstructores[i] && vInstructores[i]->getCedula() == cedula) {
-            return vInstructores[i]->toString();
-        }
-    }
-    return "No se encontró el instructor\n";
-}
-
-string vecInstructores::getInstructoresPorEspecialidad(const string& especialidad) const {
+string vecInstructores::toStringDetallado() {
     stringstream s;
     for (int i = 0; i < can; i++) {
-        if (vInstructores[i] && vInstructores[i]->tieneEspecialidad(especialidad)) {
-            s << vInstructores[i]->getCedula() << " " << vInstructores[i]->getNombre() << endl;
+        if (vInstructores[i]) {
+            s << "Instructor: " << vInstructores[i]->getNombre() << endl;
+            s << "Cédula: " << vInstructores[i]->getCedula() << endl;
+            s << "Especialidades: " << vInstructores[i]->getEspecialidades()->toString() << endl;
+            s << "------------------------" << endl;
         }
     }
     return s.str();
+}
+
+void vecInstructores::mostrarInstructoresPorEspecialidad(const string& especialidad) {
+    bool encontrado = false;
+    for (int i = 0; i < can; i++) {
+        if (vInstructores[i] && vInstructores[i]->tieneEspecialidad(especialidad)) {
+            cout << vInstructores[i]->getCedula() << " " << vInstructores[i]->getNombre() << endl;
+            encontrado = true;
+        }
+    }
+    if (!encontrado) {
+        cout << "No hay instructores con esa especialidad" << endl;
+    }
+}
+
+void vecInstructores::mostrarClientesPorInstructor(const string& cedulaInstructor) {
+    // Esta funcionalidad requiere acceso a los clientes, se implementaría en la sucursal
+    print("Funcionalidad pendiente de implementar\n");
 }

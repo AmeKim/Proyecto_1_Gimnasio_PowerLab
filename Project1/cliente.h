@@ -2,54 +2,55 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <vector>
-#include "utiles.h"
-#include "instructor.h"
-#include "Fecha.h"
 #include "Persona.h"
-#include "Medición.h"
+#include "reporteM.h"
 #include "Rutina.h"
 using namespace std;
+
+// Forward declaration para evitar dependencias circulares
+class instructor;
 
 class cliente : public Persona {
 private:
     char sexo;
-    Fecha fechaInscripcion;
-    instructor* inst;
-    Rutina* r;
-    vector<Medicion*> historialMediciones;
+    Fecha* fechaInscripcion;
+    instructor* instructorAsignado;
+    reporteM** historialMediciones;
+    int cantMediciones;
+    int maxMediciones;
+    Rutina* rutinaActual;  // Rutina creada por el instructor y almacenada aquí
 
 public:
-    // Constructores
-    cliente(string nombre, string cedula, int telefono, string correo, int dia, int mes, int anio,
-        char sexo, const Fecha& fechaIns, instructor* inst, Rutina* r = nullptr);
-    cliente(string nombre, string cedula, int telefono, string correo, const Fecha& fechaNac,
-        char sexo, const Fecha& fechaIns, instructor* inst, Rutina* r = nullptr);
-    cliente(string nombre, string cedula, int telefono, string correo, const string& fechaNacStr,
-        char sexo, const string& fechaInsStr, instructor* inst, Rutina* r = nullptr);
+    cliente(string nombre, string cedula, int telefono, string correo,
+        const Fecha& fechaNac, char sexo, const Fecha& fechaInsc,
+        instructor* inst = nullptr);
     ~cliente();
 
     // Getters
     char getSexo() const;
-    Fecha getFechaInscripcion() const;
-    instructor* getInstructor() const;
-    Rutina* getRutina() const;
-    const vector<Medicion*>& getHistorialMediciones() const;
-    Medicion* getUltimaMedicion() const;
+    Fecha* getFechaInscripcion() const;
+    instructor* getInstructorAsignado() const;
+    int getCantMediciones() const;
+    reporteM* getMedicion(int indice) const;
+    Rutina* getRutinaActual() const;
 
     // Setters
-    void setSexo(char);
+    void setSexo(char sexo);
     void setFechaInscripcion(const Fecha& fecha);
-    void setFechaInscripcion(const string& fechaStr);
-    void setInstructor(instructor*);
-    void setRutina(Rutina* nuevaRutina);
+    void setInstructorAsignado(instructor* inst);
 
-    // Métodos para gestionar mediciones
-    void agregarMedicion(Medicion* nuevaMedicion);
-    void eliminarMedicion(const Fecha& fecha);
-    Medicion* buscarMedicion(const Fecha& fecha) const;
-    string obtenerHistorialMedicionesStr() const;
+    // Métodos para que el instructor gestione la rutina
+    void recibirRutinaDelInstructor(Rutina* rutina);
+    void eliminarRutinaActual();
 
-    string toString() override;
-    int getAntiguedad() const; // Calcula antiguedad en el gimnasio
+    // Métodos para mediciones
+    bool agregarMedicion(reporteM* medicion);
+    reporteM* getUltimaMedicion() const;
+
+    // Métodos de visualización
+    string toString() const override;
+    string toStringDetallado() const;
+    void mostrarHistorialMediciones() const;
+    void mostrarRutinaActual() const;
+    bool tieneRutina() const;
 };

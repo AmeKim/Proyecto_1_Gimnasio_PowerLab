@@ -2,7 +2,7 @@
 #include <string>
 #include <sstream>
 #include "utiles.h"
-//#include "vecSucursales.h"
+#include "vecSucursales.h"
 #include "Medición.h"
 using namespace std;
 
@@ -11,7 +11,7 @@ class submenuClaseGrup {
 private:
 	char opcion;
 	char* continuacion;
-	//vecSucursales* vSucursales;
+	vecSucursales* vSucursales;
 	char imprimirMenu();
 	void addSucursal();
 	void MostrarSucursales();
