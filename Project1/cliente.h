@@ -7,9 +7,6 @@
 #include "Rutina.h"
 using namespace std;
 
-// Forward declaration para evitar dependencias circulares
-class instructor;
-
 class cliente : public Persona {
 private:
     char sexo;
@@ -18,12 +15,10 @@ private:
     reporteM** historialMediciones;
     int cantMediciones;
     int maxMediciones;
-    Rutina* rutinaActual;  // Rutina creada por el instructor y almacenada aquí
+    Rutina* rutinaActual; 
 
 public:
-    cliente(string nombre, string cedula, int telefono, string correo,
-        const Fecha& fechaNac, char sexo, const Fecha& fechaInsc,
-        instructor* inst = nullptr);
+    cliente(string, string, string, string,const Fecha&, char, const Fecha&, instructor*);
     ~cliente();
 
     // Getters
@@ -48,7 +43,7 @@ public:
     reporteM* getUltimaMedicion() const;
 
     // Métodos de visualización
-    string toString() const override;
+    string toString() const;
     string toStringDetallado() const;
     void mostrarHistorialMediciones() const;
     void mostrarRutinaActual() const;

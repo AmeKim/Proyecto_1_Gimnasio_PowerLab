@@ -130,7 +130,7 @@
     <ClInclude Include="fecha.h" />
     <ClInclude Include="instructor.h" />
     <ClInclude Include="Medición.h" />
-    <ClInclude Include="menu.h" />
+    <ClInclude Include="PowerLab.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="reporteM.h" />
     <ClInclude Include="Rutina.h" />
@@ -155,7 +155,7 @@
     <ClCompile Include="instructor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Medición.cpp" />
-    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="PowerLab.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="reporteM.cpp" />
     <ClCompile Include="Rutina.cpp" />

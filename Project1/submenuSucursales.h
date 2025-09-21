@@ -15,6 +15,7 @@ private:
 	char imprimirMenu();
 	void addSucursal();
 	void MostrarSucursales();
+	void reporteIMC();
 
 
 };

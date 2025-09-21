@@ -1,165 +1,165 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\",
+  "WorkspaceRootPath": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuSucursales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuSucursales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\submenuSucursales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\instructor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\instructor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\reporteM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\reporteM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\especialidad.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecInstructores.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecSucursales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecSucursales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Ejercicio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Rutina.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Rutina.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Ejercicio.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Persona.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Persona.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClasesGrupales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClasesGrupales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecEspecialidades.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClaseGrup.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\submenuClaseGrup.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\submenuInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\submenuClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\claseGrupal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\claseGrupal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\fecha.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Medici\u00F3n.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Sucursal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Sucursal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecEspecialidades.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\especialidad.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClientes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\utiles.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\utiles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Medici\u00F3n.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Medici\u00F3n.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\reporteM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\submenuClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\submenuInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecSucursales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClaseGrup.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\submenuClaseGrup.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecSucursales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\PowerLab.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\PowerLab.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\reporteM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\instructor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\instructor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\especialidad.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecInstructores.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Ejercicio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Rutina.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Rutina.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Ejercicio.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClasesGrupales.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClasesGrupales.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecInstructores.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecEspecialidades.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\claseGrupal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\fecha.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Sucursal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Sucursal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecEspecialidades.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\especialidad.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\vecClientes.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\utiles.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\utiles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\fecha.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -170,41 +170,162 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "reporteM.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.cpp",
-              "RelativeDocumentMoniker": "Project1\\reporteM.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.cpp",
-              "RelativeToolTip": "Project1\\reporteM.cpp",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAYwHoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T23:40:34.781Z",
+              "DocumentIndex": 9,
+              "Title": "submenuClientes.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClientes.h",
+              "RelativeDocumentMoniker": "Project1\\submenuClientes.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClientes.h",
+              "RelativeToolTip": "Project1\\submenuClientes.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-19T19:14:05.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "submenuSucursales.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuSucursales.h",
+              "RelativeDocumentMoniker": "Project1\\submenuSucursales.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuSucursales.h",
+              "RelativeToolTip": "Project1\\submenuSucursales.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-19T19:13:47.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Medici\u00F3n.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.cpp",
+              "RelativeDocumentMoniker": "Project1\\Medici\u00F3n.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.cpp",
+              "RelativeToolTip": "Project1\\Medici\u00F3n.cpp",
+              "ViewState": "AgIAADAAAAAAAAAAAAAmwJMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-19T03:59:11.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Medici\u00F3n.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.h",
+              "RelativeDocumentMoniker": "Project1\\Medici\u00F3n.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.h",
+              "RelativeToolTip": "Project1\\Medici\u00F3n.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-19T03:58:49.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "reporteM.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.h",
               "RelativeDocumentMoniker": "Project1\\reporteM.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.h",
               "RelativeToolTip": "Project1\\reporteM.h",
-              "ViewState": "AgIAACoAAAAAAAAAAAAIwDAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-09-19T23:39:55.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
+              "Title": "claseGrupal.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.cpp",
+              "RelativeDocumentMoniker": "Project1\\claseGrupal.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.cpp",
+              "RelativeToolTip": "Project1\\claseGrupal.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-09T19:49:55.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cliente.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp",
+              "RelativeDocumentMoniker": "Project1\\cliente.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp",
+              "RelativeToolTip": "Project1\\cliente.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-09T19:49:56.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "cliente.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h",
+              "RelativeDocumentMoniker": "Project1\\cliente.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h",
+              "RelativeToolTip": "Project1\\cliente.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-09T19:49:45.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Persona.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.cpp",
+              "RelativeDocumentMoniker": "Project1\\Persona.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.cpp",
+              "RelativeToolTip": "Project1\\Persona.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-09T20:04:41.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Persona.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.h",
+              "RelativeDocumentMoniker": "Project1\\Persona.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.h",
+              "RelativeToolTip": "Project1\\Persona.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-09T20:04:43.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "submenuInstructores.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuInstructores.h",
+              "RelativeDocumentMoniker": "Project1\\submenuInstructores.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuInstructores.h",
+              "RelativeToolTip": "Project1\\submenuInstructores.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-19T19:14:22.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "vecSucursales.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.cpp",
               "RelativeDocumentMoniker": "Project1\\vecSucursales.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.cpp",
               "RelativeToolTip": "Project1\\vecSucursales.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -213,11 +334,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
+              "Title": "submenuClaseGrup.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClaseGrup.h",
+              "RelativeDocumentMoniker": "Project1\\submenuClaseGrup.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClaseGrup.h",
+              "RelativeToolTip": "Project1\\submenuClaseGrup.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-19T19:14:46.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "vecSucursales.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.h",
               "RelativeDocumentMoniker": "Project1\\vecSucursales.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecSucursales.h",
               "RelativeToolTip": "Project1\\vecSucursales.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -226,72 +360,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "submenuClaseGrup.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClaseGrup.h",
-              "RelativeDocumentMoniker": "Project1\\submenuClaseGrup.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClaseGrup.h",
-              "RelativeToolTip": "Project1\\submenuClaseGrup.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T19:14:46.924Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "submenuInstructores.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuInstructores.h",
-              "RelativeDocumentMoniker": "Project1\\submenuInstructores.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuInstructores.h",
-              "RelativeToolTip": "Project1\\submenuInstructores.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T19:14:22.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "submenuClientes.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClientes.h",
-              "RelativeDocumentMoniker": "Project1\\submenuClientes.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuClientes.h",
-              "RelativeToolTip": "Project1\\submenuClientes.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T19:14:05.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "submenuSucursales.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuSucursales.h",
-              "RelativeDocumentMoniker": "Project1\\submenuSucursales.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\submenuSucursales.h",
-              "RelativeToolTip": "Project1\\submenuSucursales.h",
-              "ViewState": "AgIAAAoAAAAAAAAAAAApwBAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T19:13:47.709Z",
+              "DocumentIndex": 15,
+              "Title": "reporteM.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.cpp",
+              "RelativeDocumentMoniker": "Project1\\reporteM.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\reporteM.cpp",
+              "RelativeToolTip": "Project1\\reporteM.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwHoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-19T23:40:34.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "menu.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\menu.h",
-              "RelativeDocumentMoniker": "Project1\\menu.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\menu.h",
-              "RelativeToolTip": "Project1\\menu.h",
+              "DocumentIndex": 14,
+              "Title": "PowerLab.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\PowerLab.h",
+              "RelativeDocumentMoniker": "Project1\\PowerLab.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\PowerLab.h",
+              "RelativeToolTip": "Project1\\PowerLab.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T19:12:26.171Z"
+              "WhenOpened": "2025-09-19T19:12:26.171Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\main.cpp",
               "RelativeDocumentMoniker": "Project1\\main.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\main.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\main.cpp",
               "RelativeToolTip": "Project1\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -299,24 +398,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "vecInstructores.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.cpp",
               "RelativeDocumentMoniker": "Project1\\vecInstructores.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.cpp",
               "RelativeToolTip": "Project1\\vecInstructores.cpp",
               "ViewState": "AgIAAGAAAAAAAAAAAAAAAGYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T16:45:44.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T16:45:44.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "vecInstructores.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.h",
               "RelativeDocumentMoniker": "Project1\\vecInstructores.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecInstructores.h",
               "RelativeToolTip": "Project1\\vecInstructores.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -324,11 +422,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "vecClasesGrupales.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.cpp",
               "RelativeDocumentMoniker": "Project1\\vecClasesGrupales.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.cpp",
               "RelativeToolTip": "Project1\\vecClasesGrupales.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -336,11 +434,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "vecClasesGrupales.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.h",
               "RelativeDocumentMoniker": "Project1\\vecClasesGrupales.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClasesGrupales.h",
               "RelativeToolTip": "Project1\\vecClasesGrupales.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -348,99 +446,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "Rutina.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.cpp",
               "RelativeDocumentMoniker": "Project1\\Rutina.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.cpp",
               "RelativeToolTip": "Project1\\Rutina.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T04:47:09.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:47:09.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "Rutina.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.h",
               "RelativeDocumentMoniker": "Project1\\Rutina.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Rutina.h",
               "RelativeToolTip": "Project1\\Rutina.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T04:47:03.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:47:03.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "Ejercicio.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.cpp",
               "RelativeDocumentMoniker": "Project1\\Ejercicio.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.cpp",
               "RelativeToolTip": "Project1\\Ejercicio.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T04:44:50.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:44:50.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "Ejercicio.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.h",
               "RelativeDocumentMoniker": "Project1\\Ejercicio.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Ejercicio.h",
               "RelativeToolTip": "Project1\\Ejercicio.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T04:44:44.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:44:44.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Medici\u00F3n.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.cpp",
-              "RelativeDocumentMoniker": "Project1\\Medici\u00F3n.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.cpp",
-              "RelativeToolTip": "Project1\\Medici\u00F3n.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T03:59:11.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Persona.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.cpp",
-              "RelativeDocumentMoniker": "Project1\\Persona.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.cpp",
-              "RelativeToolTip": "Project1\\Persona.cpp",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAAFUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T20:04:41.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Persona.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.h",
-              "RelativeDocumentMoniker": "Project1\\Persona.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Persona.h",
-              "RelativeToolTip": "Project1\\Persona.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADcAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-09T20:04:43.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "fecha.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.cpp",
               "RelativeDocumentMoniker": "Project1\\fecha.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.cpp",
               "RelativeToolTip": "Project1\\fecha.cpp",
               "ViewState": "AgIAAH8AAAAAAAAAAAAwwIcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -448,37 +506,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "cliente.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h",
-              "RelativeDocumentMoniker": "Project1\\cliente.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h",
-              "RelativeToolTip": "Project1\\cliente.h",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwDUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-09T19:49:45.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "especialidad.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.cpp",
               "RelativeDocumentMoniker": "Project1\\especialidad.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.cpp",
               "RelativeToolTip": "Project1\\especialidad.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:49:57.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:57.085Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 39,
               "Title": "fecha.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.h",
               "RelativeDocumentMoniker": "Project1\\fecha.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\fecha.h",
               "RelativeToolTip": "Project1\\fecha.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -486,36 +530,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Medici\u00F3n.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.h",
-              "RelativeDocumentMoniker": "Project1\\Medici\u00F3n.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Medici\u00F3n.h",
-              "RelativeToolTip": "Project1\\Medici\u00F3n.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAD8AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T03:58:49.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "cliente.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp",
-              "RelativeDocumentMoniker": "Project1\\cliente.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp",
-              "RelativeToolTip": "Project1\\cliente.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:49:56.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Sucursal.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.h",
               "RelativeDocumentMoniker": "Project1\\Sucursal.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.h",
               "RelativeToolTip": "Project1\\Sucursal.h",
               "ViewState": "AgIAADAAAAAAAAAAAAAowD8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -523,11 +542,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Sucursal.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.cpp",
               "RelativeDocumentMoniker": "Project1\\Sucursal.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\Sucursal.cpp",
               "RelativeToolTip": "Project1\\Sucursal.cpp",
               "ViewState": "AgIAAKYAAAAAAAAAAAAAAK4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -535,37 +554,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "instructor.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.h",
               "RelativeDocumentMoniker": "Project1\\instructor.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.h",
               "RelativeToolTip": "Project1\\instructor.h",
               "ViewState": "AgIAADgAAAAAAAAAAAAIwD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-09T19:49:51.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:51.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
               "Title": "instructor.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.cpp",
               "RelativeDocumentMoniker": "Project1\\instructor.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\instructor.cpp",
               "RelativeToolTip": "Project1\\instructor.cpp",
               "ViewState": "AgIAAFoAAAAAAAAAAAApwGAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:49:58.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:58.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "vecEspecialidades.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.cpp",
               "RelativeDocumentMoniker": "Project1\\vecEspecialidades.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.cpp",
               "RelativeToolTip": "Project1\\vecEspecialidades.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -573,11 +590,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "claseGrupal.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.h",
               "RelativeDocumentMoniker": "Project1\\claseGrupal.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.h",
               "RelativeToolTip": "Project1\\claseGrupal.h",
               "ViewState": "AgIAACkAAAAAAAAAAAASwDIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -585,11 +602,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "utiles.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.cpp",
               "RelativeDocumentMoniker": "Project1\\utiles.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.cpp",
               "RelativeToolTip": "Project1\\utiles.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -597,11 +614,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "utiles.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.h",
               "RelativeDocumentMoniker": "Project1\\utiles.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\utiles.h",
               "RelativeToolTip": "Project1\\utiles.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -609,11 +626,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "vecClientes.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.cpp",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.cpp",
               "RelativeDocumentMoniker": "Project1\\vecClientes.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.cpp",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.cpp",
               "RelativeToolTip": "Project1\\vecClientes.cpp",
               "ViewState": "AgIAADoAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -621,23 +638,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "claseGrupal.cpp",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.cpp",
-              "RelativeDocumentMoniker": "Project1\\claseGrupal.cpp",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.cpp",
-              "RelativeToolTip": "Project1\\claseGrupal.cpp",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAiwJwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:49:55.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "vecEspecialidades.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.h",
               "RelativeDocumentMoniker": "Project1\\vecEspecialidades.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecEspecialidades.h",
               "RelativeToolTip": "Project1\\vecEspecialidades.h",
               "ViewState": "AgIAAAwAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -645,11 +650,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "vecClientes.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.h",
               "RelativeDocumentMoniker": "Project1\\vecClientes.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\vecClientes.h",
               "RelativeToolTip": "Project1\\vecClientes.h",
               "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -657,11 +662,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "especialidad.h",
-              "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.h",
+              "DocumentMoniker": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.h",
               "RelativeDocumentMoniker": "Project1\\especialidad.h",
-              "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.h",
+              "ToolTip": "C:\\Users\\ailem\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\especialidad.h",
               "RelativeToolTip": "Project1\\especialidad.h",
               "ViewState": "AgIAAAwAAAAAAAAAAAAtwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",

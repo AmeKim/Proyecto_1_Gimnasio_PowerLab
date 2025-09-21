@@ -2,13 +2,17 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <iomanip>
 #include "Fecha.h"
+#include "utiles.h"
+#include "cliente.h"
+#include "instructor.h"
 
 using namespace std;
 
 class Medicion {
 private:
+	instructor* instructorAsociado; // Instructor que realizó la medición
+    cliente* clienteAsociado; // Cliente al que pertenece la medición
     Fecha* fecha;
     double peso;          // en kg
     double estatura;      // en metros
@@ -28,8 +32,7 @@ private:
 
 public:
     // Constructores
-    Medicion(const Fecha& fecha, double peso, double estatura,
-        double porcGrasa, double porcMusculo);
+    Medicion(const Fecha& fecha, double peso, double estatura,double porcGrasa, double porcMusculo);
     Medicion();
     ~Medicion();
 

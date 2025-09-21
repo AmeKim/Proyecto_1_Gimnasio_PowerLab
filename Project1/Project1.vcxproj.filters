@@ -60,7 +60,7 @@
     <ClInclude Include="vecInstructores.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="menu.h">
+    <ClInclude Include="PowerLab.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="submenuSucursales.h">
@@ -131,7 +131,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="menu.cpp">
+    <ClCompile Include="PowerLab.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="submenuSucursales.cpp">

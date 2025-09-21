@@ -6,18 +6,6 @@
 using namespace std;
 
 
-/*cédula de identidad, nombre completo,  
-teléfono de contacto, correo electrónico,
-fecha de nacimiento, 
-
-sexo, fecha de inscripción, entre otros más.*/
-
-/*número de cédula, nombre completo,
-teléfono, correo, fecha de nacimiento,
-y una o varias de las siguientes especialidades:
-CrossFit, HIIT, TRX, Pesas, spinning, Cardio, Yoga,
-Zumba (un instructor puede tener más de una especialidad). */
-
 class Persona {
 protected:
     string nombre;

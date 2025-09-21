@@ -127,13 +127,11 @@ void Medicion::calcularRecomendaciones(char sexo, bool haceEjercicio) {
 
 // Utilidades
 string Medicion::toString() const {
-    stringstream ss;
-    ss << "Fecha: " << fecha->toString() << endl
-        << "Peso: " << fixed << setprecision(1) << peso << " kg" << endl
-        << "Estatura: " << estatura << " m" << endl
-        << "IMC: " << fixed << setprecision(1) << imc << endl
-        << "Clasificación: " << clasificacion << endl;
-    return ss.str();
+    stringstream s;
+    s << "Fecha: " << fecha->toString() << endl;
+    s << "Peso: " << endl;
+    s<<
+   
 }
 
 string Medicion::toStringDetallado() const {

@@ -1,24 +1,19 @@
 #include "cliente.h"
 #include "instructor.h"
 
-cliente::cliente(string nombre, string cedula, int telefono, string correo,
-    const Fecha& fechaNac, char sexo, const Fecha& fechaInsc,
-    instructor* inst)
-    : Persona(nombre, cedula, telefono, correo, fechaNac) {
-
+cliente::cliente(string nombre, string cedula, string telefono, string correo,const Fecha& fechaNac, char sexo, const Fecha& fechaInsc,
+    instructor* inst): Persona(nombre, cedula, telefono, correo, fechaNac) {
     this->sexo = sexo;
     this->fechaInscripcion = new Fecha(fechaInsc);
     this->instructorAsignado = inst;
-    this->maxMediciones = 10; // Máximo 10 mediciones según especificaciones
+    this->maxMediciones = 100; // Capacidad máxima del historial
     this->cantMediciones = 0;
     this->historialMediciones = new reporteM * [maxMediciones];
-    this->rutinaActual = nullptr; // Inicialmente sin rutina
-
     for (int i = 0; i < maxMediciones; i++) {
         historialMediciones[i] = nullptr;
     }
+    this->rutinaActual = nullptr; // Inicialmente sin rutina
 }
-
 cliente::~cliente() {
     delete fechaInscripcion;
 
