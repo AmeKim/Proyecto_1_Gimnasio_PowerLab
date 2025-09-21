@@ -84,6 +84,9 @@
     <ClInclude Include="vecReportesM.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="BateriaEjercicios.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cliente.cpp">
@@ -156,6 +159,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="vecReportesM.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="BateriaEjercicios.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

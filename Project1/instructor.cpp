@@ -7,19 +7,19 @@
 
 instructor::instructor(string nombre, string cedula, int telefono, string correo,
     int dia, int mes, int anio, vecEspecialidades* esp)
-    : Persona(nombre, cedula, telefono, correo, Fecha(dia, mes, anio)) {
+    : Persona(nombre, cedula, telefono, correo, fecha(dia, mes, anio)) {
     this->especialidades = esp;
 }
 
 instructor::instructor(string nombre, string cedula, int telefono, string correo,
-    const Fecha& fechaNac, vecEspecialidades* esp)
+    const fecha& fechaNac, vecEspecialidades* esp)
     : Persona(nombre, cedula, telefono, correo, fechaNac) {
     this->especialidades = esp;
 }
 
 instructor::instructor(string nombre, string cedula, int telefono, string correo,
     const string& fechaNacStr, vecEspecialidades* esp)
-    : Persona(nombre, cedula, telefono, correo, Fecha(fechaNacStr)) {
+    : Persona(nombre, cedula, telefono, correo, fecha(fechaNacStr)) {
     this->especialidades = esp;
 }
 
@@ -165,7 +165,7 @@ void instructor::mostrarBateriaEjerciciosPorZona(BateriaEjercicios* bateria, int
 
 // *** MÉTODOS PARA MEDICIONES ***
 
-reporteM* instructor::crearMedicionParaCliente(cliente* cli, const Fecha& fecha, double peso,
+reporteM* instructor::crearMedicionParaCliente(cliente* cli, const fecha& fecha, double peso,
     double estatura, double pGrasa, double pMusculo) {
     if (!cli) {
         return nullptr;

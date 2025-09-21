@@ -2,7 +2,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "Fecha.h"
+#include "fecha.h"
+
 using namespace std;
 
 
@@ -12,12 +13,12 @@ protected:
     string cedula;
     string telefono;
     string correo;
-    Fecha* fechaNacimiento;
+    fecha* fechaNacimiento;
 
 public:
     // Constructores
     Persona(string nombre, string cedula, string telefono, string correo, int dia, int mes, int anio);
-    Persona(string nombre, string cedula, string telefono, string correo, const Fecha& fecha);
+    Persona(string nombre, string cedula, string telefono, string correo, const fecha& fecha);
     Persona(string nombre, string cedula, string telefono, string correo, const string& fechaStr);
     Persona();
     virtual ~Persona();
@@ -27,7 +28,7 @@ public:
     string getCedula() const;
     string getTelefono() const;
     string getCorreo() const;
-    Fecha* getFechaNacimiento() const;
+    fecha* getFechaNacimiento() const;
     int getEdad() const;
 
     // Setters
@@ -35,7 +36,7 @@ public:
     void setCedula(string cedula);
     void setTelefono(string telefono);
     void setCorreo(string correo);
-    void setFechaNacimiento(const Fecha& fecha);
+    void setFechaNacimiento(const fecha& fecha);
     void setFechaNacimiento(int dia, int mes, int anio);
     void setFechaNacimiento(const string& fechaStr);
 

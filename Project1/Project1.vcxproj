@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BateriaEjercicios.h" />
     <ClInclude Include="claseGrupal.h" />
     <ClInclude Include="cliente.h" />
     <ClInclude Include="Ejercicio.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="vecSucursales.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BateriaEjercicios.cpp" />
     <ClCompile Include="claseGrupal.cpp" />
     <ClCompile Include="cliente.cpp" />
     <ClCompile Include="Ejercicio.cpp" />

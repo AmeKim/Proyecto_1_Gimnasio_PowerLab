@@ -21,7 +21,7 @@ public:
     instructor(string nombre, string cedula, int telefono, string correo,
         int dia, int mes, int anio, vecEspecialidades* esp);
     instructor(string nombre, string cedula, int telefono, string correo,
-        const Fecha& fechaNac, vecEspecialidades* esp);
+        const fecha& fechaNac, vecEspecialidades* esp);
     instructor(string nombre, string cedula, int telefono, string correo,
         const string& fechaNacStr, vecEspecialidades* esp);
     ~instructor();
@@ -53,7 +53,7 @@ public:
     void mostrarBateriaEjerciciosPorZona(BateriaEjercicios* bateria, int zona) const;
 
     // *** MÉTODOS PARA MEDICIONES ***
-    reporteM* crearMedicionParaCliente(cliente* cli, const Fecha& fecha, double peso,
+    reporteM* crearMedicionParaCliente(cliente* cli, const fecha& fecha, double peso,
         double estatura, double pGrasa, double pMusculo);
     bool asignarMedicionACliente(cliente* cli, reporteM* medicion);
 

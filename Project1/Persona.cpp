@@ -5,15 +5,15 @@ Persona::Persona(string nombre, string cedula, string telefono, string correo, i
     this->cedula = cedula;
     this->telefono = telefono;
     this->correo = correo;
-    this->fechaNacimiento = new Fecha(dia, mes, anio);
+    this->fechaNacimiento = new fecha(dia, mes, anio);
 }
 
-Persona::Persona(string nombre, string cedula, string telefono, string correo, const Fecha& fecha) {
+Persona::Persona(string nombre, string cedula, string telefono, string correo, const fecha& fecha) {
     this->nombre = nombre;
     this->cedula = cedula;
     this->telefono = telefono;
     this->correo = correo;
-    this->fechaNacimiento = new Fecha(fecha);
+    this->fechaNacimiento = new fecha(fecha);
 }
 
 Persona::Persona(string nombre, string cedula, string telefono, string correo, const string& fechaStr) {
@@ -21,7 +21,7 @@ Persona::Persona(string nombre, string cedula, string telefono, string correo, c
     this->cedula = cedula;
     this->telefono = telefono;
     this->correo = correo;
-    this->fechaNacimiento = new Fecha(fechaStr);
+    this->fechaNacimiento = new fecha(fechaStr);
 }
 
 Persona::Persona() {
@@ -29,7 +29,7 @@ Persona::Persona() {
     this->cedula = "";
     this->telefono = "";
     this->correo = "";
-    this->fechaNacimiento = new Fecha();
+    this->fechaNacimiento = new fecha();
 }
 
 Persona::~Persona() {
@@ -41,11 +41,11 @@ string Persona::getNombre() const { return nombre; }
 string Persona::getCedula() const { return cedula; }
 string Persona::getTelefono() const { return telefono; }
 string Persona::getCorreo() const { return correo; }
-Fecha* Persona::getFechaNacimiento() const { return fechaNacimiento; }
+fecha* Persona::getFechaNacimiento() const { return fechaNacimiento; }
 
 int Persona::getEdad() const {
     if (fechaNacimiento) {
-        Fecha hoy; // Asumir que el constructor por defecto crea fecha actual
+        fecha hoy; // Asumir que el constructor por defecto crea fecha actual
         return fechaNacimiento->calcularEdad(hoy);
     }
     return 0;
@@ -57,19 +57,19 @@ void Persona::setCedula(string cedula) { this->cedula = cedula; }
 void Persona::setTelefono(string telefono) { this->telefono = telefono; }
 void Persona::setCorreo(string correo) { this->correo = correo; }
 
-void Persona::setFechaNacimiento(const Fecha& fecha) {
+void Persona::setFechaNacimiento(const fecha& fecha) {
     if (fechaNacimiento) delete fechaNacimiento;
-    fechaNacimiento = new Fecha(fecha);
+    fechaNacimiento = new fecha(fecha);
 }
 
 void Persona::setFechaNacimiento(int dia, int mes, int anio) {
     if (fechaNacimiento) delete fechaNacimiento;
-    fechaNacimiento = new Fecha(dia, mes, anio);
+    fechaNacimiento = new fecha(dia, mes, anio);
 }
 
 void Persona::setFechaNacimiento(const string& fechaStr) {
     if (fechaNacimiento) delete fechaNacimiento;
-    fechaNacimiento = new Fecha(fechaStr);
+    fechaNacimiento = new fecha(fechaStr);
 }
 
 string Persona::toString() {

@@ -1,15 +1,21 @@
-#include "Fecha.h"
+#include "fecha.h"
 
-Fecha::Fecha(int dia, int mes, int anio) {
+fecha::fecha() {
+    dia = 1;
+    mes = 1;
+    anio = 2025;
+}
+
+fecha::fecha(int dia, int mes, int anio) {
     this->dia = dia;
     this->mes = mes;
     this->anio = anio;
 }
 
-Fecha::Fecha(const string& fechaStr) {
-    // Parsear fecha del formato "dd/mm/aaaa"
-    size_t pos1 = fechaStr.find('/');
-    size_t pos2 = fechaStr.find('/', pos1 + 1);
+fecha::fecha(const string& fechaStr) {
+    // Parsear formato "dd/mm/yyyy"
+    int pos1 = fechaStr.find('/');
+    int pos2 = fechaStr.find('/', pos1 + 1);
 
     if (pos1 != string::npos && pos2 != string::npos) {
         dia = stoi(fechaStr.substr(0, pos1));
@@ -19,118 +25,91 @@ Fecha::Fecha(const string& fechaStr) {
     else {
         dia = 1;
         mes = 1;
-        anio = 2000;
+        anio = 2025;
     }
 }
 
-Fecha::Fecha(const Fecha& otra) {
-    this->dia = otra.dia;
-    this->mes = otra.mes;
-    this->anio = otra.anio;
+fecha::~fecha() {}
+
+int fecha::getDia() const { return dia; }
+int fecha::getMes() const { return mes; }
+int fecha::getAnio() const { return anio; }
+
+void fecha::setDia(int dia) { this->dia = dia; }
+void fecha::setMes(int mes) { this->mes = mes; }
+void fecha::setAnio(int anio) { this->anio = anio; }
+
+void fecha::setFecha(int dia, int mes, int anio) {
+    this->dia = dia;
+    this->mes = mes;
+    this->anio = anio;
 }
 
-Fecha::Fecha() {
-    // Obtener fecha actual
-    time_t t = time(0);
-    tm now_tm;
-    localtime_s(&now_tm, &t);
-    dia = now_tm.tm_mday;
-    mes = now_tm.tm_mon + 1;
-    anio = now_tm.tm_year + 1900;
-}
-
-// Getters
-int Fecha::getDia() const { return dia; }
-int Fecha::getMes() const { return mes; }
-int Fecha::getAnio() const { return anio; }
-
-// Setters
-void Fecha::setDia(int dia) {
-    if (dia >= 1 && dia <= 31) this->dia = dia;
-}
-
-void Fecha::setMes(int mes) {
-    if (mes >= 1 && mes <= 12) this->mes = mes;
-}
-
-void Fecha::setAnio(int anio) {
-    if (anio >= 1900 && anio <= 2100) this->anio = anio;
-}
-
-void Fecha::setFecha(int dia, int mes, int anio) {
-    setDia(dia);
-    setMes(mes);
-    setAnio(anio);
-}
-
-void Fecha::setFecha(const string& fechaStr) {
-    size_t pos1 = fechaStr.find('/');
-    size_t pos2 = fechaStr.find('/', pos1 + 1);
+void fecha::setFecha(const string& fechaStr) {
+    int pos1 = fechaStr.find('/');
+    int pos2 = fechaStr.find('/', pos1 + 1);
 
     if (pos1 != string::npos && pos2 != string::npos) {
-        setDia(stoi(fechaStr.substr(0, pos1)));
-        setMes(stoi(fechaStr.substr(pos1 + 1, pos2 - pos1 - 1)));
-        setAnio(stoi(fechaStr.substr(pos2 + 1)));
+        dia = stoi(fechaStr.substr(0, pos1));
+        mes = stoi(fechaStr.substr(pos1 + 1, pos2 - pos1 - 1));
+        anio = stoi(fechaStr.substr(pos2 + 1));
     }
 }
 
-string Fecha::toString() const {
-    stringstream s;
-    s << (dia < 10 ? "0" : "") << dia << "/";
-    s << (mes < 10 ? "0" : "") << mes << "/";
-    s << anio;
-    return s.str();
-}
-
-bool Fecha::esValida() const {
+bool fecha::esValida() const {
     if (mes < 1 || mes > 12) return false;
-    if (dia < 1 || dia > diasEnMes(mes, anio)) return false;
-    if (anio < 1900 || anio > 2100) return false;
-    return true;
+    if (dia < 1) return false;
+
+    int diasPorMes[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+    // Año bisiesto
+    if (mes == 2 && ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0))) {
+        diasPorMes[1] = 29;
+    }
+
+    return dia <= diasPorMes[mes - 1];
 }
 
-int Fecha::calcularEdad(const Fecha& fechaActual) const {
-    int edad = fechaActual.anio - anio;
-    if (fechaActual.mes < mes || (fechaActual.mes == mes && fechaActual.dia < dia)) {
+int fecha::calcularEdad() const {
+    // Año actual aproximado para el cálculo
+    int anioActual = 2025;
+    int mesActual = 9;
+    int diaActual = 21;
+
+    int edad = anioActual - anio;
+
+    if (mes > mesActual || (mes == mesActual && dia > diaActual)) {
         edad--;
     }
+
     return edad;
 }
 
-int Fecha::diasTranscurridos(const Fecha& otraFecha) const {
-    // Implementación simplificada
-    int dias = (otraFecha.anio - anio) * 365;
-    dias += (otraFecha.mes - mes) * 30;
-    dias += (otraFecha.dia - dia);
-    return abs(dias);
+string fecha::toString() const {
+    stringstream s;
+    if (dia < 10) s << "0";
+    s << dia << "/";
+    if (mes < 10) s << "0";
+    s << mes << "/" << anio;
+    return s.str();
 }
 
-bool Fecha::esMayor(const Fecha& otraFecha) const {
-    if (anio > otraFecha.anio) return true;
-    if (anio < otraFecha.anio) return false;
-    if (mes > otraFecha.mes) return true;
-    if (mes < otraFecha.mes) return false;
-    return dia > otraFecha.dia;
+void fecha::mostrar() const {
+    cout << toString() << endl;
 }
 
-bool Fecha::esMenor(const Fecha& otraFecha) const {
-    return !esMayor(otraFecha) && !esIgual(otraFecha);
+bool fecha::operator==(const fecha& otra) const {
+    return (dia == otra.dia && mes == otra.mes && anio == otra.anio);
 }
 
-bool Fecha::esIgual(const Fecha& otraFecha) const {
-    return dia == otraFecha.dia && mes == otraFecha.mes && anio == otraFecha.anio;
+bool fecha::operator<(const fecha& otra) const {
+    if (anio < otra.anio) return true;
+    if (anio > otra.anio) return false;
+    if (mes < otra.mes) return true;
+    if (mes > otra.mes) return false;
+    return dia < otra.dia;
 }
 
-Fecha Fecha::fechaActual() {
-    return Fecha();
-}
-
-bool Fecha::esBisiesto(int anio) {
-    return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
-}
-
-int Fecha::diasEnMes(int mes, int anio) {
-    int dias[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    if (mes == 2 && esBisiesto(anio)) return 29;
-    return dias[mes - 1];
+bool fecha::operator>(const fecha& otra) const {
+    return !(*this < otra || *this == otra);
 }

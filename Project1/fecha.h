@@ -2,22 +2,19 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <ctime>
-
 using namespace std;
 
-class Fecha {
+class fecha {
 private:
     int dia;
     int mes;
     int anio;
 
 public:
-    // Constructores
-    Fecha(int dia, int mes, int anio);
-    Fecha(const string& fechaStr); // formato: "dd/mm/aaaa"
-    Fecha(const Fecha& otra);
-    Fecha(); // Fecha actual
+    fecha();
+    fecha(int dia, int mes, int anio);
+    fecha(const string& fechaStr); // Constructor para formato "dd/mm/yyyy"
+    ~fecha();
 
     // Getters
     int getDia() const;
@@ -31,17 +28,14 @@ public:
     void setFecha(int dia, int mes, int anio);
     void setFecha(const string& fechaStr);
 
-    // Utilidades
-    string toString() const;
+    // Métodos
     bool esValida() const;
-    int calcularEdad(const Fecha& fechaActual) const;
-    int diasTranscurridos(const Fecha& otraFecha) const;
-    bool esMayor(const Fecha& otraFecha) const;
-    bool esMenor(const Fecha& otraFecha) const;
-    bool esIgual(const Fecha& otraFecha) const;
+    int calcularEdad() const;
+    string toString() const;
+    void mostrar() const;
 
-    // Métodos estáticos
-    static Fecha fechaActual();
-    static bool esBisiesto(int anio);
-    static int diasEnMes(int mes, int anio);
+    // Operadores
+    bool operator == (const fecha& otra) const;
+    bool operator<(const fecha& otra) const;
+    bool operator>(const fecha& otra) const;
 };

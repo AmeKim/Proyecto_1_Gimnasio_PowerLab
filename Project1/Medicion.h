@@ -11,7 +11,7 @@ private:
     cliente* clienteRef;
     instructor* instructorRef;
 
-    Fecha* fechaMedicion;
+    fecha* fechaMedicion;
     double peso;
     double estatura;
     double porcentajeGrasa;
@@ -40,7 +40,7 @@ private:
 
 public:
     Medicion();
-    Medicion(cliente* cliente, instructor* instructor, const Fecha& fecha, double peso, double estatura,
+    Medicion(cliente* cliente, instructor* instructor, const fecha& fecha, double peso, double estatura,
         double pGrasa, double pMusculo, int edadMet, double grasaVisc,
         double cintura, double cadera, double pecho, double muslo);
     ~Medicion();
@@ -52,7 +52,7 @@ public:
     char getSexoCliente() const;
 
     // Getters para datos de medición ingresados
-    Fecha* getFechaMedicion() const;
+    fecha* getFechaMedicion() const;
     double getPeso() const;
     double getEstatura() const;
     double getPorcentajeGrasa() const;
@@ -78,7 +78,7 @@ public:
     instructor* getInstructor() const;
 
     // Setters para datos de medición (recalculan automáticamente)
-    void setFechaMedicion(const Fecha& fecha);
+    void setFechaMedicion(const fecha& fecha);
     void setPeso(double peso);
     void setEstatura(double estatura);
     void setPorcentajeGrasa(double pGrasa);

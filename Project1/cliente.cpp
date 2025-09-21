@@ -1,10 +1,9 @@
 #include "cliente.h"
 #include "instructor.h"
 
-cliente::cliente(string nombre, string cedula, string telefono, string correo,const Fecha& fechaNac, char sexo, const Fecha& fechaInsc,
-    instructor* inst): Persona(nombre, cedula, telefono, correo, fechaNac) {
+cliente::cliente(string nombre, string cedula, string telefono, string correo,const fecha& fechaNac, char sexo, const fecha& fechaInsc,instructor* inst): Persona(nombre, cedula, telefono, correo, fechaNac) {
     this->sexo = sexo;
-    this->fechaInscripcion = new Fecha(fechaInsc);
+    this->fechaInscripcion = new fecha(fechaInsc);
     this->instructorAsignado = inst;
     this->maxMediciones = 100; // Capacidad máxima del historial
     this->cantMediciones = 0;
@@ -34,7 +33,7 @@ char cliente::getSexo() const {
     return sexo;
 }
 
-Fecha* cliente::getFechaInscripcion() const {
+fecha* cliente::getFechaInscripcion() const {
     return fechaInscripcion;
 }
 
@@ -62,11 +61,11 @@ void cliente::setSexo(char sexo) {
     this->sexo = sexo;
 }
 
-void cliente::setFechaInscripcion(const Fecha& fecha) {
+void cliente::setfechaInscripcion(const fecha& fecha) {
     if (fechaInscripcion) {
         delete fechaInscripcion;
     }
-    fechaInscripcion = new Fecha(fecha);
+    fechaInscripcion = newfecha (fecha);
 }
 
 void cliente::setInstructorAsignado(instructor* inst) {
