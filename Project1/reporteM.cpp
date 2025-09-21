@@ -1,129 +1,106 @@
 #include "reporteM.h"
 
 reporteM::reporteM() {
-    fechaMedicion = new Fecha();
-    peso = 0.0;
-    estatura = 0.0;
-    porcentajeGrasa = 0.0;
-    porcentajeMusculo = 0.0;
-    imc = 0.0;
-    clasificacion = "";
-    altoRiesgo = false;
-    vasosAgua = 0;
-    proteina = 0.0;
+    medicion = nullptr;
 }
 
-reporteM::reporteM(const Fecha& fecha, double peso, double estatura, double pGrasa, double pMusculo) {
-    this->fechaMedicion = new Fecha(fecha);
-    this->peso = peso;
-    this->estatura = estatura;
-    this->porcentajeGrasa = pGrasa;
-    this->porcentajeMusculo = pMusculo;
-
-    calcularIMC();
-    determinarClasificacion();
-    calcularVasosAgua();
+reporteM::reporteM(Medicion* med) {
+    this->medicion = med;
 }
 
 reporteM::~reporteM() {
-    delete fechaMedicion;
+    // No eliminar medicion aquí ya que puede ser compartida
+    // La gestión de memoria de medicion se hace en el vecReportesM
 }
 
 // Getters
-Fecha* reporteM::getFechaMedicion() const { return fechaMedicion; }
-double reporteM::getPeso() const { return peso; }
-double reporteM::getEstatura() const { return estatura; }
-double reporteM::getPorcentajeGrasa() const { return porcentajeGrasa; }
-double reporteM::getPorcentajeMusculo() const { return porcentajeMusculo; }
-double reporteM::getIMC() const { return imc; }
-string reporteM::getClasificacion() const { return clasificacion; }
-bool reporteM::esAltoRiesgo() const { return altoRiesgo; }
-int reporteM::getVasosAgua() const { return vasosAgua; }
-double reporteM::getProteina() const { return proteina; }
+Medicion* reporteM::getMedicion() const {
+    return medicion;
+}
 
 // Setters
-void reporteM::setFechaMedicion(const Fecha& fecha) {
-    if (fechaMedicion) delete fechaMedicion;
-    fechaMedicion = new Fecha(fecha);
+void reporteM::setMedicion(Medicion* med) {
+    this->medicion = med;
 }
 
-void reporteM::setPeso(double peso) { this->peso = peso; }
-void reporteM::setEstatura(double estatura) { this->estatura = estatura; }
-void reporteM::setPorcentajeGrasa(double pGrasa) { this->porcentajeGrasa = pGrasa; }
-void reporteM::setPorcentajeMusculo(double pMusculo) { this->porcentajeMusculo = pMusculo; }
-
-void reporteM::calcularIMC() {
-    if (estatura > 0) {
-        imc = peso / (estatura * estatura);
-    }
-}
-
-void reporteM::determinarClasificacion() {
-    if (imc < 16.00) {
-        clasificacion = "Delgadez severa";
-        altoRiesgo = false;
-    }
-    else if (imc >= 16.00 && imc <= 16.99) {
-        clasificacion = "Delgadez moderada";
-        altoRiesgo = false;
-    }
-    else if (imc >= 17.00 && imc <= 18.49) {
-        clasificacion = "Delgadez leve";
-        altoRiesgo = false;
-    }
-    else if (imc >= 18.50 && imc <= 24.99) {
-        clasificacion = "Normal";
-        altoRiesgo = false;
-    }
-    else if (imc >= 25.00 && imc <= 29.99) {
-        clasificacion = "Pre-obesidad";
-        altoRiesgo = false;
-    }
-    else if (imc >= 30.00 && imc <= 34.99) {
-        clasificacion = "Obesidad leve";
-        altoRiesgo = true;
-    }
-    else if (imc >= 35.00 && imc <= 39.99) {
-        clasificacion = "Obesidad media";
-        altoRiesgo = true;
-    }
-    else {
-        clasificacion = "Obesidad mórbida";
-        altoRiesgo = true;
-    }
-}
-
-void reporteM::calcularVasosAgua() {
-    vasosAgua = static_cast<int>(peso / 7);
-}
-
-void reporteM::calcularProteina(char sexo) {
-    if (sexo == 'M' || sexo == 'm') {
-        // Hombre que hace ejercicio: 1.7 - 2.5 g/kg (usamos 2.0 como promedio)
-        proteina = peso * 2.0;
-    }
-    else {
-        // Mujer que hace ejercicio: 1.6 - 1.8 g/kg (usamos 1.7 como promedio)
-        proteina = peso * 1.7;
-    }
-}
-
+// Métodos de presentación (solo imprimen)
 string reporteM::toString() const {
+    if (medicion == nullptr) {
+        return "No hay datos de medicion disponibles";
+    }
+
     stringstream s;
-    s << "Fecha: " << fechaMedicion->toString() << " | Peso: " << peso << " kg | IMC: " << imc;
+    s << "=============== Detalle Medicion ===============" << endl;
+    s << "Fecha: " << medicion->getFechaMedicion()->toString() << endl;
+    s << "Peso (kg): " << medicion->getPeso() << endl;
+    s << "Estatura (m): " << medicion->getEstatura() << endl;
+    s << "% de grasa: " << medicion->getPorcentajeGrasa() << endl;
+    s << "% de musculo: " << medicion->getPorcentajeMusculo() << endl;
+    s << "Edad metabolica: " << medicion->getEdadMetabolica() << " años" << endl;
+    s << "% de grasa visceral: " << medicion->getPorcentajeGrasaVisceral() << endl;
+    s << "Cintura: " << medicion->getCintura() << " cm" << endl;
+    s << "Cadera: " << medicion->getCadera() << " cm" << endl;
+    s << "Pecho: " << medicion->getPecho() << " cm" << endl;
+    s << "Muslo: " << medicion->getMuslo() << " cm" << endl;
+    s << "IMC: " << medicion->getIMC() << endl;
+    s << "Clasificacion: " << medicion->getClasificacion() << endl;
+    s << "Alto Riesgo: " << (medicion->esAltoRiesgo() ? "SI" : "NO") << endl;
+    s << "Cantidad de vasos recomendados: " << medicion->getVasosAgua() << endl;
+    s << "Cantidad de proteina recomendada: " << medicion->getProteina() << " gramos" << endl;
     return s.str();
 }
 
 void reporteM::mostrarDetalle() const {
-    cout << "=============== Detalle Medición ===============" << endl;
-    cout << "Fecha: " << fechaMedicion->toString() << endl;
-    cout << "Peso (kg): " << peso << endl;
-    cout << "Estatura (m): " << estatura << endl;
-    cout << "% de grasa: " << porcentajeGrasa << endl;
-    cout << "% de músculo: " << porcentajeMusculo << endl;
-    cout << "IMC: " << imc << endl;
-    cout << "Clasificación: " << clasificacion << endl;
-    cout << "Alto Riesgo: " << (altoRiesgo ? "SÍ" : "NO") << endl;
-    cout << "Cantidad de vasos recomendados: " << vasosAgua << endl;
-    cout << "Cantidad de proteína recomendada: " << proteina << " gramos" << endl;
+    cout << toString();
+}
+
+void reporteM::mostrarReporteCompleto() const {
+    if (medicion == nullptr) {
+        cout << "No hay datos de medicion disponibles" << endl;
+        return;
+    }
+
+    cout << "=======================================================" << endl;
+    cout << "REPORTE DE MEDICION COMPLETO" << endl;
+    cout << "=======================================================" << endl;
+    cout << "Nombre del cliente: " << medicion->getNombreCliente() << endl;
+    cout << "ID del cliente: " << medicion->getIdCliente() << endl;
+    cout << "Nombre del instructor: " << medicion->getNombreInstructor() << endl;
+    cout << "Fecha de la medicion: " << medicion->getFechaMedicion()->toString() << endl;
+    cout << "=======================================================" << endl;
+    cout << "DATOS DE LA MEDICION:" << endl;
+    cout << "Peso: " << medicion->getPeso() << " kg" << endl;
+    cout << "Estatura: " << medicion->getEstatura() << " m" << endl;
+    cout << "Porcentaje de grasa: " << medicion->getPorcentajeGrasa() << "%" << endl;
+    cout << "Porcentaje de musculo: " << medicion->getPorcentajeMusculo() << "%" << endl;
+    cout << "Edad metabolica: " << medicion->getEdadMetabolica() << " años" << endl;
+    cout << "Porcentaje de grasa visceral: " << medicion->getPorcentajeGrasaVisceral() << "%" << endl;
+    cout << "=======================================================" << endl;
+    cout << "MEDIDAS CORPORALES:" << endl;
+    cout << "Cintura: " << medicion->getCintura() << " cm" << endl;
+    cout << "Cadera: " << medicion->getCadera() << " cm" << endl;
+    cout << "Pecho: " << medicion->getPecho() << " cm" << endl;
+    cout << "Muslo: " << medicion->getMuslo() << " cm" << endl;
+    cout << "=======================================================" << endl;
+    cout << "CALCULOS AUTOMATICOS:" << endl;
+    cout << "IMC: " << medicion->getIMC() << endl;
+    cout << "Clasificacion: " << medicion->getClasificacion() << endl;
+    cout << "Alto Riesgo: " << (medicion->esAltoRiesgo() ? "SI" : "NO") << endl;
+    cout << "=======================================================" << endl;
+    cout << "RECOMENDACIONES:" << endl;
+    cout << "Cantidad de vasos de agua recomendados: " << medicion->getVasosAgua() << endl;
+    cout << "Cantidad de proteina recomendada: " << medicion->getProteina() << " gramos" << endl;
+    cout << "=======================================================" << endl;
+}
+
+string reporteM::mostrarResumen() const {
+    if (medicion == nullptr) {
+        return "No hay datos disponibles";
+    }
+
+    stringstream s;
+    s << "Fecha: " << medicion->getFechaMedicion()->toString();
+    s << " | Peso: " << medicion->getPeso() << " kg";
+    s << " | IMC: " << medicion->getIMC();
+    return s.str();
 }

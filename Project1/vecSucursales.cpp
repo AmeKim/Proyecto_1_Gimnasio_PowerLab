@@ -1,112 +1,167 @@
 #include "vecSucursales.h"
 
-vecSucursales::vecSucursales() {
+vecSucursales::vecSucursales(int capacidad) {
+    tam = capacidad;
     can = 0;
-    vSucursales = new Sucursal * [tam];
+    sucursales = new Sucursal * [tam];
     for (int i = 0; i < tam; i++) {
-        vSucursales[i] = nullptr;
+        sucursales[i] = nullptr;
     }
 }
 
 vecSucursales::~vecSucursales() {
     for (int i = 0; i < can; i++) {
-        delete vSucursales[i];
+        delete sucursales[i];
     }
-    delete[] vSucursales;
+    delete[] sucursales;
 }
 
-void vecSucursales::agregarSucursal(Sucursal* sucursal) {
-    if (can < tam && sucursal) {
-        vSucursales[can] = sucursal;
+bool vecSucursales::agregarSucursal(Sucursal* sucursal) {
+    if (can < tam && sucursal != nullptr) {
+        // Verificar que no exista el código
+        if (!existeCodigo(sucursal->getCodigo())) {
+            sucursales[can] = sucursal;
+            can++;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool vecSucursales::agregarSucursal(int codigo, const string& provincia, const string& canton,
+    const string& correo, const string& telefono) {
+    if (can < tam && !existeCodigo(codigo)) {
+        Sucursal* nuevaSucursal = new Sucursal(codigo, provincia, canton, correo, telefono);
+        sucursales[can] = nuevaSucursal;
         can++;
+        return true;
     }
+    return false;
 }
 
-void vecSucursales::eliminarSucursal(int codigo) {
+Sucursal* vecSucursales::buscarPorCodigo(int codigo) const {
     for (int i = 0; i < can; i++) {
-        if (vSucursales[i]->getCodigo() == codigo) {
-            delete vSucursales[i];
-            for (int j = i; j < can - 1; j++) {
-                vSucursales[j] = vSucursales[j + 1];
-            }
-            vSucursales[can - 1] = nullptr;
-            can--;
-            return;
-        }
-    }
-}
-
-Sucursal* vecSucursales::getSucursal(int codigo) {
-    for (int i = 0; i < can; i++) {
-        if (vSucursales[i] && vSucursales[i]->getCodigo() == codigo) {
-            return vSucursales[i];
+        if (sucursales[i] != nullptr && sucursales[i]->getCodigo() == codigo) {
+            return sucursales[i];
         }
     }
     return nullptr;
 }
 
-Sucursal* vecSucursales::getSucursalPorIndice(int idx) {
-    if (idx >= 0 && idx < can) {
-        return vSucursales[idx];
+int vecSucursales::buscarIndicePorCodigo(int codigo) const {
+    for (int i = 0; i < can; i++) {
+        if (sucursales[i] != nullptr && sucursales[i]->getCodigo() == codigo) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+bool vecSucursales::eliminarSucursal(int codigo) {
+    int indice = buscarIndicePorCodigo(codigo);
+    if (indice != -1) {
+        delete sucursales[indice];
+
+        // Desplazar elementos hacia la izquierda
+        for (int i = indice; i < can - 1; i++) {
+            sucursales[i] = sucursales[i + 1];
+        }
+
+        sucursales[can - 1] = nullptr;
+        can--;
+        return true;
+    }
+    return false;
+}
+
+Sucursal* vecSucursales::getSucursalPorIndice(int indice) const {
+    if (indice >= 0 && indice < can) {
+        return sucursales[indice];
     }
     return nullptr;
 }
 
-int vecSucursales::getCan() {
+int vecSucursales::getCan() const {
     return can;
 }
 
-string vecSucursales::toString() {
-    stringstream s;
+int vecSucursales::getTam() const {
+    return tam;
+}
+
+bool vecSucursales::estaLlena() const {
+    return can >= tam;
+}
+
+bool vecSucursales::estaVacia() const {
+    return can == 0;
+}
+
+bool vecSucursales::existeCodigo(int codigo) const {
+    return buscarPorCodigo(codigo) != nullptr;
+}
+
+void vecSucursales::mostrarTodas() const {
+    if (estaVacia()) {
+        cout << "No hay sucursales registradas." << endl;
+        return;
+    }
+
+    cout << "Lista de sucursales:" << endl;
     for (int i = 0; i < can; i++) {
-        s << vSucursales[i]->toString() << endl;
+        if (sucursales[i] != nullptr) {
+            cout << sucursales[i]->getCodigo() << " "
+                << sucursales[i]->getProvincia() << " - "
+                << sucursales[i]->getCanton() << endl;
+        }
+    }
+}
+
+void vecSucursales::mostrarSucursal(int codigo) const {
+    Sucursal* sucursal = buscarPorCodigo(codigo);
+    if (sucursal != nullptr) {
+        cout << "Codigo: " << sucursal->getCodigo() << endl;
+        cout << "Provincia: " << sucursal->getProvincia() << endl;
+        cout << "Canton: " << sucursal->getCanton() << endl;
+        cout << "Correo: " << sucursal->getCorreo() << endl;
+        cout << "Telefono: " << sucursal->getTelefono() << endl;
+    }
+    else {
+        cout << "Sucursal no encontrada." << endl;
+    }
+}
+
+string vecSucursales::toString() const {
+    stringstream s;
+    if (estaVacia()) {
+        s << "No hay sucursales registradas." << endl;
+        return s.str();
+    }
+
+    s << "Lista de sucursales:" << endl;
+    for (int i = 0; i < can; i++) {
+        if (sucursales[i] != nullptr) {
+            s << sucursales[i]->toString() << endl;
+            s << "-------------------" << endl;
+        }
     }
     return s.str();
 }
 
-void vecSucursales::mostrarTodas() {
+string vecSucursales::mostrarListaSimple() const {
+    stringstream s;
+    if (estaVacia()) {
+        s << "No hay sucursales registradas." << endl;
+        return s.str();
+    }
+
+    s << "Lista de sucursales existentes:" << endl;
     for (int i = 0; i < can; i++) {
-        if (vSucursales[i]) {
-            cout << vSucursales[i]->toString() << endl;
+        if (sucursales[i] != nullptr) {
+            s << sucursales[i]->getCodigo() << " "
+                << sucursales[i]->getProvincia() << " - "
+                << sucursales[i]->getCanton() << endl;
         }
     }
-}
-
-void vecSucursales::inicializarDatos() {
-    // Crear sucursales de ejemplo
-    Sucursal* suc1 = new Sucursal(101, "San José", "Escazú", "powerlab.escazu@gmail.com", "2222-3344");
-    Sucursal* suc2 = new Sucursal(102, "Heredia", "Belén", "powerlab.belen@gmail.com", "2233-4455");
-    Sucursal* suc3 = new Sucursal(103, "Alajuela", "Centro", "powerlab.centro@gmail.com", "2244-5566");
-
-    agregarSucursal(suc1);
-    agregarSucursal(suc2);
-    agregarSucursal(suc3);
-
-    // Crear especialidades básicas
-    vecEspecialidades* especialidades1 = new vecEspecialidades();
-    especialidades1->agregarEspecialidad(new especialidad(1, "Yoga"));
-    especialidades1->agregarEspecialidad(new especialidad(2, "Zumba"));
-    especialidades1->agregarEspecialidad(new especialidad(3, "TRX"));
-
-    vecEspecialidades* especialidades2 = new vecEspecialidades();
-    especialidades2->agregarEspecialidad(new especialidad(4, "CrossFit"));
-    especialidades2->agregarEspecialidad(new especialidad(5, "Pesas"));
-
-    // Crear instructores de ejemplo
-    instructor* inst1 = new instructor("María Gómez", "115670111", 22334455, "maria@gmail.com",
-        Fecha(20, 3, 1985), especialidades1);
-    instructor* inst2 = new instructor("Juan Rodríguez", "116780222", 23344556, "juan@gmail.com",
-        Fecha(15, 7, 1988), especialidades2);
-
-    suc1->agregarInstructor(inst1);
-    suc1->agregarInstructor(inst2);
-
-    // Crear clientes de ejemplo
-    cliente* cli1 = new cliente("Carlos Pérez", "118990123", 88881111, "carlos@gmail.com",
-        Fecha(1, 1, 1990), 'M', Fecha(15, 7, 2025), inst1);
-    cliente* cli2 = new cliente("Laura Jiménez", "119880456", 88882222, "laura@gmail.com",
-        Fecha(10, 5, 1992), 'F', Fecha(20, 6, 2025), inst2);
-
-    suc1->agregarCliente(cli1);
-    suc1->agregarCliente(cli2);
+    return s.str();
 }

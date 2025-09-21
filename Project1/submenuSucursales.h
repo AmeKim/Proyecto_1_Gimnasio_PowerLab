@@ -2,8 +2,8 @@
 #include <string>
 #include <sstream>
 #include "utiles.h"
-#include "vecSucursales.h"
-#include "Medición.h"
+#include "vecSucursales"
+#include "Medicion.h"
 using namespace std;
 
 class submenuClaseGrup {

@@ -42,7 +42,7 @@
     <ClInclude Include="fecha.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Medición.h">
+    <ClInclude Include="Medicion.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Sucursal.h">
@@ -81,6 +81,9 @@
     <ClInclude Include="reporteM.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="vecReportesM.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cliente.cpp">
@@ -110,7 +113,7 @@
     <ClCompile Include="fecha.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Medición.cpp">
+    <ClCompile Include="Medicion.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Sucursal.cpp">
@@ -150,6 +153,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="reporteM.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="vecReportesM.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

@@ -129,7 +129,7 @@
     <ClInclude Include="especialidad.h" />
     <ClInclude Include="fecha.h" />
     <ClInclude Include="instructor.h" />
-    <ClInclude Include="Medición.h" />
+    <ClInclude Include="Medicion.h" />
     <ClInclude Include="PowerLab.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="reporteM.h" />
@@ -144,6 +144,7 @@
     <ClInclude Include="vecClientes.h" />
     <ClInclude Include="vecEspecialidades.h" />
     <ClInclude Include="vecInstructores.h" />
+    <ClInclude Include="vecReportesM.h" />
     <ClInclude Include="vecSucursales.h" />
   </ItemGroup>
   <ItemGroup>
@@ -154,7 +155,7 @@
     <ClCompile Include="fecha.cpp" />
     <ClCompile Include="instructor.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Medición.cpp" />
+    <ClCompile Include="Medicion.cpp" />
     <ClCompile Include="PowerLab.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="reporteM.cpp" />
@@ -169,6 +170,7 @@
     <ClCompile Include="vecClientes.cpp" />
     <ClCompile Include="vecEspecialidades.cpp" />
     <ClCompile Include="vecInstructores.cpp" />
+    <ClCompile Include="vecReportesM.cpp" />
     <ClCompile Include="vecSucursales.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
