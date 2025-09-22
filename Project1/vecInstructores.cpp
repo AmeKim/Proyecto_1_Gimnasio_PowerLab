@@ -39,7 +39,7 @@ void vecInstructores::eliminarInstructor(const string& cedula) {
     }
 }
 
-instructor* vecInstructores::buscarInstructor(const string& cedula) {
+instructor* vecInstructores::buscarInstructor(const string& cedula) const {
     for (int i = 0; i < can; i++) {
         if (vInstructores[i] && vInstructores[i]->getCedula() == cedula) {
             return vInstructores[i];

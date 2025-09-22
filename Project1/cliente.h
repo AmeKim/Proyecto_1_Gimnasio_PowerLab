@@ -1,66 +1,50 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "Persona.h"
 #include "reporteM.h"
-#include "Rutina.h"
 using namespace std;
 
-class cliente {
+class cliente : public Persona {
 private:
-    string nombre;
-    string cedula;
-    string telefono;
-    string correo;
-    string fechaNacimiento;
-    string sexo;
     string fechaInscripcion;
-    string cedulaInstructor;
+    string sexo;
     reporteM** mediciones;
     int canMediciones;
-    int maxMediciones;
-    Rutina* rutinaActual;
+    int tamMediciones;
+    string cedulaInstructorAsignado;
 
 public:
+    // Constructores
     cliente();
     cliente(const string& nombre, const string& cedula, const string& telefono,
-        const string& correo, const string& fechaNacimiento,
-        const string& sexo, const string& fechaInscripcion);
+        const string& correo, const string& fechaNacimiento, const string& sexo,
+        const string& fechaInscripcion);
     ~cliente();
 
     // Getters
-    string getNombre() const;
-    string getCedula() const;
-    string getTelefono() const;
-    string getCorreo() const;
-    string getFechaNacimiento() const;
-    string getSexo() const;
     string getFechaInscripcion() const;
-    string getCedulaInstructor() const;
+    string getSexo() const;
+    char getSexoChar() const; // Devuelve 'M' o 'F'
+    string getCedulaInstructorAsignado() const;
     int getCanMediciones() const;
-    Rutina* getRutinaActual() const;
+    int getTamMediciones() const;
+    reporteM* getMedicion(int indice) const;
 
     // Setters
-    void setNombre(const string& nombre);
-    void setCedula(const string& cedula);
-    void setTelefono(const string& telefono);
-    void setCorreo(const string& correo);
-    void setFechaNacimiento(const string& fechaNacimiento);
-    void setSexo(const string& sexo);
     void setFechaInscripcion(const string& fechaInscripcion);
-    void setCedulaInstructor(const string& cedula);
+    void setSexo(const string& sexo);
+    void setCedulaInstructorAsignado(const string& cedulaInstructor);
 
     // Métodos para mediciones
     bool agregarMedicion(reporteM* medicion);
-    reporteM* getMedicion(int indice) const;
-    string historialMediciones() const;
+    reporteM* getMedicionMasReciente() const;
     void mostrarHistorialMediciones() const;
 
-    // Métodos para rutina
-    void asignarRutina(Rutina* rutina);
-    void eliminarRutina();
-
-    // Métodos de utilidad
-    void mostrar() const;
+    // Métodos de visualización
     string toString() const;
-    string toStringCompleto() const;
+    string toStringResumido() const;
+    string toStringDetallado() const;
+    void mostrar() const;
 };

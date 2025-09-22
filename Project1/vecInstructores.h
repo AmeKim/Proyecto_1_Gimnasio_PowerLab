@@ -17,7 +17,7 @@ public:
 
     bool agregarInstructor(instructor* inst);
     void eliminarInstructor(const string& cedula);
-    instructor* buscarInstructor(const string& cedula);
+    instructor* buscarInstructor(const string& cedula) const; // Corregido para ser const
     instructor* getInstructor(const string& cedula);
 
     int getCan() const;
