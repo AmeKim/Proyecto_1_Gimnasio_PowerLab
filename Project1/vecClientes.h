@@ -20,6 +20,7 @@ public:
 	int getCan();
 	string toString();
 	string toStringEspecifico(string);
-	cliente* getClientePorIndice(int idx) { return (idx >= 0 && idx < can) ? vClientes[idx] : nullptr; }
+	cliente* getClientePorIndice(int idx);
+	string mostrarTodos();
 };
 

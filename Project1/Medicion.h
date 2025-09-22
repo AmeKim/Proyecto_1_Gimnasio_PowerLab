@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <iostream>
+#include <sstream>
 #include "fecha.h"
 #include "cliente.h"
 #include "instructor.h"
@@ -10,9 +12,8 @@ using namespace std;
 class Medicion {
 private:
     // Referencias al cliente e instructor
-    cliente* clienteRef;
+    cliente* cliente;
     instructor* instructorRef;
-
     fecha* fechaMedicion;
     double peso;
     double estatura;

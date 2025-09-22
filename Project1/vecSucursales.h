@@ -28,4 +28,5 @@ public:
 
     string toString() const;
     Sucursal* getSucursalPorIndice(int indice) const;
+	Sucursal* getSucursal(int codigo) const;
 };

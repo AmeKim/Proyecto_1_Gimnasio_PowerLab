@@ -24,13 +24,13 @@ int submenuSucursales::iniciar(){
 			case '3':
 				reporteIMC();
 				break;
-			case '4':
+			case '0':
 				print("Saliendo...\n");
 				return 0;
 			default:
 				cout<< "Opci" << char(162) << "n no v" << char(160)<< "lida\n";
 		}
-		if(opcion != '4'){
+		if(opcion != '3'){
 			cout<< "Desea continuar en el submen" << char(163) << " de Sucursales ? (s / n) : ";
 			cin >> *continuacion;
 			cin.ignore();
@@ -49,7 +49,7 @@ char submenuSucursales::imprimirMenu(){
 	print("1. Ingresar una Sucursal\n");
 	print("2. Muestre una Sucursal\n");
 	print("3. Mostrar reporte de IMC por Sucursal\n");
-	print("4. Regresar al menu inicial\n\n");
+	print("0. Regresar al menu inicial\n\n");
 	char num;
 	cout<< "Ingrese la opci" << char(162) << "n (Ejm: 1): "; cin >> num;
 	return num;

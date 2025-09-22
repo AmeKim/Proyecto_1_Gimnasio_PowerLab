@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "vecClasesGrupales.h"
+#include "PowerLab.h"
 using namespace std;
 
 int main() {
+	
 
-		return 0;
+	return 0;
 }

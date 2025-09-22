@@ -64,3 +64,19 @@ string vecClientes::toStringEspecifico(string ced){
 	}
 	return "No se encontro el cliente\n";
 }
+
+cliente* vecClientes::getClientePorIndice(int idx){
+	return (idx >= 0 && idx < can) ? vClientes[idx] : nullptr;
+}
+
+string vecClientes::mostrarTodos(){
+	stringstream s;
+	if(can == 0){
+		s << "No hay clientes registrados\n";
+		return s.str();
+	}
+	for(int i = 0; i < can; i++){
+		s << (i + 1) << ". " << vClientes[i]->toString() << endl;
+	}
+	return s.str();
+}

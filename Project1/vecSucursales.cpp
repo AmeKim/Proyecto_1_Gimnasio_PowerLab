@@ -98,3 +98,7 @@ Sucursal* vecSucursales::getSucursalPorIndice(int indice) const {
     }
     return nullptr;
 }
+
+Sucursal* vecSucursales::getSucursal(int codigo) const {
+    return buscarPorCodigo(codigo);
+}
