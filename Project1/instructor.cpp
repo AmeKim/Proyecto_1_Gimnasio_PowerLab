@@ -175,7 +175,7 @@ reporteM* instructor::crearMedicionParaCliente(cliente* cli, const fecha& fecha,
     cout << "Cliente: " << cli->getNombre() << endl;
 
     // El instructor crea la medición
-    reporteM* nuevaMedicion = new reporteM(fecha, peso, estatura, pGrasa, pMusculo);
+    reporteM* nuevaMedicion = (fecha, peso, estatura, pGrasa, pMusculo);
 
     // Calcular proteína según el sexo del cliente
     nuevaMedicion->calcularProteina(cli->getSexo());
