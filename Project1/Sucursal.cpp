@@ -1,5 +1,6 @@
 ﻿#include "Sucursal.h"
 #include "Medicion.h"
+#include "reporteM.h"
 
 Sucursal::Sucursal() {
     codigo = 0;
@@ -181,7 +182,7 @@ void Sucursal::reporteIMC() const {
         for (int i = 0; i < clientes->getCan(); i++) {
             cliente* cli = clientes->getClientePorIndice(i);
             if (cli && cli->getCanMediciones() > 0) {
-                reporteM* ultimaMedicion = cli->getMedicion(cli->getCanMediciones() - 1);
+                Medicion* ultimaMedicion = cli->getMedicion(cli->getCanMediciones() - 1);
                 if (ultimaMedicion && determinarCategoriaIMC(ultimaMedicion->getIMC()) == categoria) {
                     contadorCategoria++;
                     cout << contadorCategoria << "- " << cli->getCedula() << " " << cli->getNombre()

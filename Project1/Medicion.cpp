@@ -98,18 +98,22 @@ void Medicion::calcularVasosAgua() {
 
 void Medicion::calcularProteina() {
     if (clienteRef != nullptr) {
-        char sexo = clienteRef->getSexo();
-        if (sexo == 'M' || sexo == 'm') {
+        char sexo = clienteRef->getSexo()[0];
+        switch (sexo) {
+        case 'M':
+        case 'm':
             // Hombre que hace ejercicio: entre 1.7 - 2.5 (usamos promedio 2.1)
             proteina = peso * 2.1;
-        }
-        else if (sexo == 'F' || sexo == 'f') {
+            break;
+        case 'F':
+        case 'f':
             // Mujer que hace ejercicio: entre 1.6 - 1.8 (usamos promedio 1.7)
             proteina = peso * 1.7;
-        }
-        else {
+            break;
+        default:
             // Base general según OMS: 0.8 gramos por kg
             proteina = peso * 0.8;
+            break;
         }
     }
     else {
@@ -142,7 +146,7 @@ string Medicion::getNombreInstructor() const {
 
 char Medicion::getSexoCliente() const {
     if (clienteRef != nullptr) {
-        return clienteRef->getSexo();
+        return clienteRef->getSexo()[0];
     }
     return 'M'; // Valor por defecto
 }

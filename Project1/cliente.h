@@ -30,7 +30,7 @@ public:
     string getCedulaInstructorAsignado() const;
     int getCanMediciones() const;
     int getTamMediciones() const;
-    reporteM* getMedicion(int indice) const;
+    Medicion* getMedicion(int index) const;
 
     // Setters
     void setFechaInscripcion(const string& fechaInscripcion);

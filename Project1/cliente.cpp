@@ -114,7 +114,7 @@ void cliente::mostrarHistorialMediciones() const {
         break;
     default:
         for (int i = 0; i < canMediciones; i++) {
-            cout << (i + 1) << "- " << mediciones[i]->toStringResumido() << endl;
+            cout << (i + 1) << "- " << mediciones[i]->toString() << endl;
         }
         break;
     }
