@@ -3,6 +3,7 @@
 #include "fecha.h"
 #include "cliente.h"
 #include "instructor.h"
+#include "reporteM.h"
 
 using namespace std;
 

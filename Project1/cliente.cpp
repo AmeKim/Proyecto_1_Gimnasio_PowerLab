@@ -1,44 +1,86 @@
 #include "cliente.h"
-#include "instructor.h"
 
-//cliente::cliente: persona() {}
+cliente::cliente() {
+    nombre = "";
+    cedula = "";
+    telefono = "";
+    correo = "";
+    fechaNacimiento = "";
+    sexo = "";
+    fechaInscripcion = "";
+    cedulaInstructor = "";
+    maxMediciones = 10;
+    canMediciones = 0;
+    mediciones = new reporteM * [maxMediciones];
+    for (int i = 0; i < maxMediciones; i++) {
+        mediciones[i] = nullptr;
+    }
+    rutinaActual = nullptr;
+}
+
+cliente::cliente(const string& nombre, const string& cedula, const string& telefono,
+    const string& correo, const string& fechaNacimiento,
+    const string& sexo, const string& fechaInscripcion) {
+    this->nombre = nombre;
+    this->cedula = cedula;
+    this->telefono = telefono;
+    this->correo = correo;
+    this->fechaNacimiento = fechaNacimiento;
+    this->sexo = sexo;
+    this->fechaInscripcion = fechaInscripcion;
+    this->cedulaInstructor = "";
+    this->maxMediciones = 10;
+    this->canMediciones = 0;
+    this->mediciones = new reporteM * [maxMediciones];
+    for (int i = 0; i < maxMediciones; i++) {
+        mediciones[i] = nullptr;
+    }
+    this->rutinaActual = nullptr;
+}
+
 cliente::~cliente() {
-    delete fechaInscripcion;
-
-    // Eliminar historial de mediciones
-    for (int i = 0; i < cantMediciones; i++) {
-        delete historialMediciones[i];
+    for (int i = 0; i < canMediciones; i++) {
+        delete mediciones[i];
     }
-    delete[] historialMediciones;
-
-    // Eliminar rutina actual si existe
-    if (rutinaActual) {
-        delete rutinaActual;
-    }
+    delete[] mediciones;
+    delete rutinaActual;
 }
 
 // Getters
-char cliente::getSexo() const {
+string cliente::getNombre() const {
+    return nombre;
+}
+
+string cliente::getCedula() const {
+    return cedula;
+}
+
+string cliente::getTelefono() const {
+    return telefono;
+}
+
+string cliente::getCorreo() const {
+    return correo;
+}
+
+string cliente::getFechaNacimiento() const {
+    return fechaNacimiento;
+}
+
+string cliente::getSexo() const {
     return sexo;
 }
 
-fecha* cliente::getFechaInscripcion() const {
+string cliente::getFechaInscripcion() const {
     return fechaInscripcion;
 }
 
-instructor* cliente::getInstructorAsignado() const {
-    return instructorAsignado;
+string cliente::getCedulaInstructor() const {
+    return cedulaInstructor;
 }
 
-int cliente::getCantMediciones() const {
-    return cantMediciones;
-}
-
-reporteM* cliente::getMedicion(int indice) const {
-    if (indice >= 0 && indice < cantMediciones) {
-        return historialMediciones[indice];
-    }
-    return nullptr;
+int cliente::getCanMediciones() const {
+    return canMediciones;
 }
 
 Rutina* cliente::getRutinaActual() const {
@@ -46,122 +88,110 @@ Rutina* cliente::getRutinaActual() const {
 }
 
 // Setters
-void cliente::setSexo(char sexo) {
+void cliente::setNombre(const string& nombre) {
+    this->nombre = nombre;
+}
+
+void cliente::setCedula(const string& cedula) {
+    this->cedula = cedula;
+}
+
+void cliente::setTelefono(const string& telefono) {
+    this->telefono = telefono;
+}
+
+void cliente::setCorreo(const string& correo) {
+    this->correo = correo;
+}
+
+void cliente::setFechaNacimiento(const string& fechaNacimiento) {
+    this->fechaNacimiento = fechaNacimiento;
+}
+
+void cliente::setSexo(const string& sexo) {
     this->sexo = sexo;
 }
 
-void cliente::setfechaInscripcion(fecha* fecha) {
-    if (fechaInscripcion) {
-        delete fechaInscripcion;
-    }
-    fechaInscripcion = fecha;
+void cliente::setFechaInscripcion(const string& fechaInscripcion) {
+    this->fechaInscripcion = fechaInscripcion;
 }
 
-void cliente::setInstructorAsignado(instructor* inst) {
-    this->instructorAsignado = inst;
-}
-
-// Métodos para que el instructor gestione la rutina
-void cliente::recibirRutinaDelInstructor(Rutina* rutina) {
-    // Eliminar rutina anterior si existe (solo una rutina activa)
-    if (rutinaActual) {
-        delete rutinaActual;
-        rutinaActual = nullptr;
-    }
-    // Almacenar la nueva rutina creada por el instructor
-    this->rutinaActual = rutina;
-}
-
-void cliente::eliminarRutinaActual() {
-    if (rutinaActual) {
-        delete rutinaActual;
-        rutinaActual = nullptr;
-    }
+void cliente::setCedulaInstructor(const string& cedula) {
+    this->cedulaInstructor = cedula;
 }
 
 // Métodos para mediciones
 bool cliente::agregarMedicion(reporteM* medicion) {
-    if (cantMediciones < maxMediciones && medicion) {
-        // Calcular proteína específica según el sexo del cliente
-        medicion->calcularProteina(sexo);
-
-        historialMediciones[cantMediciones] = medicion;
-        cantMediciones++;
+    if (canMediciones < maxMediciones && medicion != nullptr) {
+        mediciones[canMediciones] = medicion;
+        canMediciones++;
         return true;
     }
     return false;
 }
 
-reporteM* cliente::getUltimaMedicion() const {
-    if (cantMediciones > 0) {
-        return historialMediciones[cantMediciones - 1];
+reporteM* cliente::getMedicion(int indice) const {
+    if (indice >= 0 && indice < canMediciones) {
+        return mediciones[indice];
     }
     return nullptr;
 }
 
-// Métodos de visualización
-string cliente::toString() const {
+string cliente::historialMediciones() const {
     stringstream s;
-    s << getCedula() << " " << getNombre();
-    return s.str();
-}
-
-string cliente::toStringDetallado() const {
-    stringstream s;
-    s << "Nombre: " << getNombre() << endl;
-    s << "Cedula: " << getCedula() << endl;
-    s << "Teléfono: " << getTelefono() << endl;
-    s << "Correo: " << getCorreo() << endl;
-    s << "Fecha de nacimiento: " << getFechaNacimiento()->toString() << endl;
-    s << "Fecha de Inscripción: " << fechaInscripcion->toString() << endl;
-    s << "Sexo: " << sexo << endl;
-
-    if (instructorAsignado) {
-        s << "Instructor: " << instructorAsignado->getNombre() << endl;
+    s << "HISTORIAL DE MEDICIONES" << endl;
+    for (int i = 0; i < canMediciones; i++) {
+        s << (i + 1) << "- ";
+        if (mediciones[i]) {
+            s << mediciones[i]->toStringResumido() << endl;
+        }
     }
-    else {
-        s << "Instructor: Sin asignar" << endl;
-    }
-
-    if (tieneRutina()) {
-        s << "Rutina: Asignada (" << rutinaActual->getCan() << " ejercicios)" << endl;
-    }
-    else {
-        s << "Rutina: Sin asignar" << endl;
-    }
-
     return s.str();
 }
 
 void cliente::mostrarHistorialMediciones() const {
-    cout << "HISTORIAL DE MEDICIONES" << endl;
-    cout << "Cliente: " << getNombre() << " (" << getCedula() << ")" << endl;
-
-    if (cantMediciones == 0) {
-        cout << "No hay mediciones registradas para este cliente." << endl;
-        return;
-    }
-
-    for (int i = 0; i < cantMediciones; i++) {
-        cout << (i + 1) << "- " << historialMediciones[i]->toString() << endl;
-    }
+    cout << historialMediciones();
 }
 
-void cliente::mostrarRutinaActual() const {
-    if (tieneRutina()) {
-        cout << "===================================================================" << endl;
-        cout << "RUTINA ACTUAL DE " << getNombre() << endl;
-        if (instructorAsignado) {
-            cout << "Instructor: " << instructorAsignado->getNombre() << endl;
-        }
-        cout << "===================================================================" << endl;
-        rutinaActual->mostrarRutina();
-    }
-    else {
-        cout << "El cliente " << getNombre() << " no tiene rutina asignada." << endl;
-    }
+// Métodos para rutina
+void cliente::asignarRutina(Rutina* rutina) {
+    delete rutinaActual;
+    rutinaActual = rutina;
 }
 
-bool cliente::tieneRutina() const {
-    return rutinaActual != nullptr;
+void cliente::eliminarRutina() {
+    delete rutinaActual;
+    rutinaActual = nullptr;
+}
+
+// Métodos de utilidad
+void cliente::mostrar() const {
+    cout << "=== DETALLE DE CLIENTE ===" << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Cedula: " << cedula << endl;
+    cout << "Telefono: " << telefono << endl;
+    cout << "Correo: " << correo << endl;
+    cout << "Fecha de nacimiento: " << fechaNacimiento << endl;
+    cout << "Sexo: " << sexo << endl;
+    cout << "Fecha de inscripcion: " << fechaInscripcion << endl;
+    cout << "Instructor asignado: " << (cedulaInstructor.empty() ? "Sin asignar" : cedulaInstructor) << endl;
+    cout << "Mediciones registradas: " << canMediciones << "/" << maxMediciones << endl;
+    cout << "Rutina actual: " << (rutinaActual ? "Asignada" : "No asignada") << endl;
+}
+
+string cliente::toString() const {
+    return cedula + " " + nombre;
+}
+
+string cliente::toStringCompleto() const {
+    stringstream s;
+    s << "Nombre: " << nombre << endl;
+    s << "Cedula: " << cedula << endl;
+    s << "Telefono: " << telefono << endl;
+    s << "Correo: " << correo << endl;
+    s << "Fecha de nacimiento: " << fechaNacimiento << endl;
+    s << "Sexo: " << sexo << endl;
+    s << "Fecha de inscripcion: " << fechaInscripcion << endl;
+    s << "Instructor: " << (cedulaInstructor.empty() ? "Sin asignar" : cedulaInstructor) << endl;
+    return s.str();
 }

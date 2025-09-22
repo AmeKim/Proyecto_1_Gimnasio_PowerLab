@@ -1,52 +1,66 @@
-#pragma once
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "Persona.h"
 #include "reporteM.h"
 #include "Rutina.h"
-#include "fecha.h"
 using namespace std;
 
-class cliente : public Persona {
+class cliente {
 private:
-    char sexo;
-    fecha* fechaInscripcion;
-    instructor* instructorAsignado;
-    reporteM** historialMediciones;
-    int cantMediciones;
+    string nombre;
+    string cedula;
+    string telefono;
+    string correo;
+    string fechaNacimiento;
+    string sexo;
+    string fechaInscripcion;
+    string cedulaInstructor;
+    reporteM** mediciones;
+    int canMediciones;
     int maxMediciones;
     Rutina* rutinaActual;
 
 public:
-    cliente(string, string, string, string, fecha*, char, const fecha*, instructor*);
+    cliente();
+    cliente(const string& nombre, const string& cedula, const string& telefono,
+        const string& correo, const string& fechaNacimiento,
+        const string& sexo, const string& fechaInscripcion);
     ~cliente();
 
     // Getters
-    char getSexo() const;
-    fecha* getFechaInscripcion() const;
-    instructor* getInstructorAsignado() const;
-    int getCantMediciones() const;
-    reporteM* getMedicion(int indice) const;
+    string getNombre() const;
+    string getCedula() const;
+    string getTelefono() const;
+    string getCorreo() const;
+    string getFechaNacimiento() const;
+    string getSexo() const;
+    string getFechaInscripcion() const;
+    string getCedulaInstructor() const;
+    int getCanMediciones() const;
     Rutina* getRutinaActual() const;
 
     // Setters
-    void setSexo(char sexo);
-    void setfechaInscripcion(fecha* fecha);
-    void setInstructorAsignado(instructor* inst);
-
-    // Métodos para que el instructor gestione la rutina
-    void recibirRutinaDelInstructor(Rutina* rutina);
-    void eliminarRutinaActual();
+    void setNombre(const string& nombre);
+    void setCedula(const string& cedula);
+    void setTelefono(const string& telefono);
+    void setCorreo(const string& correo);
+    void setFechaNacimiento(const string& fechaNacimiento);
+    void setSexo(const string& sexo);
+    void setFechaInscripcion(const string& fechaInscripcion);
+    void setCedulaInstructor(const string& cedula);
 
     // Métodos para mediciones
     bool agregarMedicion(reporteM* medicion);
-    reporteM* getUltimaMedicion() const;
-
-    // Métodos de visualización
-    string toString() const;
-    string toStringDetallado() const;
+    reporteM* getMedicion(int indice) const;
+    string historialMediciones() const;
     void mostrarHistorialMediciones() const;
-    void mostrarRutinaActual() const;
-    bool tieneRutina() const;
+
+    // Métodos para rutina
+    void asignarRutina(Rutina* rutina);
+    void eliminarRutina();
+
+    // Métodos de utilidad
+    void mostrar() const;
+    string toString() const;
+    string toStringCompleto() const;
 };

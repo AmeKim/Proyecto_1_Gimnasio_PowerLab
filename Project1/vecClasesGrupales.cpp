@@ -1,5 +1,4 @@
 #include "vecClasesGrupales.h"
-#include "utiles.h"
 
 vecClasesGrupales::vecClasesGrupales(int capacidad) {
     tam = capacidad;
@@ -12,15 +11,13 @@ vecClasesGrupales::vecClasesGrupales(int capacidad) {
 
 vecClasesGrupales::~vecClasesGrupales() {
     for (int i = 0; i < can; i++) {
-        if (clases[i]) {
-            delete clases[i];
-        }
+        delete clases[i];
     }
     delete[] clases;
 }
 
 bool vecClasesGrupales::agregarClase(claseGrupal* clase) {
-    if (can < tam && clase) {
+    if (can < tam && clase != nullptr) {
         clases[can] = clase;
         can++;
         return true;
@@ -38,58 +35,29 @@ claseGrupal* vecClasesGrupales::buscarPorCodigo(int codigo) const {
 }
 
 void vecClasesGrupales::mostrarTodas() const {
+    cout << "Lista de clases existentes en la sucursal:" << endl;
     for (int i = 0; i < can; i++) {
         if (clases[i]) {
-            print("=================================\n");
-            print(clases[i]->toString());
-            print("=================================\n");
+            cout << clases[i]->toString() << endl;
         }
     }
 }
 
 bool vecClasesGrupales::matricularClienteEnClase(int codigoClase, cliente* cli) {
-    if (!cli) return false;
-
-    int contador = 0;
-
-    // Contar en cuántas clases ya está matriculado el cliente
-    for (int i = 0; i < can; ++i) {
-        if (clases[i] && clases[i]->tieneClienteMatriculado(cli)) {
-            contador++;
-        }
-    }
-
-    // Verificar límite de 3 clases por cliente
-    if (contador >= 3) {
-        print("El cliente ya está matriculado en 3 clases (máximo permitido)\n");
-        return false;
-    }
-
-    // Buscar la clase específica y matricular
     claseGrupal* clase = buscarPorCodigo(codigoClase);
-    if (clase) {
-        if (clase->matricularCliente(cli)) {
-            print("Cliente matriculado correctamente en la clase\n");
-            return true;
-        }
-        else {
-            print("No se pudo matricular el cliente (clase llena o ya matriculado)\n");
-            return false;
-        }
+    if (clase && cli) {
+        return clase->matricularCliente(cli);
     }
-
-    print("No se encontró la clase especificada\n");
     return false;
 }
 
 void vecClasesGrupales::mostrarClientesDeClase(int codigoClase) const {
     claseGrupal* clase = buscarPorCodigo(codigoClase);
     if (clase) {
-        print("=== CLIENTES MATRICULADOS ===\n");
-        print(clase->getClientesMatriculadosStr());
+        clase->mostrarClientesMatriculados();
     }
     else {
-        print("No se encontró la clase especificada\n");
+        cout << "Clase no encontrada." << endl;
     }
 }
 

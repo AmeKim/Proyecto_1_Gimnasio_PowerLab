@@ -6,16 +6,19 @@ using namespace std;
 
 class Ejercicio {
 private:
-    int zonaMuscular; // 1-Pecho, 2-Tríceps, 3-Bíceps, 4-Piernas, 5-Espalda
+    int zonaMuscular; // 1=Pecho, 2=Tríceps, 3=Bíceps, 4=Piernas, 5=Espalda
     string nombre;
     string descripcion;
     int series;
     int repeticiones;
 
 public:
+    // Constructores
     Ejercicio();
-    Ejercicio(int zona, string nombre, string descripcion);
-    Ejercicio(int zona, string nombre, string descripcion, int series, int repeticiones);
+    Ejercicio(int zona, const string& nombre, const string& descripcion);
+    Ejercicio(int zona, const string& nombre, const string& descripcion, int series, int repeticiones);
+
+    // Destructor
     ~Ejercicio();
 
     // Getters
@@ -24,6 +27,7 @@ public:
     string getDescripcion() const;
     int getSeries() const;
     int getRepeticiones() const;
+    string getNombreZona() const;
 
     // Setters
     void setZonaMuscular(int zona);
@@ -32,8 +36,11 @@ public:
     void setSeries(int series);
     void setRepeticiones(int repeticiones);
 
-    // Métodos adicionales
-    string getNombreZona() const;
-    string toString() const;
+    // Métodos de utilidad
     void mostrar() const;
+    string toString() const;
+    string toStringCompleto() const;
+
+    // Crear copia para rutina
+    Ejercicio* crearCopia() const;
 };

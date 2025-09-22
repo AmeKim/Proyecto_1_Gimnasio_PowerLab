@@ -1,9 +1,9 @@
 #include "especialidad.h"
 
 especialidad::especialidad() {
-    this->id = 0;
-    this->nombre = "";
-    this->descripcion = "";
+    id = 0;
+    nombre = "";
+    descripcion = "";
 }
 
 especialidad::especialidad(int id, string nombre, string descripcion) {
@@ -13,7 +13,7 @@ especialidad::especialidad(int id, string nombre, string descripcion) {
 }
 
 especialidad::~especialidad() {
-    // Destructor vacío
+    // No hay memoria dinámica que liberar
 }
 
 // Getters
@@ -42,6 +42,7 @@ void especialidad::setDescripcion(const string& descripcion) {
     this->descripcion = descripcion;
 }
 
+// Mostrar
 void especialidad::mostrar() const {
     cout << "ID: " << id << endl;
     cout << "Nombre: " << nombre << endl;
@@ -51,5 +52,10 @@ void especialidad::mostrar() const {
 }
 
 string especialidad::toString() const {
-    return nombre;
+    stringstream s;
+    s << id << ". " << nombre;
+    if (!descripcion.empty()) {
+        s << " - " << descripcion;
+    }
+    return s.str();
 }

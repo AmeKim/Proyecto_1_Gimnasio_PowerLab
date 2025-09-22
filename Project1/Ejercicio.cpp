@@ -1,14 +1,14 @@
 #include "Ejercicio.h"
 
 Ejercicio::Ejercicio() {
-    this->zonaMuscular = 0;
-    this->nombre = "";
-    this->descripcion = "";
-    this->series = 0;
-    this->repeticiones = 0;
+    zonaMuscular = 1;
+    nombre = "";
+    descripcion = "";
+    series = 0;
+    repeticiones = 0;
 }
 
-Ejercicio::Ejercicio(int zona, string nombre, string descripcion) {
+Ejercicio::Ejercicio(int zona, const string& nombre, const string& descripcion) {
     this->zonaMuscular = zona;
     this->nombre = nombre;
     this->descripcion = descripcion;
@@ -16,7 +16,7 @@ Ejercicio::Ejercicio(int zona, string nombre, string descripcion) {
     this->repeticiones = 0;
 }
 
-Ejercicio::Ejercicio(int zona, string nombre, string descripcion, int series, int repeticiones) {
+Ejercicio::Ejercicio(int zona, const string& nombre, const string& descripcion, int series, int repeticiones) {
     this->zonaMuscular = zona;
     this->nombre = nombre;
     this->descripcion = descripcion;
@@ -25,10 +25,9 @@ Ejercicio::Ejercicio(int zona, string nombre, string descripcion, int series, in
 }
 
 Ejercicio::~Ejercicio() {
-    // Destructor vacío ya que no hay memoria dinámica
+    // No hay memoria dinámica que liberar
 }
 
-// Getters
 int Ejercicio::getZonaMuscular() const {
     return zonaMuscular;
 }
@@ -49,7 +48,17 @@ int Ejercicio::getRepeticiones() const {
     return repeticiones;
 }
 
-// Setters
+string Ejercicio::getNombreZona() const {
+    switch (zonaMuscular) {
+    case 1: return "Pecho";
+    case 2: return "Tríceps";
+    case 3: return "Bíceps";
+    case 4: return "Piernas";
+    case 5: return "Espalda";
+    default: return "Desconocido";
+    }
+}
+
 void Ejercicio::setZonaMuscular(int zona) {
     this->zonaMuscular = zona;
 }
@@ -70,29 +79,35 @@ void Ejercicio::setRepeticiones(int repeticiones) {
     this->repeticiones = repeticiones;
 }
 
-// Métodos adicionales
-string Ejercicio::getNombreZona() const {
-    switch (zonaMuscular) {
-    case 1: return "Pecho";
-    case 2: return "Tríceps";
-    case 3: return "Bíceps";
-    case 4: return "Piernas";
-    case 5: return "Espalda";
-    default: return "Desconocida";
+void Ejercicio::mostrar() const {
+    cout << "Ejercicio: " << nombre << endl;
+    cout << "Zona muscular: " << getNombreZona() << endl;
+    cout << "Descripción: " << descripcion << endl;
+    if (series > 0 && repeticiones > 0) {
+        cout << "Series: " << series << ", Repeticiones: " << repeticiones << endl;
     }
 }
 
 string Ejercicio::toString() const {
+    if (series > 0 && repeticiones > 0) {
+        return nombre + ", serie: " + to_string(series) + ", repeticiones: " + to_string(repeticiones);
+    }
+    else {
+        return nombre;
+    }
+}
+
+string Ejercicio::toStringCompleto() const {
     stringstream s;
-    s << nombre << ", series: " << series << ", repeticiones: " << repeticiones;
+    s << "Ejercicio: " << nombre << endl;
+    s << "Zona: " << getNombreZona() << endl;
+    s << "Descripción: " << descripcion << endl;
+    if (series > 0 && repeticiones > 0) {
+        s << "Series: " << series << ", Repeticiones: " << repeticiones << endl;
+    }
     return s.str();
 }
 
-void Ejercicio::mostrar() const {
-    cout << "Zona: " << getNombreZona() << endl;
-    cout << "Ejercicio: " << nombre << endl;
-    cout << "Descripción: " << descripcion << endl;
-    if (series > 0 && repeticiones > 0) {
-        cout << "Series: " << series << " - Repeticiones: " << repeticiones << endl;
-    }
+Ejercicio* Ejercicio::crearCopia() const {
+    return new Ejercicio(zonaMuscular, nombre, descripcion, series, repeticiones);
 }

@@ -19,9 +19,9 @@ private:
     vecClasesGrupales* clasesGrupales;
 
 public:
-    // Constructores y destructor
     Sucursal();
-    Sucursal(int codigo, string provincia, string canton, string correo, string telefono);
+    Sucursal(int codigo, const string& provincia, const string& canton,
+        const string& correo, const string& telefono);
     ~Sucursal();
 
     // Getters
@@ -44,21 +44,20 @@ public:
     // Métodos para gestionar clientes
     bool agregarCliente(cliente* cli);
     cliente* buscarCliente(const string& cedula);
-    void mostrarClientes() const;
-    void reporteIMC() const;
-    cliente* getClientePorIndice(int indice) const;
 
     // Métodos para gestionar instructores
     bool agregarInstructor(instructor* inst);
     instructor* buscarInstructor(const string& cedula);
-    void mostrarInstructores() const;
-    instructor* getInstructorPorIndice(int indice) const;
 
     // Métodos para gestionar clases grupales
     bool agregarClaseGrupal(claseGrupal* clase);
-    void mostrarClasesGrupales() const;
+
+    // Reportes
+    void reporteIMC() const;
+    void mostrarClientesPorIMC() const;
 
     // Métodos de utilidad
+    void mostrar() const;
     string toString() const;
-    void mostrarDetalle() const;
+    string toStringCompleto() const;
 };
