@@ -3,7 +3,7 @@
 Medicion::Medicion() {
     clienteRef = nullptr;
     instructorRef = nullptr;
-    fechaMedicion = new Fecha();
+    fechaMedicion = new fecha();
     peso = 0.0;
     estatura = 0.0;
     porcentajeGrasa = 0.0;
@@ -21,12 +21,10 @@ Medicion::Medicion() {
     proteina = 0.0;
 }
 
-Medicion::Medicion(cliente* cli, instructor* inst, const Fecha& fecha, double peso, double estatura,
-    double pGrasa, double pMusculo, int edadMet, double grasaVisc,
-    double cintura, double cadera, double pecho, double muslo) {
+Medicion::Medicion(cliente* cli, instructor* inst, fecha* fecha, double peso, double estatura, double pGrasa, double pMusculo, int edadMet, double grasaVisc, double cintura, double cadera, double pecho, double muslo) {
     this->clienteRef = cli;
     this->instructorRef = inst;
-    fechaMedicion = new Fecha(fecha);
+    this->fechaMedicion = fecha;
     this->peso = peso;
     this->estatura = estatura;
     this->porcentajeGrasa = pGrasa;
@@ -150,7 +148,7 @@ char Medicion::getSexoCliente() const {
 }
 
 // Getters para datos de medición ingresados
-Fecha* Medicion::getFechaMedicion() const {
+fecha* Medicion::getFechaMedicion() const {
     return fechaMedicion;
 }
 
@@ -226,9 +224,9 @@ instructor* Medicion::getInstructor() const {
 }
 
 // Setters para datos de medición
-void Medicion::setFechaMedicion(const Fecha& fecha) {
+void Medicion::setFechaMedicion(fecha* fecha) {
     delete fechaMedicion;
-    fechaMedicion = new Fecha(fecha);
+    fechaMedicion = fecha;
 }
 
 void Medicion::setPeso(double peso) {

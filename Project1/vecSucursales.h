@@ -18,8 +18,7 @@ public:
 
     // Métodos para agregar sucursales
     bool agregarSucursal(Sucursal* sucursal);
-    bool agregarSucursal(int codigo, const string& provincia, const string& canton,
-        const string& correo, const string& telefono);
+    bool agregarSucursal(int codigo, const string provincia, const string canton,const string correo, const string telefono);
 
     // Búsqueda de sucursales
     Sucursal* buscarPorCodigo(int codigo) const;

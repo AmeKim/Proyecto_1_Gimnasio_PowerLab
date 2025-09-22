@@ -19,12 +19,12 @@ private:
     Rutina* rutinaActual;
 
 public:
-    cliente(string, string, string, string, const fecha&, char, const fecha&, instructor*);
+    cliente(string, string, string, string, fecha*, char, const fecha*, instructor*);
     ~cliente();
 
     // Getters
     char getSexo() const;
-fecha* getFechaInscripcion() const;
+    fecha* getFechaInscripcion() const;
     instructor* getInstructorAsignado() const;
     int getCantMediciones() const;
     reporteM* getMedicion(int indice) const;
@@ -32,7 +32,7 @@ fecha* getFechaInscripcion() const;
 
     // Setters
     void setSexo(char sexo);
-    void setfechaInscripcion(const fecha& fecha);
+    void setfechaInscripcion(fecha* fecha);
     void setInstructorAsignado(instructor* inst);
 
     // Métodos para que el instructor gestione la rutina

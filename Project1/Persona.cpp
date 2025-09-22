@@ -8,15 +8,15 @@ Persona::Persona(string nombre, string cedula, string telefono, string correo, i
     this->fechaNacimiento = new fecha(dia, mes, anio);
 }
 
-Persona::Persona(string nombre, string cedula, string telefono, string correo, const fecha& fecha) {
+Persona::Persona(string nombre, string cedula, string telefono, string correo, fecha* fecha) {
     this->nombre = nombre;
     this->cedula = cedula;
     this->telefono = telefono;
     this->correo = correo;
-    this->fechaNacimiento = new fecha(fecha);
+	this->fechaNacimiento = fecha;
 }
 
-Persona::Persona(string nombre, string cedula, string telefono, string correo, const string& fechaStr) {
+Persona::Persona(string nombre, string cedula, string telefono, string correo, string fechaStr) {
     this->nombre = nombre;
     this->cedula = cedula;
     this->telefono = telefono;
@@ -45,8 +45,7 @@ fecha* Persona::getFechaNacimiento() const { return fechaNacimiento; }
 
 int Persona::getEdad() const {
     if (fechaNacimiento) {
-        fecha hoy; // Asumir que el constructor por defecto crea fecha actual
-        return fechaNacimiento->calcularEdad(hoy);
+       return fechaNacimiento->calcularEdad();
     }
     return 0;
 }
@@ -57,9 +56,9 @@ void Persona::setCedula(string cedula) { this->cedula = cedula; }
 void Persona::setTelefono(string telefono) { this->telefono = telefono; }
 void Persona::setCorreo(string correo) { this->correo = correo; }
 
-void Persona::setFechaNacimiento(const fecha& fecha) {
+void Persona::setFechaNacimiento(fecha* fecha) {
     if (fechaNacimiento) delete fechaNacimiento;
-    fechaNacimiento = new fecha(fecha);
+	fechaNacimiento = fecha;
 }
 
 void Persona::setFechaNacimiento(int dia, int mes, int anio) {
@@ -67,7 +66,7 @@ void Persona::setFechaNacimiento(int dia, int mes, int anio) {
     fechaNacimiento = new fecha(dia, mes, anio);
 }
 
-void Persona::setFechaNacimiento(const string& fechaStr) {
+void Persona::setFechaNacimiento(string fechaStr) {
     if (fechaNacimiento) delete fechaNacimiento;
     fechaNacimiento = new fecha(fechaStr);
 }

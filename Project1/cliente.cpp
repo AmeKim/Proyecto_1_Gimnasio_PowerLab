@@ -1,18 +1,7 @@
 #include "cliente.h"
 #include "instructor.h"
 
-cliente::cliente(string nombre, string cedula, string telefono, string correo,const fecha& fechaNac, char sexo, const fecha& fechaInsc,instructor* inst): Persona(nombre, cedula, telefono, correo, fechaNac) {
-    this->sexo = sexo;
-    this->fechaInscripcion = new fecha(fechaInsc);
-    this->instructorAsignado = inst;
-    this->maxMediciones = 100; // Capacidad máxima del historial
-    this->cantMediciones = 0;
-    this->historialMediciones = new reporteM * [maxMediciones];
-    for (int i = 0; i < maxMediciones; i++) {
-        historialMediciones[i] = nullptr;
-    }
-    this->rutinaActual = nullptr; // Inicialmente sin rutina
-}
+//cliente::cliente: persona() {}
 cliente::~cliente() {
     delete fechaInscripcion;
 
@@ -61,11 +50,11 @@ void cliente::setSexo(char sexo) {
     this->sexo = sexo;
 }
 
-void cliente::setfechaInscripcion(const fecha& fecha) {
+void cliente::setfechaInscripcion(fecha* fecha) {
     if (fechaInscripcion) {
         delete fechaInscripcion;
     }
-    fechaInscripcion = newfecha (fecha);
+    fechaInscripcion = fecha;
 }
 
 void cliente::setInstructorAsignado(instructor* inst) {
@@ -79,7 +68,6 @@ void cliente::recibirRutinaDelInstructor(Rutina* rutina) {
         delete rutinaActual;
         rutinaActual = nullptr;
     }
-
     // Almacenar la nueva rutina creada por el instructor
     this->rutinaActual = rutina;
 }

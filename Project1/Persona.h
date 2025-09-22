@@ -18,8 +18,8 @@ protected:
 public:
     // Constructores
     Persona(string nombre, string cedula, string telefono, string correo, int dia, int mes, int anio);
-    Persona(string nombre, string cedula, string telefono, string correo, const fecha& fecha);
-    Persona(string nombre, string cedula, string telefono, string correo, const string& fechaStr);
+    Persona(string nombre, string cedula, string telefono, string correo, fecha* fecha);
+    Persona(string nombre, string cedula, string telefono, string correo, string fechaStr);
     Persona();
     virtual ~Persona();
 
@@ -36,9 +36,9 @@ public:
     void setCedula(string cedula);
     void setTelefono(string telefono);
     void setCorreo(string correo);
-    void setFechaNacimiento(const fecha& fecha);
+    void setFechaNacimiento(fecha* fecha);
     void setFechaNacimiento(int dia, int mes, int anio);
-    void setFechaNacimiento(const string& fechaStr);
+    void setFechaNacimiento(string fechaStr);
 
     // Métodos virtuales
     virtual string toString();

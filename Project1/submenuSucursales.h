@@ -6,7 +6,7 @@
 #include "Medicion.h"
 using namespace std;
 
-class submenuClaseGrup {
+class submenuSucursales {
 
 private:
 	char opcion;
@@ -14,8 +14,11 @@ private:
 	vecSucursales* vSucursales;
 	char imprimirMenu();
 	void addSucursal();
-	void MostrarSucursales();
+	void MostrarSucursal();
 	void reporteIMC();
 
-
+	public:
+		submenuSucursales(vecSucursales* vSucursales);
+		~submenuSucursales();
+		int iniciar();
 };

@@ -12,7 +12,7 @@ fecha::fecha(int dia, int mes, int anio) {
     this->anio = anio;
 }
 
-fecha::fecha(const string& fechaStr) {
+fecha::fecha(const string fechaStr) {
     // Parsear formato "dd/mm/yyyy"
     int pos1 = fechaStr.find('/');
     int pos2 = fechaStr.find('/', pos1 + 1);
@@ -45,7 +45,7 @@ void fecha::setFecha(int dia, int mes, int anio) {
     this->anio = anio;
 }
 
-void fecha::setFecha(const string& fechaStr) {
+void fecha::setFecha(const string fechaStr) {
     int pos1 = fechaStr.find('/');
     int pos2 = fechaStr.find('/', pos1 + 1);
 

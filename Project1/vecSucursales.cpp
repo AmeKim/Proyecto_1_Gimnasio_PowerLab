@@ -28,8 +28,7 @@ bool vecSucursales::agregarSucursal(Sucursal* sucursal) {
     return false;
 }
 
-bool vecSucursales::agregarSucursal(int codigo, const string& provincia, const string& canton,
-    const string& correo, const string& telefono) {
+bool vecSucursales::agregarSucursal(int codigo, const string provincia, const string canton, const string correo, const string telefono) {
     if (can < tam && !existeCodigo(codigo)) {
         Sucursal* nuevaSucursal = new Sucursal(codigo, provincia, canton, correo, telefono);
         sucursales[can] = nuevaSucursal;

@@ -1,8 +1,9 @@
 #pragma once
+#include <string>
 #include "fecha.h"
 #include "cliente.h"
 #include "instructor.h"
-#include <string>
+
 using namespace std;
 
 class Medicion {
@@ -40,18 +41,16 @@ private:
 
 public:
     Medicion();
-    Medicion(cliente* cliente, instructor* instructor, const fecha& fecha, double peso, double estatura,
-        double pGrasa, double pMusculo, int edadMet, double grasaVisc,
-        double cintura, double cadera, double pecho, double muslo);
+    Medicion(cliente*, instructor*, fecha*, double peso, double estatura, double pGrasa, double pMusculo, int edadMet, double grasaVisc, double cintura, double cadera, double pecho, double muslo);
     ~Medicion();
 
-    // Getters para obtener información del cliente e instructor
+    // Gets para obtener información del cliente e instructor
     string getNombreCliente() const;
     string getIdCliente() const;
     string getNombreInstructor() const;
     char getSexoCliente() const;
 
-    // Getters para datos de medición ingresados
+    // Gets para datos de medición ingresados
     fecha* getFechaMedicion() const;
     double getPeso() const;
     double getEstatura() const;
@@ -60,25 +59,25 @@ public:
     int getEdadMetabolica() const;
     double getPorcentajeGrasaVisceral() const;
 
-    // Getters para medidas corporales
+    // Gets para medidas corporales
     double getCintura() const;
     double getCadera() const;
     double getPecho() const;
     double getMuslo() const;
 
-    // Getters para datos calculados
+    // Gets para datos calculados
     double getIMC() const;
     string getClasificacion() const;
     bool esAltoRiesgo() const;
     int getVasosAgua() const;
     double getProteina() const;
 
-    // Getters para referencias
+    // Gets para referencias
     cliente* getCliente() const;
     instructor* getInstructor() const;
 
-    // Setters para datos de medición (recalculan automáticamente)
-    void setFechaMedicion(const fecha& fecha);
+    // Sets para datos de medición (recalculan automáticamente)
+    void setFechaMedicion(fecha* fecha);
     void setPeso(double peso);
     void setEstatura(double estatura);
     void setPorcentajeGrasa(double pGrasa);
@@ -86,7 +85,7 @@ public:
     void setEdadMetabolica(int edad);
     void setPorcentajeGrasaVisceral(double grasaVisc);
 
-    // Setters para medidas corporales
+    // Sets para medidas corporales
     void setCintura(double cintura);
     void setCadera(double cadera);
     void setPecho(double pecho);

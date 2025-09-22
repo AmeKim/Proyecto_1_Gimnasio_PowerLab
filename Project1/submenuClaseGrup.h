@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include "utiles.h"
+#include "claseGrupal.h"
 
 class submenuClaseGrup{
 private: 

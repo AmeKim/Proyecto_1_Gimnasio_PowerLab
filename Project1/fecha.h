@@ -13,7 +13,7 @@ private:
 public:
     fecha();
     fecha(int dia, int mes, int anio);
-    fecha(const string& fechaStr); // Constructor para formato "dd/mm/yyyy"
+    fecha(const string fechaStr); // Constructor para formato "dd/mm/yyyy"
     ~fecha();
 
     // Getters
@@ -26,7 +26,7 @@ public:
     void setMes(int mes);
     void setAnio(int anio);
     void setFecha(int dia, int mes, int anio);
-    void setFecha(const string& fechaStr);
+    void setFecha(const string fechaStr);
 
     // Métodos
     bool esValida() const;
