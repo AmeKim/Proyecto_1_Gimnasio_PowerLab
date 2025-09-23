@@ -3,48 +3,46 @@
 #include <string>
 #include <sstream>
 #include "Persona.h"
-#include "reporteM.h"
+#include "fecha.h"
 using namespace std;
 
 class cliente : public Persona {
 private:
-    string fechaInscripcion;
-    string sexo;
-    reporteM** mediciones;
+    fecha* fechaInscripcion;
+    char sexo;
+    void* instructorAsignado;     // Usamos void* para evitar inclusiones circulares
+    void** mediciones;            // Array de void* para las mediciones
     int canMediciones;
     int tamMediciones;
-    string cedulaInstructorAsignado;
+    void* rutinaActual;           // Usamos void* para evitar inclusiones circulares
 
 public:
-    // Constructores
     cliente();
-    cliente(const string& nombre, const string& cedula, const string& telefono,
-        const string& correo, const string& fechaNacimiento, const string& sexo,
-        const string& fechaInscripcion);
+    cliente(const string& cedula, const string& nombre, const string& telefono,
+        const string& correo, fecha* fechaNac, fecha* fechaInsc, char sexo);
     ~cliente();
 
     // Getters
-    string getFechaInscripcion() const;
-    string getSexo() const;
-    char getSexoChar() const; // Devuelve 'M' o 'F'
-    string getCedulaInstructorAsignado() const;
+    fecha* getFechaInscripcion() const;
+    char getSexo() const;
+    void* getInstructorAsignado() const;
     int getCanMediciones() const;
-    int getTamMediciones() const;
-    Medicion* getMedicion(int index) const;
+    void* getRutinaActual() const;
+    void* getMedicion(int indice) const;
 
     // Setters
-    void setFechaInscripcion(const string& fechaInscripcion);
-    void setSexo(const string& sexo);
-    void setCedulaInstructorAsignado(const string& cedulaInstructor);
+    void setFechaInscripcion(fecha* fechaInsc);
+    void setSexo(char sexo);
+    void setInstructorAsignado(void* inst);
+    void setRutinaActual(void* rutina);
 
     // Métodos para mediciones
-    bool agregarMedicion(reporteM* medicion);
-    reporteM* getMedicionMasReciente() const;
+    bool agregarMedicion(void* medicion);
     void mostrarHistorialMediciones() const;
+    void* getUltimaMedicion() const;
 
-    // Métodos de visualización
+    // Métodos heredados y propios
     string toString() const;
-    string toStringResumido() const;
-    string toStringDetallado() const;
     void mostrar() const;
+    string toStringDetallado() const;
 };

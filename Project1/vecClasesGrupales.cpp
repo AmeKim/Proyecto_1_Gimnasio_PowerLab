@@ -1,4 +1,7 @@
 #include "vecClasesGrupales.h"
+#include <sstream> // <-- AÑADIR ESTA LÍNEA
+
+// ... (El resto del constructor, destructor y otros métodos se mantienen igual) ...
 
 vecClasesGrupales::vecClasesGrupales(int capacidad) {
     tam = capacidad;
@@ -42,6 +45,19 @@ void vecClasesGrupales::mostrarTodas() const {
         }
     }
 }
+
+// ===== INICIO DEL CÓDIGO AÑADIDO =====
+string vecClasesGrupales::toString() const {
+    stringstream s;
+    s << "Lista de clases existentes en la sucursal:" << endl;
+    for (int i = 0; i < can; i++) {
+        if (clases[i]) {
+            s << clases[i]->toString() << endl;
+        }
+    }
+    return s.str();
+}
+// ===== FIN DEL CÓDIGO AÑADIDO =====
 
 bool vecClasesGrupales::matricularClienteEnClase(int codigoClase, cliente* cli) {
     claseGrupal* clase = buscarPorCodigo(codigoClase);

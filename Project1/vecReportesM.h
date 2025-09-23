@@ -18,7 +18,6 @@ public:
     ~vecReportesM();
 
     // Métodos para agregar reportes
-    bool agregarReporte(reporteM* reporte);
     bool crearYAgregarReporte(Medicion* medicion);
 
     // Getters
@@ -31,5 +30,4 @@ public:
     // Métodos de presentación (solo guardan/organizan reportes)
     void mostrarHistorialResumen() const;
     void mostrarReporteDetallado(int indice) const;
-    void mostrarTodosLosReportes() const;
 };

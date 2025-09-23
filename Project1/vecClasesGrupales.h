@@ -14,6 +14,7 @@ public:
     bool agregarClase(claseGrupal* clase);
     claseGrupal* buscarPorCodigo(int codigo) const;
     void mostrarTodas() const;
+    string toString() const; // <-- AÑADIR ESTA LÍNEA
     bool matricularClienteEnClase(int codigoClase, cliente* cli);
     void mostrarClientesDeClase(int codigoClase) const;
     int getCan() const;

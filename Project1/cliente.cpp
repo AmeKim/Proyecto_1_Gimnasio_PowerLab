@@ -1,159 +1,180 @@
 #include "cliente.h"
+#include "Medicion.h"
 
-// Constructores
 cliente::cliente() : Persona() {
-    fechaInscripcion = "";
-    sexo = "";
-    cedulaInstructorAsignado = "";
+    fechaInscripcion = nullptr;
+    sexo = 'm';
+    instructorAsignado = nullptr;
     canMediciones = 0;
-    tamMediciones = 10; // Máximo 10 mediciones según especificaciones
-    mediciones = new reporteM * [tamMediciones];
+    tamMediciones = 10; // Máximo 10 mediciones según especificación del PDF
+    mediciones = new void* [tamMediciones];
     for (int i = 0; i < tamMediciones; i++) {
         mediciones[i] = nullptr;
     }
+    rutinaActual = nullptr;
 }
 
-cliente::cliente(const string& nombre, const string& cedula, const string& telefono,
-    const string& correo, const string& fechaNacimiento, const string& sexo,
-    const string& fechaInscripcion)
-    : Persona(nombre, cedula, telefono, correo, fechaNacimiento) {
-    this->fechaInscripcion = fechaInscripcion;
+cliente::cliente(const string& cedula, const string& nombre, const string& telefono,
+    const string& correo, fecha* fechaNac, fecha* fechaInsc, char sexo)
+    : Persona(cedula, nombre, telefono, correo, fechaNac) {
+    this->fechaInscripcion = fechaInsc;
     this->sexo = sexo;
-    this->cedulaInstructorAsignado = "";
+    this->instructorAsignado = nullptr;
     this->canMediciones = 0;
-    this->tamMediciones = 10; // Máximo 10 mediciones según especificaciones
-    this->mediciones = new reporteM * [tamMediciones];
+    this->tamMediciones = 10;
+    this->mediciones = new void* [tamMediciones];
     for (int i = 0; i < tamMediciones; i++) {
         mediciones[i] = nullptr;
     }
+    this->rutinaActual = nullptr;
 }
 
 cliente::~cliente() {
+    if (fechaInscripcion) {
+        delete fechaInscripcion;
+    }
+
+    // Eliminar mediciones
     for (int i = 0; i < canMediciones; i++) {
-        delete mediciones[i];
+        if (mediciones[i]) {
+            delete static_cast<Medicion*>(mediciones[i]);
+        }
     }
     delete[] mediciones;
+
+    // Eliminar rutina actual (si usas la clase Rutina)
+    if (rutinaActual) {
+        // delete static_cast<Rutina*>(rutinaActual);
+        // Comentado por ahora hasta que definas si usar Rutina
+    }
+
+    // No eliminamos instructorAsignado porque es solo una referencia
 }
 
 // Getters
-string cliente::getFechaInscripcion() const { return fechaInscripcion; }
-string cliente::getSexo() const { return sexo; }
-
-char cliente::getSexoChar() const {
-    // Convertir string a char usando switch
-    switch (sexo.length()) {
-    case 0:
-        return 'M'; // Default
-    default:
-        char primerChar = sexo[0];
-        switch (primerChar) {
-        case 'M':
-        case 'm':
-            return 'M';
-        case 'F':
-        case 'f':
-            return 'F';
-        default:
-            return 'M'; // Default
-        }
-    }
+fecha* cliente::getFechaInscripcion() const {
+    return fechaInscripcion;
 }
 
-string cliente::getCedulaInstructorAsignado() const { return cedulaInstructorAsignado; }
-int cliente::getCanMediciones() const { return canMediciones; }
-int cliente::getTamMediciones() const { return tamMediciones; }
+char cliente::getSexo() const {
+    return sexo;
+}
 
-reporteM* cliente::getMedicion(int indice) const {
-    switch (indice >= 0 && indice < canMediciones) {
-    case true:
+void* cliente::getInstructorAsignado() const {
+    return instructorAsignado;
+}
+
+int cliente::getCanMediciones() const {
+    return canMediciones;
+}
+
+void* cliente::getRutinaActual() const {
+    return rutinaActual;
+}
+
+void* cliente::getMedicion(int indice) const {
+    if (indice >= 0 && indice < canMediciones) {
         return mediciones[indice];
-    case false:
-        return nullptr;
     }
+    return nullptr;
 }
 
 // Setters
-void cliente::setFechaInscripcion(const string& fechaInscripcion) {
-    this->fechaInscripcion = fechaInscripcion;
+void cliente::setFechaInscripcion(fecha* fechaInsc) {
+    if (fechaInscripcion) {
+        delete fechaInscripcion;
+    }
+    this->fechaInscripcion = fechaInsc;
 }
 
-void cliente::setSexo(const string& sexo) {
+void cliente::setSexo(char sexo) {
     this->sexo = sexo;
 }
 
-void cliente::setCedulaInstructorAsignado(const string& cedulaInstructor) {
-    this->cedulaInstructorAsignado = cedulaInstructor;
+void cliente::setInstructorAsignado(void* inst) {
+    this->instructorAsignado = inst;
+}
+
+void cliente::setRutinaActual(void* rutina) {
+    if (rutinaActual) {
+        // delete static_cast<Rutina*>(rutinaActual);
+        // Comentado por ahora
+    }
+    this->rutinaActual = rutina;
 }
 
 // Métodos para mediciones
-bool cliente::agregarMedicion(reporteM* medicion) {
-    switch (canMediciones < tamMediciones && medicion != nullptr) {
-    case true:
+bool cliente::agregarMedicion(void* medicion) {
+    if (canMediciones < tamMediciones && medicion != nullptr) {
         mediciones[canMediciones] = medicion;
         canMediciones++;
         return true;
-    case false:
-        return false;
     }
-}
-
-reporteM* cliente::getMedicionMasReciente() const {
-    switch (canMediciones > 0) {
-    case true:
-        return mediciones[canMediciones - 1];
-    case false:
-        return nullptr;
-    }
+    return false; // No se puede agregar más mediciones (máximo 10)
 }
 
 void cliente::mostrarHistorialMediciones() const {
     cout << "HISTORIAL DE MEDICIONES" << endl;
-    switch (canMediciones) {
-    case 0:
+    cout << getCedula() << " " << getNombre() << endl;
+    cout << endl;
+
+    if (canMediciones == 0) {
         cout << "No hay mediciones registradas." << endl;
-        break;
-    default:
-        for (int i = 0; i < canMediciones; i++) {
-            cout << (i + 1) << "- " << mediciones[i]->toString() << endl;
+        return;
+    }
+
+    for (int i = 0; i < canMediciones; i++) {
+        if (mediciones[i]) {
+            Medicion* med = static_cast<Medicion*>(mediciones[i]);
+            cout << (i + 1) << "- Fecha: " << med->getFecha()->toString()
+                << " | Peso: " << med->getPeso() << " kg"
+                << " | IMC: " << med->getIMC() << endl;
         }
-        break;
     }
 }
 
-// Métodos de visualización
+void* cliente::getUltimaMedicion() const {
+    if (canMediciones > 0) {
+        return mediciones[canMediciones - 1];
+    }
+    return nullptr;
+}
+
+// Métodos heredados y propios
 string cliente::toString() const {
     stringstream s;
     s << getCedula() << " " << getNombre();
     return s.str();
 }
 
-string cliente::toStringResumido() const {
-    stringstream s;
-    s << "Nombre: " << getNombre() << endl;
-    s << "Cedula: " << getCedula() << endl;
-    s << "Teléfono: " << getTelefono() << endl;
-    s << "Correo: " << getCorreo() << endl;
-    s << "Fecha de nacimiento: " << getFechaNacimiento() << endl;
-    s << "Fecha de Inscripción: " << fechaInscripcion << endl;
-    s << "Sexo: " << sexo << endl;
-    return s.str();
+void cliente::mostrar() const {
+    cout << toStringDetallado();
 }
 
 string cliente::toStringDetallado() const {
     stringstream s;
-    s << toStringResumido();
-    switch (cedulaInstructorAsignado.empty()) {
-    case true:
-        s << "Instructor: Sin asignar" << endl;
-        break;
-    case false:
-        s << "Instructor asignado: " << cedulaInstructorAsignado << endl;
-        break;
-    }
-    s << "Mediciones registradas: " << canMediciones << endl;
-    return s.str();
-}
+    s << "Detalle de cliente:" << endl;
+    s << "Nombre: " << getNombre() << endl;
+    s << "Cedula: " << getCedula() << endl;
+    s << "Telefono: " << getTelefono() << endl;
+    s << "Correo: " << getCorreo() << endl;
 
-void cliente::mostrar() const {
-    cout << toStringDetallado();
+    if (getFechaNacimiento()) {
+        s << "Fecha de nacimiento: " << getFechaNacimiento()->toString() << endl;
+    }
+
+    if (fechaInscripcion) {
+        s << "Fecha de Inscripcion: " << fechaInscripcion->toString() << endl;
+    }
+
+    s << "Sexo: " << sexo << endl;
+
+    if (instructorAsignado) {
+        s << "Instructor: Asignado" << endl; // No podemos acceder al nombre sin incluir instructor.h
+    }
+    else {
+        s << "Instructor: Sin asignar" << endl;
+    }
+
+    return s.str();
 }

@@ -14,21 +14,18 @@ vecReportesM::vecReportesM(int capacidad) {
 vecReportesM::~vecReportesM() {
     for (int i = 0; i < can; i++) {
         delete reportes[i];
-        delete mediciones[i]; // Eliminar las mediciones también
+        reportes[i] = nullptr;
+        delete mediciones[i];
+        mediciones[i] = nullptr;
     }
     delete[] reportes;
+    reportes = nullptr;
     delete[] mediciones;
+    mediciones = nullptr;
 }
 
-bool vecReportesM::agregarReporte(reporteM* reporte) {
-    if (can < tam && reporte != nullptr) {
-        reportes[can] = reporte;
-        mediciones[can] = nullptr; // No gestiona esta medición
-        can++;
-        return true;
-    }
-    return false;
-}
+// Se elimina el metodo agregarReporte(reporteM* reporte) ya que su gestion de memoria
+// es incompatible con crearYAgregarReporte y el destructor, causando problemas.
 
 bool vecReportesM::crearYAgregarReporte(Medicion* medicion) {
     if (can < tam && medicion != nullptr) {
@@ -81,18 +78,6 @@ void vecReportesM::mostrarReporteDetallado(int indice) const {
         reportes[indice]->mostrarDetalle();
     }
     else {
-        cout << "Indice invalido o reporte no encontrado." << endl;
-    }
-}
-
-void vecReportesM::mostrarTodosLosReportes() const {
-    cout << "HISTORIAL COMPLETO DE MEDICIONES" << endl;
-    cout << "=================================" << endl;
-    for (int i = 0; i < can; i++) {
-        if (reportes[i] != nullptr) {
-            cout << "REPORTE #" << (i + 1) << endl;
-            reportes[i]->mostrarReporteCompleto();
-            cout << endl;
-        }
+        cout << "Indice invalido." << endl;
     }
 }

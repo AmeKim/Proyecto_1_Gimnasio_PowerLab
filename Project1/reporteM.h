@@ -21,9 +21,7 @@ public:
     void setMedicion(Medicion* med);
 
     // Métodos de presentación (solo imprimen)
-    string toString() const;
     void mostrarDetalle() const;
-    void mostrarReporteCompleto() const;
 
     // Método para mostrar resumen (fecha, peso, IMC)
     string mostrarResumen() const;
