@@ -1,98 +1,61 @@
 #pragma once
-#include <string>
 #include <iostream>
+#include <string>
 #include <sstream>
 #include "fecha.h"
 #include "cliente.h"
 #include "instructor.h"
-#include "reporteM.h"
-
 using namespace std;
 
 class Medicion {
 private:
-    // Referencias al cliente e instructor
-    cliente* cliente;
-    instructor* instructorRef;
     fecha* fechaMedicion;
+    cliente* clienteRef;
+    instructor* instructorRef;
     double peso;
     double estatura;
     double porcentajeGrasa;
     double porcentajeMusculo;
-    int edadMetabolica;
-    double porcentajeGrasaVisceral;
-
-    // Medidas
-    double cintura;
-    double cadera;
-    double pecho;
-    double muslo;
-
-    // Datos calculados automáticamente
     double imc;
     string clasificacion;
     bool altoRiesgo;
-    int vasosAgua;
-    double proteina;
-
-    // Métodos privados
-    void calcularIMC();
-    void determinarClasificacion();
-    void calcularVasosAgua();
-    void calcularProteina();
+    int vasosRecomendados;
+    double proteinaRecomendada;
 
 public:
     Medicion();
-    Medicion(cliente*, instructor*, fecha*, double peso, double estatura, double pGrasa, double pMusculo, int edadMet, double grasaVisc, double cintura, double cadera, double pecho, double muslo);
+    Medicion(fecha* fecha, cliente* cli, instructor* inst, double peso, double estatura,
+        double porcentajeGrasa, double porcentajeMusculo);
     ~Medicion();
 
-    // Gets para obtener información del cliente e instructor
-    string getNombreCliente() const;
-    string getIdCliente() const;
-    string getNombreInstructor() const;
-    char getSexoCliente() const;
-
-    // Gets para datos de medición ingresados
-    fecha* getFechaMedicion() const;
+    fecha* getFecha() const;
+    cliente* getCliente() const;
+    instructor* getInstructor() const;
     double getPeso() const;
     double getEstatura() const;
     double getPorcentajeGrasa() const;
     double getPorcentajeMusculo() const;
-    int getEdadMetabolica() const;
-    double getPorcentajeGrasaVisceral() const;
-
-    // Gets para medidas corporales
-    double getCintura() const;
-    double getCadera() const;
-    double getPecho() const;
-    double getMuslo() const;
-
-    // Gets para datos calculados
     double getIMC() const;
     string getClasificacion() const;
-    bool esAltoRiesgo() const;
-    int getVasosAgua() const;
-    double getProteina() const;
+    bool getAltoRiesgo() const;
+    int getVasosRecomendados() const;
+    double getProteinaRecomendada() const;
 
-    // Gets para referencias
-    cliente* getCliente() const;
-    instructor* getInstructor() const;
-
-    // Sets para datos de medición (recalculan automáticamente)
-    void setFechaMedicion(fecha* fecha);
+    void setFecha(fecha* fecha);
+    void setCliente(cliente* cli);
+    void setInstructor(instructor* inst);
     void setPeso(double peso);
     void setEstatura(double estatura);
-    void setPorcentajeGrasa(double pGrasa);
-    void setPorcentajeMusculo(double pMusculo);
-    void setEdadMetabolica(int edad);
-    void setPorcentajeGrasaVisceral(double grasaVisc);
+    void setPorcentajeGrasa(double porcentajeGrasa);
+    void setPorcentajeMusculo(double porcentajeMusculo);
 
-    // Sets para medidas corporales
-    void setCintura(double cintura);
-    void setCadera(double cadera);
-    void setPecho(double pecho);
-    void setMuslo(double muslo);
+    void calcularIMC();
+    void determinarClasificacion();
+    void calcularAltoRiesgo();
+    void calcularVasosRecomendados();
+    void calcularProteinaRecomendada();
+    void calcularTodo();
 
-    // Método para actualizar todos los cálculos
-    void actualizarCalculos();
+    string toString() const;
+    void mostrar() const;
 };

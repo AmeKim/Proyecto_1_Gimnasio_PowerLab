@@ -1,402 +1,471 @@
-﻿  BateriaEjercicios.cpp
-  claseGrupal.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+﻿  claseGrupal.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "claseGrupal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "claseGrupal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "claseGrupal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "claseGrupal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "claseGrupal.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "claseGrupal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "claseGrupal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
+  (compilando archivo de origen "claseGrupal.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "claseGrupal.cpp")
   
   cliente.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "cliente.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "cliente.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "cliente.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "cliente.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "cliente.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "cliente.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "cliente.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "cliente.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(66,20): error C2556: 'reporteM *cliente::getMedicion(int) const': la función sobrecargada solo se diferencia de 'Medicion *cliente::getMedicion(int) const' por el tipo de valor devuelto
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,15):
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
+  (compilando archivo de origen "cliente.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(66,20): error C2556: 'reporteM *cliente::getMedicion(int) const': la función sobrecargada solo se diferencia de 'Medicion *cliente::getMedicion(int) const' por el tipo de valor devuelto
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,15):
       vea la declaración de 'cliente::getMedicion'
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(66,20): error C2371: 'cliente::getMedicion': nueva definición; tipos básicos distintos
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,15):
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(66,20): error C2371: 'cliente::getMedicion': nueva definición; tipos básicos distintos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,15):
       vea la declaración de 'cliente::getMedicion'
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(67,25): warning C4145: '&&': expresión relacional como expresión switch; posible confusión con '&'
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(90,43): warning C4145: '&&': expresión relacional como expresión switch; posible confusión con '&'
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(101,27): warning C4144: '>': expresión relacional como expresión switch
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(67,25): warning C4145: '&&': expresión relacional como expresión switch; posible confusión con '&'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(90,43): warning C4145: '&&': expresión relacional como expresión switch; posible confusión con '&'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(101,27): warning C4144: '>': expresión relacional como expresión switch
   Ejercicio.cpp
-  especialidad.cpp
-  fecha.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\fecha.cpp(17,14): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\fecha.cpp(18,14): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\fecha.cpp(49,14): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\fecha.cpp(50,14): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-  instructor.cpp
-  main.cpp
   Medicion.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(10,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(10,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(10,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(10,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(10,23): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(10,23): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(14,14): error C2061: error de sintaxis: identificador 'Medicion'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(14,14): error C2061: error de sintaxis: identificador 'Medicion'
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(14,5): error C2535: 'reporteM::reporteM(void)': función miembro ya definida o declarada
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(14,5): error C2535: 'reporteM::reporteM(void)': función miembro ya definida o declarada
   (compilando archivo de origen "Medicion.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(13,5):
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(13,5):
       vea la declaración de 'reporteM::reporteM'
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(18,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(18,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(18,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(18,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(18,34): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(18,34): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(21,22): error C2061: error de sintaxis: identificador 'Medicion'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.h(21,22): error C2061: error de sintaxis: identificador 'Medicion'
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "Medicion.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,43): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,43): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "Medicion.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.cpp(91,19): error C2440: 'inicializando': no se puede realizar la conversión de 'std::string' a 'char'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.cpp(91,19):
+      No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
   
   PowerLab.cpp
-  Persona.cpp
   reporteM.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,26): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,43): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,43): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(41,26): error C2061: error de sintaxis: identificador 'reporteM'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(41,26): error C2061: error de sintaxis: identificador 'reporteM'
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "reporteM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,45): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,45): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "reporteM.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(34,33): error C2039: "getFechaMedicion": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(39,43): error C2039: "getEdadMetabolica": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(40,47): error C2039: "getPorcentajeGrasaVisceral": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(41,35): error C2039: "getCintura": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(42,34): error C2039: "getCadera": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(43,33): error C2039: "getPecho": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(44,33): error C2039: "getMuslo": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(47,40): error C2039: "esAltoRiesgo": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(48,58): error C2039: "getVasosAgua": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(49,60): error C2039: "getProteina": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(66,49): error C2039: "getNombreCliente": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(67,45): error C2039: "getIdCliente": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(68,52): error C2039: "getNombreInstructor": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(69,51): error C2039: "getFechaMedicion": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(76,46): error C2039: "getEdadMetabolica": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(77,59): error C2039: "getPorcentajeGrasaVisceral": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(80,38): error C2039: "getCintura": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(81,37): error C2039: "getCadera": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(82,36): error C2039: "getPecho": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(83,36): error C2039: "getMuslo": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(88,43): error C2039: "esAltoRiesgo": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(91,69): error C2039: "getVasosAgua": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(92,63): error C2039: "getProteina": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\reporteM.cpp(102,33): error C2039: "getFechaMedicion": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(10,7):
+      vea la declaración de 'Medicion'
   
   Rutina.cpp
   submenuClaseGrup.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuClaseGrup.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuClaseGrup.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "submenuClaseGrup.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "submenuClaseGrup.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "submenuClaseGrup.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuClaseGrup.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuClaseGrup.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
+  (compilando archivo de origen "submenuClaseGrup.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "submenuClaseGrup.cpp")
   
   submenuClientes.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "submenuClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "submenuClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "submenuClientes.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
+  (compilando archivo de origen "submenuClientes.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "submenuClientes.cpp")
   
   submenuInstructores.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuInstructores.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuInstructores.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "submenuInstructores.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "submenuInstructores.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "submenuInstructores.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuInstructores.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuInstructores.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "submenuInstructores.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
+  (compilando archivo de origen "submenuInstructores.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(166,25): error C2039: "getInstructoresPorSucursal": no es un miembro de "vecInstructores"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecInstructores.h(8,7):
+      vea la declaración de 'vecInstructores'
   
   submenuSucursales.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "submenuSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "submenuSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "submenuSucursales.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "submenuSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "submenuSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
+  (compilando archivo de origen "submenuSucursales.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "submenuSucursales.cpp")
   
   Sucursal.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "Sucursal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "Sucursal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "Sucursal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "Sucursal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "Sucursal.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "Sucursal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "Sucursal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "Sucursal.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(169,30): warning C4566: el carácter representado por el nombre de carácter universal '\u2265' no se puede representar en la página de códigos actual (1252)
-  utiles.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
+  (compilando archivo de origen "Sucursal.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(169,30): warning C4566: el carácter representado por el nombre de carácter universal '\u2265' no se puede representar en la página de códigos actual (1252)
   vecClasesGrupales.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecClasesGrupales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecClasesGrupales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecClasesGrupales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "vecClasesGrupales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "vecClasesGrupales.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecClasesGrupales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecClasesGrupales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecClasesGrupales.cpp")
   
-  Generando código...
-  Compilando...
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
+  (compilando archivo de origen "vecClasesGrupales.cpp")
+  
   vecClientes.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "vecClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "vecClientes.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecClientes.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecClientes.cpp")
   
-  vecEspecialidades.cpp
-  vecInstructores.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
+  (compilando archivo de origen "vecClientes.cpp")
+  
   vecReportesM.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,26): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(13,26): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,43): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(33,43): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(41,26): error C2061: error de sintaxis: identificador 'reporteM'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(41,26): error C2061: error de sintaxis: identificador 'reporteM'
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,13): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,13): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecReportesM.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,45): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(42,45): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecReportesM.cpp")
   
   vecSucursales.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(13,24): error C2238: símbolos (token) inesperados delante de ';'
   (compilando archivo de origen "vecSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,14): error C2061: error de sintaxis: identificador 'cliente'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(27,28): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "vecSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,5): error C2535: 'Medicion::Medicion(void)': función miembro ya definida o declarada
-  (compilando archivo de origen "vecSucursales.cpp")
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(44,5):
-      vea la declaración de 'Medicion::Medicion'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,12): error C2143: error de sintaxis: falta ';' delante de '*'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,12): error C2143: error de sintaxis: falta ';' delante de '*'
   (compilando archivo de origen "vecSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
   (compilando archivo de origen "vecSucursales.cpp")
   
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(77,32): error C2238: símbolos (token) inesperados delante de ';'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(32,32): error C2238: símbolos (token) inesperados delante de ';'
+  (compilando archivo de origen "vecSucursales.cpp")
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(45,21): error C2061: error de sintaxis: identificador 'cliente'
   (compilando archivo de origen "vecSucursales.cpp")
   
   Generando código...
