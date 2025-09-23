@@ -2,58 +2,42 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "cliente.h"
+
 using namespace std;
 
-// Forward declaration para evitar dependencias circulares
-class cliente;
-class instructor;
-
-class claseGrupal {
+class ClaseGrupal {
 private:
-    int codigo;
-    string tipoClase; // CrossFit, HIIT, TRX, Pesas, Spinning, Cardio, Yoga, Zumba
-    int capacidadMaxima;
+    string codigo;         // Identificador interno (ej: "1" o "C001")
+    int tipo;              // 1..8 según enumerado del enunciado (CrossFit, HIIT, TRX, ...)
+    int capacidad;         // cupo máximo
+    int cantMatriculados;  // cantidad actual matriculados
     string salon;
     string horario;
-    string cedulaInstructor;
-    cliente** clientesMatriculados;
-    int cantidadMatriculados;
+    string cedulaInstructor; // cedula del instructor asignado
+
+    // lista de cedulas de clientes matriculados (propietario)
+    string* matriculados;
+    int tamMatriculados; // tamaño del arreglo matriculados
 
 public:
-    claseGrupal();
-    claseGrupal(int codigo, const string& tipoClase, int capacidadMaxima,
-        const string& salon, const string& horario, const string& cedulaInstructor);
-    ~claseGrupal();
+    ClaseGrupal();
+    ClaseGrupal(string codigo, int tipo, int capacidad, string salon, string horario, string cedulaInstructor);
+    ~ClaseGrupal();
 
     // Getters
-    int getCodigo() const;
-    string getTipoClase() const;
-    int getCapacidadMaxima() const;
+    string getCodigo() const;
+    int getTipo() const;
+    int getCapacidad() const;
+    int getCantMatriculados() const;
     string getSalon() const;
     string getHorario() const;
     string getCedulaInstructor() const;
-    int getCantidadMatriculados() const;
-    int getCuposDisponibles() const;
 
-    // Setters
-    void setCodigo(int codigo);
-    void setTipoClase(const string& tipoClase);
-    void setCapacidadMaxima(int capacidad);
-    void setSalon(const string& salon);
-    void setHorario(const string& horario);
-    void setCedulaInstructor(const string& cedula);
+    // Setters/Modificadores
+    bool matricularCliente(string cedulaCliente); // devuelve true si matricula ok
+    bool estaMatriculado(string cedulaCliente) const;
+    bool removerMatricula(string cedulaCliente);  // remueve si existe
 
-    // Métodos para gestionar clientes
-    bool matricularCliente(cliente* cli);
-    bool desmatricularCliente(const string& cedula);
-    bool estaMatriculado(const string& cedula) const;
-    void mostrarClientesMatriculados() const;
-    string getClientesMatriculados() const;
-
-    // Métodos de utilidad
-    void mostrar() const;
     string toString() const;
-    string toStringCompleto() const;
-    bool tieneCupo() const;
+    string detalleClase() const;
 };

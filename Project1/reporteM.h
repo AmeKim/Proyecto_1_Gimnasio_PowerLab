@@ -1,28 +1,14 @@
 #pragma once
-#include <iostream>
+#include "vecClientes.h"
 #include <string>
-#include <sstream>
-#include "Medicion.h"
 using namespace std;
 
 class reporteM {
-private:
-    Medicion* medicion;
-
 public:
     reporteM();
-    reporteM(Medicion* med);
     ~reporteM();
 
-    // Getters
-    Medicion* getMedicion() const;
-
-    // Setters
-    void setMedicion(Medicion* med);
-
-    // Métodos de presentación (solo imprimen)
-    void mostrarDetalle() const;
-
-    // Método para mostrar resumen (fecha, peso, IMC)
-    string mostrarResumen() const;
+    // Genera el reporte IMC para la colección de clientes recibida.
+    // Imprime en formato similar al pedido en la guía.
+    void generarReporteIMCporSucursal(const vecClientes* clientes, const string& nombreSucursal) const;
 };

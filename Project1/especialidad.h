@@ -1,29 +1,18 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <sstream>
 using namespace std;
 
 class especialidad {
 private:
-    int id;
     string nombre;
-    string descripcion;
+
 public:
     especialidad();
-    especialidad(int id, string nombre, string descripcion = "");
+    especialidad(string nombre);
     ~especialidad();
-    // Getters
-    int getId() const;
-    string getNombre() const;
-    string getDescripcion() const;
-    // Setters
-    void setId(int id);
-    void setNombre(const string& nombre);
-    void setDescripcion(const string& descripcion);
-    // Mostrar
-    void mostrar() const;
-    string toString() const;
-	
-};
 
+    string getNombre() const;
+    void setNombre(string nombre);
+    string toString() const;
+};

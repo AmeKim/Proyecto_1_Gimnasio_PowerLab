@@ -1,100 +1,47 @@
 ﻿#include "Sucursal.h"
-#include <sstream>
-#include <iostream> // Necesario para 'cout' en el método mostrar()
 
-// MODIFICAR CONSTRUCTOR para que acepte y asigne el código
-Sucursal::Sucursal(int cod, string nom, string ubi) : codigo(cod), nombre(nom), ubicacion(ubi) {
-    clientes = new vecClientes();
-    instructores = new vecInstructores();
-    clasesGrupales = new vecClasesGrupales();
+Sucursal::Sucursal() {
+    this->codigo = "";
+    this->provincia = "";
+    this->canton = "";
+    this->correo = "";
+    this->telefono = "";
 }
 
-Sucursal::~Sucursal() {
-    delete clientes;
-    delete instructores;
-    delete clasesGrupales;
+Sucursal::Sucursal(string codigo, string provincia, string canton, string correo, string telefono) {
+    this->codigo = codigo;
+    this->provincia = provincia;
+    this->canton = canton;
+    this->correo = correo;
+    this->telefono = telefono;
 }
 
-// ===== IMPLEMENTACIÓN DE MÉTODOS AÑADIDOS =====
+Sucursal::~Sucursal() {}
 
-int Sucursal::getCodigo() const {
-    return codigo;
-}
+// Getters
+string Sucursal::getCodigo() const { return codigo; }
+string Sucursal::getProvincia() const { return provincia; }
+string Sucursal::getCanton() const { return canton; }
+string Sucursal::getCorreo() const { return correo; }
+string Sucursal::getTelefono() const { return telefono; }
+
+// Setters
+void Sucursal::setCodigo(string codigo) { this->codigo = codigo; }
+void Sucursal::setProvincia(string provincia) { this->provincia = provincia; }
+void Sucursal::setCanton(string canton) { this->canton = canton; }
+void Sucursal::setCorreo(string correo) { this->correo = correo; }
+void Sucursal::setTelefono(string telefono) { this->telefono = telefono; }
 
 string Sucursal::toString() const {
     stringstream s;
-    s << "Sucursal [" << codigo << "] - " << nombre << " (" << ubicacion << ")";
+    s << "Codigo: " << codigo << "\n";
+    s << "Provincia: " << provincia << "\n";
+    s << "Canton: " << canton << "\n";
+    s << "Correo: " << correo << "\n";
+    s << "Telefono: " << telefono << "\n";
     return s.str();
 }
 
 void Sucursal::mostrar() const {
-    cout << toString() << endl;
-}
-
-// =================================================
-
-// (Aquí va el resto del código de Sucursal.cpp que ya tenías, sin cambios)
-
-// Métodos para Clientes
-bool Sucursal::agregarCliente(cliente* cli) {
-    clientes->agregarCliente(cli);
-    return true;
-}
-
-bool Sucursal::eliminarCliente(string cedula) {
-    if (clientes->getCliente(cedula) != nullptr) {
-        clientes->eliminarCliente(cedula);
-        return true;
-    }
-    return false;
-}
-
-cliente* Sucursal::buscarCliente(string cedula) {
-    return clientes->getCliente(cedula);
-}
-
-string Sucursal::mostrarTodosLosClientes() const {
-    return clientes->mostrarTodos();
-}
-
-// Métodos para Instructores
-bool Sucursal::contratarInstructor(instructor* ins) {
-    return instructores->agregarInstructor(ins);
-}
-
-bool Sucursal::despedirInstructor(string cedula) {
-    if (instructores->buscarInstructor(cedula) != nullptr) {
-        instructores->eliminarInstructor(cedula);
-        return true;
-    }
-    return false;
-}
-
-instructor* Sucursal::buscarInstructor(string cedula) {
-    return instructores->buscarInstructor(cedula);
-}
-
-string Sucursal::mostrarTodosLosInstructores() const {
-    return instructores->toString();
-}
-
-// Métodos para Clases Grupales
-bool Sucursal::agregarClaseGrupal(claseGrupal* clase) {
-    return clasesGrupales->agregarClase(clase);
-}
-
-bool Sucursal::matricularClienteEnClase(int codigoClase, string cedulaCliente) {
-    cliente* cli = clientes->getCliente(cedulaCliente);
-    if (cli) {
-        return clasesGrupales->matricularClienteEnClase(codigoClase, cli);
-    }
-    return false;
-}
-
-string Sucursal::mostrarTodasLasClases() const {
-    return clasesGrupales->toString();
-}
-
-void Sucursal::mostrarClientesDeClase(int codigoClase) const {
-    clasesGrupales->mostrarClientesDeClase(codigoClase);
+    cout << toString();
 }

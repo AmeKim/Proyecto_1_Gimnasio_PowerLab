@@ -1,48 +1,37 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <sstream>
 #include "Persona.h"
-#include "fecha.h"
-using namespace std;
+#include "vecReportesM.h"
+#include "Rutina.h"
 
 class cliente : public Persona {
 private:
-    fecha* fechaInscripcion;
     char sexo;
-    void* instructorAsignado;     // Usamos void* para evitar inclusiones circulares
-    void** mediciones;            // Array de void* para las mediciones
-    int canMediciones;
-    int tamMediciones;
-    void* rutinaActual;           // Usamos void* para evitar inclusiones circulares
+    fecha* fechaInscripcion;
+    string cedulaInstructor;
+    vecReportesM* historialMediciones;
+    Rutina* rutinaActual;
 
 public:
     cliente();
-    cliente(const string& cedula, const string& nombre, const string& telefono,
-        const string& correo, fecha* fechaNac, fecha* fechaInsc, char sexo);
+    cliente(string nombre, string cedula, string telefono, string correo,
+        string fechaNac, char sexo, string fechaInsc, string cedulaInst);
     ~cliente();
 
     // Getters
-    fecha* getFechaInscripcion() const;
     char getSexo() const;
-    void* getInstructorAsignado() const;
-    int getCanMediciones() const;
-    void* getRutinaActual() const;
-    void* getMedicion(int indice) const;
+    fecha* getFechaInscripcion() const;
+    string getCedulaInstructor() const;
+    vecReportesM* getHistorialMediciones();
+    Rutina* getRutinaActual();
 
     // Setters
-    void setFechaInscripcion(fecha* fechaInsc);
     void setSexo(char sexo);
-    void setInstructorAsignado(void* inst);
-    void setRutinaActual(void* rutina);
+    void setFechaInscripcion(string fechaStr);
+    void setCedulaInstructor(string cedula);
 
-    // Métodos para mediciones
-    bool agregarMedicion(void* medicion);
-    void mostrarHistorialMediciones() const;
-    void* getUltimaMedicion() const;
-
-    // Métodos heredados y propios
-    string toString() const;
-    void mostrar() const;
-    string toStringDetallado() const;
+    // Métodos
+    void agregarMedicion(Medicion* medicion);
+    string toString() override;
+    string toStringDetalle(string nombreInstructor, string nombreSucursal) const;
+    double getUltimoIMC() const;
 };

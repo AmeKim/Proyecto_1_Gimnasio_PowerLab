@@ -1,46 +1,298 @@
-﻿  submenuClientes.cpp
+﻿  reporteM.cpp
+  submenuClientes.cpp
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(50,7): warning C4101: 'opcion': variable local sin referencia
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(96,37): error C2665: 'cliente::cliente':ninguna función sobrecargada pudo convertir todos los tipos de argumento
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(21,5):
-      puede ser 'cliente::cliente(const std::string &,const std::string &,const std::string &,const std::string &,fecha *,fecha *,char)'
-          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(96,37):
-          'cliente::cliente(const std::string &,const std::string &,const std::string &,const std::string &,fecha *,fecha *,char)': el argumento 5 no puede convertirse de 'std::string' a 'fecha *'
-              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(96,72):
-              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(67,15): error C2039: "mostrarTodas": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(76,16): error C2039: "getCliente": no es un miembro de "vecClientes"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClientes.h(4,7):
+      vea la declaración de 'vecClientes'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(96,37): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
       C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(96,37):
       al hacer coincidir la lista de argumentos '(std::string, std::string, std::string, std::string, std::string, std::string, std::string)'
   
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(97,13): error C2039: "agregarCliente": no es un miembro de "vecClientes"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClientes.h(4,7):
+      vea la declaración de 'vecClientes'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(104,13): error C2039: "mostrarTodos": no es un miembro de "vecClientes"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClientes.h(4,7):
+      vea la declaración de 'vecClientes'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(107,28): error C2039: "getCliente": no es un miembro de "vecClientes"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClientes.h(4,7):
+      vea la declaración de 'vecClientes'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(113,15): error C2039: "mostrarTodas": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(116,31): error C2039: "getSucursal": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(122,7): error C2039: "getInstructores": no es un miembro de "Sucursal"
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(9,7):
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(8,7):
       vea la declaración de 'Sucursal'
   
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(125,2): error C2065: 'instructor': identificador no declarado
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(125,14): error C2065: 'inst': identificador no declarado
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(125,26): error C2039: "getInstructores": no es un miembro de "Sucursal"
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(9,7):
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(8,7):
       vea la declaración de 'Sucursal'
   
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(126,5): error C2065: 'inst': identificador no declarado
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(130,7): error C2039: "setCedulaInstructorAsignado": no es un miembro de "cliente"
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(6,7):
       vea la declaración de 'cliente'
   
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(137,15): error C2039: "mostrarTodas": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(140,31): error C2039: "getSucursal": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(146,7): error C2039: "getClientes": no es un miembro de "Sucursal"
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(9,7):
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(8,7):
       vea la declaración de 'Sucursal'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(152,13): error C2039: "mostrarTodos": no es un miembro de "vecClientes"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClientes.h(4,7):
+      vea la declaración de 'vecClientes'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(155,28): error C2039: "getCliente": no es un miembro de "vecClientes"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClientes.h(4,7):
+      vea la declaración de 'vecClientes'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(161,13): error C2039: "toStringDetallado": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(6,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(168,8): error C2039: "mostrarHistorialMediciones": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(6,7):
+      vea la declaración de 'cliente'
   
   submenuInstructores.cpp
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(68,7): warning C4101: 'opcion': variable local sin referencia
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(112,2): error C2065: 'instructor': identificador no declarado
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(112,14): error C2065: 'nuevoInstructor': identificador no declarado
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(112,36): error C2061: error de sintaxis: identificador 'instructor'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(113,21): error C2039: "agregarInstructor": no es un miembro de "vecInstructores"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecInstructores.h(4,7):
+      vea la declaración de 'vecInstructores'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(113,39): error C2065: 'nuevoInstructor': identificador no declarado
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(114,40): error C2039: "buscarPorId": no es un miembro de "vecEspecialidades"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecEspecialidades.h(4,7):
+      vea la declaración de 'vecEspecialidades'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(117,8): error C2065: 'nuevoInstructor': identificador no declarado
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(134,22): error C2039: "mostrarTodas": no es un miembro de "vecEspecialidades"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecEspecialidades.h(4,7):
+      vea la declaración de 'vecEspecialidades'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(139,42): error C2039: "buscarPorId": no es un miembro de "vecEspecialidades"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecEspecialidades.h(4,7):
+      vea la declaración de 'vecEspecialidades'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(141,10): error C2065: 'nuevoInstructor': identificador no declarado
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(153,10): error C2065: 'nuevoInstructor': identificador no declarado
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(153,3): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(160,23): error C2039: "toString": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,31): error C2664: 'Sucursal *vecSucursales::buscarPorCodigo(const std::string &) const': el argumento 1 no puede convertirse de 'int' a 'const std::string &'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,47):
+      Razón: no se puede realizar la conversión de 'int' a 'const std::string'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,47):
+      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+          puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,47):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,47):
+                  La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,47):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,47):
+                  La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,47):
+          al hacer coincidir la lista de argumentos '(int)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(16,15):
+      vea la declaración de 'vecSucursales::buscarPorCodigo'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(163,31):
+      al hacer coincidir la lista de argumentos '(int)'
+  
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(166,25): error C2039: "getInstructoresPorSucursal": no es un miembro de "vecInstructores"
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecInstructores.h(8,7):
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecInstructores.h(4,7):
       vea la declaración de 'vecInstructores'
   
   submenuSucursales.cpp
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(45,7): warning C4101: 'opcion': variable local sin referencia
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,46): error C2661: 'Sucursal::Sucursal': ninguna función sobrecargada acepta 5 argumentos
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,18): error C2039: "agregarSucursal": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,46): error C2665: 'Sucursal::Sucursal':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(19,5):
+      puede ser 'Sucursal::Sucursal(std::string,std::string,std::string,std::string,std::string)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,46):
+          'Sucursal::Sucursal(std::string,std::string,std::string,std::string,std::string)': el argumento 1 no puede convertirse de 'int' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,47):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+                  puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,47):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,47):
+                          La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,47):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,47):
+                          La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,47):
+                  al hacer coincidir la lista de argumentos '(int)'
       C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(71,46):
       al hacer coincidir la lista de argumentos '(int, std::string, std::string, std::string, std::string)'
   
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(83,15): error C2039: "mostrarTodas": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(86,18): error C2039: "existeCodigo": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(87,16): error C2039: "mostrarSucursal": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(98,15): error C2039: "mostrarTodas": no es un miembro de "vecSucursales"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(4,7):
+      vea la declaración de 'vecSucursales'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,31): error C2664: 'Sucursal *vecSucursales::buscarPorCodigo(const std::string &) const': el argumento 1 no puede convertirse de 'int' a 'const std::string &'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,47):
+      Razón: no se puede realizar la conversión de 'int' a 'const std::string'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,47):
+      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+          puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,47):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,47):
+                  La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,47):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,47):
+                  La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,47):
+          al hacer coincidir la lista de argumentos '(int)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecSucursales.h(16,15):
+      vea la declaración de 'vecSucursales::buscarPorCodigo'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(101,31):
+      al hacer coincidir la lista de argumentos '(int)'
+  
 C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(103,8): error C2039: "reporteIMC": no es un miembro de "Sucursal"
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(9,7):
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.h(8,7):
       vea la declaración de 'Sucursal'
   
+  vecClasesGrupales.cpp
+  vecClientes.cpp
   vecSucursales.cpp
   Generando código...

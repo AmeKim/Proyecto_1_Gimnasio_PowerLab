@@ -1,32 +1,22 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <sstream>
 #include "Sucursal.h"
-using namespace std;
 
 class vecSucursales {
 private:
-    Sucursal** sucursales;
-    int can;
+    Sucursal** datos;
     int tam;
+    int cant;
+    void expandir();
 
 public:
-    vecSucursales(int capacidad = 30);
+    vecSucursales(int capacidadInicial = 10);
     ~vecSucursales();
 
-    bool agregarSucursal(Sucursal* sucursal);
-    void eliminarSucursal(int codigo);
-    Sucursal* buscarPorCodigo(int codigo) const;
-    bool existeCodigo(int codigo) const;
-
-    int getCan() const;
-    int getTam() const;
-
-    void mostrarTodas() const;
-    void mostrarSucursal(int codigo) const;
-
-    string toString() const;
-    Sucursal* getSucursalPorIndice(int indice) const;
-	Sucursal* getSucursal(int codigo) const;
+    bool insertar(Sucursal* s); // false si codigo duplicado
+    Sucursal* buscarPorCodigo(const string& codigo) const;
+    int indicePorCodigo(const string& codigo) const;
+    Sucursal* obtener(int idx) const;
+    int cantidad() const;
+    void listarTodos() const;
+    bool eliminarPorCodigo(const string& codigo);
 };

@@ -1,104 +1,71 @@
 #include "vecSucursales.h"
+#include "utiles.h"
 
-vecSucursales::vecSucursales(int capacidad) {
-    tam = capacidad;
-    can = 0;
-    sucursales = new Sucursal * [tam];
-    for (int i = 0; i < tam; i++) {
-        sucursales[i] = nullptr;
-    }
+vecSucursales::vecSucursales(int capacidadInicial) {
+    if (capacidadInicial < 1) capacidadInicial = 10;
+    tam = capacidadInicial;
+    cant = 0;
+    datos = new Sucursal * [tam];
+    for (int i = 0; i < tam; ++i) datos[i] = nullptr;
 }
 
 vecSucursales::~vecSucursales() {
-    for (int i = 0; i < can; i++) {
-        delete sucursales[i];
-    }
-    delete[] sucursales;
+    for (int i = 0; i < cant; ++i) if (datos[i]) delete datos[i];
+    delete[] datos;
 }
 
-bool vecSucursales::agregarSucursal(Sucursal* sucursal) {
-    if (can < tam && sucursal != nullptr) {
-        // Verificar que no existe una sucursal con el mismo código
-        if (!existeCodigo(sucursal->getCodigo())) {
-            sucursales[can] = sucursal;
-            can++;
-            return true;
-        }
-    }
-    return false;
+void vecSucursales::expandir() {
+    int nuevo = tam * 2;
+    Sucursal** aux = new Sucursal * [nuevo];
+    for (int i = 0; i < nuevo; ++i) aux[i] = nullptr;
+    for (int i = 0; i < cant; ++i) aux[i] = datos[i];
+    delete[] datos;
+    datos = aux;
+    tam = nuevo;
 }
 
-void vecSucursales::eliminarSucursal(int codigo) {
-    for (int i = 0; i < can; i++) {
-        if (sucursales[i] && sucursales[i]->getCodigo() == codigo) {
-            delete sucursales[i];
-            for (int j = i; j < can - 1; j++) {
-                sucursales[j] = sucursales[j + 1];
-            }
-            sucursales[can - 1] = nullptr;
-            can--;
-            return;
-        }
-    }
+bool vecSucursales::insertar(Sucursal* s) {
+    if (!s) return false;
+    if (buscarPorCodigo(s->getCodigo()) != nullptr) return false;
+    if (cant >= tam) expandir();
+    datos[cant++] = s;
+    return true;
 }
 
-Sucursal* vecSucursales::buscarPorCodigo(int codigo) const {
-    for (int i = 0; i < can; i++) {
-        if (sucursales[i] && sucursales[i]->getCodigo() == codigo) {
-            return sucursales[i];
-        }
-    }
+Sucursal* vecSucursales::buscarPorCodigo(const string& codigo) const {
+    for (int i = 0; i < cant; ++i) if (datos[i] && datos[i]->getCodigo() == codigo) return datos[i];
     return nullptr;
 }
 
-bool vecSucursales::existeCodigo(int codigo) const {
-    return buscarPorCodigo(codigo) != nullptr;
+int vecSucursales::indicePorCodigo(const string& codigo) const {
+    for (int i = 0; i < cant; ++i) if (datos[i] && datos[i]->getCodigo() == codigo) return i;
+    return -1;
 }
 
-int vecSucursales::getCan() const {
-    return can;
+Sucursal* vecSucursales::obtener(int idx) const {
+    if (idx < 0 || idx >= cant) return nullptr;
+    return datos[idx];
 }
 
-int vecSucursales::getTam() const {
-    return tam;
-}
+int vecSucursales::cantidad() const { return cant; }
 
-void vecSucursales::mostrarTodas() const {
-    cout << "Lista de sucursales:" << endl;
-    for (int i = 0; i < can; i++) {
-        if (sucursales[i]) {
-            cout << sucursales[i]->toString() << endl;
+void vecSucursales::listarTodos() const {
+    if (cant == 0) { print("No hay sucursales registradas\n"); return; }
+    for (int i = 0; i < cant; ++i) {
+        if (datos[i]) {
+            stringstream s;
+            s << datos[i]->getCodigo() << " " << datos[i]->getProvincia() << " - " << datos[i]->getCanton() << "\n";
+            print(s.str());
         }
     }
 }
 
-void vecSucursales::mostrarSucursal(int codigo) const {
-    Sucursal* suc = buscarPorCodigo(codigo);
-    if (suc) {
-        suc->mostrar();
-    }
-    else {
-        cout << "Sucursal no encontrada." << endl;
-    }
-}
-
-string vecSucursales::toString() const {
-    stringstream s;
-    for (int i = 0; i < can; i++) {
-        if (sucursales[i]) {
-            s << sucursales[i]->toString() << endl;
-        }
-    }
-    return s.str();
-}
-
-Sucursal* vecSucursales::getSucursalPorIndice(int indice) const {
-    if (indice >= 0 && indice < can) {
-        return sucursales[indice];
-    }
-    return nullptr;
-}
-
-Sucursal* vecSucursales::getSucursal(int codigo) const {
-    return buscarPorCodigo(codigo);
+bool vecSucursales::eliminarPorCodigo(const string& codigo) {
+    int idx = indicePorCodigo(codigo);
+    if (idx == -1) return false;
+    if (datos[idx]) delete datos[idx];
+    for (int i = idx; i < cant - 1; ++i) datos[i] = datos[i + 1];
+    datos[cant - 1] = nullptr;
+    --cant;
+    return true;
 }

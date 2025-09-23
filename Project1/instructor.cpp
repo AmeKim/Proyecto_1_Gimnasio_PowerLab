@@ -1,128 +1,59 @@
 #include "instructor.h"
 
-instructor::instructor() {
-    cedula = "";
-    nombre = "";
-    telefono = "";
-    correo = "";
-    fechaNacimiento = "";
-    especialidades = new vecEspecialidades();
+Instructor::Instructor() : Persona() {
+    maxEspecialidades = 8;
+    cantEspecialidades = 0;
+    especialidades = new string[maxEspecialidades];
+    codigoSucursal = "";
 }
 
-instructor::instructor(const string& cedula, const string& nombre, const string& telefono,
-    const string& correo, const string& fechaNacimiento) {
-    this->cedula = cedula;
-    this->nombre = nombre;
-    this->telefono = telefono;
-    this->correo = correo;
-    this->fechaNacimiento = fechaNacimiento;
-    this->especialidades = new vecEspecialidades();
+Instructor::Instructor(string nombre, string cedula, string telefono, string correo, const string& fechaNacimientoStr)
+    : Persona(nombre, cedula, telefono, correo, fechaNacimientoStr) {
+    maxEspecialidades = 8;
+    cantEspecialidades = 0;
+    especialidades = new string[maxEspecialidades];
+    codigoSucursal = "";
 }
 
-instructor::~instructor() {
-    delete especialidades;
+Instructor::~Instructor() {
+    delete[] especialidades;
 }
 
-// Getters
-string instructor::getCedula() const {
-    return cedula;
+bool Instructor::agregarEspecialidad(const string& esp) {
+    if (esp.empty()) return false;
+    for (int i = 0; i < cantEspecialidades; ++i) if (especialidades[i] == esp) return false;
+    if (cantEspecialidades >= maxEspecialidades) return false;
+    especialidades[cantEspecialidades++] = esp;
+    return true;
 }
 
-string instructor::getNombre() const {
-    return nombre;
-}
-
-string instructor::getTelefono() const {
-    return telefono;
-}
-
-string instructor::getCorreo() const {
-    return correo;
-}
-
-string instructor::getFechaNacimiento() const {
-    return fechaNacimiento;
-}
-
-vecEspecialidades* instructor::getEspecialidades() const {
-    return especialidades;
-}
-
-// Setters
-void instructor::setCedula(const string& cedula) {
-    this->cedula = cedula;
-}
-
-void instructor::setNombre(const string& nombre) {
-    this->nombre = nombre;
-}
-
-void instructor::setTelefono(const string& telefono) {
-    this->telefono = telefono;
-}
-
-void instructor::setCorreo(const string& correo) {
-    this->correo = correo;
-}
-
-void instructor::setFechaNacimiento(const string& fechaNacimiento) {
-    this->fechaNacimiento = fechaNacimiento;
-}
-
-// Métodos para especialidades
-bool instructor::agregarEspecialidad(especialidad* esp) {
-    if (esp != nullptr) {
-        especialidades->agregarEspecialidad(esp);
-        return true;
-    }
+bool Instructor::tieneEspecialidad(const string& esp) const {
+    for (int i = 0; i < cantEspecialidades; ++i) if (especialidades[i] == esp) return true;
     return false;
 }
 
-bool instructor::tieneEspecialidad(const string& nombreEspecialidad) const {
-    return especialidades->buscarPorNombre(nombreEspecialidad) != nullptr;
+int Instructor::getCantEspecialidades() const { return cantEspecialidades; }
+
+string Instructor::getEspecialidad(int idx) const {
+    if (idx < 0 || idx >= cantEspecialidades) return "";
+    return especialidades[idx];
 }
 
-bool instructor::tieneEspecialidad(int idEspecialidad) const {
-    return especialidades->buscarPorId(idEspecialidad) != nullptr;
-}
+void Instructor::setCodigoSucursal(const string& codigo) { codigoSucursal = codigo; }
+string Instructor::getCodigoSucursal() const { return codigoSucursal; }
 
-string instructor::getEspecialidadesString() const {
+string Instructor::toString() {
     stringstream s;
-    for (int i = 0; i < especialidades->getCan(); i++) {
-        // Accedemos a las especialidades de forma directa
-        if (i > 0) s << ", ";
-        // Aquí necesitaremos agregar un método para obtener especialidades por índice
+    s << Persona::toString();
+    s << "Sucursal: " << (codigoSucursal.empty() ? "Sin sucursal" : codigoSucursal) << "\n";
+    s << "Especialidades: ";
+    if (cantEspecialidades == 0) s << "Ninguna\n";
+    else {
+        for (int i = 0; i < cantEspecialidades; ++i) {
+            s << especialidades[i];
+            if (i < cantEspecialidades - 1) s << ", ";
+        }
+        s << "\n";
     }
-    return s.str();
-}
-
-void instructor::mostrarEspecialidades() const {
-    cout << "Especialidades:" << endl;
-    especialidades->mostrarTodas();
-}
-
-// Métodos de utilidad
-void instructor::mostrar() const {
-    cout << "=== DETALLE DEL INSTRUCTOR ===" << endl;
-    cout << "Nombre: " << nombre << endl;
-    cout << "Cedula: " << cedula << endl;
-    cout << "Telefono: " << telefono << endl;
-    cout << "Correo: " << correo << endl;
-    cout << "Fecha de nacimiento: " << fechaNacimiento << endl;
-    cout << "Especialidades: " << getEspecialidadesString() << endl;
-}
-
-string instructor::toString() const {
-    return cedula + " " + nombre;
-}
-
-string instructor::toStringCompleto() const {
-    stringstream s;
-    s << "Nombre: " << nombre << endl;
-    s << "Cedula: " << cedula << endl;
-    s << "Telefono: " << telefono << endl;
-    s << "Correo: " << correo << endl;
-    s << "Fecha de nacimiento: " << fechaNacimiento << endl;
-    s << "Especialidades: " << getEspecialidadesString() << endl;
     return s.str();
 }

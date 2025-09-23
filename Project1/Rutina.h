@@ -1,29 +1,36 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <sstream>
 #include "Ejercicio.h"
+#include <string>
 using namespace std;
+
+class EjercicioRutina {
+private:
+    Ejercicio* ejercicio;
+    int series;
+    int repeticiones;
+
+public:
+    EjercicioRutina(Ejercicio* ej, int ser, int rep);
+    ~EjercicioRutina();
+
+    Ejercicio* getEjercicio() const;
+    int getSeries() const;
+    int getRepeticiones() const;
+    string toString() const;
+};
 
 class Rutina {
 private:
-    string cedulaCliente;
-    Ejercicio** ejercicios;
-    int can;
+    EjercicioRutina** ejerciciosRutina;
     int tam;
+    int cant;
 
 public:
-    Rutina(string cedulaCliente, int capacidad = 15);
+    Rutina();
     ~Rutina();
 
-    bool agregarEjercicio(Ejercicio* ejercicio);
+    void agregarEjercicio(Ejercicio* ejercicio, int series, int repeticiones);
+    void mostrarRutina(string nombreCliente);
     void limpiarRutina();
-
-    string getCedulaCliente() const;
-    int getCan() const;
-
-    string toString() const;
-    void mostrarRutina() const;
-    void mostrarPorZona(int zona) const;
-    int contarEjerciciosPorZona(int zona) const;
+    int getCantidad() const;
 };

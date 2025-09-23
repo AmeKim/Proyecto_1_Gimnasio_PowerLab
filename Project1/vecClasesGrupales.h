@@ -1,21 +1,21 @@
 #pragma once
-#include "claseGrupal.h"
+#include "ClaseGrupal.h"
 #include <string>
 using namespace std;
 
 class vecClasesGrupales {
 private:
-    claseGrupal** clases;
-    int can;
+    ClaseGrupal** clases;
     int tam;
+    int cant;
+
 public:
-    vecClasesGrupales(int capacidad = 8);
+    vecClasesGrupales();
     ~vecClasesGrupales();
-    bool agregarClase(claseGrupal* clase);
-    claseGrupal* buscarPorCodigo(int codigo) const;
-    void mostrarTodas() const;
-    string toString() const; // <-- AÑADIR ESTA LÍNEA
-    bool matricularClienteEnClase(int codigoClase, cliente* cli);
-    void mostrarClientesDeClase(int codigoClase) const;
-    int getCan() const;
+
+    bool agregar(ClaseGrupal* c);            // agrega si hay espacio
+    ClaseGrupal* obtener(int indice);        // devuelve puntero o nullptr
+    ClaseGrupal* buscarPorCodigo(string codigo); // busca por codigo
+    int getCantidad() const;
+    void mostrarLista() const;
 };

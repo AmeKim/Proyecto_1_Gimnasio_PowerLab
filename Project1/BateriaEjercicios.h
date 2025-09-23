@@ -1,35 +1,21 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <sstream>
 #include "Ejercicio.h"
-using namespace std;
 
 class BateriaEjercicios {
 private:
     Ejercicio** ejercicios;
-    int can;
     int tam;
+    int cant;
 
 public:
-    BateriaEjercicios(int capacidad = 50);
+    BateriaEjercicios();
     ~BateriaEjercicios();
 
-    bool agregarEjercicio(Ejercicio* ejercicio);
-    void eliminarEjercicio(const string& nombre);
-    Ejercicio* buscarEjercicio(const string& nombre);
-
-    void mostrarEjerciciosPorZona(int zona) const;
-    string getEjerciciosPorZona(int zona) const;
-    Ejercicio* obtenerEjercicioPorIndice(int indice, int zona) const;
-
-    int getCan() const;
-    int getTam() const;
-    void mostrarTodos() const;
+    void agregar(Ejercicio* ejercicio);
+    Ejercicio* obtener(int indice);
+    int getCantidad() const;
+    void mostrarPorZona(int zona);
+    Ejercicio* obtenerPorZona(int zona, int indiceZona);
+    int getCantidadPorZona(int zona);
     string toString() const;
-
-    // Métodos para obtener ejercicios de una zona específica
-    int contarEjerciciosPorZona(int zona) const;
-    void inicializarEjerciciosBasicos();
 };
-

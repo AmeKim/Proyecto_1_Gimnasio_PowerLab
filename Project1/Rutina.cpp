@@ -1,133 +1,90 @@
 #include "Rutina.h"
+#include "utiles.h"
 
-Rutina::Rutina(string cedulaCliente, int capacidad) {
-    this->cedulaCliente = cedulaCliente;
-    this->tam = capacidad;
-    this->can = 0;
-    this->ejercicios = new Ejercicio * [tam];
+EjercicioRutina::EjercicioRutina(Ejercicio* ej, int ser, int rep) {
+    ejercicio = ej;
+    series = ser;
+    repeticiones = rep;
+}
+
+EjercicioRutina::~EjercicioRutina() {
+    // No eliminar el ejercicio ya que pertenece a la batería
+}
+
+Ejercicio* EjercicioRutina::getEjercicio() const {
+    return ejercicio;
+}
+
+int EjercicioRutina::getSeries() const {
+    return series;
+}
+
+int EjercicioRutina::getRepeticiones() const {
+    return repeticiones;
+}
+
+string EjercicioRutina::toString() const {
+    return ejercicio->getNombre() + ", series: " + to_string(series) +
+        ", repeticiones: " + to_string(repeticiones);
+}
+
+Rutina::Rutina() {
+    tam = 50;
+    cant = 0;
+    ejerciciosRutina = new EjercicioRutina * [tam];
     for (int i = 0; i < tam; i++) {
-        ejercicios[i] = nullptr;
+        ejerciciosRutina[i] = nullptr;
     }
 }
 
 Rutina::~Rutina() {
-    for (int i = 0; i < can; i++) {
-        delete ejercicios[i];
+    for (int i = 0; i < cant; i++) {
+        delete ejerciciosRutina[i];
     }
-    delete[] ejercicios;
+    delete[] ejerciciosRutina;
 }
 
-bool Rutina::agregarEjercicio(Ejercicio* ejercicio) {
-    if (can < tam && ejercicio) {
-        ejercicios[can] = ejercicio;
-        can++;
-        return true;
+void Rutina::agregarEjercicio(Ejercicio* ejercicio, int series, int repeticiones) {
+    if (cant < tam) {
+        ejerciciosRutina[cant] = new EjercicioRutina(ejercicio, series, repeticiones);
+        cant++;
     }
-    return false;
+}
+
+void Rutina::mostrarRutina(string nombreCliente) {
+    print("==================================================================\n");
+    print("RUTINA GENERADA PARA " + nombreCliente + "\n");
+    print("==================================================================\n");
+
+    // Mostrar por zonas
+    string zonas[] = { "Pecho", "Tríceps", "Bíceps", "Piernas", "Espalda" };
+
+    for (int zona = 1; zona <= 5; zona++) {
+        print(zonas[zona - 1] + ":\n");
+        bool tieneEjercicios = false;
+
+        for (int i = 0; i < cant; i++) {
+            if (ejerciciosRutina[i]->getEjercicio()->getZonaMuscular() == zona) {
+                print(ejerciciosRutina[i]->toString() + "\n");
+                tieneEjercicios = true;
+            }
+        }
+
+        if (!tieneEjercicios) {
+            print("Ninguno\n");
+        }
+        print("\n");
+    }
 }
 
 void Rutina::limpiarRutina() {
-    for (int i = 0; i < can; i++) {
-        delete ejercicios[i];
-        ejercicios[i] = nullptr;
+    for (int i = 0; i < cant; i++) {
+        delete ejerciciosRutina[i];
+        ejerciciosRutina[i] = nullptr;
     }
-    can = 0;
+    cant = 0;
 }
 
-string Rutina::getCedulaCliente() const {
-    return cedulaCliente;
-}
-
-int Rutina::getCan() const {
-    return can;
-}
-
-string Rutina::toString() const {
-    stringstream s;
-
-    // Mostrar por zonas musculares
-    for (int zona = 1; zona <= 5; zona++) {
-        bool tieneEjercicios = false;
-
-        // Verificar si hay ejercicios para esta zona
-        for (int i = 0; i < can; i++) {
-            if (ejercicios[i] && ejercicios[i]->getZonaMuscular() == zona) {
-                tieneEjercicios = true;
-                break;
-            }
-        }
-
-        if (tieneEjercicios) {
-            s << ejercicios[0]->getNombreZona() << ":" << endl;
-            for (int i = 0; i < can; i++) {
-                if (ejercicios[i] && ejercicios[i]->getZonaMuscular() == zona) {
-                    s << ejercicios[i]->toString() << endl;
-                }
-            }
-        }
-        else {
-            // Mostrar "Ninguno" para zonas sin ejercicios
-            Ejercicio temp(zona, "", "");
-            s << temp.getNombreZona() << ":" << endl;
-            s << "Ninguno" << endl;
-        }
-    }
-
-    return s.str();
-}
-
-void Rutina::mostrarRutina() const {
-    cout << "===================================================================" << endl;
-    cout << "RUTINA GENERADA" << endl;
-    cout << "===================================================================" << endl;
-
-    for (int zona = 1; zona <= 5; zona++) {
-        bool tieneEjercicios = false;
-
-        // Verificar si hay ejercicios para esta zona
-        for (int i = 0; i < can; i++) {
-            if (ejercicios[i] && ejercicios[i]->getZonaMuscular() == zona) {
-                tieneEjercicios = true;
-                break;
-            }
-        }
-
-        // Crear un ejercicio temporal para obtener el nombre de la zona
-        Ejercicio temp(zona, "", "");
-        cout << temp.getNombreZona() << ":" << endl;
-
-        if (tieneEjercicios) {
-            for (int i = 0; i < can; i++) {
-                if (ejercicios[i] && ejercicios[i]->getZonaMuscular() == zona) {
-                    cout << ejercicios[i]->toString() << endl;
-                }
-            }
-        }
-        else {
-            cout << "Ninguno" << endl;
-        }
-    }
-}
-
-void Rutina::mostrarPorZona(int zona) const {
-    bool encontrado = false;
-    for (int i = 0; i < can; i++) {
-        if (ejercicios[i] && ejercicios[i]->getZonaMuscular() == zona) {
-            ejercicios[i]->mostrar();
-            encontrado = true;
-        }
-    }
-    if (!encontrado) {
-        cout << "No hay ejercicios para esta zona muscular." << endl;
-    }
-}
-
-int Rutina::contarEjerciciosPorZona(int zona) const {
-    int contador = 0;
-    for (int i = 0; i < can; i++) {
-        if (ejercicios[i] && ejercicios[i]->getZonaMuscular() == zona) {
-            contador++;
-        }
-    }
-    return contador;
+int Rutina::getCantidad() const {
+    return cant;
 }

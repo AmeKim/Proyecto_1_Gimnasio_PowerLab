@@ -1,45 +1,39 @@
 #pragma once
-#include "vecClientes.h"
-#include "vecInstructores.h"
-#include "vecClasesGrupales.h"
+#include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
 class Sucursal {
 private:
-    int codigo; // <-- AÑADIR ESTA LÍNEA
-    string nombre;
-    string ubicacion;
-    vecClientes* clientes;
-    vecInstructores* instructores;
-    vecClasesGrupales* clasesGrupales;
+    string codigo;
+    string provincia;
+    string canton;
+    string correo;
+    string telefono;
 
 public:
-    Sucursal(int cod, string nom, string ubi); // <-- MODIFICAR CONSTRUCTOR
+    // Constructores
+    Sucursal();
+    Sucursal(string codigo, string provincia, string canton, string correo, string telefono);
     ~Sucursal();
 
-    // ===== MÉTODOS AÑADIDOS PARA CORREGIR ERRORES =====
-    int getCodigo() const;
+    // Getters
+    string getCodigo() const;
+    string getProvincia() const;
+    string getCanton() const;
+    string getCorreo() const;
+    string getTelefono() const;
+
+    // Setters
+    void setCodigo(string codigo);
+    void setProvincia(string provincia);
+    void setCanton(string canton);
+    void setCorreo(string correo);
+    void setTelefono(string telefono);
+
+    // Métodos
     string toString() const;
     void mostrar() const;
-    // =================================================
-
-    // Métodos para Clientes
-    bool agregarCliente(cliente* cli);
-    bool eliminarCliente(string cedula);
-    cliente* buscarCliente(string cedula);
-    string mostrarTodosLosClientes() const;
-
-    // Métodos para Instructores
-    bool contratarInstructor(instructor* ins);
-    bool despedirInstructor(string cedula);
-    instructor* buscarInstructor(string cedula);
-    string mostrarTodosLosInstructores() const;
-
-    // Métodos para Clases Grupales
-    bool agregarClaseGrupal(claseGrupal* clase);
-    bool matricularClienteEnClase(int codigoClase, string cedulaCliente);
-    string mostrarTodasLasClases() const;
-    void mostrarClientesDeClase(int codigoClase) const;
 };
