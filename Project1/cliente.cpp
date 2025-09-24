@@ -44,6 +44,10 @@ Rutina* cliente::getRutinaActual() {
     return rutinaActual;
 }
 
+Instructor* cliente::getInstructor() const{
+	return instructor;
+}
+
 void cliente::setSexo(char sexo) {
     this->sexo = sexo;
 }

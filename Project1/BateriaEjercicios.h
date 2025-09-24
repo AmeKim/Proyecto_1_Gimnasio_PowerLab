@@ -11,7 +11,7 @@ public:
     BateriaEjercicios();
     ~BateriaEjercicios();
 
-    void agregar(Ejercicio* ejercicio);
+    bool agregar(Ejercicio* ejercicio);
     Ejercicio* obtener(int indice);
     int getCantidad() const;
     void mostrarPorZona(int zona);

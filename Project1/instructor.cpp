@@ -1,59 +1,65 @@
 #include "instructor.h"
 
 Instructor::Instructor() : Persona() {
-    maxEspecialidades = 8;
-    cantEspecialidades = 0;
-    especialidades = new string[maxEspecialidades];
-    codigoSucursal = "";
+    especialidades = new vecEspecialidades();
 }
-
 Instructor::Instructor(string nombre, string cedula, string telefono, string correo, const string& fechaNacimientoStr)
     : Persona(nombre, cedula, telefono, correo, fechaNacimientoStr) {
-    maxEspecialidades = 8;
-    cantEspecialidades = 0;
-    especialidades = new string[maxEspecialidades];
-    codigoSucursal = "";
+    especialidades = new vecEspecialidades();
 }
-
 Instructor::~Instructor() {
-    delete[] especialidades;
+    delete especialidades;
 }
 
 bool Instructor::agregarEspecialidad(const string& esp) {
-    if (esp.empty()) return false;
-    for (int i = 0; i < cantEspecialidades; ++i) if (especialidades[i] == esp) return false;
-    if (cantEspecialidades >= maxEspecialidades) return false;
-    especialidades[cantEspecialidades++] = esp;
+    if (esp.empty() || especialidades->buscar(esp)) return false;
+    especialidad* nueva = new especialidad(esp);
+    especialidades->agregar(nueva);
     return true;
 }
 
 bool Instructor::tieneEspecialidad(const string& esp) const {
-    for (int i = 0; i < cantEspecialidades; ++i) if (especialidades[i] == esp) return true;
-    return false;
+    return especialidades->buscar(esp);
 }
 
-int Instructor::getCantEspecialidades() const { return cantEspecialidades; }
+int Instructor::getCantEspecialidades() const {
+    return especialidades->getCantidad();
+}
 
 string Instructor::getEspecialidad(int idx) const {
-    if (idx < 0 || idx >= cantEspecialidades) return "";
-    return especialidades[idx];
+    if (idx < 0 || idx >= especialidades->getCantidad()) return "";
+    especialidad* esp = especialidades->obtener(idx);
+    return esp ? esp->getNombre() : "";
 }
 
-void Instructor::setCodigoSucursal(const string& codigo) { codigoSucursal = codigo; }
-string Instructor::getCodigoSucursal() const { return codigoSucursal; }
+void Instructor::agregarRutinaCliente(Rutina* rutina, const string& nombreCliente){
+    if(rutina == nullptr || nombreCliente.empty()) return;
+    cout << "Rutina asignada al cliente " << nombreCliente << " por el instructor " << nombre << ":\n";
+    rutina->mostrarRutina(nombreCliente);
+}
+
+void Instructor::realizarMedicionCliente(Medicion* medicion, const string& nombreCliente){
+    if(medicion == nullptr || nombreCliente.empty()) return;
+    cout << "Medici" << char(162) << "n realizada al cliente " << nombreCliente << " por el instructor " << nombre << ":\n";
+    cout << medicion->toString() << "\n";
+}
 
 string Instructor::toString() {
-    stringstream s;
-    s << Persona::toString();
-    s << "Sucursal: " << (codigoSucursal.empty() ? "Sin sucursal" : codigoSucursal) << "\n";
-    s << "Especialidades: ";
-    if (cantEspecialidades == 0) s << "Ninguna\n";
-    else {
-        for (int i = 0; i < cantEspecialidades; ++i) {
-            s << especialidades[i];
-            if (i < cantEspecialidades - 1) s << ", ";
+    string info = "Instructor: " + nombre + "\nC" + char(130) + "dula: " + cedula + "\nTel" + char(130) + "fono: " + telefono +
+        "\nCorreo: " + correo + "\nFecha de Nacimiento: " + fechaNacimiento->toString() +
+        "\nEspecialidades: ";
+    if (especialidades->getCantidad() == 0) {
+        info += "Ninguna";
+    } else {
+        for (int i = 0; i < especialidades->getCantidad(); i++) {
+            especialidad* esp = especialidades->obtener(i);
+            if (esp != nullptr) {
+                info += esp->getNombre();
+                if (i < especialidades->getCantidad() - 1) {
+                    info += ", ";
+                }
+            }
         }
-        s << "\n";
     }
-    return s.str();
+    return info;
 }

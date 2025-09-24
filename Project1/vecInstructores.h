@@ -15,9 +15,10 @@ public:
 
     bool insertar(Instructor* i); // falso si cedula duplicada
     Instructor* buscarPorCedula(const string& cedula) const;
+	especialidad* obtenerEspecialidad(const string& nombre) const;
     int indicePorCedula(const string& cedula) const;
     Instructor* obtener(int idx) const;
-    int cantidad() const;
+    int getcantidad() const;
     void listarTodos() const;
     bool eliminarPorCedula(const string& cedula);
 };

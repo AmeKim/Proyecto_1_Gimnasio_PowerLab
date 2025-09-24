@@ -2,6 +2,12 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "vecClientes.h"
+#include "vecClasesGrupales.h"
+#include "vecInstructores.h"
+#include "BateriaEjercicios.h"
+#include "reporteM.h"
+#include "utiles.h"
 
 using namespace std;
 
@@ -13,8 +19,13 @@ private:
     string correo;
     string telefono;
 
+    // Colecciones propias de la sucursal (propietarias)
+    vecClientes* clientes;
+    vecClasesGrupales* clases;
+	vecInstructores* instructores;
+    BateriaEjercicios* bateria;
+
 public:
-    // Constructores
     Sucursal();
     Sucursal(string codigo, string provincia, string canton, string correo, string telefono);
     ~Sucursal();
@@ -27,13 +38,26 @@ public:
     string getTelefono() const;
 
     // Setters
-    void setCodigo(string codigo);
     void setProvincia(string provincia);
     void setCanton(string canton);
     void setCorreo(string correo);
     void setTelefono(string telefono);
 
-    // Métodos
+    // Operaciones solicitadas por el enunciado / interfaz
+    bool agregarCliente(cliente* cli);               // valida duplicados por cedula en la sucursal
+    cliente* buscarClientePorCedula(string cedula) const;
+
+    bool agregarClaseGrupal(ClaseGrupal* c);        // valida límite de 8 clases (vecClasesGrupales ya tiene tam=8)
+    ClaseGrupal* buscarClasePorCodigo(int codigo) const;
+
+    BateriaEjercicios* getBateria();                // acceso a la batería de ejercicios
+    vecClientes* getVecClientes();   
+    vecInstructores* getVecInstructores();
+	vecClasesGrupales* getVecClasesGrupales();
+
+    // Reportes
+    void generarReporteIMC() const;                  // usa reporteM para imprimir reporte por sucursal
+
+    // Representación
     string toString() const;
-    void mostrar() const;
 };

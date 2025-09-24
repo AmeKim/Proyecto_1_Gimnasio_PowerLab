@@ -17,11 +17,13 @@ vecClientes::~vecClientes() {
     delete[] clientes;
 }
 
-void vecClientes::agregar(cliente* cli) {
+bool vecClientes::agregar(cliente* cli) {
     if (cant < tam) {
         clientes[cant] = cli;
         cant++;
+		return true;
     }
+	return false;
 }
 
 // Versión no-const

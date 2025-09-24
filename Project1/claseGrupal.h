@@ -7,8 +7,9 @@ using namespace std;
 
 class ClaseGrupal {
 private:
-    string codigo;         // Identificador interno (ej: "1" o "C001")
-    int tipo;              // 1..8 según enumerado del enunciado (CrossFit, HIIT, TRX, ...)
+    string tipo;              // 1..8 (crossFit, HIIT, TRX , pesas, spinning , cardio, yoga, zumba)
+    int codigo;         // Identificador interno (ej: "1")
+    string tipo;              // 1..8 (crossFit, HIIT, TRX , pesas, spinning , cardio, yoga, zumba)
     int capacidad;         // cupo máximo
     int cantMatriculados;  // cantidad actual matriculados
     string salon;
@@ -21,12 +22,12 @@ private:
 
 public:
     ClaseGrupal();
-    ClaseGrupal(string codigo, int tipo, int capacidad, string salon, string horario, string cedulaInstructor);
+    ClaseGrupal(string tipo, int codigo, int capacidad, string salon, string horario, string cedulaInstructor);
     ~ClaseGrupal();
 
     // Getters
-    string getCodigo() const;
-    int getTipo() const;
+    string getTipo() const;
+    int getCodigo() const;
     int getCapacidad() const;
     int getCantMatriculados() const;
     string getSalon() const;
@@ -40,4 +41,5 @@ public:
 
     string toString() const;
     string detalleClase() const;
+	string mostrarTipos() const;
 };

@@ -15,7 +15,9 @@ public:
 
     bool agregar(ClaseGrupal* c);            // agrega si hay espacio
     ClaseGrupal* obtener(int indice);        // devuelve puntero o nullptr
-    ClaseGrupal* buscarPorCodigo(string codigo); // busca por codigo
+    ClaseGrupal* buscarPorCodigo(int codigo); // busca por codigo
     int getCantidad() const;
+   
     void mostrarLista() const;
+	string mostrarTipos() const;
 };

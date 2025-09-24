@@ -1,5 +1,8 @@
 #pragma once
+#include <string>
+#include <sstream>
 #include "especialidad.h"
+#include "utiles.h"
 
 class vecEspecialidades {
 private:
@@ -16,4 +19,7 @@ public:
     int getCantidad() const;
     bool buscar(string nombre);
     string toString() const;
+	void listarTodas() const;
+	bool existeEspecialidad(string nombre) const;
+    int getCantidad();
 };

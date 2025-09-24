@@ -38,6 +38,11 @@ Instructor* vecInstructores::buscarPorCedula(const string& cedula) const {
     return nullptr;
 }
 
+especialidad* vecInstructores::obtenerEspecialidad(const string& nombre) const
+{
+    return nullptr;
+}
+
 int vecInstructores::indicePorCedula(const string& cedula) const {
     for (int i = 0; i < cant; ++i) if (datos[i] && datos[i]->getCedula() == cedula) return i;
     return -1;
@@ -48,7 +53,7 @@ Instructor* vecInstructores::obtener(int idx) const {
     return datos[idx];
 }
 
-int vecInstructores::cantidad() const { return cant; }
+int vecInstructores::getcantidad() const { return cant; }
 
 void vecInstructores::listarTodos() const {
     if (cant == 0) { print("No hay instructores registrados\n"); return; }

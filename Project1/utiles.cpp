@@ -24,6 +24,19 @@ int digNum() {
 	}
 }
 
+double digDouble() {
+	double valor;
+	if (cin >> valor) {
+		cin.ignore();
+		return valor;
+	}
+	else {
+		cin.ignore();
+		print("Error: Solo se permiten digitos\n");
+		return 0.0;
+	}
+}
+
 void limpiar() { system("cls"); }
 void limpiarEnter() {
 	print("\nPresione ENTER para continuar\n");

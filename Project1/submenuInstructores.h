@@ -16,12 +16,12 @@ class submenuInstructores{
 	vecSucursales* vSucursales;
 	char imprimirMenu();
 	void incluirInstructor();
-	void mostrarInstructorPorSucursal();
-	void mostrarInstructor();
+	void mostrarInstructoresPorSucursal();
+	void mostrarInstructorDetalle();
 	void mostrarInstructorPorEspecialidad();
 	void mostrarClientesPorInstructor();
 	void generarMedicion();
-	void historialMedicionesInstructor();
+	void historialMediciones();
 	void ingresarEjecicioBateria();
 	void generarRutina();
 	void visualizarRutina();

@@ -15,9 +15,9 @@ string especialidad::getNombre() const {
 }
 
 void especialidad::setNombre(string nombre) {
-    this->nombre = nombre;
+	this->nombre = nombre;
 }
 
 string especialidad::toString() const {
-    return nombre;
+	return nombre;
 }

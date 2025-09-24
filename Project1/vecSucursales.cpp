@@ -69,3 +69,22 @@ bool vecSucursales::eliminarPorCodigo(const string& codigo) {
     --cant;
     return true;
 }
+
+
+
+string vecSucursales::listarInstructoresPorSucursal(string codigo) {
+    Sucursal* suc = buscarPorCodigo(codigo);
+    if (!suc) return "Error: No existe una sucursal con ese codigo.\n";
+    vecInstructores* vInstructores = suc->getVecInstructores();
+ 
+    if (!vInstructores || vInstructores->getcantidad() == 0) return "No hay instructores registrados en esta sucursal.\n";
+    stringstream s;
+    s << "Instructores en la sucursal " << codigo << ":\n";
+    for (int i = 0; i < vInstructores->getcantidad(); ++i) {
+        Instructor* inst = vInstructores->obtener(i);
+        if (inst) {
+            s << inst->toString() << "\n";
+        }
+    }
+    return s.str();
+}

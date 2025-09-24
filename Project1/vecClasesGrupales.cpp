@@ -29,7 +29,7 @@ ClaseGrupal* vecClasesGrupales::obtener(int indice) {
     return nullptr;
 }
 
-ClaseGrupal* vecClasesGrupales::buscarPorCodigo(string codigo) {
+ClaseGrupal* vecClasesGrupales::buscarPorCodigo(int codigo) {
     for (int i = 0; i < cant; i++) {
         if (clases[i] != nullptr && clases[i]->getCodigo() == codigo) {
             return clases[i];
@@ -41,6 +41,7 @@ ClaseGrupal* vecClasesGrupales::buscarPorCodigo(string codigo) {
 int vecClasesGrupales::getCantidad() const {
     return cant;
 }
+
 
 void vecClasesGrupales::mostrarLista() const {
     print("Lista de clases grupales de la sucursal:\n");

@@ -51,3 +51,25 @@ string vecEspecialidades::toString() const {
     }
     return result;
 }
+
+void vecEspecialidades::listarTodas() const {
+    if (cant == 0) { print("No hay instructores registrados\n"); return; }
+    for (int i = 0; i < cant; ++i) {
+        if (especialidades[i]) {
+            stringstream s;
+            s << (i + 1) << "- " << especialidades[i]->getNombre() << "\n";
+            print(s.str());
+        }
+    }
+}
+
+bool vecEspecialidades::existeEspecialidad(string nombre) const {
+    for (int i = 0; i < cant; i++) {
+        if (especialidades[i]->getNombre() == nombre) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int vecEspecialidades::getCantidad() {     return cant; }

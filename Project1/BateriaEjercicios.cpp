@@ -17,11 +17,13 @@ BateriaEjercicios::~BateriaEjercicios() {
     delete[] ejercicios;
 }
 
-void BateriaEjercicios::agregar(Ejercicio* ejercicio) {
+bool BateriaEjercicios::agregar(Ejercicio* ejercicio) {
     if (cant < tam) {
         ejercicios[cant] = ejercicio;
         cant++;
+		return true;
     }
+	return false;
 }
 
 Ejercicio* BateriaEjercicios::obtener(int indice) {

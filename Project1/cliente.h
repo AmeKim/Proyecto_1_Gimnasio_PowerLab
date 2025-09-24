@@ -1,4 +1,7 @@
 #pragma once
+#include <string>
+#include <sstream>
+#include "instructor.h"
 #include "Persona.h"
 #include "vecReportesM.h"
 #include "Rutina.h"
@@ -10,6 +13,7 @@ private:
     string cedulaInstructor;
     vecReportesM* historialMediciones;
     Rutina* rutinaActual;
+	Instructor* instructor; // Instructor asociado al cliente
 
 public:
     cliente();
@@ -23,6 +27,7 @@ public:
     string getCedulaInstructor() const;
     vecReportesM* getHistorialMediciones();
     Rutina* getRutinaActual();
+    Instructor* getInstructor() const;
 
     // Setters
     void setSexo(char sexo);

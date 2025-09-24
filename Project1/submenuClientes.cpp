@@ -26,7 +26,7 @@ int submenuClientes::iniciar(){
 				ClientePorSucursal();
 				break;
 			case '4':
-				mostrarCliente();
+				mostrarClienteDetalle();
 				break;
 			case '0':
 				print("Saliendo...\n");
@@ -61,112 +61,170 @@ char submenuClientes::imprimirMenu(){
 	return num;
 }
 
-void submenuClientes::incluirCliente(){
+void submenuClientes::incluirCliente() {
 	limpiar();
-	print("-------------------Lista de Sucursales-------------------");
-	vSucursales->mostrarTodas();
-	cout<< "Ingrese el c" << char(162) << "digo de la Sucursal a mostrar: ";
-	int cod = digNum();
+	print("-------------------Creando un nuevo Cliente-------------------\n");
+	vSucursales->listarTodos();
+	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se asociar" << char(160) << " el Cliente: ";
+		int cod = digNum();
+		if (vSucursales->obtener(cod) == nullptr) {
+			cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+			return;
+		}
+	print("-------------Ingresando datos de un nuevo Cliente-------------\n");
+	cout << "Ingrese la c" << char(130) << "dula del Cliente: ";
+	string cedula = digPalabra();
 
-	print("Ingrese el nombre del cliente: ");
+	print("Ingrese el nombre del Cliente: ");
 	string nombre = digPalabra();
 
-	print("Ingrese el ID del cliente: ");
-	string cedula = digPalabra();
-	if(vClientes->getCliente(cedula) != nullptr){
-		cout<<"Ya existe un cliente con esa c" << char(162) << "dula\n";
-		return;
-	}
-
-	print("Ingrese el telefono del cliente: ");
-	string telefono = digPalabra();
-
-	print("Ingrese el correo del cliente: ");
+	print("Ingrese el correo del Cliente: ");
 	string correo = digPalabra();
 
-	print("Ingrese la fecha de nacimiento del cliente (dd/mm/aaaa): ");
-	string fechaNacimiento = digPalabra();
+	cout << "Ingrese el tel" << char(130) << "fono del Cliente: ";
+	string telefono = digPalabra();
 
-	print("Ingrese el sexo del cliente (M/F): ");
-	string sexo = digPalabra();
-
-	print("Ingrese la fecha de inscripcion del cliente (dd/mm/aaaa): ");
-	string fechaInscrip = digPalabra();
-
-	cliente* nuevoCliente = new cliente(nombre, cedula, telefono, correo, fechaNacimiento, sexo, fechaInscrip);
-	vClientes->agregarCliente(nuevoCliente);
-	print("Cliente agregado exitosamente\n");
-}
-
-void submenuClientes::asignarInstructorCliente(){
-	limpiar();
-	print("-------------------Lista de Clientes-------------------");
-	vClientes->mostrarTodos();
-	cout<< "Ingrese la c" << char(162) << "dula del cliente a asignar instructor: ";
-	string cedulaCli = digPalabra();
-	cliente* cli = vClientes->getCliente(cedulaCli);
-	if(cli == nullptr){
-		cout<< "No existe un cliente con esa c" << char(162) << "dula\n";
-		return;
-	}
-	print("-------------------Lista de Sucursales-------------------");
-	vSucursales->mostrarTodas();
-	cout<< "Ingrese el c" << char(162) << "digo de la Sucursal donde se encuentra el instructor: ";
-	int cod = digNum();
-	Sucursal* suc = vSucursales->getSucursal(cod);
-	if(suc == nullptr){
-		cout<< "No existe una sucursal con ese c" << char(162) << "digo\n";
-		return;
-	}
-	print("-------------------Lista de Instructores-------------------");
-	suc->getInstructores()->mostrarTodos();
-	cout <<"Ingrese la c" << char(162) << "dula del instructor a asignar: ";
-	string cedulaInst = digPalabra();
-	instructor* inst = suc->getInstructores()->getInstructor(cedulaInst);
-	if(inst == nullptr){
-		cout<< "No existe un instructor con esa c" << char(162) << "dula en esa sucursal\n";
-		return;
-	}
-	cli->setCedulaInstructorAsignado(cedulaInst);
-	print("Instructor asignado exitosamente\n");
-}
-
-void submenuClientes::ClientePorSucursal(){
-	limpiar();
-	print("-------------------Lista de Sucursales-------------------");
-	vSucursales->mostrarTodas();
-	cout<< "Ingrese el c" << char(162) << "digo de la Sucursal a mostrar: ";
-	int cod = digNum();
-	Sucursal* suc = vSucursales->getSucursal(cod);
-	if(suc == nullptr){
-		cout<< "No existe una sucursal con ese c" << char(162) << "digo\n";
-		return;
-	}
-	print("-------------------Lista de Clientes en la Sucursal-------------------");
-	suc->getClientes()->mostrarTodos();
-}
-
-void submenuClientes::mostrarCliente(){
-	limpiar();
-	print("-------------------Lista de Clientes-------------------");
-	vClientes->mostrarTodos();
-	cout<< "Ingrese la c" << char(162) << "dula del cliente a mostrar: ";
-	string cedulaCli = digPalabra();
-	cliente* cli = vClientes->getCliente(cedulaCli);
-	if(cli == nullptr){
-		cout<< "No existe un cliente con esa c" << char(162) << "dula\n";
-		return;
-	}
-	print("-------------------Detalle del Cliente-------------------\n");
-	print(cli->toStringDetallado());
-	print("--------------------------------------------------------\n");
-	print("Desea ver el historial de mediciones del cliente? (s/n): ");
-	char resp;
-	cin >> resp;
+	print("Ingrese el sexo del Cliente (M/F): ");
+	char sexo;
+	cin >> sexo;
 	cin.ignore();
-	if(resp == 's' || resp == 'S'){
-		cli->mostrarHistorialMediciones();
+
+	print("Ingrese la fecha de nacimiento del Cliente (dd/mm/aaaa): ");
+	string fechaStr = digPalabra();
+	fecha* fechaNac = new fecha(fechaStr);
+
+	cout << "Ingrese la fecha de inscripci" << char(162) << "n del Cliente (dd/mm/aaaa): ";
+	string fechaInscStr = digPalabra();
+	fecha* fechaInsc = new fecha(fechaInscStr);
+
+	print("-------------------Lista de Instructores-------------------\n");
+	vSucursales->obtener(cod)->getVecInstructores()->listarTodos();
+	cout << "Ingrese la c" << char(130) << "dula del Instructor que desea asignar al Cliente: ";
+	string cedulaInst = digPalabra();
+
+	cliente* nuevoCliente = new cliente(nombre, cedula, telefono, correo, fechaStr, sexo, fechaInscStr, cedulaInst);
+	if (vClientes->agregar(nuevoCliente)) {
+		if (vSucursales->obtener(cod)->agregarCliente(nuevoCliente)) {
+			print("Cliente agregado exitosamente.\n");
+		}
+		else {
+			cout << "Error: No se pudo agregar el cliente a la sucursal. C" << char(162) << "dula duplicada en la sucursal.\n";
+			delete nuevoCliente;
+		}
+	}
+	else {
+		cout << "Error: No se pudo agregar el cliente. C" << char(162) << "dula duplicada en el sistema.\n";
+		delete nuevoCliente;
 	}
 }
 
+void submenuClientes::asignarInstructorCliente() {
+	limpiar();
+	print("-------------------Asignando Instructor a un Cliente-------------------\n");
+	if (vClientes->getCantidad() == 0) {
+		print("No hay clientes registrados.\n");
+		return;
+	}
+	vClientes->mostrarLista();
+	cout << "Ingrese la c" << char(130) << "dula del Cliente al que desea asignar un Instructor: ";
+	string cedulaCli = digPalabra();
+	cliente* cli = vClientes->buscarPorCedula(cedulaCli);
+	if (cli == nullptr) {
+		cout << "Error: No existe un cliente con esa c" << char(162) << "dula.\n";
+		return;
+	}
+	print("-------------------Lista de Instructores-------------------\n");
+	bool encontrado = false;
+	for (int i = 0; i < vSucursales->cantidad(); ++i) {
+		vecInstructores* vInstructores = vSucursales->obtener(i)->getVecInstructores();
+		if (vInstructores && vInstructores->getcantidad() > 0) {
+			vInstructores->listarTodos();
+			encontrado = true;
+		}
+	}
+	if (!encontrado) {
+		print("No hay instructores registrados en ninguna sucursal.\n");
+		return;
+	}
+	cout << "Ingrese la c" << char(130) << "dula del Instructor que desea asignar al Cliente: ";
+	string cedulaInst = digPalabra();
+	Instructor* inst = nullptr;
+	for (int i = 0; i < vSucursales->cantidad(); ++i) {
+		vecInstructores* vInstructores = vSucursales->obtener(i)->getVecInstructores();
+		if (vInstructores) {
+			inst = vInstructores->buscarPorCedula(cedulaInst);
+			if (inst != nullptr) break;
+		}
+	}
+	if (inst == nullptr) {
+		cout << "Error: No existe un instructor con esa c" << char(162) << "dula.\n";
+		return;
+	}
+	cli->setCedulaInstructor(cedulaInst);
+	print("Instructor asignado exitosamente al Cliente.\n");
+}
 
+void submenuClientes::ClientePorSucursal() {
+	limpiar();
+	print("-------------------Mostrando Clientes por Sucursal-------------------\n");
+	if (vSucursales->cantidad() == 0) {
+		print("No hay sucursales registradas.\n");
+		return;
+	}
+	vSucursales->listarTodos();
+	cout << "Ingrese el c" << char(162) << "digo de la Sucursal para listar sus Clientes: ";
+	int cod = digNum();
+	Sucursal* suc = vSucursales->obtener(cod);
+	if (suc == nullptr) {
+		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		return;
+	}
+	vecClientes* vCli = suc->getVecClientes();
+	if (vCli == nullptr || vCli->getCantidad() == 0) {
+		print("No hay clientes registrados en esta sucursal.\n");
+		return;
+	}
+	vCli->mostrarLista();
+}
+
+void submenuClientes::mostrarClienteDetalle() {
+	limpiar();
+	print("-------------------Mostrando detalle de un Cliente-------------------\n");
+	if (vClientes->getCantidad() == 0) {
+		print("No hay clientes registrados.\n");
+		return;
+	}
+	vClientes->mostrarLista();
+	cout << "Ingrese la c" << char(130) << "dula del Cliente para ver su detalle: ";
+	string cedulaCli = digPalabra();
+	cliente* cli = vClientes->buscarPorCedula(cedulaCli);
+	if (cli == nullptr) {
+		cout << "Error: No existe un cliente con esa c" << char(162) << "dula.\n";
+		return;
+	}
+	// Buscar nombre del instructor asignado
+	string nombreInstructor = "No asignado";
+	string cedulaInst = cli->getCedulaInstructor();
+	if (!cedulaInst.empty()) {
+		for (int i = 0; i < vSucursales->cantidad(); ++i) {
+			vecInstructores* vInstructores = vSucursales->obtener(i)->getVecInstructores();
+			if (vInstructores) {
+				Instructor* inst = vInstructores->buscarPorCedula(cedulaInst);
+				if (inst != nullptr) {
+					nombreInstructor = inst->getNombre();
+					break;
+				}
+			}
+		}
+	}
+	// Buscar nombre de la sucursal del cliente
+	string nombreSucursal = "No asignada";
+	for (int i = 0; i < vSucursales->cantidad(); ++i) {
+		vecClientes* vCli = vSucursales->obtener(i)->getVecClientes();
+		if (vCli && vCli->buscarPorCedula(cedulaCli) != nullptr) {
+			nombreSucursal = vSucursales->obtener(i)->getProvincia() + " - " + vSucursales->obtener(i)->getCanton();
+			break;
+		}
+	}
+	print(cli->toStringDetalle(nombreInstructor, nombreSucursal));
+}

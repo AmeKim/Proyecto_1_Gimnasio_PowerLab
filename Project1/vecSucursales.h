@@ -19,4 +19,5 @@ public:
     int cantidad() const;
     void listarTodos() const;
     bool eliminarPorCodigo(const string& codigo);
+	string listarInstructoresPorSucursal(string codigo);
 };

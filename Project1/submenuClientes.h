@@ -17,7 +17,7 @@ private:
 	void incluirCliente();
 	void asignarInstructorCliente();
 	void ClientePorSucursal();
-	void mostrarCliente();
+	void mostrarClienteDetalle();
 public:
 	submenuClientes(vecClientes* vClientes, vecSucursales* vSucursales);
 	~submenuClientes();

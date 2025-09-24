@@ -11,7 +11,7 @@ public:
     vecClientes();
     ~vecClientes();
 
-    void agregar(cliente* cli);
+    bool agregar(cliente* cli);
 
     // Acceso no-const (permite modificar cliente o colección)
     cliente* obtener(int indice);

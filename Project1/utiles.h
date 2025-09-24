@@ -10,6 +10,7 @@ void print(string valor);
 void print(int valor);
 string digPalabra();
 int digNum();
+double digDouble();
 void limpiar();
 void limpiarEnter();
 #endif

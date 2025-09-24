@@ -2,8 +2,8 @@
 
 // Constructor por defecto
 ClaseGrupal::ClaseGrupal() {
-    codigo = "";
-    tipo = 1;
+    codigo = 0;
+    tipo = "";
     capacidad = 0;
     salon = "";
     horario = "";
@@ -14,7 +14,7 @@ ClaseGrupal::ClaseGrupal() {
 }
 
 // Constructor con parámetros
-ClaseGrupal::ClaseGrupal(string codigo, int tipo, int capacidad, string salon, string horario, string cedulaInstructor) {
+ClaseGrupal::ClaseGrupal(string tipo,int codigo, int capacidad, string salon, string horario, string cedulaInstructor) {
     this->codigo = codigo;
     this->tipo = tipo;
     this->capacidad = capacidad;
@@ -40,8 +40,8 @@ ClaseGrupal::~ClaseGrupal() {
 }
 
 // Getters
-string ClaseGrupal::getCodigo() const { return codigo; }
-int ClaseGrupal::getTipo() const { return tipo; }
+string ClaseGrupal::getTipo() const { return tipo; }
+int ClaseGrupal::getCodigo() const { return codigo; }
 int ClaseGrupal::getCapacidad() const { return capacidad; }
 int ClaseGrupal::getCantMatriculados() const { return cantMatriculados; }
 string ClaseGrupal::getSalon() const { return salon; }
@@ -118,4 +118,18 @@ string ClaseGrupal::detalleClase() const {
         }
     }
     return s.str();
+}
+
+string ClaseGrupal::mostrarTipos() const{
+    stringstream s;
+	s << "Tipos de clases grupales disponibles:\n";
+	s << "1 - CrossFit\n";
+	s << "2 - HIIT\n";
+	s << "3 - TRX\n";
+	s << "4 - Pesas\n";
+	s << "5 - Spinning\n";
+	s << "6 - Cardio\n";
+	s << "7 - Yoga\n";
+	s << "8 - Zumba\n";
+	return s.str();
 }
