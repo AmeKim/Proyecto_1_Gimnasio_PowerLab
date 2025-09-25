@@ -15,9 +15,9 @@ int submenuSucursales::iniciar() {
 		limpiar();
 		opcion = imprimirMenu();
 		switch (opcion) {
-		case '1': MostrarSucursal();
+		case '1': addSucursal();
 			break;
-		case '2': addSucursal();
+		case '2': MostrarSucursal();
 			break;
 		case '3': reporteIMC();
 			break;
@@ -39,8 +39,8 @@ int submenuSucursales::iniciar() {
 
 char submenuSucursales::imprimirMenu(){
 	char opcion;
-	print("\n----------------------------------------------------\n");
-	cout<< "\n-------SubMen" << char(163)<< "de Sucursales-------\n";
+	print("\n-----------------------------------------\n");
+	cout<< "\n-------SubMen" << char(163)<< " de Sucursales-------\n";
 	cout<< "Por favor escoja una opci"<< char(162) <<"n: \n";
 	print("1. Ingresar una Sucursal\n");
 	print("2. Muestre una Sucursal\n");
@@ -53,19 +53,19 @@ char submenuSucursales::imprimirMenu(){
 }
 
 void submenuSucursales::addSucursal(){
-	limpiar();
+	cin.ignore();
+	limpiarEnter();
 	print("-------------------Creando una nueva Sucursal-------------------\n");
-	string codigo, provincia, canton, correo, telefono;
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal: ";
-	codigo = digPalabra();
+	string codigo = digPalabra();
 	print("Ingrese la provincia donde se ubica la Sucursal: ");
-	provincia = digPalabra();
+	string provincia = digPalabra();
 	cout<< "Ingrese el cant" << char(162) << "n donde se ubica la Sucursal: ";
-	canton = digPalabra();
+	string canton = digPalabra();
 	print("Ingrese el correo de la Sucursal: ");
-	correo = digPalabra();
+	string correo = digPalabra();
 	cout<< "Ingrese el tel" << char(130) << "fono de la Sucursal: ";
-	telefono = digPalabra();
+	string telefono = digPalabra();
 	Sucursal* nuevaSucursal = new Sucursal(codigo, provincia, canton, correo, telefono);
 	if(vSucursales->insertar(nuevaSucursal)){
 		print("Sucursal agregada exitosamente.\n");
@@ -76,7 +76,8 @@ void submenuSucursales::addSucursal(){
 }
 
 void submenuSucursales::MostrarSucursal(){
-	limpiar();
+	cin.get();
+	limpiarEnter();
 	print("-------------------Mostrando una Sucursal-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
@@ -96,7 +97,8 @@ void submenuSucursales::MostrarSucursal(){
 }
 
 void submenuSucursales::reporteIMC() {
-	limpiar();
+	cin.get();
+	limpiarEnter();
 	print("-------------------Reporte de IMC por Sucursal-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
