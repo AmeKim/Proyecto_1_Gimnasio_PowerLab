@@ -48,9 +48,12 @@ int vecInstructores::indicePorCedula(const string& cedula) const {
     return -1;
 }
 
-Instructor* vecInstructores::obtener(int idx) const {
-    if (idx < 0 || idx >= cant) return nullptr;
-    return datos[idx];
+Instructor* vecInstructores::obtener(string idx) const {
+    for (int i = 0 ; i< cant; i++){
+        if (datos[i]->getCedula() == idx)
+            return datos[i];
+    }
+	return nullptr;
 }
 
 int vecInstructores::getcantidad() const { return cant; }

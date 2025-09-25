@@ -65,7 +65,7 @@ void submenuClaseGrup::crearClaseGrupal() {
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el código de la Sucursal para la nueva clase grupal: ";
-	int cod = digNum();
+	string cod = digPalabra();
 	Sucursal* sucursal = vSucursales->obtener(cod);
 	if (sucursal == nullptr) {
 		cout << "Error: No existe una sucursal con ese código.\n";
@@ -119,7 +119,7 @@ void submenuClaseGrup::crearClaseGrupal() {
 	}
 	bool encontrado = false;
 	for (int i = 0; i < vInstructores->getcantidad(); ++i) {
-		Instructor* inst = vInstructores->obtener(i);
+		Instructor* inst = vInstructores->obtener(cod);
 		if (inst && inst->tieneEspecialidad(nombreEsp)) {
 			if (!encontrado) {
 				print("Instructores con la especialidad " + nombreEsp + ":\n");
@@ -169,7 +169,7 @@ void submenuClaseGrup::mostrarClasesPorSucursal(){
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el código de la Sucursal para ver sus clases grupales: ";
-	int cod = digNum();
+	string cod = digPalabra();
 	Sucursal* sucursal = vSucursales->obtener(cod);
 	if (sucursal == nullptr) {
 		cout << "Error: No existe una sucursal con ese código.\n";
@@ -198,7 +198,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el código de la Sucursal para inscribir un cliente a una clase grupal: ";
-	int cod = digNum();
+	string cod = digPalabra();
 	Sucursal* sucursal = vSucursales->obtener(cod);
 	if (sucursal == nullptr) {
 		cout << "Error: No existe una sucursal con ese código.\n";
@@ -264,7 +264,7 @@ void submenuClaseGrup::mostrarClasePorCliente(){
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el código de la Sucursal para ver las clases grupales de un cliente: ";
-	int cod = digNum();
+	string cod = digPalabra();
 	Sucursal* sucursal = vSucursales->obtener(cod);
 	if (sucursal == nullptr) {
 		cout << "Error: No existe una sucursal con ese código.\n";

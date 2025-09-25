@@ -14,7 +14,7 @@ public:
     ~vecClasesGrupales();
 
     bool agregar(ClaseGrupal* c);            // agrega si hay espacio
-    ClaseGrupal* obtener(int indice);        // devuelve puntero o nullptr
+    ClaseGrupal* obtener(int cod);        // devuelve puntero o nullptr
     ClaseGrupal* buscarPorCodigo(int codigo); // busca por codigo
     int getCantidad() const;
    

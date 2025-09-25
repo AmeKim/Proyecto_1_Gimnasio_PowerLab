@@ -42,9 +42,12 @@ int vecSucursales::indicePorCodigo(const string& codigo) const {
     return -1;
 }
 
-Sucursal* vecSucursales::obtener(int idx) const {
-    if (idx < 0 || idx >= cant) return nullptr;
-    return datos[idx];
+Sucursal* vecSucursales::obtener(string cod) const {
+    for (int i = 0 ; i< cant; i++){
+		if (datos[i]->getCodigo() == cod)
+			return datos[i];
+    }
+	return nullptr;
 }
 
 int vecSucursales::cantidad() const { return cant; }
@@ -81,10 +84,10 @@ string vecSucursales::listarInstructoresPorSucursal(string codigo) {
     stringstream s;
     s << "Instructores en la sucursal " << codigo << ":\n";
     for (int i = 0; i < vInstructores->getcantidad(); ++i) {
-        Instructor* inst = vInstructores->obtener(i);
+        Instructor* inst = vInstructores->obtener();
         if (inst) {
             s << inst->toString() << "\n";
         }
-    }
+	}
     return s.str();
 }

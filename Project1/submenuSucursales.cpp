@@ -39,8 +39,8 @@ int submenuSucursales::iniciar() {
 
 char submenuSucursales::imprimirMenu(){
 	char opcion;
-	print("\n-----------------------------------------\n");
-	cout<< "\n-------SubMen" << char(163)<< " de Sucursales-------\n";
+	print("\n-----------------------------------------------\n");
+	cout<< "\n---------SubMen" << char(163)<< " de Sucursales---------\n";
 	cout<< "Por favor escoja una opci"<< char(162) <<"n: \n";
 	print("1. Ingresar una Sucursal\n");
 	print("2. Muestre una Sucursal\n");
@@ -68,7 +68,9 @@ void submenuSucursales::addSucursal(){
 	string telefono = digPalabra();
 	Sucursal* nuevaSucursal = new Sucursal(codigo, provincia, canton, correo, telefono);
 	if(vSucursales->insertar(nuevaSucursal)){
+		cout << endl << endl;
 		print("Sucursal agregada exitosamente.\n");
+		cout << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get(); // Espera a que el usuario presione Enter
 	}else{
@@ -93,10 +95,10 @@ void submenuSucursales::MostrarSucursal(){
 	string codigo;
 	cout<< "Ingrese el c" << char(162) << "digo de la Sucursal a mostrar: ";
 	codigo = digPalabra();
-	Sucursal* s = vSucursales->buscarPorCodigo(codigo);
-	if(s){
+	Sucursal* suc = vSucursales->buscarPorCodigo(codigo);
+	if(suc){
 		print("Detalles de la Sucursal:\n");
-		s->toString();
+		cout << suc->toString();
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;

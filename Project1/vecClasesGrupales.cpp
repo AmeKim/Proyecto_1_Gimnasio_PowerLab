@@ -24,9 +24,13 @@ bool vecClasesGrupales::agregar(ClaseGrupal* c) {
     return false;
 }
 
-ClaseGrupal* vecClasesGrupales::obtener(int indice) {
-    if (indice >= 0 && indice < cant) return clases[indice];
-    return nullptr;
+ClaseGrupal* vecClasesGrupales::obtener(int cod) {
+    for (int i = 0; i < cant; i++) {
+        if (clases[i]->getCodigo() == cod) {
+            return clases[i];
+        }
+    }
+	return nullptr;
 }
 
 ClaseGrupal* vecClasesGrupales::buscarPorCodigo(int codigo) {

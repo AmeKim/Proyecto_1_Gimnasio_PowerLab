@@ -60,7 +60,7 @@ void submenuClientes::incluirCliente() {
 	print("-------------------Creando un nuevo Cliente-------------------\n");
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se asociar" << char(160) << " el Cliente: ";
-		int cod = digNum();
+	string cod = digPalabra();
 		if (vSucursales->obtener(cod) == nullptr) {
 			cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
 			print("<Digite enter para regresar>\n");
@@ -122,6 +122,15 @@ void submenuClientes::incluirCliente() {
 
 void submenuClientes::asignarInstructorCliente() {
 	limpiar();
+	if (vSucursales->cantidad() == 0) {
+		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+	vSucursales->listarTodos();
+	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se inscribe el Cliente: ";
+	string cod = digPalabra();
 	print("-------------------Asignando Instructor a un Cliente-------------------\n");
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
@@ -141,8 +150,8 @@ void submenuClientes::asignarInstructorCliente() {
 	}
 	print("-------------------Lista de Instructores-------------------\n");
 	bool encontrado = false;
-	for (int i = 0; i < vSucursales->cantidad(); ++i) {
-		vecInstructores* vInstructores = vSucursales->obtener(i)->getVecInstructores();
+	for (int i = 0; i < vSucursales->cantidad(); i++) {
+		vecInstructores* vInstructores = vSucursales->obtener(cod)->getVecInstructores();
 		if (vInstructores && vInstructores->getcantidad() > 0) {
 			vInstructores->listarTodos();
 			encontrado = true;
@@ -158,7 +167,7 @@ void submenuClientes::asignarInstructorCliente() {
 	string cedulaInst = digPalabra();
 	Instructor* inst = nullptr;
 	for (int i = 0; i < vSucursales->cantidad(); ++i) {
-		vecInstructores* vInstructores = vSucursales->obtener(i)->getVecInstructores();
+		vecInstructores* vInstructores = vSucursales->obtener(cod)->getVecInstructores();
 		if (vInstructores) {
 			inst = vInstructores->buscarPorCedula(cedulaInst);
 			if (inst != nullptr) break;
@@ -187,7 +196,7 @@ void submenuClientes::ClientePorSucursal() {
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal para listar sus Clientes: ";
-	int cod = digNum();
+	string cod = digPalabra();
 	Sucursal* suc = vSucursales->obtener(cod);
 	if (suc == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
@@ -208,6 +217,16 @@ void submenuClientes::ClientePorSucursal() {
 void submenuClientes::mostrarClienteDetalle() {
 	limpiar();
 	print("-------------------Mostrando detalle de un Cliente-------------------\n");
+	if (vSucursales->cantidad() == 0) {
+		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+	vSucursales->listarTodos();
+	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se asocia el Cliente: ";
+	string cod = digPalabra();
+
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
 		print("<Digite enter para regresar>\n");
@@ -229,7 +248,7 @@ void submenuClientes::mostrarClienteDetalle() {
 	string cedulaInst = cli->getCedulaInstructor();
 	if (!cedulaInst.empty()) {
 		for (int i = 0; i < vSucursales->cantidad(); ++i) {
-			vecInstructores* vInstructores = vSucursales->obtener(i)->getVecInstructores();
+			vecInstructores* vInstructores = vSucursales->obtener(cod)->getVecInstructores();
 			if (vInstructores) {
 				Instructor* inst = vInstructores->buscarPorCedula(cedulaInst);
 				if (inst != nullptr) {
@@ -242,9 +261,9 @@ void submenuClientes::mostrarClienteDetalle() {
 	// Buscar nombre de la sucursal del cliente
 	string nombreSucursal = "No asignada";
 	for (int i = 0; i < vSucursales->cantidad(); ++i) {
-		vecClientes* vCli = vSucursales->obtener(i)->getVecClientes();
+		vecClientes* vCli = vSucursales->obtener(cod)->getVecClientes();
 		if (vCli && vCli->buscarPorCedula(cedulaCli) != nullptr) {
-			nombreSucursal = vSucursales->obtener(i)->getProvincia() + " - " + vSucursales->obtener(i)->getCanton();
+			nombreSucursal = vSucursales->obtener(cod)->getProvincia() + " - " + vSucursales->obtener(cod)->getCanton();
 			break;
 		}
 	}

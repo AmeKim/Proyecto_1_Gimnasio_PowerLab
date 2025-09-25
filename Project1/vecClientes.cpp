@@ -35,11 +35,13 @@ cliente* vecClientes::obtener(int indice) {
 }
 
 // Versión const
-cliente* vecClientes::obtener(int indice) const {
-    if (indice >= 0 && indice < cant) {
-        return clientes[indice];
+cliente* vecClientes::obtener(string ced) const {
+    for (int i = 0; i < cant; i++) {
+        if (clientes[i]->getCedula() == ced) {
+            return clientes[i];
+        }
     }
-    return nullptr;
+	return nullptr;
 }
 
 // Versión no-const

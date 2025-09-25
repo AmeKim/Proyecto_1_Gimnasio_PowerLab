@@ -18,7 +18,7 @@ public:
     cliente* buscarPorCedula(string cedula);
 
     // Acceso const (permite llamar desde objetos const)
-    cliente* obtener(int indice) const;
+    cliente* obtener(string ced) const;
     cliente* buscarPorCedula(string cedula) const;
 
     int getCantidad() const;

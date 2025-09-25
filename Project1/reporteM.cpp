@@ -18,7 +18,7 @@ void reporteM::generarReporteIMCporSucursal(const vecClientes* clientes, const s
     int cantPorCategoria[8] = { 0 };
 
     for (int i = 0; i < clientes->getCantidad(); i++) {
-        cliente* c = clientes->obtener(i);
+		cliente* c = clientes->
         if (c == nullptr) continue;
         double imc = c->getUltimoIMC();
         if (imc <= 0.0) continue; // sin mediciones, ignorar
