@@ -12,53 +12,41 @@ submenuInstructores::~submenuInstructores(){
 
 int submenuInstructores::iniciar(){
 	*continuacion = 's';
-	do{
+	while (*continuacion == 's' || *continuacion == 'S') {
 		limpiar();
 		opcion = imprimirMenu();
-		switch(opcion){
-			case '1':
-				incluirInstructor();
-				break;
-			case '2':
-				mostrarInstructoresPorSucursal();
-				break;
-			case '3':
-				mostrarInstructorDetalle();
-				break;
-			case '4':
-				mostrarInstructorPorEspecialidad();
-				break;
-			case '5':
-				mostrarClientesPorInstructor();
-				break;
-			case '6':
-				generarMedicion();
-				break;
-			case '7':
-				historialMediciones();
-				break;
-			case '8':
-				ingresarEjecicioBateria();
-				break;
-			case '9':
-				generarRutina();
-				break;
-			case '10':
-				visualizarRutina();
-				break;
-			case '0':
-				print("Saliendo...\n");
-				return 0;
-				break;
-			default:
-				cout << "Opci" << char(162) << "n no v" << char(160) << "lida\n";
+		switch (opcion) {
+		case '1': incluirInstructor();
+			break;
+		case '2': mostrarInstructoresPorSucursal();
+			break;
+		case '3': mostrarInstructorDetalle();
+			break;
+		case '4': mostrarInstructorPorEspecialidad();
+			break;
+		case '5': mostrarClientesPorInstructor();
+			break;
+		case '6': generarMedicion();
+			break;
+		case '7': historialMediciones();
+			break;
+		case '8': ingresarEjecicioBateria();
+			break;
+		case '9': generarRutina();
+			break;
+		case '10': visualizarRutina();
+			break;
+		case '0':
+			print("Saliendo...\n");
+			*continuacion = 'n';
+			break;
+		default:
+			cout << "Error: Por favor digite una opci" << char(162) << "n v" << char(160) << "lida\n";
+			print("\n------------------------------------\n");
+			limpiarEnter();
+			continue;
 		}
-		if(opcion != '10'){
-			cout<< "Desea continuar en el submen" << char(163) << " de Instructores ? (s / n) : ";
-			cin >> *continuacion;
-			cin.ignore();
-		}
-	}while(*continuacion == 's' || *continuacion == 'S');
+	}
 	cin.get();
 	limpiar();
 	return 0;

@@ -9,7 +9,6 @@ class ClaseGrupal {
 private:
     string tipo;              // 1..8 (crossFit, HIIT, TRX , pesas, spinning , cardio, yoga, zumba)
     int codigo;         // Identificador interno (ej: "1")
-    string tipo;              // 1..8 (crossFit, HIIT, TRX , pesas, spinning , cardio, yoga, zumba)
     int capacidad;         // cupo máximo
     int cantMatriculados;  // cantidad actual matriculados
     string salon;

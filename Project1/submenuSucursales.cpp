@@ -9,33 +9,29 @@ submenuSucursales::~submenuSucursales(){
 	delete continuacion;
 }
 
-int submenuSucursales::iniciar(){
+int submenuSucursales::iniciar() {
 	*continuacion = 's';
-	do{
+	while (*continuacion == 's' || *continuacion == 'S') {
 		limpiar();
 		opcion = imprimirMenu();
-		switch(opcion){
-			case '1':
-				addSucursal();
-				break;
-			case '2':
-				MostrarSucursal();
-				break;
-			case '3':
-				reporteIMC();
-				break;
-			case '0':
-				print("Saliendo...\n");
-				return 0;
-			default:
-				cout<< "Opci" << char(162) << "n no v" << char(160)<< "lida\n";
+		switch (opcion) {
+		case '1': MostrarSucursal();
+			break;
+		case '2': addSucursal();
+			break;
+		case '3': reporteIMC();
+			break;
+		case '0':
+			print("Saliendo...\n");
+			*continuacion = 'n';
+			break;
+		default:
+			cout << "Error: Por favor digite una opci" << char(162) << "n v" << char(160) << "lida\n";
+			print("\n------------------------------------\n");
+			limpiarEnter();
+			continue;
 		}
-		if(opcion != '3'){
-			cout<< "Desea continuar en el submen" << char(163) << " de Sucursales ? (s / n) : ";
-			cin >> *continuacion;
-			cin.ignore();
-		}
-	}while(*continuacion == 's' || *continuacion == 'S');
+	}
 	cin.get();
 	limpiar();
 	return 0;

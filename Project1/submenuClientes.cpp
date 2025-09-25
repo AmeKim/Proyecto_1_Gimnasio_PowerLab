@@ -12,35 +12,29 @@ submenuClientes::~submenuClientes(){
 
 int submenuClientes::iniciar(){
 	*continuacion = 's';
-	do{
+	while (*continuacion == 's' || *continuacion == 'S') {
 		limpiar();
 		opcion = imprimirMenu();
-		switch(opcion){
-			case '1':
-				incluirCliente();
-				break;
-			case '2':
-				asignarInstructorCliente();
-				break;
-			case '3':
-				ClientePorSucursal();
-				break;
-			case '4':
-				mostrarClienteDetalle();
-				break;
-			case '0':
-				print("Saliendo...\n");
-				return 0;
-				break;
-			default:
-				cout << "Opci" << char(162) << "n no v" << char(160) << "lida\n";
+		switch (opcion) {
+		case '1': incluirCliente();
+			break;
+		case '2': asignarInstructorCliente();
+			break;
+		case '3': ClientePorSucursal();
+			break;
+		case '4': mostrarClienteDetalle();
+			break;
+		case '0':
+			print("Saliendo...\n");
+			*continuacion = 'n';
+			break;
+		default:
+			cout << "Error: Por favor digite una opci" << char(162) << "n v" << char(160) << "lida\n";
+			print("\n------------------------------------\n");
+			limpiarEnter();
+			continue;
 		}
-		if(opcion != '4'){
-			cout<< "Desea continuar en el submen" << char(163) << " de Clientes ? (s / n) : ";
-			cin >> *continuacion;
-			cin.ignore();
-		}
-	}while(*continuacion == 's' || *continuacion == 'S');
+	}
 	cin.get();
 	limpiar();
 	return 0;

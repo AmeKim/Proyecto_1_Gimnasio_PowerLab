@@ -5,48 +5,42 @@ submenuClaseGrup::submenuClaseGrup(vecClasesGrupales* vClasesGrupales, vecClient
 	this->vClientes = vClientes;
 	this->vSucursales = vSucursales;
 	this->vEspecialidades = vEspecialidades;
-	continuacion = new char;
-	*continuacion = 'S';
+	continuacion =  new char('s');
 }
 
-submenuClaseGrup::~submenuClaseGrup() { 	
-	delete continuacion; }
+submenuClaseGrup::~submenuClaseGrup() {
+	delete continuacion;
+}
 
 int submenuClaseGrup::iniciar() {
 	*continuacion = 's';
-	do {
+	while (*continuacion == 's' || *continuacion == 'S') {
 		limpiar();
 		opcion = imprimirMenu();
 		switch (opcion) {
-		case '1':
-			crearClaseGrupal();
+		case '1': crearClaseGrupal();
 			break;
-		case '2':
-			mostrarClasesPorSucursal();
+		case '2': mostrarClasesPorSucursal();
 			break;
-		case '3':
-			inscribirClienteClase();
+		case '3': inscribirClienteClase();
 			break;
-		case '4':
-			mostrarClasePorCliente();
+		case '4': mostrarClasePorCliente();
 			break;
 		case '0':
 			print("Saliendo...\n");
-			return 0;
+			*continuacion = 'n';
 			break;
 		default:
-			cout << "Opci" << char(162) << "n no v" << char(160) << "lida\n";
+			cout << "Error: Por favor digite una opci" << char(162) << "n v" << char(160) << "lida\n";
+			print("\n------------------------------------\n");
+			limpiarEnter();
+			continue;
 		}
-		if (opcion != '0') {
-			cout << "Desea continuar en el submen" << char(163) << " de Clases Grupales ? (s / n) : ";
-			cin >> *continuacion;
-			cin.ignore();
-		}
-	} while (*continuacion == 's' || *continuacion == 'S');
+	}
 	cin.get();
 	limpiar();
 	return 0;
-}
+} 
 
 char submenuClaseGrup::imprimirMenu() {
 	cout << "---------------Submen"<< char(163) << " de Clases Grupales---------------\n";
