@@ -84,10 +84,10 @@ string vecSucursales::listarInstructoresPorSucursal(string codigo) {
     stringstream s;
     s << "Instructores en la sucursal " << codigo << ":\n";
     for (int i = 0; i < vInstructores->getcantidad(); ++i) {
-        Instructor* inst = vInstructores->obtener();
+        Instructor* inst = vInstructores->obtener(""); // Necesita revisar la lógica
         if (inst) {
             s << inst->toString() << "\n";
         }
-	}
+    }
     return s.str();
 }

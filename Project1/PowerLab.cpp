@@ -53,16 +53,16 @@ int PowerLab::iniciar(){
 }
 
 char PowerLab::imprimirMenu() {
-	print("---------------------------------------------\n");
-	print("----------Bienvenido al menu PowerLab--------\n");	
-	print("---------------------------------------------\n");	
+	print("---------------------------------------------------------------\n");
+	print("----------Bienvenido a la Gestion de Gimnasios PowerLab--------\n");	
+	print("---------------------------------------------------------------\n");	
 	cout << "1. Ir a men" << char(163) << " de Sucursales\n";
 	cout << "2. Ir a men" << char(163) << " de Clientes\n";
 	cout << "3. Ir a men" << char(163) << " de Instructores\n";
 	cout << "4. Ir a men" << char(163) << " de Clases Grupales\n";
 	cout << "5. Salir\n";
-	print("---------------------------------------------\n");	
-	print("---------------------------------------------\n");
+	print("---------------------------------------------------------------\n");	
+	print("---------------------------------------------------------------\n");
 	char num;
 	cout << "Por favor seleccione una opci" << (char)162 << "n:\n"; cin >> num;
 	return num;
