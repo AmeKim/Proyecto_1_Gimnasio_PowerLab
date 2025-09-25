@@ -78,6 +78,8 @@ void submenuInstructores::incluirInstructor(){
 	print("-------------------Creando un nuevo Instructor-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas. No se puede agregar un instructor.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -85,6 +87,8 @@ void submenuInstructores::incluirInstructor(){
 		int cod = digNum();
 		if (vSucursales->obtener(cod) == nullptr) {
 			cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+			print("<Digite enter para regresar>\n");
+			cin.get();
 			return;
 		}
 	print("-------------Ingresando datos de un nuevo Instructor-------------\n");
@@ -111,6 +115,8 @@ void submenuInstructores::incluirInstructor(){
 	int cantEsp = digNum();
 	if(cantEsp <= 0){
 		print("Error: La cantidad de especialidades debe ser mayor a cero.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	especialidad** especialidades = new especialidad * [cantEsp];
@@ -132,9 +138,14 @@ void submenuInstructores::incluirInstructor(){
 	if (vInstructores->insertar(nuevoInstructor)) {
 		vSucursales->obtener(cod)->getVecInstructores()->insertar(nuevoInstructor);
 		print("Instructor agregado exitosamente.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 	} else {
 		cout << "Error: No se pudo agregar el instructor. M" << char(160) << "ximo de instructores alcanzado o c" << char(162) << "dula duplicada.\n";
 		delete nuevoInstructor;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
 	}
 	for(int i = 0; i < cantEsp; ++i){
 		delete especialidades[i];
@@ -147,6 +158,8 @@ void submenuInstructores::mostrarInstructoresPorSucursal(){
 	print("-------------------Mostrando Instructores por Sucursal-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -154,6 +167,8 @@ void submenuInstructores::mostrarInstructoresPorSucursal(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	string codigoSucursal = vSucursales->obtener(cod)->getCodigo();
@@ -165,6 +180,8 @@ void submenuInstructores::mostrarInstructorDetalle(){
 	limpiar();
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas. No se puede agregar un instructor.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -172,11 +189,15 @@ void submenuInstructores::mostrarInstructorDetalle(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	print("-------------------Mostrando detalle de un Instructor-------------------\n");
 	if(vInstructores->getcantidad() == 0){
 		print("No hay instructores registrados.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vInstructores->listarTodos();
@@ -195,6 +216,8 @@ void submenuInstructores::mostrarInstructorPorEspecialidad(){
 	limpiar();
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas. No se puede agregar un instructor.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -202,11 +225,15 @@ void submenuInstructores::mostrarInstructorPorEspecialidad(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	print("-------------------Mostrando Instructores por Especialidad-------------------\n");
 	if(vEspecialidades->getCantidad() == 0){
 		print("No hay especialidades registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vEspecialidades->listarTodas();
@@ -214,6 +241,8 @@ void submenuInstructores::mostrarInstructorPorEspecialidad(){
 	string nombreEsp = digPalabra();
 	if(!vEspecialidades->existeEspecialidad(nombreEsp)){
 		cout << "Error: No existe una especialidad con ese nombre.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	bool encontrado = false;
@@ -229,6 +258,9 @@ void submenuInstructores::mostrarInstructorPorEspecialidad(){
 	}
 	if(!encontrado){
 		print("No hay instructores con esa especialidad.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
 	}
 }
 
@@ -236,6 +268,8 @@ void submenuInstructores::mostrarClientesPorInstructor(){
 	limpiar();
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas. No se puede agregar un instructor.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -243,11 +277,15 @@ void submenuInstructores::mostrarClientesPorInstructor(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	print("-------------------Mostrando Clientes por Instructor-------------------\n");
 	if(vInstructores->getcantidad() == 0){
 		print("No hay instructores registrados.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vInstructores->listarTodos();
@@ -256,6 +294,8 @@ void submenuInstructores::mostrarClientesPorInstructor(){
 	Instructor* inst = vInstructores->buscarPorCedula(cedula);
 	if(!inst){
 		cout << "Error: No existe un instructor con esa c" << char(162) << "dula.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	bool encontrado = false;
@@ -283,6 +323,8 @@ void submenuInstructores::generarMedicion(){
 	limpiar();
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas. No se puede agregar un instructor.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -290,11 +332,15 @@ void submenuInstructores::generarMedicion(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	cout << "-------------------Generando Medici"<< char(162) << "n para un Cliente-------------------\n";
 	if(vInstructores->getcantidad() == 0){
 		print("No hay instructores registrados.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vInstructores->listarTodos();
@@ -303,6 +349,8 @@ void submenuInstructores::generarMedicion(){
 	Instructor* inst = vInstructores->buscarPorCedula(cedulaInst);
 	if(!inst){
 		cout << "Error: No existe un instructor con esa c" << char(162) << "dula.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	bool encontrado = false;
@@ -323,6 +371,8 @@ void submenuInstructores::generarMedicion(){
 	}
 	if(!encontrado){
 		print("No hay clientes asignados a este instructor.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	cout << "Ingrese la c" << char(130) << "dula del Cliente al que se le va a realizar la medici"<< char(162) << "n: ";
@@ -337,6 +387,8 @@ void submenuInstructores::generarMedicion(){
 	}
 	if (!cli) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	cout << "Ingrese la fecha de la medici" << char(162) << "n (dd/mm/aaaa): ";
@@ -345,6 +397,8 @@ void submenuInstructores::generarMedicion(){
 	if(!fechaMed->esValida()){
 		cout << "Error: La fecha ingresada no es v" << char(160) << "lida.\n";
 		delete fechaMed;
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	print("Ingrese el peso (kg): ");
@@ -370,6 +424,8 @@ void submenuInstructores::historialMediciones() {
 	limpiar();
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -377,11 +433,15 @@ void submenuInstructores::historialMediciones() {
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vecClientes* vCli = vSucursales->obtener(cod)->getVecClientes();
 	if (vCli->getCantidad() == 0) {
 		print("No hay clientes registrados en esta sucursal.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vCli->mostrarLista();
@@ -390,11 +450,15 @@ void submenuInstructores::historialMediciones() {
 	cliente* cli = vCli->buscarPorCedula(cedulaCli);
 	if (!cli) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula en esta sucursal.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vecReportesM* historial = cli->getHistorialMediciones();
 	if (historial->getCantidad() == 0) {
 		print("El cliente no tiene mediciones registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	print("Historial de Mediciones del Cliente " + cli->getNombre() + ":\n");
@@ -406,6 +470,8 @@ void submenuInstructores::ingresarEjecicioBateria(){
 	print("-------------------Ingresando Ejercicio a Bateria de Ejercicios-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -413,6 +479,8 @@ void submenuInstructores::ingresarEjecicioBateria(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	BateriaEjercicios* bateria = vSucursales->obtener(cod)->getBateria();
@@ -436,6 +504,8 @@ void submenuInstructores::ingresarEjecicioBateria(){
 	} else {
 		cout << "Error: No se pudo agregar el ejercicio. M" << char(160) << "ximo de ejercicios alcanzado o ejercicio duplicado.\n";
 		delete nuevoEjercicio;
+		print("<Digite enter para regresar>\n");
+		cin.get();
 	}
 }
 
@@ -444,6 +514,8 @@ void submenuInstructores::generarRutina(){
 	print("-------------------Generando Rutina para un Cliente-------------------\n");
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -451,11 +523,15 @@ void submenuInstructores::generarRutina(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vecClientes* vCli = vSucursales->obtener(cod)->getVecClientes();
 	if (vCli->getCantidad() == 0) {
 		print("No hay clientes registrados en esta sucursal.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vCli->mostrarLista();
@@ -464,6 +540,8 @@ void submenuInstructores::generarRutina(){
 	cliente* cli = vCli->buscarPorCedula(cedulaCli);
 	if (!cli) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula en esta sucursal.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	BateriaEjercicios* bateria = vSucursales->obtener(cod)->getBateria();
@@ -481,6 +559,8 @@ void submenuInstructores::generarRutina(){
 		if (cantSeleccionar <= 0 || cantSeleccionar > cantPorZona) {
 			cout << "Error: Cantidad inv" << char(160) << "lida.\n";
 			delete rutina;
+			print("<Digite enter para regresar>\n");
+			cin.get();
 			return;
 		}
 		for (int i = 0; i < cantSeleccionar; i++) {
@@ -518,6 +598,8 @@ void submenuInstructores::visualizarRutina(){
 	print("-------------------Visualizando Rutina de un Cliente-------------------\n");
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -525,11 +607,15 @@ void submenuInstructores::visualizarRutina(){
 	int cod = digNum();
 	if (vSucursales->obtener(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vecClientes* vCli = vSucursales->obtener(cod)->getVecClientes();
 	if (vCli->getCantidad() == 0) {
 		print("No hay clientes registrados en esta sucursal.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vCli->mostrarLista();
@@ -538,11 +624,15 @@ void submenuInstructores::visualizarRutina(){
 	cliente* cli = vCli->buscarPorCedula(cedulaCli);
 	if (!cli) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula en esta sucursal.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	Rutina* rutina = cli->getRutinaActual();
 	if (!rutina || rutina->getCantidad() == 0) {
 		print("El cliente no tiene una rutina asignada.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	rutina->mostrarRutina(cli->getNombre());

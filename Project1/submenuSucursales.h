@@ -3,6 +3,7 @@
 #include <sstream>
 #include "utiles.h"
 #include "vecSucursales.h"
+#include "Sucursal.h"
 using namespace std;
 
 class submenuSucursales {

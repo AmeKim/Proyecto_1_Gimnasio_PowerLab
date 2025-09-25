@@ -69,9 +69,13 @@ void submenuSucursales::addSucursal(){
 	Sucursal* nuevaSucursal = new Sucursal(codigo, provincia, canton, correo, telefono);
 	if(vSucursales->insertar(nuevaSucursal)){
 		print("Sucursal agregada exitosamente.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get(); // Espera a que el usuario presione Enter
 	}else{
 		cout <<"Error: No se pudo agregar la sucursal. M"<< char(160) <<"ximo de sucursales alcanzado.\n";
 		delete nuevaSucursal;
+		print("<Digite enter para regresar>\n");
+		cin.get();
 	}
 }
 
@@ -81,6 +85,8 @@ void submenuSucursales::MostrarSucursal(){
 	print("-------------------Mostrando una Sucursal-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -91,8 +97,13 @@ void submenuSucursales::MostrarSucursal(){
 	if(s){
 		print("Detalles de la Sucursal:\n");
 		s->toString();
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
 	}else{
 		print("Sucursal no encontrada.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 	}
 }
 
@@ -102,6 +113,8 @@ void submenuSucursales::reporteIMC() {
 	print("-------------------Reporte de IMC por Sucursal-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -111,8 +124,12 @@ void submenuSucursales::reporteIMC() {
 	Sucursal* s = vSucursales->buscarPorCodigo(codigo);
 	if(s){
 		s->generarReporteIMC();
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
 	}else{
 		print("Sucursal no encontrada.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 	}
 }
-

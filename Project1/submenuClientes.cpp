@@ -63,6 +63,8 @@ void submenuClientes::incluirCliente() {
 		int cod = digNum();
 		if (vSucursales->obtener(cod) == nullptr) {
 			cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+			print("<Digite enter para regresar>\n");
+			cin.get();
 			return;
 		}
 	print("-------------Ingresando datos de un nuevo Cliente-------------\n");
@@ -100,15 +102,21 @@ void submenuClientes::incluirCliente() {
 	if (vClientes->agregar(nuevoCliente)) {
 		if (vSucursales->obtener(cod)->agregarCliente(nuevoCliente)) {
 			print("Cliente agregado exitosamente.\n");
+			print("<Digite enter para regresar>\n");
+			cin.get();
 		}
 		else {
 			cout << "Error: No se pudo agregar el cliente a la sucursal. C" << char(162) << "dula duplicada en la sucursal.\n";
 			delete nuevoCliente;
+			print("<Digite enter para regresar>\n");
+			cin.get();
 		}
 	}
 	else {
 		cout << "Error: No se pudo agregar el cliente. C" << char(162) << "dula duplicada en el sistema.\n";
 		delete nuevoCliente;
+		print("<Digite enter para regresar>\n");
+		cin.get();
 	}
 }
 
@@ -117,6 +125,8 @@ void submenuClientes::asignarInstructorCliente() {
 	print("-------------------Asignando Instructor a un Cliente-------------------\n");
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vClientes->mostrarLista();
@@ -125,6 +135,8 @@ void submenuClientes::asignarInstructorCliente() {
 	cliente* cli = vClientes->buscarPorCedula(cedulaCli);
 	if (cli == nullptr) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	print("-------------------Lista de Instructores-------------------\n");
@@ -138,6 +150,8 @@ void submenuClientes::asignarInstructorCliente() {
 	}
 	if (!encontrado) {
 		print("No hay instructores registrados en ninguna sucursal.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	cout << "Ingrese la c" << char(130) << "dula del Instructor que desea asignar al Cliente: ";
@@ -152,10 +166,14 @@ void submenuClientes::asignarInstructorCliente() {
 	}
 	if (inst == nullptr) {
 		cout << "Error: No existe un instructor con esa c" << char(162) << "dula.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	cli->setCedulaInstructor(cedulaInst);
 	print("Instructor asignado exitosamente al Cliente.\n");
+	print("<Digite enter para regresar>\n");
+	cin.get();
 }
 
 void submenuClientes::ClientePorSucursal() {
@@ -163,6 +181,8 @@ void submenuClientes::ClientePorSucursal() {
 	print("-------------------Mostrando Clientes por Sucursal-------------------\n");
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vSucursales->listarTodos();
@@ -171,11 +191,15 @@ void submenuClientes::ClientePorSucursal() {
 	Sucursal* suc = vSucursales->obtener(cod);
 	if (suc == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vecClientes* vCli = suc->getVecClientes();
 	if (vCli == nullptr || vCli->getCantidad() == 0) {
 		print("No hay clientes registrados en esta sucursal.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vCli->mostrarLista();
@@ -186,6 +210,8 @@ void submenuClientes::mostrarClienteDetalle() {
 	print("-------------------Mostrando detalle de un Cliente-------------------\n");
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	vClientes->mostrarLista();
@@ -194,6 +220,8 @@ void submenuClientes::mostrarClienteDetalle() {
 	cliente* cli = vClientes->buscarPorCedula(cedulaCli);
 	if (cli == nullptr) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
 		return;
 	}
 	// Buscar nombre del instructor asignado
