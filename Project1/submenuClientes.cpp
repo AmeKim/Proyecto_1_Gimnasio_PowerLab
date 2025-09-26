@@ -60,9 +60,11 @@ void submenuClientes::incluirCliente() {
 	print("-------------------Creando un nuevo Cliente-------------------\n");
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se asociar" << char(160) << " el Cliente: " << endl;
+	cin.get();
 	string cod = digPalabra();
 		if (vSucursales->buscarPorCodigo(cod) == nullptr) {
 			cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+			cout << endl << endl;
 			print("<Digite enter para regresar>\n");
 			cin.get();
 			return;
@@ -102,12 +104,14 @@ void submenuClientes::incluirCliente() {
 	if (vClientes->agregar(nuevoCliente)) {
 		if (vSucursales->buscarPorCodigo(cod)->agregarCliente(nuevoCliente)) {
 			print("Cliente agregado exitosamente.\n");
+			cout << endl << endl;
 			print("<Digite enter para regresar>\n");
 			cin.get();
 		}
 		else {
 			cout << "Error: No se pudo agregar el cliente a la sucursal. C" << char(162) << "dula duplicada en la sucursal.\n";
 			delete nuevoCliente;
+			cout << endl << endl;
 			print("<Digite enter para regresar>\n");
 			cin.get();
 		}
@@ -130,7 +134,14 @@ void submenuClientes::asignarInstructorCliente() {
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se inscribe el Cliente: ";
+	cin.get();
 	string cod = digPalabra();
+	if (vSucursales->buscarPorCodigo(cod) == nullptr) {
+		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
 	print("-------------------Asignando Instructor a un Cliente-------------------\n");
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
@@ -144,43 +155,36 @@ void submenuClientes::asignarInstructorCliente() {
 	cliente* cli = vClientes->buscarPorCedula(cedulaCli);
 	if (cli == nullptr) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula.\n";
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
 	print("-------------------Lista de Instructores-------------------\n");
-	bool encontrado = false;
-	for (int i = 0; i < vSucursales->cantidad(); i++) {
-		vecInstructores* vInstructores = vSucursales->buscarPorCodigo(cod)->getVecInstructores();
-		if (vInstructores && vInstructores->getcantidad() > 0) {
-			vInstructores->listarTodos();
-			encontrado = true;
-		}
+	vecInstructores* vInstructores = vSucursales->buscarPorCodigo(cod)->getVecInstructores();
+	if (vInstructores && vInstructores->getcantidad() > 0) {
+		vInstructores->listarTodos();
 	}
-	if (!encontrado) {
-		print("No hay instructores registrados en ninguna sucursal.\n");
+	else {
+		print("No hay instructores registrados en esta sucursal.\n");
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
 	cout << "Ingrese la c" << char(130) << "dula del Instructor que desea asignar al Cliente: ";
 	string cedulaInst = digPalabra();
-	Instructor* inst = nullptr;
-	for (int i = 0; i < vSucursales->cantidad(); ++i) {
-		vecInstructores* vInstructores = vSucursales->obtener(cod)->getVecInstructores();
-		if (vInstructores) {
-			inst = vInstructores->buscarPorCedula(cedulaInst);
-			if (inst != nullptr) break;
-		}
-	}
+	Instructor* inst = vInstructores->buscarPorCedula(cedulaInst);
 	if (inst == nullptr) {
-		cout << "Error: No existe un instructor con esa c" << char(162) << "dula.\n";
+		cout << "Error: No existe un instructor con esa c" << char(162) << "dula en esta sucursal.\n"; 
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
 	cli->setCedulaInstructor(cedulaInst);
 	print("Instructor asignado exitosamente al Cliente.\n");
+	cout << endl << endl;
 	print("<Digite enter para regresar>\n");
 	cin.get();
 }
@@ -196,6 +200,7 @@ void submenuClientes::ClientePorSucursal() {
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal para listar sus Clientes: ";
+	cin.get();
 	string cod = digPalabra();
 	Sucursal* suc = vSucursales->buscarPorCodigo(cod);
 	if (suc == nullptr) {
@@ -226,7 +231,7 @@ void submenuClientes::mostrarClienteDetalle() {
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se asocia el Cliente: ";
 	string cod = digPalabra();
-
+	cin.get();
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
 		cout << endl << endl;
@@ -240,6 +245,7 @@ void submenuClientes::mostrarClienteDetalle() {
 	cliente* cli = vClientes->buscarPorCedula(cedulaCli);
 	if (cli == nullptr) {
 		cout << "Error: No existe un cliente con esa c" << char(162) << "dula.\n";
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
