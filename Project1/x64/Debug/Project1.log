@@ -1,63 +1,6 @@
-﻿  main.cpp
-  PowerLab.cpp
-  submenuInstructores.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(57,7): warning C4101: 'opcion': variable local sin referencia
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,37): error C2664: 'Instructor *vecInstructores::obtener(std::string) const': el argumento 1 no puede convertirse de 'int' a 'std::string'
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,45):
-      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
-          puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
-          with
-          [
-              _Elem=char
-          ]
-              C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,45):
-              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
-          with
-          [
-              _Elem=char
-          ]
-                  C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,45):
-                  La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
-          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
-          with
-          [
-              _Elem=char,
-              _Alloc=std::allocator<char>
-          ]
-              C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,45):
-              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
-          with
-          [
-              _Elem=char,
-              _Alloc=std::allocator<char>
-          ]
-          and
-          [
-              _Elem=char
-          ]
-                  C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,45):
-                  La conversión requiere un segundo operador de conversión definido por el usuario o constructor
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
-          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
-          with
-          [
-              _Alloc=std::allocator<char>
-          ]
-          C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,45):
-          al hacer coincidir la lista de argumentos '(int)'
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecInstructores.h(20,17):
-      vea la declaración de 'vecInstructores::obtener'
-      C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(285,37):
-      al hacer coincidir la lista de argumentos '(int)'
-  
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(301,1): error C2059: error de sintaxis: '}'
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(301,1): error C2143: error de sintaxis: falta ';' delante de '}'
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(303,57): error C2143: error de sintaxis: falta ';' delante de '{'
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(303,57): error C2447: '{': falta el encabezado de función (¿lista formal de estilo anterior?)
-  submenuSucursales.cpp
-C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuSucursales.cpp(41,7): warning C4101: 'opcion': variable local sin referencia
-  vecClasesGrupales.cpp
+﻿  submenuClaseGrup.cpp
+  submenuClientes.cpp
+C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(44,7): warning C4101: 'opcion': variable local sin referencia
   vecSucursales.cpp
   Generando código...
+  Project1.vcxproj -> C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe

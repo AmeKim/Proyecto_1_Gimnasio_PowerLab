@@ -64,8 +64,16 @@ void submenuClaseGrup::crearClaseGrupal() {
 		cin.get();
 		return;
 	}
+	if (vEspecialidades->getCantidad() == 0) {
+		print("No hay especialidades registradas. No se puede crear una clase grupal. \n");
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el código de la Sucursal para la nueva clase grupal: ";
+	cin.ignore();
 	string cod = digPalabra();
 	Sucursal* sucursal = vSucursales->obtener(cod);
 	if (sucursal == nullptr) {
@@ -75,97 +83,81 @@ void submenuClaseGrup::crearClaseGrupal() {
 		cin.get();
 		return;
 	}
-	print("-------------Ingresando datos de la nueva Clase Grupal-------------\n");
-	cout << "Ingrese el código de la nueva clase grupal (número entero): ";
-	int codigo = digNum();
-	if (vClasesGrupales->buscarPorCodigo(codigo) != nullptr) {
-		cout << "Error: Ya existe una clase grupal con ese código.\n";
+	vecInstructores* vInstructoresSucursal = vSucursales->buscarPorCodigo(cod)->getVecInstructores();
+	if (vInstructoresSucursal == nullptr || vInstructoresSucursal->getcantidad() == 0) {
+		print("No hay instructores registrados en esta sucursal. No se puede crear una clase grupal.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
-	print("Ingrese el nombre de la clase grupal: ");
-	string tipo = digPalabra();
-	print("-------------Lista de Especialidades Disponibles-------------\n");
+
+	print("-------------Ingresando datos de la nueva Clase Grupal-------------\n");
+	cout << "Ingrese el c" << char(162) << "digo de la nueva Clase Grupal(Ejemplo: 01): ";
+	int codigo = digNum();
+	cout << "Ingrese la el horario en que se va a impartir la Clase Grupal (Ejemplo: Lunes de 13 a 15): ";
+	string horario = digPalabra();
+
+	cout << "Ingrese el numero de Sal" << char(162) << "n donde se impartir" << char(160) << " la Clase Grupal: ";
+	string salon = digPalabra();
+
+	cout << "Ingrese la capacidad m" << char(160) << "xima de participantes: ";
+	int capacidadMaxima = digNum();
+	if (capacidadMaxima <= 0) {
+		cout << "Error: La capacidad m" << char(160) << "xima debe ser mayor a cero.\n";
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+
+	print("-------------------Lista de Especialidades-------------------\n");
 	vEspecialidades->listarTodas();
-	print("Ingrese el nombre de la especialidad para esta clase grupal: ");
-	string nombreEsp = digPalabra();
-	if (!vEspecialidades->existeEspecialidad(nombreEsp)) {
+	cout << "Ingrese el nombre de la especialidad de la clase: ";
+	string tipo = digPalabra();
+	if (!vEspecialidades->existeEspecialidad(tipo)) {
 		cout << "Error: No existe una especialidad con ese nombre.\n";
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
-	cout << "Ingrese el horario de la clase grupal (Ejem: Martes 10am): ";
-	string horario = digPalabra();
 
-	cout << "Ingrese el salón donde se realizará la clase grupal: ";
-	string salon = digPalabra();
-
-	cout << "Ingrese la capacidad máxima de la clase grupal (número entero): ";
-	int capacidad = digNum();
-	if (capacidad <= 0) {
-		cout << "Error: Capacidad inválida.\n";
+	print("-------------------Lista de Instructores-------------------\n");
+	vInstructoresSucursal->listarTodos();
+	cout << "Ingrese la c" << char(130) << "dula del Instructor que impartir" << char(160) << " la clase: ";
+	string cedulaInstructor = digPalabra();
+	Instructor* instructor = vInstructoresSucursal->buscarPorCedula(cedulaInstructor);
+	if (instructor == nullptr) {
+		cout << "Error: No existe un instructor con esa c" << char(162) << "dula en esta sucursal.\n";
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
 
-	// Buscar instructores con la especialidad igual al tipo de la clase grupal
-	vecInstructores* vInstructores = sucursal->getVecInstructores();
-	if (vInstructores->getcantidad() == 0) {
-		print("No hay instructores registrados en esta sucursal. No se puede asignar un instructor a la clase grupal.\n");
+	// Verificar que el instructor tiene la especialidad requerida
+	if (!instructor->tieneEspecialidad(tipo)) {
+		cout << "Error: El instructor seleccionado no tiene la especialidad requerida para esta clase.\n";
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
-	bool encontrado = false;
-	for (int i = 0; i < vInstructores->getcantidad(); ++i) {
-		Instructor* inst = vInstructores->obtener(cod);
-		if (inst && inst->tieneEspecialidad(nombreEsp)) {
-			if (!encontrado) {
-				print("Instructores con la especialidad " + nombreEsp + ":\n");
-				encontrado = true;
-			}
-			print(inst->toString() + "\n");
-		}
-	}
-	if (!encontrado) {
-		print("No hay instructores con esa especialidad en esta sucursal. No se puede asignar un instructor a la clase grupal.\n");
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
-		return;
-	}
-	cout << "Ingrese la cédula del Instructor para esta clase grupal: ";
-	string cedulaInst = digPalabra();
-	Instructor* inst = vInstructores->buscarPorCedula(cedulaInst);
-	if (!inst) {
-		cout << "Error: No existe un instructor con esa cédula en esta sucursal.\n";
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
-		return;
-	}
-	ClaseGrupal* nuevaClase = new ClaseGrupal(tipo, codigo,capacidad, salon, horario, cedulaInst);
+
+	ClaseGrupal* nuevaClase = new ClaseGrupal(tipo, codigo, capacidadMaxima, salon, horario, cedulaInstructor);
+
 	if (vClasesGrupales->agregar(nuevaClase)) {
-		sucursal->getVecClasesGrupales()->agregar(nuevaClase);
-		print("Clase grupal agregada exitosamente a la sucursal.\n");
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
+		cout << "Clase grupal creada exitosamente.\n";
 	}
 	else {
-		cout << "Error: No se pudo agregar la clase grupal. Máximo de clases alcanzado o código duplicado.\n";
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
+		cout << "Error: No se pudo crear la clase grupal.\n";
 		delete nuevaClase;
 	}
+
+	cout << endl << endl;
+	print("<Digite enter para regresar>\n");
+	cin.get();
 }
 
 void submenuClaseGrup::mostrarClasesPorSucursal(){
@@ -180,8 +172,10 @@ void submenuClaseGrup::mostrarClasesPorSucursal(){
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el código de la Sucursal para ver sus clases grupales: ";
+	cin.ignore();
 	string cod = digPalabra();
-	Sucursal* sucursal = vSucursales->obtener(cod);
+
+	Sucursal* sucursal = vSucursales->buscarPorCodigo(cod);
 	if (sucursal == nullptr) {
 		cout << "Error: No existe una sucursal con ese código.\n";
 		cout << endl << endl;
@@ -189,6 +183,8 @@ void submenuClaseGrup::mostrarClasesPorSucursal(){
 		cin.get();
 		return;
 	}
+	bool hayClases = false;
+	print("Clases Grupales en la sucursal " + sucursal->getProvincia() + " - " + sucursal->getCanton() + ":\n");
 	vecClasesGrupales* vClases = sucursal->getVecClasesGrupales();
 	if (vClases->getCantidad() == 0) {
 		print("No hay clases grupales registradas en esta sucursal.\n");
@@ -202,7 +198,8 @@ void submenuClaseGrup::mostrarClasesPorSucursal(){
 
 void submenuClaseGrup::inscribirClienteClase(){
 	limpiar();
-	print("-------------------Inscribiendo Cliente a una Clase Grupal-------------------\n");
+	print("-------------------Inscribiendo Cliente a Clase Grupal-------------------\n");
+
 	if (vSucursales->cantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
@@ -210,68 +207,133 @@ void submenuClaseGrup::inscribirClienteClase(){
 		cin.get();
 		return;
 	}
-	vSucursales->listarTodos();
-	cout << "Ingrese el código de la Sucursal para inscribir un cliente a una clase grupal: ";
-	string cod = digPalabra();
-	Sucursal* sucursal = vSucursales->obtener(cod);
-	if (sucursal == nullptr) {
-		cout << "Error: No existe una sucursal con ese código.\n";
+
+	if (vClasesGrupales->getCantidad() == 0) {
+		print("No hay clases grupales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
-	vecClientes* vCli = sucursal->getVecClientes();
-	if (vCli->getCantidad() == 0) {
+
+	if (vClientes->getCantidad() == 0) {
+		print("No hay clientes registrados.\n");
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+
+	vSucursales->listarTodos();
+	cout << "Ingrese el c" << char(162) << "digo de la Sucursal: ";
+	cin.ignore();
+	string cod = digPalabra();
+
+	Sucursal* sucursal = vSucursales->buscarPorCodigo(cod);
+	if (sucursal == nullptr) {
+		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+
+	// Mostrar clases disponibles de esta sucursal
+	bool hayClases = false;
+	print("Clases grupales disponibles:\n");
+	for (int i = 0; i < vClasesGrupales->getCantidad(); ++i) {
+		ClaseGrupal* clase = vClasesGrupales->obtener(i);
+		if (clase && clase->getCodigoSucursal() == cod) {
+			if (!hayClases) {
+				hayClases = true;
+			}
+			cout << "ID: " << clase->getCodigo() << " - " << clase->toString() << "\n";
+		}
+	}
+
+	if (!hayClases) {
+		print("No hay clases grupales disponibles en esta sucursal.\n");
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+
+	cout << "Ingrese el ID de la clase a la que desea inscribir el cliente: ";
+	int idClase = digNum();
+	ClaseGrupal* claseSeleccionada = nullptr;
+
+	// Buscar la clase por ID y verificar que pertenezca a la sucursal
+	for (int i = 0; i < vClasesGrupales->getCantidad(); ++i) {
+		ClaseGrupal* clase = vClasesGrupales->obtener(i);
+		if (clase && clase->getId() == idClase && clase->getCodigoSucursal() == cod) {
+			claseSeleccionada = clase;
+			break;
+		}
+	}
+
+	if (claseSeleccionada == nullptr) {
+		cout << "Error: No existe una clase con ese ID en esta sucursal.\n";
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+
+	// Verificar capacidad
+	if (claseSeleccionada->estaLlena()) {
+		cout << "Error: La clase seleccionada ya alcanz" << char(162) << " su capacidad m" << char(160) << "xima.\n";
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+
+	// Mostrar clientes de la sucursal
+	vecClientes* vCliSucursal = sucursal->getVecClientes();
+	if (vCliSucursal == nullptr || vCliSucursal->getCantidad() == 0) {
 		print("No hay clientes registrados en esta sucursal.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}
-	vCli->mostrarLista();
-	cout << "Ingrese la cédula del Cliente a inscribir en una clase grupal: ";
-	string cedulaCli = digPalabra();
-	cliente* cli = vCli->buscarPorCedula(cedulaCli);
-	if (!cli) {
-		cout << "Error: No existe un cliente con esa cédula en esta sucursal.\n";
+
+	print("Clientes disponibles en esta sucursal:\n");
+	vCliSucursal->mostrarLista();
+
+	cout << "Ingrese la c" << char(130) << "dula del cliente a inscribir: ";
+	string cedulaCliente = digPalabra();
+
+	cliente* clienteSeleccionado = vCliSucursal->buscarPorCedula(cedulaCliente);
+	if (clienteSeleccionado == nullptr) {
+		cout << "Error: No existe un cliente con esa c" << char(162) << "dula en esta sucursal.\n";
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
-	}
-	vecClasesGrupales* vClases = sucursal->getVecClasesGrupales();
-	if (vClases->getCantidad() == 0) {
-		print("No hay clases grupales registradas en esta sucursal.\n");
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
-		return;
-	}
-	vClases->mostrarLista();
-	cout << "Ingrese el código de la Clase Grupal para inscribir al cliente: ";
-	int codigoClase = digNum();
-	ClaseGrupal* clase = vClases->buscarPorCodigo(codigoClase);
-	if (!clase) {
-		cout << "Error: No existe una clase grupal con ese código en esta sucursal.\n";
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
-		return;
-	}
-	if (clase->matricularCliente(cedulaCli)) {
-		print("Cliente inscrito exitosamente en la clase grupal.\n");
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
-	}
-	else {
-		cout << "Error: No se pudo inscribir al cliente. Puede que la clase esté llena o el cliente ya esté inscrito.\n";
-		cout << endl << endl;
-		print("<Digite enter para regresar>\n");
-		cin.get();
 	}
 
+	// Verificar si el cliente ya está inscrito
+	if (claseSeleccionada->clienteEstaInscrito(cedulaCliente)) {
+		cout << "Error: El cliente ya est" << char(160) << " inscrito en esta clase.\n";
+		cout << endl << endl;
+		print("<Digite enter para regresar>\n");
+		cin.get();
+		return;
+	}
+
+	// Inscribir cliente
+	if (claseSeleccionada->inscribirCliente(clienteSeleccionado)) {
+		cout << "Cliente inscrito exitosamente en la clase grupal.\n";
+	}
+	else {
+		cout << "Error: No se pudo inscribir el cliente en la clase.\n";
+	}
+
+	cout << endl << endl;
+	print("<Digite enter para regresar>\n");
+	cin.get();
 }
 
 void submenuClaseGrup::mostrarClasePorCliente(){

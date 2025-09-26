@@ -15,6 +15,7 @@ ClaseGrupal::ClaseGrupal() {
 
 // Constructor con parámetros
 ClaseGrupal::ClaseGrupal(string tipo,int codigo, int capacidad, string salon, string horario, string cedulaInstructor) {
+    this->codigoSucursal = codigoSucursal;
     this->codigo = codigo;
     this->tipo = tipo;
     this->capacidad = capacidad;
@@ -42,6 +43,9 @@ ClaseGrupal::~ClaseGrupal() {
 // Getters
 string ClaseGrupal::getTipo() const { return tipo; }
 int ClaseGrupal::getCodigo() const { return codigo; }
+string ClaseGrupal::getCodigoSucursal(){
+
+}
 int ClaseGrupal::getCapacidad() const { return capacidad; }
 int ClaseGrupal::getCantMatriculados() const { return cantMatriculados; }
 string ClaseGrupal::getSalon() const { return salon; }
