@@ -18,6 +18,7 @@ public:
 	especialidad* obtenerEspecialidad(const string& nombre) const;
     int indicePorCedula(const string& cedula) const;
     Instructor* obtener(string ced) const;
+	Instructor* obtener(int idx) const; 
     int getcantidad() const;
     void listarTodos() const;
     bool eliminarPorCedula(const string& cedula);

@@ -60,7 +60,7 @@ void submenuClientes::incluirCliente() {
 	print("-------------------Creando un nuevo Cliente-------------------\n");
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se asociar" << char(160) << " el Cliente: " << endl;
-	cin.get();
+	cin.ignore();
 	string cod = digPalabra();
 	if (vSucursales->buscarPorCodigo(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
@@ -69,7 +69,7 @@ void submenuClientes::incluirCliente() {
 		cin.get();
 		return;
 	}
-	// VALIDAR SI HAY INSTRUCTORES EN LA SUCURSAL ANTES DE CONTINUAR
+	
 	vecInstructores* vInstructoresSucursal = vSucursales->buscarPorCodigo(cod)->getVecInstructores();
 	if (vInstructoresSucursal == nullptr || vInstructoresSucursal->getcantidad() == 0) {
 		cout << "Error: No hay instructores registrados en esta sucursal. No se puede crear un cliente.\n";
@@ -153,8 +153,9 @@ void submenuClientes::asignarInstructorCliente() {
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se inscribe el Cliente: ";
-	cin.get();
+	cin.ignore();
 	string cod = digPalabra();
+
 	if (vSucursales->buscarPorCodigo(cod) == nullptr) {
 		cout << "Error: No existe una sucursal con ese c" << char(162) << "digo.\n";
 		cout << endl << endl;
@@ -162,6 +163,7 @@ void submenuClientes::asignarInstructorCliente() {
 		cin.get();
 		return;
 	}
+
 	print("-------------------Asignando Instructor a un Cliente-------------------\n");
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
@@ -222,7 +224,7 @@ void submenuClientes::ClientePorSucursal() {
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal para listar sus Clientes: ";
-	cin.get();
+	cin.ignore();
 	string cod = digPalabra();
 	Sucursal* suc = vSucursales->buscarPorCodigo(cod);
 	if (suc == nullptr) {
@@ -255,8 +257,9 @@ void submenuClientes::mostrarClienteDetalle() {
 	}
 	vSucursales->listarTodos();
 	cout << "Ingrese el c" << char(162) << "digo de la Sucursal a la que se asocia el Cliente: ";
+	cin.ignore();
 	string cod = digPalabra();
-	cin.get();
+
 	if (vClientes->getCantidad() == 0) {
 		print("No hay clientes registrados.\n");
 		cout << endl << endl;

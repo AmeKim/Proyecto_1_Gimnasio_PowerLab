@@ -7,6 +7,8 @@
 #include "vecEspecialidades.h"
 #include "vecSucursales.h"
 
+using namespace std;
+
 class submenuInstructores{
 	private: 
 	char opcion;

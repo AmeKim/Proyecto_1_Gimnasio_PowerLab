@@ -56,6 +56,12 @@ Instructor* vecInstructores::obtener(string idx) const {
 	return nullptr;
 }
 
+Instructor* vecInstructores::obtener(int idx) const{
+    if (idx >= 0 && idx < cant) {
+        return datos[idx];
+    }
+}
+
 int vecInstructores::getcantidad() const { return cant; }
 
 void vecInstructores::listarTodos() const {
