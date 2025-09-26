@@ -72,11 +72,13 @@ void submenuSucursales::addSucursal(){
 		print("Sucursal agregada exitosamente.\n");
 		cout << endl;
 		print("<Digite enter para regresar>\n");
+		cout << endl << endl;
 		cin.get(); // Espera a que el usuario presione Enter
 	}else{
 		cout <<"Error: No se pudo agregar la sucursal. M"<< char(160) <<"ximo de sucursales alcanzado.\n";
 		delete nuevaSucursal;
 		print("<Digite enter para regresar>\n");
+		cout << endl << endl;
 		cin.get();
 	}
 }
@@ -87,6 +89,7 @@ void submenuSucursales::MostrarSucursal(){
 	print("-------------------Mostrando una Sucursal-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
@@ -118,6 +121,7 @@ void submenuSucursales::reporteIMC() {
 	print("-------------------Reporte de IMC por Sucursal-------------------\n");
 	if(vSucursales->cantidad() == 0){
 		print("No hay sucursales registradas.\n");
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
