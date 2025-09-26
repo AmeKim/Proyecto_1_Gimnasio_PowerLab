@@ -54,7 +54,7 @@ int PowerLab::iniciar(){
 
 char PowerLab::imprimirMenu() {
 	print("---------------------------------------------------------------\n");
-	print("----------Bienvenido a la Gestion de Gimnasios PowerLab--------\n");	
+	cout << "---------Bienvenido a la Gesti" << char(162) << "n de Gimnasios PowerLab---------\n";
 	print("---------------------------------------------------------------\n");	
 	cout << "1. Ir a men" << char(163) << " de Sucursales\n";
 	cout << "2. Ir a men" << char(163) << " de Clientes\n";

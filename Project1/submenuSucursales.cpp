@@ -45,7 +45,7 @@ char submenuSucursales::imprimirMenu(){
 	print("1. Ingresar una Sucursal\n");
 	print("2. Muestre una Sucursal\n");
 	print("3. Mostrar reporte de IMC por Sucursal\n");
-	cout<< "0. Regresar al men" << char(163)<< "u principal\n\n";
+	cout<< "0. Regresar al men" << char(163)<< " principal\n\n";
 	char num;
 	cout<< "Ingrese la opci" << char(162) << "n (Ejm: 1): "; cin >> num;
 	return num;
@@ -98,12 +98,15 @@ void submenuSucursales::MostrarSucursal(){
 	Sucursal* suc = vSucursales->buscarPorCodigo(codigo);
 	if(suc){
 		print("Detalles de la Sucursal:\n");
+		cout << endl;
 		cout << suc->toString();
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}else{
 		print("Sucursal no encontrada.\n");
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 	}
@@ -126,11 +129,13 @@ void submenuSucursales::reporteIMC() {
 	Sucursal* s = vSucursales->buscarPorCodigo(codigo);
 	if(s){
 		s->generarReporteIMC();
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 		return;
 	}else{
 		print("Sucursal no encontrada.\n");
+		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
 	}
