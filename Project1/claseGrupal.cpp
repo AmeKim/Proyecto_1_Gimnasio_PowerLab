@@ -93,6 +93,10 @@ bool ClaseGrupal::removerMatricula(string cedulaCliente) {
     return false;
 }
 
+bool ClaseGrupal::capacidadSuperada(){
+    return cantMatriculados >= capacidad;
+}
+
 // Representación corta
 string ClaseGrupal::toString() const {
     stringstream s;

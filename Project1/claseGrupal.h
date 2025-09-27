@@ -39,6 +39,7 @@ public:
     bool matricularCliente(string cedulaCliente); // devuelve true si matricula ok
     bool estaMatriculado(string cedulaCliente) const;
     bool removerMatricula(string cedulaCliente);  // remueve si existe
+    bool capacidadSuperada();
 
     string toString() const;
     string detalleClase() const;

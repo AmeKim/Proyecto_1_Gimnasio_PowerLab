@@ -238,7 +238,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 		return;
 	}
 
-	// Mostrar clases disponibles de esta sucursal
+	// Mostrar clases disponibles de esta sucursal	
 	bool hayClases = false;
 	print("Clases grupales disponibles:\n");
 	for (int i = 0; i < vClasesGrupales->getCantidad(); ++i) {
@@ -266,7 +266,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 	// Buscar la clase por ID y verificar que pertenezca a la sucursal
 	for (int i = 0; i < vClasesGrupales->getCantidad(); ++i) {
 		ClaseGrupal* clase = vClasesGrupales->obtener(i);
-		if (clase && clase->getId() == idClase && clase->getCodigoSucursal() == cod) {
+		if (clase && clase->getCodigo() == idClase && clase->getCodigoSucursal() == cod) {
 			claseSeleccionada = clase;
 			break;
 		}
@@ -281,7 +281,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 	}
 
 	// Verificar capacidad
-	if (claseSeleccionada->estaLlena()) {
+	if (claseSeleccionada->capacidadSuperada()) {
 		cout << "Error: La clase seleccionada ya alcanz" << char(162) << " su capacidad m" << char(160) << "xima.\n";
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -315,7 +315,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 	}
 
 	// Verificar si el cliente ya está inscrito
-	if (claseSeleccionada->clienteEstaInscrito(cedulaCliente)) {
+	if (claseSeleccionada->estaMatriculado(cedulaCliente)) {
 		cout << "Error: El cliente ya est" << char(160) << " inscrito en esta clase.\n";
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -324,7 +324,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 	}
 
 	// Inscribir cliente
-	if (claseSeleccionada->inscribirCliente(clienteSeleccionado)) {
+	if (claseSeleccionada->matricularCliente(cedulaCliente)) {
 		cout << "Cliente inscrito exitosamente en la clase grupal.\n";
 	}
 	else {
