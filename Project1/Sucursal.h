@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include "vecClientes.h"
+#include "vecEspecialidades.h"
 #include "vecClasesGrupales.h"
 #include "vecInstructores.h"
 #include "BateriaEjercicios.h"
@@ -24,6 +25,7 @@ private:
     vecClasesGrupales* clases;
 	vecInstructores* instructores;
     BateriaEjercicios* bateria;
+    vecEspecialidades* especialidades;
 
 public:
     Sucursal();

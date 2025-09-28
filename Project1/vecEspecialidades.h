@@ -21,5 +21,4 @@ public:
     string toString() const;
 	void listarTodas() const;
 	bool existeEspecialidad(string nombre) const;
-    int getCantidad();
 };

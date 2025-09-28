@@ -71,5 +71,3 @@ bool vecEspecialidades::existeEspecialidad(string nombre) const {
     }
     return false;
 }
-
-int vecEspecialidades::getCantidad() {     return cant; }

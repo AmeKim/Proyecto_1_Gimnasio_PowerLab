@@ -6,7 +6,18 @@ PowerLab::PowerLab(){
 	menuClientes = new submenuClientes(clientes, sucursales);
 	menuInstructores = new submenuInstructores(instructores, especialidades, sucursales);
 	menuClasesGrupales = new submenuClaseGrup(clasesGrupales, clientes, sucursales, especialidades);
+	especialidades = new vecEspecialidades();
 
+	// Agregar especialidades por defecto
+	especialidades->agregar(new especialidad("CrossFit"));
+	especialidades->agregar(new especialidad("HIIT"));
+	especialidades->agregar(new especialidad("TRX"));
+	especialidades->agregar(new especialidad("Pesas"));
+	especialidades->agregar(new especialidad("Spinning"));
+	especialidades->agregar(new especialidad("Cardio"));
+	especialidades->agregar(new especialidad("Yoga"));
+	especialidades->agregar(new especialidad("Zumba"));
+	
 }
 
 PowerLab::~PowerLab(){

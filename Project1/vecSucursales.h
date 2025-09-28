@@ -1,5 +1,6 @@
 #pragma once
 #include "Sucursal.h"
+#include "vecEspecialidades.h"
 
 class vecSucursales {
 private:
@@ -16,7 +17,7 @@ public:
     Sucursal* buscarPorCodigo(const string& codigo) const;
     int indicePorCodigo(const string& codigo) const;
     Sucursal* obtener(string cod) const;
-    int cantidad() const;
+    int getCantidad() const;
     void listarTodos() const;
     bool eliminarPorCodigo(const string& codigo);
 	string listarInstructoresPorSucursal(string codigo);

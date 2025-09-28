@@ -56,10 +56,11 @@ Instructor* vecInstructores::obtener(string idx) const {
 	return nullptr;
 }
 
-Instructor* vecInstructores::obtener(int idx) const{
+Instructor* vecInstructores::obtener(int idx) const {
     if (idx >= 0 && idx < cant) {
         return datos[idx];
     }
+    return nullptr; // Añadido para asegurar que todas las rutas devuelven un valor
 }
 
 int vecInstructores::getcantidad() const { return cant; }

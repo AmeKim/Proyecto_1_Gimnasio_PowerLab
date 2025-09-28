@@ -50,7 +50,7 @@ Sucursal* vecSucursales::obtener(string cod) const {
 	return nullptr;
 }
 
-int vecSucursales::cantidad() const { return cant; }
+int vecSucursales::getCantidad() const { return cant; }
 
 void vecSucursales::listarTodos() const {
     if (cant == 0) { print("No hay sucursales registradas\n"); return; }

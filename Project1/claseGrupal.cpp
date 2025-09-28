@@ -43,9 +43,7 @@ ClaseGrupal::~ClaseGrupal() {
 // Getters
 string ClaseGrupal::getTipo() const { return tipo; }
 int ClaseGrupal::getCodigo() const { return codigo; }
-string ClaseGrupal::getCodigoSucursal(){
-
-}
+string ClaseGrupal::getCodigoSucursal() { return codigoSucursal; }
 int ClaseGrupal::getCapacidad() const { return capacidad; }
 int ClaseGrupal::getCantMatriculados() const { return cantMatriculados; }
 string ClaseGrupal::getSalon() const { return salon; }

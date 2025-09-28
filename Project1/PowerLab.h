@@ -16,7 +16,7 @@ using namespace std;
 
 class PowerLab{
 	private: 
-		char opcion;
+		char opcion = '\0';
 		char* continuacion;
 		vecEspecialidades* especialidades = new vecEspecialidades;
 		submenuSucursales* menuSucursales;

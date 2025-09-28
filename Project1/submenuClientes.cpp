@@ -41,7 +41,6 @@ int submenuClientes::iniciar(){
 }
 
 char submenuClientes::imprimirMenu(){
-	char opcion;
 	print("\n----------------------------------------------------\n");
 	cout<< "\n-------SubMen" << char(163)<< "de Clientes-------\n";
 	cout<<"Por favor escoja una opci" << char(162) << "n: \n";
@@ -144,7 +143,7 @@ void submenuClientes::incluirCliente() {
 
 void submenuClientes::asignarInstructorCliente() {
 	limpiar();
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -215,7 +214,7 @@ void submenuClientes::asignarInstructorCliente() {
 void submenuClientes::ClientePorSucursal() {
 	limpiar();
 	print("-------------------Mostrando Clientes por Sucursal-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -248,7 +247,7 @@ void submenuClientes::ClientePorSucursal() {
 void submenuClientes::mostrarClienteDetalle() {
 	limpiar();
 	print("-------------------Mostrando detalle de un Cliente-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -282,7 +281,7 @@ void submenuClientes::mostrarClienteDetalle() {
 	string nombreInstructor = "No asignado";
 	string cedulaInst = cli->getCedulaInstructor();
 	if (!cedulaInst.empty()) {
-		for (int i = 0; i < vSucursales->cantidad(); ++i) {
+		for (int i = 0; i < vSucursales->getCantidad(); ++i) {
 			vecInstructores* vInstructores = vSucursales->buscarPorCodigo(cod)->getVecInstructores();
 			if (vInstructores) {
 				Instructor* inst = vInstructores->buscarPorCedula(cedulaInst);
@@ -295,7 +294,7 @@ void submenuClientes::mostrarClienteDetalle() {
 	}
 	// Buscar nombre de la sucursal del cliente
 	string nombreSucursal = "No asignada";
-	for (int i = 0; i < vSucursales->cantidad(); ++i) {
+	for (int i = 0; i < vSucursales->getCantidad(); ++i) {
 		vecClientes* vCli = vSucursales->buscarPorCodigo(cod)->getVecClientes();
 		if (vCli && vCli->buscarPorCedula(cedulaCli) != nullptr) {
 			nombreSucursal = vSucursales->buscarPorCodigo(cod)->getProvincia() + " - " + vSucursales->obtener(cod)->getCanton();

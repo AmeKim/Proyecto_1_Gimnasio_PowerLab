@@ -57,7 +57,7 @@ char submenuClaseGrup::imprimirMenu() {
 void submenuClaseGrup::crearClaseGrupal() {
 	limpiar();
 	print("-------------------Creando una nueva Clase Grupal-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas. No se puede agregar una clase grupal.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -163,7 +163,7 @@ void submenuClaseGrup::crearClaseGrupal() {
 void submenuClaseGrup::mostrarClasesPorSucursal(){
 	limpiar();
 	print("-------------------Mostrando Clases Grupales por Sucursal-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -200,7 +200,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 	limpiar();
 	print("-------------------Inscribiendo Cliente a Clase Grupal-------------------\n");
 
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -339,7 +339,7 @@ void submenuClaseGrup::inscribirClienteClase(){
 void submenuClaseGrup::mostrarClasePorCliente(){
 	limpiar();
 	print("-------------------Mostrando Clases Grupales por Cliente-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");

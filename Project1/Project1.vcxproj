@@ -156,7 +156,7 @@
     <ClCompile Include="especialidad.cpp" />
     <ClCompile Include="fecha.cpp" />
     <ClCompile Include="instructor.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainDePrueba.cpp" />
     <ClCompile Include="Medicion.cpp" />
     <ClCompile Include="PowerLab.cpp" />
     <ClCompile Include="Persona.cpp" />

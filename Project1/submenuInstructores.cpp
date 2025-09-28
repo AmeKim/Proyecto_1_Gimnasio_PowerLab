@@ -1,9 +1,10 @@
 #include "submenuInstructores.h"
 
-submenuInstructores::submenuInstructores(vecInstructores* vInstructores, vecEspecialidades* vEspecialides, vecSucursales* vSucursales) {
+submenuInstructores::submenuInstructores(vecInstructores* vInstructores, vecEspecialidades* vEspecialidades, vecSucursales* vSucursales) {
 	this->vInstructores = vInstructores;
 	this->vEspecialidades = vEspecialidades;
 	this->vSucursales = vSucursales;
+	this->opcion = '\0';
 	continuacion = new char('s');
 }
 submenuInstructores::~submenuInstructores(){
@@ -53,9 +54,9 @@ int submenuInstructores::iniciar(){
 }
 
 char submenuInstructores::imprimirMenu(){
-	char opcion;
+
 	print("\n----------------------------------------------------\n");
-	cout<< "\n-------SubMen" << char(163)<< "de Instructores-------\n";
+	cout<< "\n-------Submen" << char(163)<< " de Instructores-------\n";
 	cout<<"Por favor escoja una opci" << char(162) << "n: \n";
 	print("1. Ingresar un Instructor\n");
 	print("2. Mostrar Instructores por Sucursal\n");
@@ -73,10 +74,10 @@ char submenuInstructores::imprimirMenu(){
 	return num;	
 }
 
-void submenuInstructores::incluirInstructor(){
+void submenuInstructores::incluirInstructor() {
 	limpiar();
 	print("-------------------Creando un nuevo Instructor-------------------\n");
-	if(vSucursales->cantidad() == 0){
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas. No se puede agregar un instructor.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -84,7 +85,8 @@ void submenuInstructores::incluirInstructor(){
 		return;
 	}
 	if (vEspecialidades->getCantidad() == 0) {
-		print("No hay especialidades registradas. No se puede agregar un instructor.\n");
+		print("Error: No se puede ingresar instructores porque no existen especialidades registradas.\n");
+		print("Por favor, cree al menos una especialidad antes de agregar instructores.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
 		cin.get();
@@ -171,7 +173,7 @@ void submenuInstructores::incluirInstructor(){
 void submenuInstructores::mostrarInstructoresPorSucursal(){
 	limpiar();
 	print("-------------------Mostrando Instructores por Sucursal-------------------\n");
-	if(vSucursales->cantidad() == 0){
+	if(vSucursales->getCantidad() == 0){
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -286,7 +288,7 @@ void submenuInstructores::mostrarInstructorPorEspecialidad(){
 void submenuInstructores::mostrarClientesPorInstructor(){
 	limpiar();
 	print("-------------------Mostrando Clientes por Instructor-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -350,7 +352,7 @@ void submenuInstructores::mostrarClientesPorInstructor(){
 void submenuInstructores::generarMedicion() {
 	limpiar();
 	cout << "-------------------Generando Medici" << char(162) << "n para un Cliente-------------------\n";
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -500,7 +502,7 @@ void submenuInstructores::generarMedicion() {
 void submenuInstructores::historialMediciones() {
 	limpiar();
 	print("-------------------Historial de Mediciones-------------------\n"); 
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -554,7 +556,7 @@ void submenuInstructores::historialMediciones() {
 void submenuInstructores::ingresarEjecicioBateria() {
 	limpiar();
 	print("-------Ingresando Ejercicio a la Bateria de Ejercicios-------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas. \n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>");
@@ -606,7 +608,7 @@ void submenuInstructores::ingresarEjecicioBateria() {
 void submenuInstructores::generarRutina() {
 	limpiar();
 	print("-------------------Generando Rutina para un Cliente-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -706,7 +708,7 @@ void submenuInstructores::generarRutina() {
 void submenuInstructores::visualizarRutina() {
 	limpiar();
 	print("-------------------Visualizando Rutina de un Cliente-------------------\n");
-	if (vSucursales->cantidad() == 0) {
+	if (vSucursales->getCantidad() == 0) {
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");

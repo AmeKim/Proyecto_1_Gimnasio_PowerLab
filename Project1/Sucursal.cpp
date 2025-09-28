@@ -10,6 +10,18 @@ Sucursal::Sucursal() {
     clases = new vecClasesGrupales();
     bateria = new BateriaEjercicios();
 	instructores = new vecInstructores();
+    especialidades = new vecEspecialidades();
+
+    // Agregar especialidades por defecto
+    especialidades->agregar(new especialidad("CrossFit"));
+    especialidades->agregar(new especialidad("HIIT"));
+    especialidades->agregar(new especialidad("TRX"));
+    especialidades->agregar(new especialidad("Pesas"));
+    especialidades->agregar(new especialidad("Spinning"));
+    especialidades->agregar(new especialidad("Cardio"));
+    especialidades->agregar(new especialidad("Yoga"));
+    especialidades->agregar(new especialidad("Zumba"));
+    
 }
 
 Sucursal::Sucursal(string codigo, string provincia, string canton, string correo, string telefono) {
@@ -22,6 +34,17 @@ Sucursal::Sucursal(string codigo, string provincia, string canton, string correo
     clases = new vecClasesGrupales();
     bateria = new BateriaEjercicios();
 	instructores = new vecInstructores();
+    especialidades = new vecEspecialidades();
+
+    // Agregar especialidades por defecto
+    especialidades->agregar(new especialidad("CrossFit"));
+    especialidades->agregar(new especialidad("HIIT"));
+    especialidades->agregar(new especialidad("TRX"));
+    especialidades->agregar(new especialidad("Pesas"));
+    especialidades->agregar(new especialidad("Spinning"));
+    especialidades->agregar(new especialidad("Cardio"));
+    especialidades->agregar(new especialidad("Yoga"));
+    especialidades->agregar(new especialidad("Zumba"));
 }
 
 Sucursal::~Sucursal() {
@@ -29,6 +52,7 @@ Sucursal::~Sucursal() {
     delete clases;
     delete bateria;
 	delete instructores;
+    delete especialidades;
 }
 
 // Getters

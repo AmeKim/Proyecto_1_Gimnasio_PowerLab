@@ -1,8 +1,9 @@
 #include "submenuSucursales.h"
 
-submenuSucursales::submenuSucursales(vecSucursales* vSucursales){
+submenuSucursales::submenuSucursales(vecSucursales* vSucursales) {
 	this->vSucursales = vSucursales;
 	continuacion = new char('s');
+	opcion = '\0'; // Inicialización de la variable miembro opcion
 }
 
 submenuSucursales::~submenuSucursales(){
@@ -38,7 +39,6 @@ int submenuSucursales::iniciar() {
 }
 
 char submenuSucursales::imprimirMenu(){
-	char opcion;
 	print("\n-----------------------------------------------\n");
 	cout<< "\n---------SubMen" << char(163)<< " de Sucursales---------\n";
 	cout<< "Por favor escoja una opci"<< char(162) <<"n: \n";
@@ -87,7 +87,7 @@ void submenuSucursales::MostrarSucursal(){
 	cin.get();
 	limpiarEnter();
 	print("-------------------Mostrando una Sucursal-------------------\n");
-	if(vSucursales->cantidad() == 0){
+	if(vSucursales->getCantidad() == 0){
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
@@ -119,7 +119,7 @@ void submenuSucursales::reporteIMC() {
 	cin.get();
 	limpiarEnter();
 	print("-------------------Reporte de IMC por Sucursal-------------------\n");
-	if(vSucursales->cantidad() == 0){
+	if(vSucursales->getCantidad() == 0){
 		print("No hay sucursales registradas.\n");
 		cout << endl << endl;
 		print("<Digite enter para regresar>\n");
