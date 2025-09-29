@@ -1,6 +1,11 @@
 #pragma once
+#include <string>
+#include <sstream>
+#include "utiles.h"
 #include "Sucursal.h"
 #include "vecEspecialidades.h"
+
+using namespace std;
 
 class vecSucursales {
 private:

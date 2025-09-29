@@ -1,25 +1,24 @@
 #pragma once
 #include "instructor.h"
+#include <string>
+
+using namespace std;
 
 class vecInstructores {
-private:
-    Instructor** datos;
-    int tam;
-    int cant;
-
-    void expandir();
-
 public:
-    vecInstructores(int capacidadInicial = 10);
+    vecInstructores(int capacidadInicial = 8);
     ~vecInstructores();
 
-    bool insertar(Instructor* i); // falso si cedula duplicada
-    Instructor* buscarPorCedula(const string& cedula) const;
-	especialidad* obtenerEspecialidad(const string& nombre) const;
-    int indicePorCedula(const string& cedula) const;
-    Instructor* obtener(string ced) const;
-	Instructor* obtener(int idx) const; 
-    int getcantidad() const;
-    void listarTodos() const;
-    bool eliminarPorCedula(const string& cedula);
+    void agregar(const instructor& ins);
+    int tamanio() const;
+    const instructor& obtener(int idx) const;
+    instructor& obtener(int idx);
+    int indicePorCedula(int cedula) const;
+    void limpiar();
+
+private:
+    void asegurarCapacidad(int nuevaCapacidad);
+    instructor* datos;
+    int capacidad;
+    int cantidad;
 };

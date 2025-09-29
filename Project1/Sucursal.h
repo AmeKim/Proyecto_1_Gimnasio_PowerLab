@@ -1,18 +1,43 @@
 #pragma once
-#include <iostream>
+#include "instructor.h"
+#include "claseGrupal.h"
+#include "vecInstructores.h"
+#include "vecClasesGrupales.h"
 #include <string>
 #include <sstream>
-#include "vecClientes.h"
-#include "vecEspecialidades.h"
-#include "vecClasesGrupales.h"
-#include "vecInstructores.h"
-#include "BateriaEjercicios.h"
-#include "reporteM.h"
-#include "utiles.h"
 
 using namespace std;
 
 class Sucursal {
+public:
+    Sucursal();
+    Sucursal(const string& codigo, const string& provincia, const string& canton,const string& correo, const string& telefono);
+    ~Sucursal();
+
+    // Accesores básicos
+    void setCodigo(const string& c);
+    string getCodigo() const;
+    void setProvincia(const string& p);
+    string getProvincia() const;
+    void setCanton(const string& ca);
+    string getCanton() const;
+    void setCorreo(const string& co);
+    string getCorreo() const;
+    void setTelefono(const string& t);
+    string getTelefono() const;
+
+    // Operaciones sobre instructores
+    bool agregarInstructor(const instructor& ins); // retorna false si ya existe cedula
+    int contarInstructores() const;
+    const vecInstructores& obtenerVecInstructores() const;
+    vecInstructores& obtenerVecInstructores();
+
+    // Operaciones sobre clases (interfaz mínima requerida)
+    void agregarClase(const ClaseGrupal& c);
+    int contarClases() const;
+    const vecClasesGrupales& obtenerVecClases() const;
+    vecClasesGrupales& obtenerVecClases();
+
 private:
     string codigo;
     string provincia;
@@ -20,46 +45,6 @@ private:
     string correo;
     string telefono;
 
-    // Colecciones propias de la sucursal (propietarias)
-    vecClientes* clientes;
-    vecClasesGrupales* clases;
-	vecInstructores* instructores;
-    BateriaEjercicios* bateria;
-    vecEspecialidades* especialidades;
-
-public:
-    Sucursal();
-    Sucursal(string codigo, string provincia, string canton, string correo, string telefono);
-    ~Sucursal();
-
-    // Getters
-    string getCodigo() const;
-    string getProvincia() const;
-    string getCanton() const;
-    string getCorreo() const;
-    string getTelefono() const;
-
-    // Setters
-    void setProvincia(string provincia);
-    void setCanton(string canton);
-    void setCorreo(string correo);
-    void setTelefono(string telefono);
-
-    // Operaciones solicitadas por el enunciado / interfaz
-    bool agregarCliente(cliente* cli);               // valida duplicados por cedula en la sucursal
-    cliente* buscarClientePorCedula(string cedula) const;
-
-    bool agregarClaseGrupal(ClaseGrupal* c);        // valida límite de 8 clases (vecClasesGrupales ya tiene tam=8)
-    ClaseGrupal* buscarClasePorCodigo(int codigo) const;
-
-    BateriaEjercicios* getBateria();                // acceso a la batería de ejercicios
-    vecClientes* getVecClientes();   
-    vecInstructores* getVecInstructores();
-	vecClasesGrupales* getVecClasesGrupales();
-
-    // Reportes
-    void generarReporteIMC() const;                  // usa reporteM para imprimir reporte por sucursal
-
-    // Representación
-    string toString() const;
+    vecInstructores instructores;
+    vecClasesGrupales clases;
 };

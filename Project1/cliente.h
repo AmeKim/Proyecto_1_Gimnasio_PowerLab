@@ -13,7 +13,7 @@ private:
     string cedulaInstructor;
     vecReportesM* historialMediciones;
     Rutina* rutinaActual;
-	Instructor* instructor; // Instructor asociado al cliente
+	instructor* Instructor; // Instructor asociado al cliente
 
 public:
     cliente();
@@ -27,7 +27,7 @@ public:
     string getCedulaInstructor() const;
     vecReportesM* getHistorialMediciones();
     Rutina* getRutinaActual();
-    Instructor* getInstructor() const;
+    instructor* getInstructor() const;
 
     // Setters
     void setSexo(char sexo);

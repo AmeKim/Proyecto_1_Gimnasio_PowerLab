@@ -134,7 +134,7 @@
     <ClCompile Include="vecInstructores.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="mainDePrueba.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="PowerLab.cpp">

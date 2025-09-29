@@ -1,23 +1,10 @@
 #include "especialidad.h"
 
-especialidad::especialidad() {
-    nombre = "";
-}
-
-especialidad::especialidad(string nombre) {
-    this->nombre = nombre;
-}
-
-especialidad::~especialidad() {}
-
-string especialidad::getNombre() const {
-    return nombre;
-}
-
-void especialidad::setNombre(string nombre) {
-	this->nombre = nombre;
-}
-
-string especialidad::toString() const {
-	return nombre;
-}
+const string Especialidad::CROSSFIT = "CrossFit";
+const string Especialidad::HIIT = "HIIT";
+const string Especialidad::TRX = "TRX";
+const string Especialidad::PESAS = "Pesas";
+const string Especialidad::SPINNING = "Spinning";
+const string Especialidad::CARDIO = "Cardio";
+const string Especialidad::YOGA = "Yoga";
+const string Especialidad::ZUMBA = "Zumba";

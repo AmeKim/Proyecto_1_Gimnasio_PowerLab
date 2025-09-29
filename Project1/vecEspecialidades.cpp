@@ -1,73 +1,79 @@
 #include "vecEspecialidades.h"
+#include "especialidad.h"
 
-vecEspecialidades::vecEspecialidades() {
-    tam = 10;
-    cant = 0;
-    especialidades = new especialidad * [tam];
-    for (int i = 0; i < tam; i++) {
-        especialidades[i] = nullptr;
-    }
+vecEspecialidades::vecEspecialidades(int capacidadInicial)
+    : datos(nullptr), capacidad(0), cantidad(0) {
+    if (capacidadInicial < 1) capacidadInicial = 8;
+    datos = new Especialidad[capacidadInicial];
+    capacidad = capacidadInicial;
+    // No llamamos a cargarEspecialidadesPorDefecto aquí por si el programa necesita control sobre el momento de carga
 }
 
 vecEspecialidades::~vecEspecialidades() {
-    for (int i = 0; i < cant; i++) {
-        delete especialidades[i];
-    }
-    delete[] especialidades;
+    delete[] datos;
+    datos = nullptr;
+    capacidad = 0;
+    cantidad = 0;
 }
 
-void vecEspecialidades::agregar(especialidad* esp) {
-    if (cant < tam) {
-        especialidades[cant] = esp;
-        cant++;
+void vecEspecialidades::asegurarCapacidad(int nuevaCapacidad) {
+    if (nuevaCapacidad <= capacidad) return;
+    Especialidad* nuevo = new Especialidad[nuevaCapacidad];
+    for (int i = 0; i < cantidad; ++i) {
+        nuevo[i] = datos[i];
     }
+    delete[] datos;
+    datos = nuevo;
+    capacidad = nuevaCapacidad;
 }
 
-especialidad* vecEspecialidades::obtener(int indice) {
-    if (indice >= 0 && indice < cant) {
-        return especialidades[indice];
+void vecEspecialidades::agregar(const Especialidad& e) {
+    if (cantidad >= capacidad) {
+        asegurarCapacidad(capacidad * 2);
     }
-    return nullptr;
+    datos[cantidad++] = e;
 }
 
-int vecEspecialidades::getCantidad() const {
-    return cant;
+void vecEspecialidades::limpiar() {
+    // Resetea el conteo; mantiene el buffer para futuras inserciones
+    cantidad = 0;
 }
 
-bool vecEspecialidades::buscar(string nombre) {
-    for (int i = 0; i < cant; i++) {
-        if (especialidades[i]->getNombre() == nombre) {
-            return true;
-        }
-    }
-    return false;
+int vecEspecialidades::tamanio() const {
+    return cantidad;
 }
 
-string vecEspecialidades::toString() const {
-    string result = "";
-    for (int i = 0; i < cant; i++) {
-        if (i > 0) result += ", ";
-        result += especialidades[i]->getNombre();
-    }
-    return result;
+const Especialidad& vecEspecialidades::obtener(int indice) const {
+    if (indice < 0) indice = 0;
+    if (indice >= cantidad) indice = cantidad - 1;
+    return datos[indice];
 }
 
-void vecEspecialidades::listarTodas() const {
-    if (cant == 0) { print("No hay instructores registrados\n"); return; }
-    for (int i = 0; i < cant; ++i) {
-        if (especialidades[i]) {
-            stringstream s;
-            s << (i + 1) << "- " << especialidades[i]->getNombre() << "\n";
-            print(s.str());
-        }
-    }
+Especialidad& vecEspecialidades::obtener(int indice) {
+    if (indice < 0) indice = 0;
+    if (indice >= cantidad) indice = cantidad - 1;
+    return datos[indice];
 }
 
-bool vecEspecialidades::existeEspecialidad(string nombre) const {
-    for (int i = 0; i < cant; i++) {
-        if (especialidades[i]->getNombre() == nombre) {
-            return true;
-        }
+int vecEspecialidades::indicePorNombre(const string& nombre) const {
+    for (int i = 0; i < cantidad; ++i) {
+        if (datos[i].getNombre() == nombre) return i;
     }
-    return false;
+    return -1;
+}
+
+bool vecEspecialidades::existe(const string& nombre) const {
+    return indicePorNombre(nombre) != -1;
+}
+
+void vecEspecialidades::cargarEspecialidadesPorDefecto() {
+    limpiar();
+    agregar(Especialidad(Especialidad::CROSSFIT));
+    agregar(Especialidad(Especialidad::HIIT));
+    agregar(Especialidad(Especialidad::TRX));
+    agregar(Especialidad(Especialidad::PESAS));
+    agregar(Especialidad(Especialidad::SPINNING));
+    agregar(Especialidad(Especialidad::CARDIO));
+    agregar(Especialidad(Especialidad::YOGA));
+    agregar(Especialidad(Especialidad::ZUMBA));
 }

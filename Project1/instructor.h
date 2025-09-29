@@ -1,34 +1,41 @@
 #pragma once
-#include <string>
-#include <sstream>
+#include "especialidad.h"
 #include "Persona.h"
-#include "Rutina.h"
-#include "Medicion.h"
 #include "vecEspecialidades.h"
+#include "fecha.h"
+#include <string>
+
 using namespace std;
 
-class Instructor : public Persona {
-private:
-    vecEspecialidades* especialidades;
-    string codigoSucursal;
+class instructor : public Persona {
 public:
-    Instructor();
-    Instructor(string nombre, string cedula, string telefono, string correo, const string& fechaNacimientoStr);
-    ~Instructor();
+    instructor();
+    instructor(int cedula, const string& nombre, const string& telefono,
+        const string& correo, const fecha& fechaNac);
+	instructor(const instructor& other);
+    instructor& operator=(const instructor& other);
+    ~instructor();
 
-    bool agregarEspecialidad(const string& esp);
-    bool tieneEspecialidad(const string& esp) const;
-    int getCantEspecialidades() const;
+    // Especialidades (usa VecEspecialidades interno)
+    void agregarEspecialidad(const Especialidad& esp);
+    int obtenerCantidadEspecialidades() const;
+    const Especialidad& obtenerEspecialidad(int indice) const;
+    void limpiarEspecialidades();
 
-    // Devuelve el nombre de la especialidad en la posición idx (la posicion de la especialidad en la lista)
-    string getEspecialidad(int idx) const;
+    // Datos personales
+    void setTelefono(const string& t);
+    void setCorreo(const string& c);
+    void setFechaNacimiento(const fecha& f);
 
-    void agregarRutinaCliente(Rutina* rutina, const string& nombreCliente);
-    void realizarMedicionCliente(Medicion* medicion, const string& nombreCliente);
+    string getTelefono() const;
+    string getCorreo() const;
+    fecha getFechaNacimiento() const;
 
-    virtual string toString() override;
+    string toString() const;
 
-    //Métodos para el código de sucursal
-    void setCodigoSucursal(const string& codigo) { codigoSucursal = codigo; }
-    string getCodigoSucursal() const { return codigoSucursal; }
+private:
+    vecEspecialidades especialidades; // contenedor propio de especialidades
+    string telefono;
+    string correo;
+    fecha fechaNacimiento;
 };

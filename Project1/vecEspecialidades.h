@@ -1,24 +1,30 @@
 #pragma once
-#include <string>
-#include <sstream>
 #include "especialidad.h"
-#include "utiles.h"
+
+using namespace std;
 
 class vecEspecialidades {
-private:
-    especialidad** especialidades;
-    int tam;
-    int cant;
-
 public:
-    vecEspecialidades();
+    vecEspecialidades(int capacidadInicial = 8);
     ~vecEspecialidades();
 
-    void agregar(especialidad* esp);
-    especialidad* obtener(int indice);
-    int getCantidad() const;
-    bool buscar(string nombre);
-    string toString() const;
-	void listarTodas() const;
-	bool existeEspecialidad(string nombre) const;
+    // Inicialización
+    void cargarEspecialidadesPorDefecto();
+
+    // Operaciones básicas
+    void agregar(const Especialidad& e);
+    void limpiar();
+    int tamanio() const;
+    const Especialidad& obtener(int indice) const;
+    Especialidad& obtener(int indice);
+
+    // Búsqueda
+    int indicePorNombre(const string& nombre) const;
+    bool existe(const string& nombre) const;
+
+private:
+    void asegurarCapacidad(int nuevaCapacidad);
+    Especialidad* datos;
+    int capacidad;
+    int cantidad;
 };
