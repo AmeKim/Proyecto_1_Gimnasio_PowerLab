@@ -1,36 +1,11 @@
-﻿  Sucursal.cpp
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(3,100): error C2665: 'vecClasesGrupales::vecClasesGrupales':ninguna función sobrecargada pudo convertir todos los tipos de argumento
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClasesGrupales.h(23,1):
-      puede ser 'vecClasesGrupales::vecClasesGrupales(const vecClasesGrupales &)'
-          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(3,100):
-          'vecClasesGrupales::vecClasesGrupales(const vecClasesGrupales &)': el argumento 1 no puede convertirse de 'int' a 'const vecClasesGrupales &'
-              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(3,101):
-              Razón: no se puede realizar la conversión de 'int' a 'const vecClasesGrupales'
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(3,100):
-      al hacer coincidir la lista de argumentos '(int)'
-  
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(6,248): error C2665: 'vecClasesGrupales::vecClasesGrupales':ninguna función sobrecargada pudo convertir todos los tipos de argumento
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClasesGrupales.h(23,1):
-      puede ser 'vecClasesGrupales::vecClasesGrupales(const vecClasesGrupales &)'
-          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(6,248):
-          'vecClasesGrupales::vecClasesGrupales(const vecClasesGrupales &)': el argumento 1 no puede convertirse de 'int' a 'const vecClasesGrupales &'
-              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(6,249):
-              Razón: no se puede realizar la conversión de 'int' a 'const vecClasesGrupales'
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(6,248):
-      al hacer coincidir la lista de argumentos '(int)'
-  
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(48,12): error C2664: 'bool vecClasesGrupales::agregar(ClaseGrupal *)': el argumento 1 no puede convertirse de 'const ClaseGrupal' a 'ClaseGrupal *'
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(48,20):
-      No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClasesGrupales.h(16,10):
-      vea la declaración de 'vecClasesGrupales::agregar'
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(48,12):
-      al hacer coincidir la lista de argumentos '(const ClaseGrupal)'
-  
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Sucursal.cpp(52,19): error C2039: "tamanio": no es un miembro de "vecClasesGrupales"
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClasesGrupales.h(6,7):
-      vea la declaración de 'vecClasesGrupales'
-  
+﻿  cliente.cpp
+  instructor.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\instructor.cpp(56,71): warning C4309: 'argumento': truncamiento de valor constante
+  reporteM.cpp
+  Sucursal.cpp
   vecClientes.cpp
+  vecInstructores.cpp
   vecSucursales.cpp
   Generando código...
+MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo main sin resolver al que se hace referencia en la función "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe : fatal error LNK1120: 1 externos sin resolver
