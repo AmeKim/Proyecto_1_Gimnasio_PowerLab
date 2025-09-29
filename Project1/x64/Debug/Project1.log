@@ -1,11 +1,755 @@
-﻿  cliente.cpp
-  instructor.cpp
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\instructor.cpp(56,71): warning C4309: 'argumento': truncamiento de valor constante
-  reporteM.cpp
-  Sucursal.cpp
-  vecClientes.cpp
-  vecInstructores.cpp
+﻿  PowerLab.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(62,32): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(62,32):
+      al hacer coincidir la lista de argumentos '(const char [10], const char [13], const char [10], const char [17], fecha, fecha, const char [2])'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(64,11): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(67,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(67,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(67,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(67,34):
+      al hacer coincidir la lista de argumentos '(fecha, int, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(69,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(69,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(69,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(69,34):
+      al hacer coincidir la lista de argumentos '(fecha, int, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(71,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(71,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(71,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(71,34):
+      al hacer coincidir la lista de argumentos '(fecha, double, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(74,32): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(74,32):
+      al hacer coincidir la lista de argumentos '(const char [10], const char [14], const char [10], const char [16], fecha, fecha, const char [2])'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(76,11): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(79,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(79,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(79,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(79,34):
+      al hacer coincidir la lista de argumentos '(fecha, int, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(82,32): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(82,32):
+      al hacer coincidir la lista de argumentos '(const char [10], const char [15], const char [10], const char [17], fecha, fecha, const char [2])'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(84,11): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(87,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(87,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(87,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(87,34):
+      al hacer coincidir la lista de argumentos '(fecha, int, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(90,32): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(90,32):
+      al hacer coincidir la lista de argumentos '(const char [10], const char [12], const char [10], const char [17], fecha, fecha, const char [2])'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(92,11): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(95,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(95,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(95,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(95,34):
+      al hacer coincidir la lista de argumentos '(fecha, int, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(98,32): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(98,32):
+      al hacer coincidir la lista de argumentos '(const char [10], const char [11], const char [10], const char [16], fecha, fecha, const char [2])'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(100,11): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(103,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(103,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(103,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(103,34):
+      al hacer coincidir la lista de argumentos '(fecha, int, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(106,32): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(106,32):
+      al hacer coincidir la lista de argumentos '(const char [10], const char [11], const char [10], const char [17], fecha, fecha, const char [2])'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(108,11): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(111,34): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(111,34):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(111,40):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(111,34):
+      al hacer coincidir la lista de argumentos '(fecha, int, double, int, int)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,42): error C2665: 'ClaseGrupal::ClaseGrupal':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(25,5):
+      puede ser 'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,42):
+          'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)': el argumento 1 no puede convertirse de 'int' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,43):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+                  puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,43):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,43):
+                          La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,43):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,43):
+                          La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,43):
+                  al hacer coincidir la lista de argumentos '(int)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(159,42):
+      al hacer coincidir la lista de argumentos '(int, const std::string, int, const char [3], const char [10], instructor *)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,42): error C2665: 'ClaseGrupal::ClaseGrupal':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(25,5):
+      puede ser 'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,42):
+          'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)': el argumento 1 no puede convertirse de 'int' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,43):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+                  puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,43):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,43):
+                          La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,43):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,43):
+                          La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,43):
+                  al hacer coincidir la lista de argumentos '(int)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(163,42):
+      al hacer coincidir la lista de argumentos '(int, const std::string, int, const char [3], const char [11], instructor *)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,42): error C2665: 'ClaseGrupal::ClaseGrupal':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(25,5):
+      puede ser 'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,42):
+          'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)': el argumento 1 no puede convertirse de 'int' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,43):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+                  puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,43):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,43):
+                          La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,43):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,43):
+                          La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,43):
+                  al hacer coincidir la lista de argumentos '(int)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(167,42):
+      al hacer coincidir la lista de argumentos '(int, const std::string, int, const char [3], const char [14], instructor *)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,13): error C2664: 'bool ClaseGrupal::matricularCliente(std::string)': el argumento 1 no puede convertirse de 'cliente *' a 'std::string'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,31):
+      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+          puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,31):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'cliente *' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,31):
+                  Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,31):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'cliente *' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,31):
+                  La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,31):
+          al hacer coincidir la lista de argumentos '(cliente *)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(39,10):
+      vea la declaración de 'ClaseGrupal::matricularCliente'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(171,13):
+      al hacer coincidir la lista de argumentos '(cliente *)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,13): error C2664: 'bool ClaseGrupal::matricularCliente(std::string)': el argumento 1 no puede convertirse de 'cliente *' a 'std::string'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,31):
+      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+          puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,31):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'cliente *' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,31):
+                  Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,31):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'cliente *' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,31):
+                  La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,31):
+          al hacer coincidir la lista de argumentos '(cliente *)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(39,10):
+      vea la declaración de 'ClaseGrupal::matricularCliente'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(172,13):
+      al hacer coincidir la lista de argumentos '(cliente *)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,13): error C2664: 'bool ClaseGrupal::matricularCliente(std::string)': el argumento 1 no puede convertirse de 'cliente *' a 'std::string'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,31):
+      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+          puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,31):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'cliente *' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,31):
+                  Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,31):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'cliente *' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,31):
+                  La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,31):
+          al hacer coincidir la lista de argumentos '(cliente *)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(39,10):
+      vea la declaración de 'ClaseGrupal::matricularCliente'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\PowerLab.cpp(173,13):
+      al hacer coincidir la lista de argumentos '(cliente *)'
+  
+  submenuClaseGrup.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,46): error C2665: 'ClaseGrupal::ClaseGrupal':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(25,5):
+      puede ser 'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,46):
+          'ClaseGrupal::ClaseGrupal(std::string,int,int,std::string,std::string,std::string)': el argumento 1 no puede convertirse de 'int' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,58):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+                  puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,58):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'int' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,58):
+                          La conversión de un tipo entero a un tipo de puntero requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+                      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,58):
+                      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'int' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,58):
+                          La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+                  o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,58):
+                  al hacer coincidir la lista de argumentos '(int)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(154,46):
+      al hacer coincidir la lista de argumentos '(int, std::string, int, std::string, std::string, instructor *)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(250,41): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(252,14): error C2039: "getCantidadClasesMatriculadas": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(280,47): error C2039: "getCantidadMatriculados": no es un miembro de "ClaseGrupal"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(8,7):
+      vea la declaración de 'ClaseGrupal'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(281,52): error C2039: "getCuposDisponibles": no es un miembro de "ClaseGrupal"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(8,7):
+      vea la declaración de 'ClaseGrupal'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(285,16): error C2039: "getCuposDisponibles": no es un miembro de "ClaseGrupal"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(8,7):
+      vea la declaración de 'ClaseGrupal'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,20): error C2664: 'bool ClaseGrupal::matricularCliente(std::string)': el argumento 1 no puede convertirse de 'cliente *' a 'std::string'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,38):
+      'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(768,5):
+          puede ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,38):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': el argumento 1 no puede convertirse de 'cliente *' a 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,38):
+                  Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función entre paréntesis
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(1340,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,38):
+              'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': el argumento 1 no puede convertirse de 'cliente *' a 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+                  C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,38):
+                  La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xstring(798,5):
+          o       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,38):
+          al hacer coincidir la lista de argumentos '(cliente *)'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\ClaseGrupal.h(39,10):
+      vea la declaración de 'ClaseGrupal::matricularCliente'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(295,20):
+      al hacer coincidir la lista de argumentos '(cliente *)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(343,41): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(346,16): error C2039: "mostrarClasesMatriculadas": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClaseGrup.cpp(347,61): error C2039: "getCantidadClasesMatriculadas": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+  submenuClientes.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(97,40): error C2661: 'cliente::cliente': ninguna función sobrecargada acepta 7 argumentos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(97,40):
+      al hacer coincidir la lista de argumentos '(std::string, std::string, std::string, std::string, fecha, fecha, std::string)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(111,27): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(163,41): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(167,70): error C2039: "getNombreCompleto": no es un miembro de "instructor"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\instructor.h(10,7):
+      vea la declaración de 'instructor'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(190,14): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(194,14): error C2039: "setInstructor": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(235,21): error C2039: "listarSimple": no es un miembro de "vecClientes"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\vecClientes.h(4,7):
+      vea la declaración de 'vecClientes'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuClientes.cpp(279,37): error C2039: "getNombreCompleto": no es un miembro de "instructor"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\instructor.h(10,7):
+      vea la declaración de 'instructor'
+  
+  submenuInstructores.cpp
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(213,29): error C2039: "getNombreCompleto": no es un miembro de "instructor"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\instructor.h(10,7):
+      vea la declaración de 'instructor'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(362,49): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(408,41): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(427,33): error C2665: 'Medicion::Medicion':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(21,5):
+      puede ser 'Medicion::Medicion(std::string,double,double,double,double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(427,33):
+          'Medicion::Medicion(std::string,double,double,double,double)': el argumento 1 no puede convertirse de 'fecha' a 'std::string'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(427,34):
+              No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(427,33):
+      al hacer coincidir la lista de argumentos '(fecha, double, double, double, double)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(432,41): error C2039: "esAltoRiesgo": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(6,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48): error C2665: 'std::to_string':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(498,38):
+      puede ser 'std::string std::to_string(long double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(long double)': el argumento 1 no puede convertirse de 'void' a 'long double'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(494,38):
+      o       'std::string std::to_string(float)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(float)': el argumento 1 no puede convertirse de 'void' a 'float'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(487,38):
+      o       'std::string std::to_string(double)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(double)': el argumento 1 no puede convertirse de 'void' a 'double'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(483,38):
+      o       'std::string std::to_string(unsigned __int64)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(unsigned __int64)': el argumento 1 no puede convertirse de 'void' a 'unsigned __int64'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(479,38):
+      o       'std::string std::to_string(__int64)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(__int64)': el argumento 1 no puede convertirse de 'void' a '__int64'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(475,38):
+      o       'std::string std::to_string(unsigned long)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(unsigned long)': el argumento 1 no puede convertirse de 'void' a 'unsigned long'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(471,38):
+      o       'std::string std::to_string(long)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(long)': el argumento 1 no puede convertirse de 'void' a 'long'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(467,38):
+      o       'std::string std::to_string(unsigned int)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(unsigned int)': el argumento 1 no puede convertirse de 'void' a 'unsigned int'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string(463,38):
+      o       'std::string std::to_string(int)'
+          C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+          'std::string std::to_string(int)': el argumento 1 no puede convertirse de 'void' a 'int'
+              C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,76):
+              Las expresiones de tipo void no se pueden convertir en otros tipos
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,48):
+      al hacer coincidir la lista de argumentos '(void)'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,46): error C2088: el operador integrado '+' no se puede aplicar a un operando de tipo '_T'
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,46): error C2088:         with
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,46): error C2088:         [
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,46): error C2088:             _T=std::string
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(433,46): error C2088:         ]
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(435,60): error C2446: ==': no hay conversión de 'const char [2]' en 'int'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(435,63):
+      No existe un contexto en el que sea posible realizar esta conversión
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(435,85): error C2446: ==': no hay conversión de 'const char [2]' en 'int'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(435,88):
+      No existe un contexto en el que sea posible realizar esta conversión
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(478,41): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(480,37): error C2039: "getMediciones": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(508,63): error C2039: "calcularVasosAgua": no es un miembro de "Medicion"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\Medicion.h(6,7):
+      vea la declaración de 'Medicion'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(509,60): error C2446: ==': no hay conversión de 'const char [2]' en 'int'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(509,63):
+      No existe un contexto en el que sea posible realizar esta conversión
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(509,85): error C2446: ==': no hay conversión de 'const char [2]' en 'int'
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(509,88):
+      No existe un contexto en el que sea posible realizar esta conversión
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(599,43): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(603,46): error C2039: "getNombreCompleto": no es un miembro de "instructor"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\instructor.h(10,7):
+      vea la declaración de 'instructor'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(609,27): error C2039: "getRutina": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(679,42): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(681,32): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(719,27): error C2039: "getRutina": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(727,31): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
+C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\submenuInstructores.cpp(729,32): error C2039: "getNombreCompleto": no es un miembro de "cliente"
+      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.h(9,7):
+      vea la declaración de 'cliente'
+  
   vecSucursales.cpp
   Generando código...
-MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo main sin resolver al que se hace referencia en la función "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe : fatal error LNK1120: 1 externos sin resolver
