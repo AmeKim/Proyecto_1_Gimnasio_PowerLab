@@ -3,14 +3,7 @@
 #include "ClaseGrupal.h"
 #include <sstream>
 
-cliente::cliente() : Persona(), telefono(""), correo(""),fechaNacimiento(), fechaInscripcion(), sexo(""),instructorAsignado(nullptr), tamClases(3), cantClases(0) {mediciones = new vecReportesM();rutina = new Rutina();
-    clasesMatriculadas = new ClaseGrupal * [tamClases];
-    for (int i = 0; i < tamClases; i++) {
-        clasesMatriculadas[i] = nullptr;
-    }
-}
-
-cliente::cliente(const string& ced, const string& nom, const string& tel,const string& corr, const fecha& fechaNac, const fecha& fechaInsc,const string& sex): Persona(ced, nom), telefono(tel), correo(corr),fechaNacimiento(fechaNac), fechaInscripcion(fechaInsc), sexo(sex),instructorAsignado(nullptr), tamClases(3), cantClases(0) {
+cliente::cliente() : Persona(), telefono(""), correo(""), fechaNacimiento(), fechaInscripcion(), sexo(""), instructorAsignado(nullptr), tamClases(3), cantClases(0) {
     mediciones = new vecReportesM();
     rutina = new Rutina();
     clasesMatriculadas = new ClaseGrupal * [tamClases];
@@ -19,7 +12,30 @@ cliente::cliente(const string& ced, const string& nom, const string& tel,const s
     }
 }
 
-cliente::cliente(const cliente& other): Persona(other), telefono(other.telefono), correo(other.correo),fechaNacimiento(other.fechaNacimiento), fechaInscripcion(other.fechaInscripcion),sexo(other.sexo), instructorAsignado(other.instructorAsignado),tamClases(other.tamClases), cantClases(other.cantClases) {
+cliente::cliente(const string& ced, const string& nom, const string& tel, const string& corr, const fecha& fechaNac, const fecha& fechaInsc, const string& sex)
+    : Persona(),
+    telefono(tel),
+    correo(corr),
+    fechaNacimiento(fechaNac),
+    fechaInscripcion(fechaInsc),
+    sexo(sex),
+    instructorAsignado(nullptr),
+    tamClases(3),
+    cantClases(0)
+{
+    setNombre(nom);
+    setCedula(ced);
+
+    mediciones = new vecReportesM();
+    rutina = new Rutina();
+    clasesMatriculadas = new ClaseGrupal * [tamClases];
+    for (int i = 0; i < tamClases; i++) {
+        clasesMatriculadas[i] = nullptr;
+    }
+}
+
+// Constructor de copia
+cliente::cliente(const cliente& other) : Persona(other), telefono(other.telefono), correo(other.correo), fechaNacimiento(other.fechaNacimiento), fechaInscripcion(other.fechaInscripcion), sexo(other.sexo), instructorAsignado(other.instructorAsignado), tamClases(other.tamClases), cantClases(other.cantClases) {
     mediciones = new vecReportesM();
     rutina = new Rutina();
     clasesMatriculadas = new ClaseGrupal * [tamClases];
@@ -28,6 +44,7 @@ cliente::cliente(const cliente& other): Persona(other), telefono(other.telefono)
     }
 }
 
+// Operador de asignación
 cliente& cliente:: operator=(const cliente& other) {
     if (this != &other) {
         Persona::operator=(other);
@@ -64,7 +81,8 @@ cliente::~cliente() {
 // Getters
 string cliente::getTelefono() const { return telefono; }
 string cliente::getCorreo() const { return correo; }
-string getNombreCompleto() { return getNombreCompleto(); }
+string cliente::getNombreCompleto() { return getNombre(); }
+
 fecha cliente::getFechaNacimiento() const { return fechaNacimiento; }
 fecha cliente::getFechaInscripcion() const { return fechaInscripcion; }
 string cliente::getSexo() const { return sexo; }

@@ -3,11 +3,11 @@
 #include "fecha.h"
 #include "vecReportesM.h"
 #include "Rutina.h"
+#include "instructor.h"
+#include "ClaseGrupal.h"
 #include <string>
-using namespace std;
 
-class instructor;
-class ClaseGrupal;
+using namespace std;
 
 class cliente : public Persona {
 private:
@@ -27,6 +27,10 @@ public:
     cliente();
     cliente(const string& ced, const string& nom, const string& tel, const string& corr,
         const fecha& fechaNac, const fecha& fechaInsc, const string& sex);
+
+    cliente(const cliente& other);
+    cliente& operator=(const cliente& other);
+
     ~cliente();
 
     // Getters

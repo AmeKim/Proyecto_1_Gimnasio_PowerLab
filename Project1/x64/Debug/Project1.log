@@ -1,9 +1,14 @@
-﻿  cliente.cpp
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(13,167): error C2661: 'Persona::Persona': ninguna función sobrecargada acepta 2 argumentos
-      C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(13,167):
-      al hacer coincidir la lista de argumentos '(const std::string, const std::string)'
-  
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(22,10): error C2600: 'cliente::cliente': no se puede definir una función miembro especial generada por el compilador (se debe declarar primero en la clase)
-C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\Project1\cliente.cpp(31,20): error C2600: 'cliente::operator =': no se puede definir una función miembro especial generada por el compilador (se debe declarar primero en la clase)
+﻿  PowerLab.cpp
+  Sucursal.cpp
+  claseGrupal.cpp
+  cliente.cpp
+  main.cpp
+  reporteM.cpp
+  submenuClaseGrup.cpp
+  submenuClientes.cpp
+  submenuInstructores.cpp
+  submenuSucursales.cpp
+  vecClientes.cpp
   vecSucursales.cpp
   Generando código...
+  Project1.vcxproj -> C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe

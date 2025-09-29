@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08429602-2667-400B-9941-0188255CF65E}|Project1\\Project1.vcxproj|C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\claseGrupal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -210,10 +210,6 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d3750d8a-574b-4fb3-b7e2-aa8af40e8231}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
@@ -226,8 +222,7 @@
               "RelativeToolTip": "Project1\\submenuInstructores.cpp",
               "ViewState": "AgIAAFYCAAAAAAAAAAAhwFoCAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-21T19:39:27.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-21T19:39:27.219Z"
             },
             {
               "$type": "Document",
@@ -239,8 +234,7 @@
               "RelativeToolTip": "Project1\\PowerLab.cpp",
               "ViewState": "AgIAALwAAAAAAAAAAAAAAMIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-21T19:39:18.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-21T19:39:18.316Z"
             },
             {
               "$type": "Document",
@@ -300,8 +294,7 @@
               "RelativeToolTip": "Project1\\claseGrupal.cpp",
               "ViewState": "AgIAAEoAAAAAAAAAAAAAAE4AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:49:55.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:55.461Z"
             },
             {
               "$type": "Document",
@@ -337,8 +330,7 @@
               "RelativeToolTip": "Project1\\submenuClientes.cpp",
               "ViewState": "AgIAABIBAAAAAAAAAAAAABcBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-21T19:39:26.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-21T19:39:26.316Z"
             },
             {
               "$type": "Document",
@@ -410,8 +402,7 @@
               "RelativeToolTip": "Project1\\Medicion.cpp",
               "ViewState": "AgIAAEcAAAAAAAAAAAAAAF8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T03:59:11.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T03:59:11.766Z"
             },
             {
               "$type": "Document",
@@ -423,8 +414,7 @@
               "RelativeToolTip": "Project1\\Medicion.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T03:58:49.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T03:58:49.681Z"
             },
             {
               "$type": "Document",
@@ -436,8 +426,7 @@
               "RelativeToolTip": "Project1\\claseGrupal.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-09T19:49:43.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:43.522Z"
             },
             {
               "$type": "Document",
@@ -449,8 +438,7 @@
               "RelativeToolTip": "Project1\\vecReportesM.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-21T19:17:16.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-21T19:17:16.717Z"
             },
             {
               "$type": "Document",
@@ -462,8 +450,7 @@
               "RelativeToolTip": "Project1\\vecReportesM.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-21T18:58:05.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-21T18:58:05.306Z"
             },
             {
               "$type": "Document",
@@ -475,8 +462,7 @@
               "RelativeToolTip": "Project1\\reporteM.cpp",
               "ViewState": "AgIAACsAAAAAAAAAAAAhwC4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T23:40:34.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T23:40:34.781Z"
             },
             {
               "$type": "Document",
@@ -488,8 +474,7 @@
               "RelativeToolTip": "Project1\\reporteM.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T23:39:55.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T23:39:55.651Z"
             },
             {
               "$type": "Document",
@@ -501,8 +486,7 @@
               "RelativeToolTip": "Project1\\vecClasesGrupales.cpp",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T05:10:55.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T05:10:55.332Z"
             },
             {
               "$type": "Document",
@@ -514,8 +498,7 @@
               "RelativeToolTip": "Project1\\vecClasesGrupales.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T04:54:57.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:54:57.095Z"
             },
             {
               "$type": "Document",
@@ -527,8 +510,7 @@
               "RelativeToolTip": "Project1\\Rutina.cpp",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAAFgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-19T04:47:09.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:47:09.068Z"
             },
             {
               "$type": "Document",
@@ -540,8 +522,7 @@
               "RelativeToolTip": "Project1\\Rutina.h",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T04:47:03.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:47:03.201Z"
             },
             {
               "$type": "Document",
@@ -565,8 +546,7 @@
               "RelativeToolTip": "Project1\\Ejercicio.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T04:44:44.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T04:44:44.451Z"
             },
             {
               "$type": "Document",
@@ -590,8 +570,7 @@
               "RelativeToolTip": "Project1\\fecha.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-19T03:43:30.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T03:43:30.588Z"
             },
             {
               "$type": "Document",
@@ -711,8 +690,7 @@
               "RelativeToolTip": "Project1\\instructor.cpp",
               "ViewState": "AgIAADAAAAAAAAAAAAAgwDMAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:49:58.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:58.147Z"
             },
             {
               "$type": "Document",
@@ -724,8 +702,7 @@
               "RelativeToolTip": "Project1\\instructor.h",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAAB8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-09T19:49:51.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:51.254Z"
             },
             {
               "$type": "Document",
@@ -737,8 +714,7 @@
               "RelativeToolTip": "Project1\\vecClientes.cpp",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAAE4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:49:59.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:59.807Z"
             },
             {
               "$type": "Document",
@@ -750,31 +726,30 @@
               "RelativeToolTip": "Project1\\vecClientes.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-09T19:49:53.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:49:53.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "cliente.cpp",
               "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp",
               "RelativeDocumentMoniker": "Project1\\cliente.cpp",
               "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.cpp",
               "RelativeToolTip": "Project1\\cliente.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAAAFIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-09T19:49:56.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "cliente.h",
               "DocumentMoniker": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h",
               "RelativeDocumentMoniker": "Project1\\cliente.h",
               "ToolTip": "C:\\Users\\amega\\OneDrive\\Documentos\\GitHub\\Proyecto_1_Gimnasio_PowerLab\\Project1\\cliente.h",
               "RelativeToolTip": "Project1\\cliente.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-09-09T19:49:45.108Z",
               "EditorCaption": ""
@@ -789,8 +764,7 @@
               "RelativeToolTip": "Project1\\Persona.cpp",
               "ViewState": "AgIAAEsAAAAAAAAAAAAwwFMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T20:04:41.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T20:04:41.284Z"
             },
             {
               "$type": "Document",
@@ -802,8 +776,7 @@
               "RelativeToolTip": "Project1\\Persona.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-09T20:04:43.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T20:04:43.053Z"
             },
             {
               "$type": "Document",
