@@ -20,13 +20,13 @@ void reporteM::generarReporteIMCporSucursal(vecClientes* clientes, string nombre
         cliente* cli = clientes->obtener(i);
         if (cli) {
             // Obtener la última medición del cliente
-            vecReportesM* historial = cli->getHistorialMediciones();
+			vecReportesM* historial = cli->getMediciones();
             if (historial && historial->getCantidad() > 0) {
                 Medicion* ultimaMedicion = historial->obtener(historial->getCantidad() - 1);
                 if (ultimaMedicion) {
                     double imc = ultimaMedicion->getImc();
                     string categoria = ultimaMedicion->getClasificacion();
-                    string nombre = cli->getNombre().substr(0, 14);
+                    string nombre = cli->getNombreCompleto().substr(0, 14);
                     string cedula = cli->getCedula();
 
                     // Rellenar espacios para alineación
@@ -44,7 +44,7 @@ void reporteM::generarReporteIMCporSucursal(vecClientes* clientes, string nombre
                 }
             }
             else {
-                string nombre = cli->getNombre().substr(0, 14);
+                string nombre = cli->getNombreCompleto().substr(0, 14);
                 string cedula = cli->getCedula();
 
                 while (nombre.length() < 15) nombre += " ";

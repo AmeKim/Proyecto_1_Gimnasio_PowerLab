@@ -1,27 +1,22 @@
 #pragma once
 #include "cliente.h"
+#include <string>
+using namespace std;
 
 class vecClientes {
 private:
     cliente** clientes;
     int tam;
     int cant;
+    void expandir();
 
 public:
     vecClientes();
     ~vecClientes();
 
     bool agregar(cliente* cli);
-
-    // Acceso no-const (permite modificar cliente o colección)
     cliente* obtener(int indice);
-    cliente* buscarPorCedula(string cedula);
-
-    // Acceso const (permite llamar desde objetos const)
-    cliente* obtener(string ced) const;
-    cliente* buscarPorCedula(string cedula) const;
-
+    cliente* buscarPorCedula(const string& cedula);
     int getCantidad() const;
-    void mostrarLista() const;
-    void generarReporteIMC() const;
+    string listarSimple() const;
 };

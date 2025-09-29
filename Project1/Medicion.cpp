@@ -1,171 +1,96 @@
 #include "Medicion.h"
 
-Medicion::Medicion() {
-    fechaMedicion = new fecha();
-    peso = 0.0;
-    estatura = 0.0;
-    porcentajeGrasa = 0.0;
-    porcentajeMusculo = 0.0;
-    imc = 0.0;
-    clasificacion = "";
-    altoRiesgo = false;
-    vasosRecomendados = 0;
-    proteinaRecomendada = 0.0;
+Medicion::Medicion() : fechaMedicion(), peso(0), estatura(0),
+porcentajeGrasa(0), porcentajeMusculo(0), imc(0),
+clasificacion(""), altoRiesgo(false) {
 }
 
-Medicion::Medicion(string fechaStr, double peso, double estatura, double grasa, double musculo) {
-    fechaMedicion = new fecha(fechaStr);
-    this->peso = peso;
-    this->estatura = estatura;
-    this->porcentajeGrasa = grasa;
-    this->porcentajeMusculo = musculo;
-    imc = 0.0;
-    clasificacion = "";
-    altoRiesgo = false;
-    vasosRecomendados = 0;
-    proteinaRecomendada = 0.0;
+Medicion::Medicion(const fecha& f, double p, double e, double g, double m)
+    : fechaMedicion(f), peso(p), estatura(e),
+    porcentajeGrasa(g), porcentajeMusculo(m) {
+    calcularIMC();
+    determinarClasificacion();
+    determinarRiesgo();
 }
 
-Medicion::~Medicion() {
-    delete fechaMedicion;
-}
-
-fecha* Medicion::getFecha() const {
-    return fechaMedicion;
-}
-
-double Medicion::getPeso() const {
-    return peso;
-}
-
-double Medicion::getEstatura() const {
-    return estatura;
-}
-
-double Medicion::getPorcentajeGrasa() const {
-    return porcentajeGrasa;
-}
-
-double Medicion::getPorcentajeMusculo() const {
-    return porcentajeMusculo;
-}
-
-double Medicion::getImc() const {
-    return imc;
-}
-
-string Medicion::getClasificacion() const {
-    return clasificacion;
-}
-
-bool Medicion::getAltoRiesgo() const {
-    return altoRiesgo;
-}
-
-int Medicion::getVasosRecomendados() const {
-    return vasosRecomendados;
-}
-
-double Medicion::getProteinaRecomendada() const {
-    return proteinaRecomendada;
-}
-
-void Medicion::setFecha(string fechaStr) {
-    delete fechaMedicion;
-    fechaMedicion = new fecha(fechaStr);
-}
-
-void Medicion::setPeso(double peso) {
-    this->peso = peso;
-}
-
-void Medicion::setEstatura(double estatura) {
-    this->estatura = estatura;
-}
-
-void Medicion::setPorcentajeGrasa(double grasa) {
-    this->porcentajeGrasa = grasa;
-}
-
-void Medicion::setPorcentajeMusculo(double musculo) {
-    this->porcentajeMusculo = musculo;
-}
+Medicion::~Medicion() {}
 
 void Medicion::calcularIMC() {
     if (estatura > 0) {
         imc = peso / (estatura * estatura);
     }
+    else {
+        imc = 0;
+    }
 }
 
-void Medicion::calcularClasificacion() {
-    if (imc < 16.0) {
+void Medicion::determinarClasificacion() {
+    if (imc < 16.00) {
         clasificacion = "Delgadez severa";
     }
-    else if (imc <= 16.99) {
+    else if (imc >= 16.00 && imc <= 16.99) {
         clasificacion = "Delgadez moderada";
     }
-    else if (imc <= 18.49) {
+    else if (imc >= 17.00 && imc <= 18.49) {
         clasificacion = "Delgadez leve";
     }
-    else if (imc <= 24.99) {
+    else if (imc >= 18.50 && imc <= 24.99) {
         clasificacion = "Normal";
     }
-    else if (imc <= 29.99) {
+    else if (imc >= 25.00 && imc <= 29.99) {
         clasificacion = "Pre-obesidad";
     }
-    else if (imc <= 34.99) {
+    else if (imc >= 30.00 && imc <= 34.99) {
         clasificacion = "Obesidad leve";
     }
-    else if (imc <= 39.99) {
+    else if (imc >= 35.00 && imc <= 39.99) {
         clasificacion = "Obesidad media";
     }
     else {
-        clasificacion = "Obesidad mórbida";
+        clasificacion = "Obesidad morbida";
     }
 }
 
-void Medicion::calcularAltoRiesgo() {
-    altoRiesgo = (imc >= 30.0); // Obesidad leve, media o mórbida
+void Medicion::determinarRiesgo() {
+    altoRiesgo = (imc >= 30.00);
 }
 
-void Medicion::calcularVasos() {
-    vasosRecomendados = static_cast<int>(peso / 7.0);
+fecha Medicion::getFecha() const { return fechaMedicion; }
+double Medicion::getPeso() const { return peso; }
+double Medicion::getEstatura() const { return estatura; }
+double Medicion::getPorcentajeGrasa() const { return porcentajeGrasa; }
+double Medicion::getPorcentajeMusculo() const { return porcentajeMusculo; }
+double Medicion::getImc() const { return imc; }
+string Medicion::getClasificacion() const { return clasificacion; }
+bool Medicion::esAltoRiesgo() const { return altoRiesgo; }
+
+int Medicion::calcularVasos() const {
+    if (peso <= 0) return 0;
+    return static_cast<int>(peso / 7.0);
 }
 
-void Medicion::calcularProteina(char sexo) {
-    if (sexo == 'M' || sexo == 'm') {
-        // Hombre que hace ejercicio: 1.7 - 2.5, usamos promedio 2.1
-        proteinaRecomendada = peso * 2.1;
+int Medicion::calcularVasosAgua() const {
+    return calcularVasos();
+}
+
+double Medicion::calcularProteina(bool esHombre) const {
+    if (esHombre) {
+        return peso * 2.1;
     }
     else {
-        // Mujer que hace ejercicio: 1.6 - 1.8, usamos promedio 1.7
-        proteinaRecomendada = peso * 1.7;
+        return peso * 1.7;
     }
-}
-
-void Medicion::calcularTodo(char sexo) {
-    calcularIMC();
-    calcularClasificacion();
-    calcularAltoRiesgo();
-    calcularVasos();
-    calcularProteina(sexo);
 }
 
 string Medicion::toString() const {
-    return "=============== Detalle Medición ===============\n"
-        "Fecha: " + fechaMedicion->toString() + "\n" +
-        "Peso (kg): " + to_string(peso) + "\n" +
-        "Estatura (m): " + to_string(estatura) + "\n" +
-        "% de grasa: " + to_string(porcentajeGrasa) + "\n" +
-        "% de músculo: " + to_string(porcentajeMusculo) + "\n" +
-        "IMC: " + to_string(imc) + "\n" +
-        "Clasificación: " + clasificacion + "\n" +
-        "Alto Riesgo: " + (altoRiesgo ? "SÍ" : "NO") + "\n" +
-        "Cantidad de vasos recomendados: " + to_string(vasosRecomendados) + "\n" +
-        "Cantidad de proteína recomendada: " + to_string(proteinaRecomendada) + " gramos\n";
-}
-
-string Medicion::toStringResumen() const {
-    return "Fecha: " + fechaMedicion->toString() + " | Peso: " +
-        to_string(peso) + " kg | IMC: " + to_string(imc);
+    stringstream ss;
+    ss << "Fecha: " << fechaMedicion.toString() << "\n";
+    ss << "Peso (kg): " << peso << "\n";
+    ss << "Estatura (m): " << estatura << "\n";
+    ss << "% de grasa: " << porcentajeGrasa << "\n";
+    ss << "% de musculo: " << porcentajeMusculo << "\n";
+    ss << "IMC: " << imc << "\n";
+    ss << "Clasificacion: " << clasificacion << "\n";
+    ss << "Alto Riesgo: " << (altoRiesgo ? "SI" : "NO") << "\n";
+    return ss.str();
 }

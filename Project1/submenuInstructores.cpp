@@ -210,7 +210,7 @@ void submenuInstructores::detalleInstructor(vecSucursales* sucursales) {
     }
 
     print("\nDetalle del instructor:\n");
-    print("Nombre: " + ins->getNombreCompleto() + "\n");
+    print("Nombre: " + ins->getNombre() + "\n");
     print("Cedula: " + ins->getCedula() + "\n");
     print("Telefono: " + ins->getTelefono() + "\n");
     print("Correo: " + ins->getCorreo() + "\n");
@@ -600,7 +600,7 @@ void submenuInstructores::generarRutina(vecSucursales* sucursales, BateriaEjerci
 
     instructor* ins = cli->getInstructor();
     if (ins != nullptr) {
-        print("Instructor asignado: " + ins->getNombreCompleto() + "\n");
+        print("Instructor asignado: " + ins->getNombre() + "\n");
     }
     else {
         print("Sin instructor asignado\n");

@@ -1,141 +1,89 @@
 #include "ClaseGrupal.h"
+#include "instructor.h"
+#include "cliente.h"
 
-// Constructor por defecto
-ClaseGrupal::ClaseGrupal() {
-    codigo = 0;
-    tipo = "";
-    capacidad = 0;
-    salon = "";
-    horario = "";
-    cedulaInstructor = "";
-    cantMatriculados = 0;
-    tamMatriculados = 0;
-    matriculados = nullptr;
+ClaseGrupal::ClaseGrupal() : codigo(0), tipo(""), capacidad(0), salon(""),
+horario(""), instructorAsignado(nullptr), tamClientes(50), cantMatriculados(0) {
+    clientesMatriculados = new cliente * [tamClientes];
+    for (int i = 0; i < tamClientes; i++) {
+        clientesMatriculados[i] = nullptr;
+    }
 }
 
-// Constructor con parámetros
-ClaseGrupal::ClaseGrupal(string tipo,int codigo, int capacidad, string salon, string horario, string cedulaInstructor) {
-    this->codigoSucursal = codigoSucursal;
-    this->codigo = codigo;
-    this->tipo = tipo;
-    this->capacidad = capacidad;
-    this->salon = salon;
-    this->horario = horario;
-    this->cedulaInstructor = cedulaInstructor;
-    this->cantMatriculados = 0;
-    this->tamMatriculados = capacidad > 0 ? capacidad : 0;
-    if (tamMatriculados > 0) {
-        matriculados = new string[tamMatriculados];
-        for (int i = 0; i < tamMatriculados; i++) matriculados[i] = "";
-    }
-    else {
-        matriculados = nullptr;
+ClaseGrupal::ClaseGrupal(int cod, const string& tip, int cap, const string& sal,
+    const string& hor, instructor* ins)
+    : codigo(cod), tipo(tip), capacidad(cap), salon(sal), horario(hor),
+    instructorAsignado(ins), tamClientes(50), cantMatriculados(0) {
+    clientesMatriculados = new cliente * [tamClientes];
+    for (int i = 0; i < tamClientes; i++) {
+        clientesMatriculados[i] = nullptr;
     }
 }
 
 ClaseGrupal::~ClaseGrupal() {
-    if (matriculados != nullptr) {
-        delete[] matriculados;
-        matriculados = nullptr;
+    if (clientesMatriculados) {
+        delete[] clientesMatriculados;
+        clientesMatriculados = nullptr;
     }
 }
 
-// Getters
-string ClaseGrupal::getTipo() const { return tipo; }
 int ClaseGrupal::getCodigo() const { return codigo; }
-string ClaseGrupal::getCodigoSucursal() { return codigoSucursal; }
+string ClaseGrupal::getTipo() const { return tipo; }
 int ClaseGrupal::getCapacidad() const { return capacidad; }
-int ClaseGrupal::getCantMatriculados() const { return cantMatriculados; }
 string ClaseGrupal::getSalon() const { return salon; }
 string ClaseGrupal::getHorario() const { return horario; }
-string ClaseGrupal::getCedulaInstructor() const { return cedulaInstructor; }
+instructor* ClaseGrupal::getInstructor() const { return instructorAsignado; }
+int ClaseGrupal::getCantidadMatriculados() const { return cantMatriculados; }
 
-// Comprueba si ya está matriculado
-bool ClaseGrupal::estaMatriculado(string cedulaCliente) const {
+int ClaseGrupal::getCuposDisponibles() const {
+    return capacidad - cantMatriculados;
+}
+
+bool ClaseGrupal::matricularCliente(cliente* cli) {
+    if (!cli || cantMatriculados >= capacidad) return false;
+
     for (int i = 0; i < cantMatriculados; i++) {
-        if (matriculados[i] == cedulaCliente) return true;
+        if (clientesMatriculados[i] == cli) return false;
     }
-    return false;
+
+    clientesMatriculados[cantMatriculados++] = cli;
+    cli->matricularClase(this);
+    return true;
 }
 
-// Matricular cliente por cédula. Devuelve true si tuvo éxito.
-bool ClaseGrupal::matricularCliente(string cedulaCliente) {
-    if (cantMatriculados >= capacidad) return false; // sin cupo
-    if (estaMatriculado(cedulaCliente)) return false; // ya matriculado
-    // insertar en primera posición libre
-    for (int i = 0; i < tamMatriculados; i++) {
-        if (matriculados[i].empty()) {
-            matriculados[i] = cedulaCliente;
-            cantMatriculados++;
-            return true;
+string ClaseGrupal::listarClientesMatriculados() const {
+    if (cantMatriculados == 0) {
+        return "No hay clientes matriculados en esta clase.\n";
+    }
+
+    stringstream ss;
+    for (int i = 0; i < cantMatriculados; i++) {
+        if (clientesMatriculados[i]) {
+            ss << clientesMatriculados[i]->getCedula() << " "
+                << clientesMatriculados[i]->getNombreCompleto() << "\n";
         }
     }
-    // si no encontramos posición (no debería ocurrir), intentar al final lógico
-    if (cantMatriculados < tamMatriculados) {
-        matriculados[cantMatriculados] = cedulaCliente;
-        cantMatriculados++;
-        return true;
-    }
-    return false;
+    return ss.str();
 }
 
-// Remover matrícula (si existe)
-bool ClaseGrupal::removerMatricula(string cedulaCliente) {
-    for (int i = 0; i < tamMatriculados; i++) {
-        if (matriculados[i] == cedulaCliente) {
-            matriculados[i] = "";
-            cantMatriculados--;
-            return true;
-        }
-    }
-    return false;
-}
-
-bool ClaseGrupal::capacidadSuperada(){
-    return cantMatriculados >= capacidad;
-}
-
-// Representación corta
 string ClaseGrupal::toString() const {
-    stringstream s;
-    s << codigo << " - Tipo: " << tipo << " - Cap: " << capacidad << " - Mat: " << cantMatriculados;
-    return s.str();
-}
+    stringstream ss;
+    ss << "Clase: " << tipo << "\n";
+    ss << "Capacidad: " << capacidad << "\n";
+    ss << "Matriculados: " << cantMatriculados << "\n";
+    ss << "Cupos disponibles: " << getCuposDisponibles() << "\n";
+    ss << "Salon: " << salon << "\n";
+    ss << "Horario: " << horario << "\n";
 
-// Representación detallada
-string ClaseGrupal::detalleClase() const {
-    stringstream s;
-    s << "Clase codigo: " << codigo << "\n";
-    s << "Tipo (codigo): " << tipo << "\n";
-    s << "Capacidad: " << capacidad << "\n";
-    s << "Matriculados: " << cantMatriculados << "\n";
-    s << "Cupos disponibles: " << (capacidad - cantMatriculados) << "\n";
-    s << "Salon: " << salon << "\n";
-    s << "Horario: " << horario << "\n";
-    s << "Instructor: " << cedulaInstructor << "\n";
-    if (cantMatriculados > 0 && matriculados != nullptr) {
-        s << "Lista de matriculados:\n";
-        int idx = 1;
-        for (int i = 0; i < tamMatriculados; i++) {
-            if (!matriculados[i].empty()) {
-                s << idx << "- " << matriculados[i] << "\n";
-                idx++;
-            }
-        }
+    if (instructorAsignado) {
+        ss << "Instructor asignado: " << instructorAsignado->getNombre() << "\n";
     }
-    return s.str();
-}
+    else {
+		ss << "Instructor asignado: Ninguno\n";
+    }
 
-string ClaseGrupal::mostrarTipos() const{
-    stringstream s;
-	s << "Tipos de clases grupales disponibles:\n";
-	s << "1 - CrossFit\n";
-	s << "2 - HIIT\n";
-	s << "3 - TRX\n";
-	s << "4 - Pesas\n";
-	s << "5 - Spinning\n";
-	s << "6 - Cardio\n";
-	s << "7 - Yoga\n";
-	s << "8 - Zumba\n";
-	return s.str();
+    ss << "\nLista de clientes matriculados en la clase:\n";
+    ss << listarClientesMatriculados();
+
+    return ss.str();
 }

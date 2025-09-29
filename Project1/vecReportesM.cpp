@@ -1,10 +1,8 @@
-#pragma once
 #include "vecReportesM.h"
-#include "utiles.h"
+#include <iostream>
+#include <sstream>
 
-vecReportesM::vecReportesM() {
-    tam = 10; // Máximo 10 mediciones por cliente
-    cant = 0;
+vecReportesM::vecReportesM() : tam(10), cant(0) {
     mediciones = new Medicion * [tam];
     for (int i = 0; i < tam; i++) {
         mediciones[i] = nullptr;
@@ -13,23 +11,21 @@ vecReportesM::vecReportesM() {
 
 vecReportesM::~vecReportesM() {
     for (int i = 0; i < cant; i++) {
-        delete mediciones[i];
+        if (mediciones[i]) {
+            delete mediciones[i];
+        }
     }
     delete[] mediciones;
 }
 
 void vecReportesM::agregar(Medicion* medicion) {
-    if (cant < tam) {
-        mediciones[cant] = medicion;
-        cant++;
-    }
+    if (!medicion || cant >= tam) return;
+    mediciones[cant++] = medicion;
 }
 
 Medicion* vecReportesM::obtener(int indice) {
-    if (indice >= 0 && indice < cant) {
-        return mediciones[indice];
-    }
-    return nullptr;
+    if (indice < 0 || indice >= cant) return nullptr;
+    return mediciones[indice];
 }
 
 int vecReportesM::getCantidad() const {
@@ -37,8 +33,11 @@ int vecReportesM::getCantidad() const {
 }
 
 void vecReportesM::mostrarHistorial() const {
-    print("HISTORIAL DE MEDICIONES\n");
     for (int i = 0; i < cant; i++) {
-        print(to_string(i + 1) + "- " + mediciones[i]->toStringResumen() + "\n");
+        if (mediciones[i]) {
+            cout << (i + 1) << "- Fecha: " << mediciones[i]->getFecha().toString()
+                << " | Peso: " << mediciones[i]->getPeso() << " kg"
+                << " | IMC: " << mediciones[i]->getImc() << "\n";
+        }
     }
 }

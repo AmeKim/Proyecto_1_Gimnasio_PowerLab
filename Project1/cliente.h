@@ -1,42 +1,61 @@
 #pragma once
-#include <string>
-#include <sstream>
-#include "instructor.h"
 #include "Persona.h"
+#include "fecha.h"
 #include "vecReportesM.h"
 #include "Rutina.h"
+#include <string>
+using namespace std;
+
+class instructor;
+class ClaseGrupal;
 
 class cliente : public Persona {
 private:
-    char sexo;
-    fecha* fechaInscripcion;
-    string cedulaInstructor;
-    vecReportesM* historialMediciones;
-    Rutina* rutinaActual;
-	instructor* Instructor; // Instructor asociado al cliente
+    string telefono;
+    string correo;
+    fecha fechaNacimiento;
+    fecha fechaInscripcion;
+    string sexo;
+    instructor* instructorAsignado;
+    vecReportesM* mediciones;
+    Rutina* rutina;
+    ClaseGrupal** clasesMatriculadas;
+    int tamClases;
+    int cantClases;
 
 public:
     cliente();
-    cliente(string nombre, string cedula, string telefono, string correo,
-        string fechaNac, char sexo, string fechaInsc, string cedulaInst);
+    cliente(const string& ced, const string& nom, const string& tel, const string& corr,
+        const fecha& fechaNac, const fecha& fechaInsc, const string& sex);
     ~cliente();
 
     // Getters
-    char getSexo() const;
-    fecha* getFechaInscripcion() const;
-    string getCedulaInstructor() const;
-    vecReportesM* getHistorialMediciones();
-    Rutina* getRutinaActual();
+    string getTelefono() const;
+    string getCorreo() const;
+    string getNombreCompleto();
+    fecha getFechaNacimiento() const;
+    fecha getFechaInscripcion() const;
+    string getSexo() const;
     instructor* getInstructor() const;
+    vecReportesM* getMediciones() const;
+    Rutina* getRutina() const;
 
     // Setters
-    void setSexo(char sexo);
-    void setFechaInscripcion(string fechaStr);
-    void setCedulaInstructor(string cedula);
+    void setTelefono(const string& tel);
+    void setCorreo(const string& corr);
+    void setFechaNacimiento(const fecha& f);
+    void setFechaInscripcion(const fecha& f);
+    void setSexo(const string& s);
+    void setInstructor(instructor* ins);
 
-    // Métodos
-    void agregarMedicion(Medicion* medicion);
-    string toString() override;
-    string toStringDetalle(string nombreInstructor, string nombreSucursal) const;
-    double getUltimoIMC() const;
+    // Mediciones
+    void agregarMedicion(Medicion* med);
+
+    // Clases grupales
+    bool matricularClase(ClaseGrupal* clase);
+    int getCantidadClasesMatriculadas() const;
+    string mostrarClasesMatriculadas() const;
+
+    // Utilidades
+    string toString() const;
 };

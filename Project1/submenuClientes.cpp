@@ -164,7 +164,7 @@ void submenuClientes::asignarInstructor(vecSucursales* sucursales) {
 
     instructor* insActual = cli->getInstructor();
     if (insActual != nullptr) {
-        print("Instructor actual asignado al cliente: " + insActual->getNombreCompleto() + "\n");
+		print("Instructor actual: " + insActual->getNombre() + "\n");
     }
     else {
         print("Instructor actual: Sin instructor\n");
@@ -276,7 +276,7 @@ void submenuClientes::detalleCliente(vecSucursales* sucursales) {
 
     instructor* ins = cli->getInstructor();
     if (ins != nullptr) {
-        print("Instructor: " + ins->getNombreCompleto() + "\n");
+        print("Instructor: " + ins->getNombre() + "\n");
     }
     else {
         print("Instructor: Sin instructor asignado\n");

@@ -1,11 +1,13 @@
 #pragma once
 #include "fecha.h"
 #include <string>
+#include <cmath>
+#include <sstream>
 using namespace std;
 
 class Medicion {
 private:
-    fecha* fechaMedicion;
+    fecha fechaMedicion;
     double peso;
     double estatura;
     double porcentajeGrasa;
@@ -13,41 +15,31 @@ private:
     double imc;
     string clasificacion;
     bool altoRiesgo;
-    int vasosRecomendados;
-    double proteinaRecomendada;
+
+    void calcularIMC();
+    void determinarClasificacion();
+    void determinarRiesgo();
 
 public:
     Medicion();
-    Medicion(string fechaStr, double peso, double estatura, double grasa, double musculo);
+    Medicion(const fecha& f, double p, double e, double g, double m);
     ~Medicion();
 
     // Getters
-    fecha* getFecha() const;
+    fecha getFecha() const;
     double getPeso() const;
     double getEstatura() const;
     double getPorcentajeGrasa() const;
     double getPorcentajeMusculo() const;
     double getImc() const;
     string getClasificacion() const;
-    bool getAltoRiesgo() const;
-    int getVasosRecomendados() const;
-    double getProteinaRecomendada() const;
+    bool esAltoRiesgo() const;
 
-    // Setters
-    void setFecha(string fechaStr);
-    void setPeso(double peso);
-    void setEstatura(double estatura);
-    void setPorcentajeGrasa(double grasa);
-    void setPorcentajeMusculo(double musculo);
+    // Cálculos
+    int calcularVasos() const;
+    int calcularVasosAgua() const;
+    double calcularProteina(bool esHombre) const;
 
-    // Métodos
-    void calcularIMC();
-    void calcularClasificacion();
-    void calcularAltoRiesgo();
-    void calcularVasos();
-    void calcularProteina(char sexo);
-    void calcularTodo(char sexo);
-
+    // Utilidades
     string toString() const;
-    string toStringResumen() const;
 };

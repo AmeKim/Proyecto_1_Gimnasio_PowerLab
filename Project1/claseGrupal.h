@@ -1,47 +1,43 @@
 #pragma once
-#include <iostream>
 #include <string>
 #include <sstream>
-
 using namespace std;
+
+class instructor;
+class cliente;
 
 class ClaseGrupal {
 private:
-    string codigoSucursal;
-    string tipo;              // 1..8 (crossFit, HIIT, TRX , pesas, spinning , cardio, yoga, zumba)
-    int codigo;         // Identificador interno (ej: "1")
-    int capacidad;         // cupo máximo
-    int cantMatriculados;  // cantidad actual matriculados
+    int codigo;
+    string tipo;
+    int capacidad;
     string salon;
     string horario;
-    string cedulaInstructor; // cedula del instructor asignado
-
-    // lista de cedulas de clientes matriculados (propietario)
-    string* matriculados;
-    int tamMatriculados; // tamaño del arreglo matriculados
+    instructor* instructorAsignado;
+    cliente** clientesMatriculados;
+    int tamClientes;
+    int cantMatriculados;
 
 public:
     ClaseGrupal();
-    ClaseGrupal(string tipo, int codigo, int capacidad, string salon, string horario, string cedulaInstructor);
+    ClaseGrupal(int cod, const string& tip, int cap, const string& sal,
+        const string& hor, instructor* ins);
     ~ClaseGrupal();
 
     // Getters
-    string getTipo() const;
     int getCodigo() const;
-    string getCodigoSucursal();
+    string getTipo() const;
     int getCapacidad() const;
-    int getCantMatriculados() const;
     string getSalon() const;
     string getHorario() const;
-    string getCedulaInstructor() const;
+    instructor* getInstructor() const;
+    int getCantidadMatriculados() const;
+    int getCuposDisponibles() const;
 
-    // Setters/Modificadores
-    bool matricularCliente(string cedulaCliente); // devuelve true si matricula ok
-    bool estaMatriculado(string cedulaCliente) const;
-    bool removerMatricula(string cedulaCliente);  // remueve si existe
-    bool capacidadSuperada();
+    // Matriculación
+    bool matricularCliente(cliente* cli);
+    string listarClientesMatriculados() const;
 
+    // Utilidades
     string toString() const;
-    string detalleClase() const;
-	string mostrarTipos() const;
 };
