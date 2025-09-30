@@ -70,7 +70,7 @@ void submenuInstructores::incluirInstructor(vecSucursales* sucursales) {
     print("\nIngrese los datos del nuevo instructor:\n");
 
     print("Digite cedula: ");
-    int cedula = digNum();
+    string cedula = digPalabra();
 
     if (suc->buscarInstructorPorCedula(cedula) != nullptr) {
         print("Error: Ya existe un instructor con esa cedula en esta sucursal.\n");
@@ -149,18 +149,17 @@ void submenuInstructores::listaInstructoresPorSucursal(vecSucursales* sucursales
         return;
     }
 
-    vecInstructores& instructores = suc->obtenerVecInstructores();
-    if (instructores.tamanio() == 0) {
+    vecInstructores* instructores = &(suc->obtenerVecInstructores());
+    if (instructores->tamanio() == 0) {
         print("\nNo hay instructores en esta sucursal.\n");
         limpiarEnter();
         return;
     }
 
     print("\nLista de instructores existentes en la sucursal:\n");
-    for (int i = 0; i < instructores.tamanio(); i++) {
-        print(instructores.obtener(i).toString() + "\n");
+    for (int i = 0; i < instructores->tamanio(); i++) {
+        print(instructores->obtener(i).toString() + "\n");
     }
-
     limpiarEnter();
 }
 
@@ -200,7 +199,7 @@ void submenuInstructores::detalleInstructor(vecSucursales* sucursales) {
     }
 
     print("\nDigite el ID del instructor que desea visualizar: ");
-    int cedula = digNum();
+    string cedula = digPalabra();
 
     instructor* ins = suc->buscarInstructorPorCedula(cedula);
     if (ins == nullptr) {
@@ -211,7 +210,7 @@ void submenuInstructores::detalleInstructor(vecSucursales* sucursales) {
 
     print("\nDetalle del instructor:\n");
     print("Nombre: " + ins->getNombre() + "\n");
-    print("Cedula: " + ins->getCedula() + "\n");
+    cout << "Cedula: " + ins->getCedula() + "\n";
     print("Telefono: " + ins->getTelefono() + "\n");
     print("Correo: " + ins->getCorreo() + "\n");
     print("Fecha de nacimiento: " + ins->getFechaNacimiento().toString() + "\n");
@@ -260,7 +259,7 @@ void submenuInstructores::instructoresPorEspecialidad(vecSucursales* sucursales)
     print("7. Yoga\n");
     print("8. Zumba\n");
 
-    print("\nDigite la especialidad deseada: ");
+    print("\nDigite la especialidad deseada (Ejemplo 1): ");
     int opEsp = digNum();
 
     string nombreEsp;
@@ -337,7 +336,7 @@ void submenuInstructores::clientesPorInstructor(vecSucursales* sucursales) {
     }
 
     print("\nDigite ID del instructor deseado: ");
-    int cedula = digNum();
+    string cedula = digPalabra();
 
     instructor* ins = suc->buscarInstructorPorCedula(cedula);
     if (ins == nullptr) {
@@ -692,7 +691,6 @@ void submenuInstructores::visualizarRutina(vecSucursales* sucursales) {
         limpiarEnter();
         return;
     }
-
     print("Lista de sucursales existentes:\n");
     sucursales->listarTodos();
 

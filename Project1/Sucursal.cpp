@@ -84,13 +84,13 @@ const vecInstructores& Sucursal::obtenerVecInstructores() const {
     return instructores;
 }
 
-instructor* Sucursal::buscarInstructorPorCedula(int cedula) {
+instructor* Sucursal::buscarInstructorPorCedula(string cedula) {
     int indice = instructores.indicePorCedula(cedula);
     if (indice == -1) return nullptr;
     return &instructores.obtener(indice);
 }
 
-const instructor* Sucursal::buscarInstructorPorCedula(int cedula) const {
+const instructor* Sucursal::buscarInstructorPorCedula(string cedula) const {
     int indice = instructores.indicePorCedula(cedula);
     if (indice == -1) return nullptr;
     return &instructores.obtener(indice);

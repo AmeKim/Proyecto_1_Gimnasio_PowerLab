@@ -9,11 +9,12 @@ public:
     vecInstructores(int capacidadInicial = 8);
     ~vecInstructores();
 
+    int getCantidad();
     void agregar(const instructor& ins);
     int tamanio() const;
     const instructor& obtener(int idx) const;
     instructor& obtener(int idx);
-    int indicePorCedula(int cedula) const;
+    int indicePorCedula(string cedula) const;
     void limpiar();
 
 private:

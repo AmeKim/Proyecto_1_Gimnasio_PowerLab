@@ -22,6 +22,9 @@ void vecInstructores::asegurarCapacidad(int nuevaCapacidad) {
     capacidad = nuevaCapacidad;
 }
 
+int vecInstructores::getCantidad(){ return cantidad;
+}
+
 void vecInstructores::agregar(const instructor& ins) {
     if (cantidad >= capacidad) asegurarCapacidad((capacidad == 0) ? 4 : capacidad * 2);
     datos[cantidad++] = ins;
@@ -41,8 +44,8 @@ instructor& vecInstructores::obtener(int idx) {
     return datos[idx];
 }
 
-int vecInstructores::indicePorCedula(int cedula) const {
-        string cedulaStr = to_string(cedula);
+int vecInstructores::indicePorCedula(string cedula) const {
+        string cedulaStr = cedula;
     for (int i = 0; i < cantidad; ++i) {
         if (datos[i].getCedula() == cedulaStr) return i;
     }

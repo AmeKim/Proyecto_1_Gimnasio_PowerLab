@@ -38,23 +38,23 @@ void PowerLab::cargarDatosIniciales() {
     sucursales->insertar(suc2);
     sucursales->insertar(suc3);
 
-    instructor ins1(115670111, "Maria Gomez", "2233-4455", "maria@gmail.com", fecha("20/03/1985"));
+    instructor ins1("115670111", "Maria Gomez", "2233-4455", "maria@gmail.com", fecha("20/03/1985"));
     ins1.agregarEspecialidad(Especialidad(Especialidad::YOGA));
     ins1.agregarEspecialidad(Especialidad(Especialidad::ZUMBA));
     ins1.agregarEspecialidad(Especialidad(Especialidad::TRX));
     suc1->agregarInstructor(ins1);
 
-    instructor ins2(116780222, "Juan Rodriguez", "2244-5566", "juan@gmail.com", fecha("15/07/1988"));
+    instructor ins2("116780222", "Juan Rodriguez", "2244-5566", "juan@gmail.com", fecha("15/07/1988"));
     ins2.agregarEspecialidad(Especialidad(Especialidad::CROSSFIT));
     ins2.agregarEspecialidad(Especialidad(Especialidad::PESAS));
     suc1->agregarInstructor(ins2);
 
-    instructor ins3(117890333, "Ana Lopez", "2255-6677", "ana@gmail.com", fecha("10/11/1990"));
+    instructor ins3("117890333", "Ana Lopez", "2255-6677", "ana@gmail.com", fecha("10/11/1990"));
     ins3.agregarEspecialidad(Especialidad(Especialidad::SPINNING));
     ins3.agregarEspecialidad(Especialidad(Especialidad::CARDIO));
     suc1->agregarInstructor(ins3);
 
-    instructor ins4(118900444, "Miguel Lopez", "2266-7788", "miguel@gmail.com", fecha("05/09/1987"));
+    instructor ins4("118900444", "Miguel Lopez", "2266-7788", "miguel@gmail.com", fecha("05/09/1987"));
     ins4.agregarEspecialidad(Especialidad(Especialidad::HIIT));
     ins4.agregarEspecialidad(Especialidad(Especialidad::TRX));
     suc2->agregarInstructor(ins4);

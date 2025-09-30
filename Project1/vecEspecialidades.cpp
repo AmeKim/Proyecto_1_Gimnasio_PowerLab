@@ -9,11 +9,44 @@ vecEspecialidades::vecEspecialidades(int capacidadInicial)
     // No llamamos a cargarEspecialidadesPorDefecto aquí por si el programa necesita control sobre el momento de carga
 }
 
+vecEspecialidades::vecEspecialidades(const vecEspecialidades& otro)
+    : datos(nullptr), capacidad(0), cantidad(0) {
+    if (otro.cantidad > 0) {
+        capacidad = otro.capacidad;
+        cantidad = otro.cantidad;
+        datos = new Especialidad[capacidad];
+        for (int i = 0; i < cantidad; i++) {
+            datos[i] = otro.datos[i];
+        }
+    }
+}
+
 vecEspecialidades::~vecEspecialidades() {
     delete[] datos;
     datos = nullptr;
     capacidad = 0;
     cantidad = 0;
+}
+
+vecEspecialidades& vecEspecialidades::operator=(const vecEspecialidades& otro) {
+    if (this != &otro) {
+        // Liberar memoria existente
+        delete[] datos;
+        datos = nullptr;
+        capacidad = 0;
+        cantidad = 0;
+
+        // Copiar del otro
+        if (otro.cantidad > 0) {
+            capacidad = otro.capacidad;
+            cantidad = otro.cantidad;
+            datos = new Especialidad[capacidad];
+            for (int i = 0; i < cantidad; i++) {
+                datos[i] = otro.datos[i];
+            }
+        }
+    }
+    return *this;
 }
 
 void vecEspecialidades::asegurarCapacidad(int nuevaCapacidad) {
@@ -39,7 +72,7 @@ void vecEspecialidades::limpiar() {
     cantidad = 0;
 }
 
-int vecEspecialidades::tamanio() const {
+int vecEspecialidades::getCantidad() const {
     return cantidad;
 }
 
@@ -50,8 +83,18 @@ const Especialidad& vecEspecialidades::obtener(int indice) const {
 }
 
 Especialidad& vecEspecialidades::obtener(int indice) {
+    // Si el índice es inválido, evitar acceso
     if (indice < 0) indice = 0;
+    if (cantidad <= 0) indice = 0;  // proteger cuando está vacío
     if (indice >= cantidad) indice = cantidad - 1;
+
+    // Última verificación de seguridad
+    if (cantidad <= 0) {
+        // Retornar una especialidad vacía estática
+        static Especialidad especialidadVacia;
+        return especialidadVacia;
+    }
+
     return datos[indice];
 }
 

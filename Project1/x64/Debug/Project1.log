@@ -1,14 +1,2 @@
-﻿  PowerLab.cpp
-  Sucursal.cpp
-  claseGrupal.cpp
-  cliente.cpp
-  main.cpp
-  reporteM.cpp
-  submenuClaseGrup.cpp
-  submenuClientes.cpp
-  submenuInstructores.cpp
-  submenuSucursales.cpp
-  vecClientes.cpp
-  vecSucursales.cpp
-  Generando código...
-  Project1.vcxproj -> C:\Users\amega\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe
+﻿  submenuInstructores.cpp
+  Project1.vcxproj -> C:\Users\ailem\OneDrive\Documentos\GitHub\Proyecto_1_Gimnasio_PowerLab\x64\Debug\Project1.exe

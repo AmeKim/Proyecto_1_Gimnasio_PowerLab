@@ -44,8 +44,8 @@ public:
     void agregarInstructor(const instructor& ins);
     vecInstructores& obtenerVecInstructores();
     const vecInstructores& obtenerVecInstructores() const;
-    instructor* buscarInstructorPorCedula(int cedula);
-    const instructor* buscarInstructorPorCedula(int cedula) const;
+    instructor* buscarInstructorPorCedula(string cedula);
+    const instructor* buscarInstructorPorCedula(string cedula) const;
 
     // Gestión de clientes
     vecClientes* getClientes();

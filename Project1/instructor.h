@@ -10,7 +10,7 @@ using namespace std;
 class instructor : public Persona {
 public:
     instructor();
-    instructor(int cedula, const string& nombre, const string& telefono,
+    instructor(const string& cedula, const string& nombre, const string& telefono,
         const string& correo, const fecha& fechaNac);
 	instructor(const instructor& other);
     instructor& operator=(const instructor& other);

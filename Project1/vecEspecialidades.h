@@ -6,15 +6,16 @@ using namespace std;
 class vecEspecialidades {
 public:
     vecEspecialidades(int capacidadInicial = 8);
+    vecEspecialidades(const vecEspecialidades& otro);
     ~vecEspecialidades();
-
+    vecEspecialidades& operator=(const vecEspecialidades& otro);
     // Inicialización
     void cargarEspecialidadesPorDefecto();
 
     // Operaciones básicas
     void agregar(const Especialidad& e);
     void limpiar();
-    int tamanio() const;
+    int getCantidad() const;
     const Especialidad& obtener(int indice) const;
     Especialidad& obtener(int indice);
 

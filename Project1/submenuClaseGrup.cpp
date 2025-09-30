@@ -125,7 +125,7 @@ void submenuClaseGrup::crearClaseGrupal(vecSucursales* sucursales) {
     }
 
     print("\nDigite instructor (cedula): ");
-    int cedulaIns = digNum();
+    string cedulaIns = digPalabra();
 
     instructor* ins = suc->buscarInstructorPorCedula(cedulaIns);
     if (ins == nullptr) {

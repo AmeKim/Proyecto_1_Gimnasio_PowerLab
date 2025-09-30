@@ -1,9 +1,9 @@
-#include "instructor.h"
+﻿#include "instructor.h"
 
 instructor::instructor(): Persona(), especialidades(8), telefono(), correo(), fechaNacimiento() {
 }
 
-instructor::instructor(int cedula, const string& nombre, const string& telefono,const string& correo, const fecha& fechaNac): Persona(nombre, to_string(cedula), telefono, correo, fechaNac.getDia(), fechaNac.getMes(), fechaNac.getAnio()),especialidades(8), telefono(telefono), correo(correo), fechaNacimiento(fechaNac) {
+instructor::instructor(const string& cedula, const string& nombre, const string& telefono,const string& correo, const fecha& fechaNac): Persona(nombre, cedula, telefono, correo, fechaNac.getDia(), fechaNac.getMes(), fechaNac.getAnio()),especialidades(8), telefono(telefono), correo(correo), fechaNacimiento(fechaNac) {
 }
 
 instructor::instructor(const instructor& other): Persona(other),especialidades(other.especialidades),telefono(other.telefono),correo(other.correo),fechaNacimiento(other.fechaNacimiento) {
@@ -20,7 +20,7 @@ instructor& instructor::operator=(const instructor& other) {
 }
 
 instructor::~instructor() {
-    // VecEspecialidades gestionar� su propia memoria en su destructor
+    // VecEspecialidades gestionará su propia memoria en su destructor
 }
 
 void instructor::agregarEspecialidad(const Especialidad& esp) {
@@ -28,7 +28,7 @@ void instructor::agregarEspecialidad(const Especialidad& esp) {
 }
 
 int instructor::obtenerCantidadEspecialidades() const {
-    return especialidades.tamanio();
+    return especialidades.getCantidad();
 }
 
 const Especialidad& instructor::obtenerEspecialidad(int indice) const {
@@ -48,23 +48,27 @@ string instructor::getCorreo() const { return correo; }
 fecha instructor::getFechaNacimiento() const { return fechaNacimiento; }
 
 string instructor::toString() const {
-    string resultado = "Instructor: " + nombre + "\n";
-    resultado += "C" + string(130, 100) + "dula: " + cedula + "\n";
-    resultado += "Tel" + string(130, 102) + "fono: " + telefono + "\n";
-    resultado += "Correo: " + correo + "\n";
-    resultado += "Fecha de Nacimiento: " + fechaNacimiento.toString() + "\n";
-    resultado += "Edad: " + to_string(getEdad()) + " a" + string(164, 241) + "os\n";
-    resultado += "Especialidades: ";
-    if (especialidades.tamanio() == 0) {
-        resultado += "Ninguna\n";
-    } else {
-        for (int i = 0; i < especialidades.tamanio(); ++i) {
-            resultado += especialidades.obtener(i).getNombre();
-            if (i < especialidades.tamanio() - 1) {
-                resultado += ", ";
+    stringstream s;
+    s << "Instructor: " << nombre << "\n";
+    s << "C" << char(130) << "dula: " << cedula << "\n";
+    s << "Telefono: " << telefono << "\n";
+    s << "Correo: " << correo << "\n";
+    s << "Fecha de Nacimiento: " << fechaNacimiento.toString() << "\n";
+    s << "Especialidades: ";
+    int tam = especialidades.getCantidad();
+
+    if (tam == 0) {
+        s << "Ninguna";
+    }
+    else {
+        for (int i = 0; i < tam; i++) {
+            s << especialidades.obtener(i).getNombre();
+            if (i < tam - 1) {
+                s << ", ";
             }
         }
-        resultado += "\n";
     }
-	return resultado;
+    s << "\n";
+
+    return s.str();
 }

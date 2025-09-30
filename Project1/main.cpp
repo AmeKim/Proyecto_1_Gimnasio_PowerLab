@@ -1,7 +1,8 @@
 ﻿#include "PowerLab.h"
 
 int main() {
-    PowerLab sistema;
-    sistema.ejecutar();
+    PowerLab* sistema = new PowerLab();
+    sistema->ejecutar();
+    delete sistema;
     return 0;
 }
